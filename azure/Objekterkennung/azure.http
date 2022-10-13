@@ -1,0 +1,21 @@
+
+POST https://tubildanalyse.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=Categories,Objects,Description&details=Landmarks HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: {{cognitive-service-key}}
+
+{
+    "url":"http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg"
+}
+
+### Senden eines eigenen Bildes
+POST https://tubildanalyse.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=Categories,Objects,Description&details=Landmarks HTTP/1.1
+Ocp-Apim-Subscription-Key: {{cognitive-service-key}}
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="image"; filename="dg.jpg"
+Content-Type: image/jpg
+
+< ./dg.jpg
+--MyBoundary--
+
