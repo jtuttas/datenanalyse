@@ -91,7 +91,7 @@ curl --request POST --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.
 
 - Modifizieren Sie ihr Programm, dass statt dem JSON die Bytes des Bildes mit dem parkenden Auto übertragen werden.
 
-![Bild Auto](../html//car.png)
+![Bild Auto](images/car.png)
 
 >Sollten Sie Python als Programmiersprache verwenden, so hilft diese Code Schnipsel ihnen den request zu erzeugen und die Bilddaten im Body des Requests zu übertragen!
 
@@ -162,14 +162,14 @@ Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine
 
 Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:
 
->"Sehr geehrte Damen und Herren,<br>
+>Sehr geehrte Damen und Herren,<br>
 >wie ich feststellen konnte nimmt ihre Überwachungskamera Fotos von meinem Auto auf und erfasst dabei auch das KFZ Kennzeichen. 
 >
 >Mit Blick auf die DSGVO möchte ich Sie bitten dieses Aufzeichnungen von personengebundenen Daten zu Unterlassen. Sollten Sie ihren Dienst nicht innerhalb der nächsten Woche abstellen, so werde ich mit rechtliche Schritte vorbehalten.
 >
 >Mit freundlichen Grüßen
 >
->Dr. Harald Wöhler"
+>Dr. Harald Wöhler
 
 Beantworten Sie diese Email, nachdem Sie sich zuvor über die rechtlichen Grundlagen informiert haben!
 <!--Aufgabe5-->
