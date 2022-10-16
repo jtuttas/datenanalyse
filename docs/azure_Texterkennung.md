@@ -160,7 +160,7 @@ Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine
 ## Datenschutz
 
 <!--Aufgabe5-->
-Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:
+**Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:**
 
 >Sehr geehrte Damen und Herren,<br>
 >wie ich feststellen konnte nimmt ihre Überwachungskamera Fotos von meinem Auto auf und erfasst dabei auch das KFZ Kennzeichen. 
@@ -171,5 +171,5 @@ Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auf
 >
 >Dr. Harald Wöhler
 
-Beantworten Sie diese Email, nachdem Sie sich zuvor über die rechtlichen Grundlagen informiert haben!
+**Beantworten Sie diese Email, nachdem Sie sich zuvor über die rechtlichen Grundlagen informiert haben!**
 <!--Aufgabe5-->
