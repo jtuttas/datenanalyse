@@ -4,9 +4,9 @@
 
 Da das antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der Azure Bilderkennungsdienst genutzt werden.
 
-<!--Info-->
 ## Der Bilderkennungsdienst von Azure
 
+<!--Info-->
 Azure bietet eine vielzahl von trainierten Neuronalen Netzwerken für diverse Aufgaben an (z.B. Bildanalyse, Sprachsynthese u.v.a.m). In diesem Beispiel wollen wir das Texterkennungssystem von Azure nutzen. Dabei kommunizieren die KI Dienste von Azure über eine REST Schnittstelle mit dem Client (das Programm).
 
 ### Einrichten der Texterkennung in Azure
@@ -75,10 +75,10 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 
 ## Aufgaben
 
-<!--Aufgabe1-->
 
 ### Aufgabe 1
 
+<!--Aufgabe1-->
 - Lesen Sie sich noch einmal aufmerksam die Informationen zum Bilderkennungsdienst von Azure durch.
 - Melden Sie sich dann bei Azure an und erzeugen Sie wie beschrieben eine Ressourcegruppe und fügen Sie dort einen Bilderkennungsdienst "Maschinelles Sehen" hinzu. 
 - Notieren Sie sich dich Zugangsdaten zum Dienst und führen Sie eine HTTP Post Request zum Dienst durch. Z.B. via dem Programm CURL
@@ -107,10 +107,10 @@ ol=r2.headers["Operation-Location"]
 print(ol)
 ```
 <!--Aufgabe1-->
-<!--Aufgabe2-->
 
 ### Aufgabe 2
 
+<!--Aufgabe2-->
 Notieren Sie sich die URL, die Sie im Header **Operation-Location** aus Aufgabe 1 erhalten haben und gehen Sie dann wie folgt vor.
 
 - Erzeugen Sie einen GET Request auf die Adresse **Operation-Location**. Wobei im Header der API key als **Ocp-Apim-Subscription-Key** anzugeben ist und lassen Sie sich die Antwort des Requests auf der Console ausgeben.
@@ -151,15 +151,15 @@ Analysieren Sie das im Response erhaltene JSON und zeichnen Sie auf das Bild den
 
 <!--Aufgabe3-->
 
-<!--Aufgabe4-->
 ### Aufgabe 4 (Zusatz)
 
+<!--Aufgabe4-->
 Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine Datenbank
 <!--Aufgabe4-->
 
-<!--Aufgabe5-->
 ## Datenschutz
 
+<!--Aufgabe5-->
 Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:
 
 >Sehr geehrte Damen und Herren,<br>

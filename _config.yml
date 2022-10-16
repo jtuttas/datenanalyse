@@ -1,0 +1,7 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: false
+  collections: true
+include:
+  - azure_Texterkennung.md
