@@ -23,5 +23,5 @@ Content-Type: image/png
 
 
 ### Abholen des Leseergebnisses
-GET https://tubilderkennung.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
+GET https://tubilderkennung.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/f304c8b6-a4be-4542-8bc5-bd9a138528c7 HTTP/1.1
 Ocp-Apim-Subscription-Key: {{api-key}}

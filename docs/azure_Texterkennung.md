@@ -107,3 +107,69 @@ ol=r2.headers["Operation-Location"]
 print(ol)
 ```
 <!--Aufgabe1-->
+<!--Aufgabe2-->
+
+### Aufgabe 2
+
+Notieren Sie sich die URL, die Sie im Header **Operation-Location** aus Aufgabe 1 erhalten haben und gehen Sie dann wie folgt vor.
+
+- Erzeugen Sie einen GET Request auf die Adresse **Operation-Location**. Wobei im Header der API key als **Ocp-Apim-Subscription-Key** anzugeben ist und lassen Sie sich die Antwort des Requests auf der Console ausgeben.
+
+```http
+curl --request GET --url https://{{Name der Ressourcengruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 --header 'ocp-apim-subscription-key: {API key}' 
+```
+
+- Erweitern Sie ihr Programm aus Aufgabe 1 um diesen Get-Request und lassen Sie sich den Body des Response auf der Konsole ausgeben.
+
+<!--Aufgabe2-->
+<!--Aufgabe3-->
+
+### Aufgabe 3
+
+Analysieren Sie das im Response erhaltene JSON und zeichnen Sie auf das Bild den Bereich des erkannten Textes und den Text ein.
+
+>Wenn Sie als Programmiersprache Python verwenden, so können Sie hierzu die Bibliothek **mathplotlib** verwenden.  
+
+```json
+             {
+                "boundingBox": [
+                  130,
+                  655,
+                  418,
+                  664,
+                  413,
+                  825,
+                  124,
+                  823
+                ],
+                "text": "The",
+                "confidence": 0.998
+              },
+```
+
+![erkannter Text](images/output.png)
+
+<!--Aufgabe3-->
+
+<!--Aufgabe4-->
+### Aufgabe 4 (Zusatz)
+
+Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine Datenbank
+<!--Aufgabe4-->
+
+<!--Aufgabe5-->
+## Datenschutz
+
+Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:
+
+>"Sehr geehrte Damen und Herren,<br>
+>wie ich feststellen konnte nimmt ihre Überwachungskamera Fotos von meinem Auto auf und erfasst dabei auch das KFZ Kennzeichen. 
+>
+>Mit Blick auf die DSGVO möchte ich Sie bitten dieses Aufzeichnungen von personengebundenen Daten zu Unterlassen. Sollten Sie ihren Dienst nicht innerhalb der nächsten Woche abstellen, so werde ich mit rechtliche Schritte vorbehalten.
+>
+>Mit freundlichen Grüßen
+>
+>Dr. Harald Wöhler"
+
+Beantworten Sie diese Email, nachdem Sie sich zuvor über die rechtlichen Grundlagen informiert haben!
+<!--Aufgabe5-->
