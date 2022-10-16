@@ -36,7 +36,7 @@ Oder die Bilddatei wird dem Dienst im Body des http Post Befehls übertragen.
 Im Header des HTTP Post Befehls steht der API Schlüssel mit dem key *Ocp-Apim-Subscription-Key*:
 
 ```http
-POST https://tubilderkennung.cognitiveservices.azure.com/vision/v3.2/read/analyze HTTP/1.1
+POST https://{{Name der Ressourcegruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze HTTP/1.1
 content-type: application/json
 Ocp-Apim-Subscription-Key: {{api-key}}
 
@@ -47,15 +47,63 @@ Ocp-Apim-Subscription-Key: {{api-key}}
 
 Liefert der Dienst den Status Code **202 Accepted** zurück, so enthält der Header des Response einen key **Operation-Location**, der zum Abholen des Ergebnisses dient.
 
+```txt
+HTTP/1.1 202 Accepted
+Content-Length: 0
+Operation-Location: https://{{Name der Ressourceguppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/8bba342e-f1eb-4e24-8702-db823f615a38
+x-envoy-upstream-service-time: 584
+CSP-Billing-Usage: CognitiveServices.ComputerVision.Transaction=1
+apim-request-id: 8bba342e-f1eb-4e24-8702-db823f615a38
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+Date: Sat, 15 Oct 2022 16:11:18 GMT
+Connection: close
+```
+
 Über einen zweiten HTTP-Get Request auf die Adresse **Operation-Location** kann das Ergebnis in Form eines JSON abgeholt werden. Dabei muss erneut der *Ocp-Apim-Subscription-Key* angegeben werden.
 
 ```http
-GET https://tubilderkennung.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
+GET https://{{Name der Ressourcegruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
 Ocp-Apim-Subscription-Key: {{api-key}}
 ```
 
 Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 
-
+![Sequenzdiagramm](images/sequenzdiagramm.png)
 
 <!--Info-->
+
+## Aufgaben
+
+<!--Aufgabe1-->
+
+### Aufgabe 1
+
+- Lesen Sie sich noch einmal aufmerksam die Informationen zum Bilderkennungsdienst von Azure durch.
+- Melden Sie sich dann bei Azure an und erzeugen Sie wie beschrieben eine Ressourcegruppe und fügen Sie dort einen Bilderkennungsdienst "Maschinelles Sehen" hinzu. 
+- Notieren Sie sich dich Zugangsdaten zum Dienst und führen Sie eine HTTP Post Request zum Dienst durch. Z.B. via dem Programm CURL
+
+```http
+curl --request POST --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze --header 'content-type: application/json' --header 'ocp-apim-subscription-key: {{api key}}' --data '{"url":"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/master/articles/cognitive-services/Computer-vision/Images/readsample.jpg"}'
+```
+
+- Schreiben Sie ein Programm (die Programmiersprache ist hier beliebig) welchen des Request durchführt und lassen Sie sich den Head des Responses auf der Konsole ausgeben.
+
+- Modifizieren Sie ihr Programm, dass statt dem JSON die Bytes des Bildes mit dem parkenden Auto übertragen werden.
+
+![Bild Auto](../html//car.png)
+
+>Sollten Sie Python als Programmiersprache verwenden, so hilft diese Code Schnipsel ihnen den request zu erzeugen und die Bilddaten im Body des Requests zu übertragen!
+
+```py
+import requests
+
+files = [('file', (image_name, open(image_name, 'rb'), 'image/jpeg'))]
+headers = {
+    'Ocp-Apim-Subscription-Key': api_key
+}
+r2 = requests.post("https://"+api_endpunkt+".cognitiveservices.azure.com/vision/v3.2/read/analyze", files=files, headers=headers)
+ol=r2.headers["Operation-Location"]
+print(ol)
+```
+<!--Aufgabe1-->
