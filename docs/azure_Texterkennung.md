@@ -72,9 +72,9 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 ![Sequenzdiagramm](images/sequenzdiagramm.png)
 
 <!--Info-->
+---
 
 ## Aufgaben
-
 
 ### Aufgabe 1
 
