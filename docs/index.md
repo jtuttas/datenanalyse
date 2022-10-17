@@ -1,6 +1,6 @@
-# Lernsituation zum Lernfeld 10c für den Fachinformatiker für Daten- und Prozessanalyse (FIDP)
+# Lernsituationen zum Lernfeld 10c für den Fachinformatiker für Daten- und Prozessanalyse (FIDP)
 
-Auf den folgenden Seiten finden Sie die SchUCu konformen Lernsituation für den Fachinformatiker für Daten- und Prozessanalyse.
+Auf den folgenden Seiten finden Sie die SchuCu konformen Lernsituationen für den Fachinformatiker für Daten- und Prozessanalyse.
 
 ## Kompetenzformulierung gemäß Rahmenlehrplan
 
