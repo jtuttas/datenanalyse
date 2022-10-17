@@ -4,7 +4,7 @@
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
-| LF 10c:</br>Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) | 3 |
+| LF 10c:</br>$\newline$Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) | 3 |
 
 ### Kompetenzformulierung
 

@@ -2,7 +2,7 @@
 
 >Der Besitzer eines Eigenheims möchte gerne wissen welche Autos für wie lange auf seinen Parkplatz parken. Die Kamera vor dem Haus mach dazu alle 5 Minuten ein Bild von dem Parkplatz. Sie erhalten der Auftrag eine Anwendungssystem zu entwickeln welches das KFZ Kennzeichen erfasst und dieses mit einem Zeitstempel in eine Datenbank schreibt.
 
-Da das antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der Azure Bilderkennungsdienst genutzt werden.
+Da das Antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der Azure Bilderkennungsdienst genutzt werden.
 
 ## Der Bilderkennungsdienst von Azure
 
@@ -90,7 +90,7 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 
 <!--Aufgabe1-->
 - Lesen Sie sich noch einmal aufmerksam die Informationen zum Bilderkennungsdienst von Azure durch.
-- Melden Sie sich dann bei Azure an und erzeugen Sie wie beschrieben eine Ressourcegruppe und fügen Sie dort einen Bilderkennungsdienst "Maschinelles Sehen" hinzu. 
+- Melden Sie sich dann bei Azure an und erzeugen Sie wie beschrieben eine Ressourcengruppe und fügen Sie dort einen Bilderkennungsdienst "Maschinelles Sehen" hinzu. 
 - Notieren Sie sich dich Zugangsdaten zum Dienst und führen Sie eine HTTP Post Request zum Dienst durch. Z.B. via dem Programm CURL
 
 ```txt
@@ -111,7 +111,7 @@ curl --request POST
 
 >Sollten Sie Python als Programmiersprache verwenden, so hilft diese Code Schnipsel ihnen den request zu erzeugen und die Bilddaten im Body des Requests zu übertragen!
 
-```py
+```python
 import requests
 
 files = [('file', (image_name, open(image_name, 'rb'), 'image/jpeg'))]

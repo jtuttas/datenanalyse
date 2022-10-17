@@ -53,10 +53,10 @@ Da das Antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, ents
 | | Handlungskompetenz<br/>$\newline$(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
 | Informieren bzw. Analysieren | Die Schülerinnen und Schüler Analysieren den Auftrag und identifizieren einzelne Arbeitspakete. Für diese Arbeitspakete bestimmen Sie, ob dazu noch weitere Informationen notwendig sind. <br/>$\newline$Für das Arbeitspaket des maschinellen Sehens mit Azure lesen Sie den zur Verfügung gestellten Artikel. | - Zerlegen des Auftrages in einzelne Arbeitspakete <br/> $\newline$- Die Azure REST Api  | Einzelarbeit / Klassenplenum <br/><br/> $\newline$ $\newline$**Hinweise für den DU**: Das Gliedern der Arbeitspakete kann in Moodle über die Aktivität *Moodle Board* erfolgen |
-| Planen / Entscheiden | Die Schülerinnen und Schülern Planen in Kleingruppen das weitere Vorgehen zum Bewältigen des Arbeitsauftrages. Dazu Priorisieren Sie einzelne Arbeitspakete nach ihrer Zeitlichen Reihenfolge und Wichtigkeit |  | Gruppenarbeit |
-| Durchführen | Die Schülerinnen und Schüler implementieren die gewünschte Funktionalität entsprechend des Arbeitsauftrages | | Moodle Aufgabe **A1** bis **A3** (**A4** ist optional) |
-| Kontrollieren / Bewerten | Die Schülerinnen und Schüler bewerten das Ergebnis hinsichtlich der Qualität. <br/> $\newline$ Die Schülerinnen und Schüler erstellen für den Kunden ein Angebot aus denen die Kosten für den Täglichen Betrieb des Systems ersichtlich werden. | | Gruppenarbeit<br/>$\newline$ Moodle Aufgabe **A5**  |
-| Reflektieren | Die Schülerinnen und Schüler erhalten eine Email eines Autobesitzers und verfassen eine Antwort, die mögliche Datenschutzprobleme thematisiert | Datenschutzaspekte bei automatischen KI Systemen | Moodle Aufgabe **A6** |
+| Planen / Entscheiden | Die Schülerinnen und Schülern Planen in Kleingruppen das weitere Vorgehen zum Bewältigen des Arbeitsauftrages. Dazu Priorisieren Sie einzelne Arbeitspakete nach ihrer Zeitlichen Reihenfolge und Wichtigkeit | Priorisieren von Arbeitspaketen | Gruppenarbeit |
+| Durchführen | Die Schülerinnen und Schüler implementieren die gewünschte Funktionalität entsprechend des Arbeitsauftrages | Implementieren der Funktionalität | Moodle Aufgabe **A1** bis **A3** (**A4** ist optional) |
+| Kontrollieren / Bewerten | Die Schülerinnen und Schüler bewerten das Ergebnis hinsichtlich der Qualität. <br/> $\newline$Die Schülerinnen und Schüler erstellen für den Kunden ein Angebot aus denen die Kosten für den Täglichen Betrieb des Systems ersichtlich werden. | - Überprüfen der Funktionalität.<br/>$\newline$<br/>$\newline$- Erstellen eines Angebotes | Gruppenarbeit<br/>$\newline$ Moodle Aufgabe **A5**  |
+| Reflektieren | Die Schülerinnen und Schüler erhalten eine Email eines Autobesitzers und verfassen eine Antwort, die mögliche Datenschutzprobleme thematisiert | Schreiben einer Email bzgl. Datenschutzaspekte bei automatischen KI Systemen | Moodle Aufgabe **A6** |
 
 ### Arbeitsmaterialien / Links
 
@@ -76,4 +76,4 @@ Da das Antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, ents
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
 
-- Politik / Ethik: Personengebundene Daten
+- Politik / Ethik: Sekundäre personengebundene Daten
