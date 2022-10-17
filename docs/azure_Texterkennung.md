@@ -36,12 +36,16 @@ Oder die Bilddatei wird dem Dienst im Body des http Post Befehls übertragen.
 Im Header des HTTP Post Befehls steht der API Schlüssel mit dem key *Ocp-Apim-Subscription-Key*:
 
 ```http
-POST https://{{Name der Ressourcegruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze HTTP/1.1
+POST https://{{Name der Ressourcegruppe}}.cognitiveservices.
+     azure.com/vision/v3.2/read/analyze HTTP/1.1
 content-type: application/json
 Ocp-Apim-Subscription-Key: {{api-key}}
 
 {
-    "url":"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/master/articles/cognitive-services/Computer-vision/Images/readsample.jpg"
+    "url":"https://raw.githubusercontent.com/MicrosoftDocs/
+            azure-docs/master/articles/
+            cognitive-services/Computer-vision/
+            Images/readsample.jpg"
 }
 ```
 
@@ -50,7 +54,10 @@ Liefert der Dienst den Status Code **202 Accepted** zurück, so enthält der Hea
 ```txt
 HTTP/1.1 202 Accepted
 Content-Length: 0
-Operation-Location: https://{{Name der Ressourceguppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/8bba342e-f1eb-4e24-8702-db823f615a38
+Operation-Location: https://{{Name der Ressourceguppe}}.
+   cognitiveservices.azure.com/vision/v3.2
+   /read/analyzeResults/
+   8bba342e-f1eb-4e24-8702-db823f615a38
 x-envoy-upstream-service-time: 584
 CSP-Billing-Usage: CognitiveServices.ComputerVision.Transaction=1
 apim-request-id: 8bba342e-f1eb-4e24-8702-db823f615a38
@@ -63,7 +70,10 @@ Connection: close
 Über einen zweiten HTTP-Get Request auf die Adresse **Operation-Location** kann das Ergebnis in Form eines JSON abgeholt werden. Dabei muss erneut der *Ocp-Apim-Subscription-Key* angegeben werden.
 
 ```http
-GET https://{{Name der Ressourcegruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
+GET https://{{Name der Ressourcegruppe}}.
+    cognitiveservices.azure.com
+    /vision/v3.2/read/analyzeResults/
+    54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
 Ocp-Apim-Subscription-Key: {{api-key}}
 ```
 
@@ -84,7 +94,13 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 - Notieren Sie sich dich Zugangsdaten zum Dienst und führen Sie eine HTTP Post Request zum Dienst durch. Z.B. via dem Programm CURL
 
 ```http
-curl --request POST --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze --header 'content-type: application/json' --header 'ocp-apim-subscription-key: {{api key}}' --data '{"url":"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/master/articles/cognitive-services/Computer-vision/Images/readsample.jpg"}'
+curl --request POST 
+  --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze 
+  --header 'content-type: application/json' 
+  --header 'ocp-apim-subscription-key: {{api key}}' 
+  --data '{"url":"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs
+    /master/articles/cognitive-services/
+    Computer-vision/Images/readsample.jpg"}'
 ```
 
 - Schreiben Sie ein Programm (die Programmiersprache ist hier beliebig) welchen des Request durchführt und lassen Sie sich den Head des Responses auf der Konsole ausgeben.
@@ -102,7 +118,10 @@ files = [('file', (image_name, open(image_name, 'rb'), 'image/jpeg'))]
 headers = {
     'Ocp-Apim-Subscription-Key': api_key
 }
-r2 = requests.post("https://"+api_endpunkt+".cognitiveservices.azure.com/vision/v3.2/read/analyze", files=files, headers=headers)
+r2 = requests.post("https://"+api_endpunkt+".cognitiveservices.azure.com
+  /vision/v3.2/read/analyze",
+  files=files,
+  headers=headers)
 ol=r2.headers["Operation-Location"]
 print(ol)
 ```
@@ -116,7 +135,12 @@ Notieren Sie sich die URL, die Sie im Header **Operation-Location** aus Aufgabe 
 - Erzeugen Sie einen GET Request auf die Adresse **Operation-Location**. Wobei im Header der API key als **Ocp-Apim-Subscription-Key** anzugeben ist und lassen Sie sich die Antwort des Requests auf der Console ausgeben.
 
 ```http
-curl --request GET --url https://{{Name der Ressourcengruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyzeResults/54d749b7-697e-4a8b-a2f2-8caefa1ba053 --header 'ocp-apim-subscription-key: {API key}' 
+curl --request GET 
+  --url https://{{Name der Ressourcengruppe}}.
+    cognitiveservices.azure.com/vision/v3.2
+    /read/analyzeResults/
+    54d749b7-697e-4a8b-a2f2-8caefa1ba053 
+  --header 'ocp-apim-subscription-key: {API key}' 
 ```
 
 - Erweitern Sie ihr Programm aus Aufgabe 1 um diesen Get-Request und lassen Sie sich den Body des Response auf der Konsole ausgeben.
