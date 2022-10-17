@@ -30,11 +30,11 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 Die Lernsituationen werden automatisch generiert aus Markdown Dateien und können auch als **pdf** herunter geladen werden.
 
-- [LS1](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS1.md.pdf)
-- [LS2](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS2.md.pdf)
-- [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf)
-- [LS4](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS4.md.pdf)
-- [LS5](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS5.md.pdf)
-- [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf)
-- [LS7](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS7.md.pdf)
-- [LS8](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS8.md.pdf)
+- [LS1](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS1.md.pdf) KI im Alltag
+- [LS2](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS2.md.pdf) Dateien als Datenquellen
+- [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf) Datenbanken als Datenquellen
+- [LS4](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS4.md.pdf) APIs abfragen
+- [LS5](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS5.md.pdf) Regressionsanalyse
+- [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf) Entscheidungsbäume
+- [LS7](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS7.md.pdf) Neuronale Netze
+- [LS8](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS8.md.pdf) Claud KI Systeme nutzen
