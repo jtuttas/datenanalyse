@@ -36,10 +36,10 @@ Oder die Bilddatei wird dem Dienst im Body des http Post Befehls übertragen.
 Im Header des HTTP Post Befehls steht der API Schlüssel mit dem key *Ocp-Apim-Subscription-Key*:
 
 ```txt
-POST https://{{Name der Ressourcegruppe}}.cognitiveservices.
+POST https://{Name der Ressourcegruppe}.cognitiveservices.
      azure.com/vision/v3.2/read/analyze HTTP/1.1
 content-type: application/json
-Ocp-Apim-Subscription-Key: {{api-key}}
+Ocp-Apim-Subscription-Key: {api-key}
 
 {
     "url":"https://raw.githubusercontent.com/MicrosoftDocs/
@@ -54,7 +54,7 @@ Liefert der Dienst den Status Code **202 Accepted** zurück, so enthält der Hea
 ```txt
 HTTP/1.1 202 Accepted
 Content-Length: 0
-Operation-Location: https://{{Name der Ressourceguppe}}.
+Operation-Location: https://{Name der Ressourceguppe}.
    cognitiveservices.azure.com/vision/v3.2
    /read/analyzeResults/
    8bba342e-f1eb-4e24-8702-db823f615a38
@@ -70,11 +70,11 @@ Connection: close
 Über einen zweiten HTTP-Get Request auf die Adresse **Operation-Location** kann das Ergebnis in Form eines JSON abgeholt werden. Dabei muss erneut der *Ocp-Apim-Subscription-Key* angegeben werden.
 
 ```txt
-GET https://{{Name der Ressourcegruppe}}.
+GET https://{Name der Ressourcegruppe}.
     cognitiveservices.azure.com
     /vision/v3.2/read/analyzeResults/
     54d749b7-697e-4a8b-a2f2-8caefa1ba053 HTTP/1.1
-Ocp-Apim-Subscription-Key: {{api-key}}
+Ocp-Apim-Subscription-Key: {api-key}
 ```
 
 Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
@@ -95,9 +95,9 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 
 ```txt
 curl --request POST 
-  --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze 
+  --url https://{Ressourcegruppe}.cognitiveservices.azure.com/vision/v3.2/read/analyze 
   --header 'content-type: application/json' 
-  --header 'ocp-apim-subscription-key: {{api key}}' 
+  --header 'ocp-apim-subscription-key: {api key}' 
   --data '{"url":"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs
     /master/articles/cognitive-services/
     Computer-vision/Images/readsample.jpg"}'
@@ -136,7 +136,7 @@ Notieren Sie sich die URL, die Sie im Header **Operation-Location** aus Aufgabe 
 
 ```txt
 curl --request GET 
-  --url https://{{Name der Ressourcengruppe}}.
+  --url https://{Name der Ressourcengruppe}.
     cognitiveservices.azure.com/vision/v3.2
     /read/analyzeResults/
     54d749b7-697e-4a8b-a2f2-8caefa1ba053 
