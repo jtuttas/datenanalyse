@@ -35,7 +35,7 @@ Oder die Bilddatei wird dem Dienst im Body des http Post Befehls übertragen.
 
 Im Header des HTTP Post Befehls steht der API Schlüssel mit dem key *Ocp-Apim-Subscription-Key*:
 
-```http
+```txt
 POST https://{{Name der Ressourcegruppe}}.cognitiveservices.
      azure.com/vision/v3.2/read/analyze HTTP/1.1
 content-type: application/json
@@ -69,7 +69,7 @@ Connection: close
 
 Über einen zweiten HTTP-Get Request auf die Adresse **Operation-Location** kann das Ergebnis in Form eines JSON abgeholt werden. Dabei muss erneut der *Ocp-Apim-Subscription-Key* angegeben werden.
 
-```http
+```txt
 GET https://{{Name der Ressourcegruppe}}.
     cognitiveservices.azure.com
     /vision/v3.2/read/analyzeResults/
@@ -93,7 +93,7 @@ Die Funktion des Texterkennung Dienstes stellt das folgende Sequenzdiagramm dar.
 - Melden Sie sich dann bei Azure an und erzeugen Sie wie beschrieben eine Ressourcegruppe und fügen Sie dort einen Bilderkennungsdienst "Maschinelles Sehen" hinzu. 
 - Notieren Sie sich dich Zugangsdaten zum Dienst und führen Sie eine HTTP Post Request zum Dienst durch. Z.B. via dem Programm CURL
 
-```http
+```txt
 curl --request POST 
   --url https://{{Ressourcehngruppe}}.cognitiveservices.azure.com/vision/v3.2/read/analyze 
   --header 'content-type: application/json' 
@@ -134,7 +134,7 @@ Notieren Sie sich die URL, die Sie im Header **Operation-Location** aus Aufgabe 
 
 - Erzeugen Sie einen GET Request auf die Adresse **Operation-Location**. Wobei im Header der API key als **Ocp-Apim-Subscription-Key** anzugeben ist und lassen Sie sich die Antwort des Requests auf der Console ausgeben.
 
-```http
+```txt
 curl --request GET 
   --url https://{{Name der Ressourcengruppe}}.
     cognitiveservices.azure.com/vision/v3.2
