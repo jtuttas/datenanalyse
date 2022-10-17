@@ -17,6 +17,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
+    - Home: index.md
     - LS10c.1: LS1.md
     - LS10c.2: LS2.md
     - LS10c.3: LS3.md

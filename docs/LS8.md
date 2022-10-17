@@ -1,31 +1,50 @@
-# KDM - Lernfeld 12
+# FIDP - Lernfeld 10c
 
-## LS 12.1: Geschäftsmodelle und Vertriebswege analysieren
+## LS 10.8: Cloud KI Systeme nutzen
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
-| LF 12:</br>Unternehmen digital weiterentwickeln | Kaufleute für Digitalisierungsmanagement (KDM) | 3 |
+| LF 10c:</br>Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) | 3 |
 
 ### Kompetenzformulierung
 
-**"Die Schülerinnen und Schüler verfügen über die Kompetenz, im Team Geschäftsmodell und Geschäftsprozesse des Unternehmens zu analysieren und Vorschläge für
-eine marktgerechte digitale Weiterentwicklung zu erarbeiten."**
+"**Die Schülerinnen und Schüler verfügen über die Kompetenz, maschinelles Lernen zur
+Problemlösung anzuwenden und den Lernfortschritt des Entscheidungssystems zu
+begleiten**".
 
-"Die Schülerinnen und Schüler informieren sich über  Geschäftsmodell und Vertriebswege des Unternehmens. Mithilfe der identifizierten Geschäftsprozesse beschreiben sie die Prozesslandschaft des Unternehmens. Sie ermitteln die Erwartungen der betrieblichen Prozessteilnehmer und der externen Marktteilnehmer. Sie wenden Methoden zur Informationsbeschaffung und Marktanalyse an und beschreiben vorhandenes Marktpotential."
+Die Schülerinnen und Schüler **stellen** Einsatzmöglichkeiten des maschinellen Lernens **dar**.
+Auf dieser Basis entscheiden sie über die betriebswirtschaftlich sinnvolle Eignung maschinellen Lernens bezüglich kundenspezifischer Problemstellungen.
+
+Sie führen die benötigten Daten zusammen. Dazu analysieren sie freie und kommerzielle
+Datenquellen und **wählen** diese nach Eignung zur Lösung der Aufgabe durch maschinelles
+Lernen aus. Die Schülerinnen und Schüler berücksichtigen datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
+
+Sie **legen** für die Aufgabenstellung maschinellen Lernens adäquate Werkzeuge und Systeme **fest**.
+
+Sie bereiten das ausgewählte System technisch vor und **implementieren** die Schnittstellen
+zum Datenimport.
+
+Die Schülerinnen und Schüler **überwachen** die technische Funktionsfähigkeit im Hinblick
+auf den Lernfortschritt des Systems.
+
+Sie **reflektieren** die Wirksamkeit des angelernten Entscheidungssystems. Dabei diskutieren
+sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Kaufleute für Digitalisierungsmanagement in der Fassung vom 13.12.2019, S. 25 | LS 12.1: Geschäftsmodelle und Vertriebswege analysieren | 12 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.8: Cloud KI Systeme nutzen | 12 Unterrichtsstunden |
 
 ### Handlungssituation
 
-Die ChangeIT GmbH möchte das Angebot für seine Kunden zukünftig umfassender gestalten und hat eine kleine Unternehmensberatung als Abteilung eingekauft. Sie nehmen die Rolle zwischen Informationstechnologie und der Gestaltung von Geschäftsmodellen sowie -prozessen in einer neu geschaffenen Stelle ein.
+Sie arbeiten bei der ChangeIT GmbH in der Abteilung Datenanalyse und erhalten folgenden Auftrag:
 
-Für Ihren ersten Auftrag in der neuen Position setzen Sie sich genauer mit der Analyse des Kunden "Fitness 365 GmbH & Co. KG" und seiner Geschäftsfelder auseinander.
+>Der Besitzer eines Eigenheims möchte gerne wissen welche Autos für wie lange auf seinen Parkplatz parken. Die Kamera vor dem Haus mach dazu alle 5 Minuten ein Bild von dem Parkplatz. Sie erhalten der Auftrag eine Anwendungssystem zu entwickeln welches das KFZ Kennzeichen erfasst und dieses mit einem Zeitstempel in eine Datenbank schreibt.
+
+Da das antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der Azure Bilderkennungsdienst genutzt werden.
 
 ### Handlungsergebnis
 
-- **Business Model Canvas** zu einem zuvor ausgewählten Unternehmen
+- Bildanalyse (KFZ Kennzeichen) eines geparkten Autos.
 
 <div style="page-break-after: always;"></div>
 
@@ -33,39 +52,26 @@ Für Ihren ersten Auftrag in der neuen Position setzen Sie sich genauer mit der 
 
 | | Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
-| Informieren bzw. Analysieren | Die SuS erfassen die Problemsituation des Kunden.<br> Die SuS erkennen die Notwendigkeit für die systematische und aktive Entwicklung des Geschäftsmodells des Kunden.<br>Die SuS identifizieren den Vergleich mit anderen Unternehmen aus der Branche als Möglichkeit zur Verbesserung des eigenen Kunden. | | In Kleingruppen wird eine Problemanalyse anhand einer Projektmappe zum Kunden durchgeführt. |
-| Planen / Entscheiden | Die SuS erarbeiten die Struktur des Business Model Canvas.<br>Die SuS finden Kriterien für die einzelnen Segmente des Business model Canvas. | Business Model Canvas (Stakeholder, Aktivitäten, Ressourcen, Kostenstrukturen, Gewinne, Wertesystem, Kundenbeziehungen, Distributionskanäle, Zielmärkte) | Erst in Einzelarbeit mithilfe des LinkedIn-Learning-Kurses, zwischenzeitlich oder am Ende Abstimmung der Erkenntnisse in Kleingruppen. |
-| Durchführen | Die SuS stellen ein zielgerichtetes Business Model Canvas für zusammen.<br>Die SuS ergänzen ihre Inhalte der Felder um Aspekte der strategischen Neuausrichtung. | | Bearbeitung in Kleingruppen, ggf. arbeitsteilige Bearbeitung der Felder.<br>Einsatz des Tools [draw.io](https://draw.io) mit passender Vorlage zum Business Model Canvas.<br>Es wird am Beispiel des Branchenriesen *McFit* gearbeitet. |
-| Kontrollieren / Bewerten | Die SuS stellen die Ergebnisse ihrer Kleingruppe vor.<br>Die SuS stimmen sich über eine gemeinsame Strategie mit einer anderen Kleingruppe ab.<br>Die SuS vertreten in einer Vorstellung der Ergebnisse eine Gesamtstrategie zweier Kleingruppen. | | Zwei Kleingruppen werden miteinander kombiniert, um die jeweiligen Ergebnisse abzustimmen und in einem gemeinsamen Ergebnis zusammenzuführen. |
-| Reflektieren | Die SuS schätzen das Ergebnis aus der Kombination aus zwei Kleingruppen gegenüber dem Ergebnis ihrer Stammgruppe individuell und anschließend gemeinsam ein. | | Es können ggf. Strategiekonflikte erkannt und die Notwendigkeit eines stimmigen Konzeptes reflektiert werden. |
-
-## Bearbeitungsverlauf der Lernsituation
-
-| Verantwortliche / Verantwortlicher | Version | Bearbeitungsdatum |
-| :--- | :---: | :---: |
-| Neumann (NM) | 1.0 | 02.06.2022 |
-| Neumann (NM) | 1.1 | 03.06.2022 |
-| Neumann (NM) | 1.2 | 06.07.2022 |
+| Informieren bzw. Analysieren | Die Schülerinnen und Schüler Analysieren den Auftrag und identifizieren einzelne Arbeitspakete. Für diese Arbeitspakete bestimmen Sie, ob dazu noch weitere Informationen notwendig sind. <br> Für das Arbeitspaket des maschinellen Sehens mit Azure lesen Sie den zur Verfügung gestellten Artikel. | - Zerlegen des Auftrages in einzelne Arbeitspakete<br> - Die Azure REST Api  | Einzelarbeit / Klassenplenumm<br><br> **Hinweise für den DU Unterricht**: Das Gliedern der Arbeitspakete kann in Moodle über die Aktivität *Moodle Board* erfolgen |
+| Planen / Entscheiden | Die Schülerinnen und Schülern Planen in Kleingruppen das weitere Vorgehen zum Bewältigen des Arbeitsauftrages. Dazu Priorisieren Sie einzelne Arbeitspakete nach ihrer Zeitlichen Reihenfolge und Wichtigkeit |  | Gruppenarbeit |
+| Durchführen | Die Schülerinnen und Schüler implementieren die gewünschte Funktionalität entsprechend des Arbeitsauftrages | | Moodle Aufgabe A1 bis A3 (A4 ist optional) |
+| Kontrollieren / Bewerten | Die Schülerinnen und Schüler bewerten das Ergebnis hinsichtlich der Qualität. <br> Die Schülerinnen und Schüler erstellen für den Kunden ein Angebot aus denen die Kosten für den Täglichen Betrieb des Systems ersichtlich werden. | | Gruppenarbeit<br>Moodle Aufgabe A5  |
+| Reflektieren | Die Schülerinnen und Schüler erhalten eine Email eines Autobesitzers und verfassen eine Antwort, die mögliche Datenschutzprobleme thematisiert | Datenschutzaspekte bei automatischen KI Systemen | Moodle Aufgabe A6 |
 
 ### Arbeitsmaterialien / Links
 
-- Moodle-Kurs: [LF12: Unternehmen digital weiterentwickeln
-](https://moodle.mm-bbs.de/moodle/course/view.php?id=2737)
-- Videomaterial aus dem LinkedIn-Learning Portal
+- Moodle-Kurs: [LF10c: Werkzeuge des maschinellen Lernens einsetzen](https://moodle.mm-bbs.de/moodle/course/view.php?id=2812)
+- [GitHub Repository](https://github.com/jtuttas/datenanalyse)
 
 ### Schulische Entscheidungen
 
-- Das Lernfeld wird aus organisatorischen Gründen durch drei Kolleg:innen besetzt. Zwei sind in der Schiene der KDM-Spezialisierung, eine parallel im Bereich des Projektmanagements.
+- Für die Nutzung des Azure Dienstes kann der Zugang genutzt werden, der im Rahmen des O365 Angebots vorliegt.
+- Die Implementierung der Software sollte in Python unter Verwendung von VS-Code erfolgen. Hier sollte möglichst das in der Python Extension enthaltene Jupyter Notebook verwenden werden.
 
 <div style="page-break-after: always;"></div>
 
 ### Leistungsnachweise
 
-- Klassenarbeit KA|1 (Block 3)
-- Test T|1 (Block 1)
-- Test T|2 (Block 2)
-- Mitarbeit (kontinuierlich)
+- Bewertung des Handlungsergebnisses ggf. im Form eines Fachgespräches mit den einzelnen Arbeitsgruppen.
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
-
-- Lernfeld 9: Darstellung und Modellierung von Prozessen

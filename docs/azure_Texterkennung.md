@@ -157,9 +157,20 @@ Analysieren Sie das im Response erhaltene JSON und zeichnen Sie auf das Bild den
 Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine Datenbank
 <!--Aufgabe4-->
 
-## Datenschutz
+### Aufgabe 5
+<!--Aufgabe5-->
+
+**Kalkulation der Kosten**
+
+Nachdem die technische Umsetzung des Arbeitsauftrages realisiert wurde. Stellt sich der Kunde die Frage, wie hoch die laufenden Kosten für den bereitgestellten Dienst sind?
+
+Recherchieren Sie in der Azure Dokumention nach den Kosten für den Dienst "maschinelles Sehen" und erstellen Sie für den Kunden ein Angebot, welches die monatlichen Kosten darstellt.
 
 <!--Aufgabe5-->
+
+## Datenschutz
+
+<!--Aufgabe6-->
 **Nach dem Realisieren der Aufgabe erhalten Sie eine weitergeleitete Email vom Auftraggeber mit folgendem Inhalt:**
 
 >Sehr geehrte Damen und Herren,<br>
@@ -172,4 +183,4 @@ Speichern die abschließend den gelesenen Text mit aktuellem Zeitstempel in eine
 >Dr. Harald Wöhler
 
 **Beantworten Sie diese Email, nachdem Sie sich zuvor über die rechtlichen Grundlagen informiert haben!**
-<!--Aufgabe5-->
+<!--Aufgabe6-->
