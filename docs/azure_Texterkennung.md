@@ -146,10 +146,10 @@ curl --request GET
 - Erweitern Sie ihr Programm aus Aufgabe 1 um diesen Get-Request und lassen Sie sich den Body des Response auf der Konsole ausgeben.
 
 <!--Aufgabe2-->
-<!--Aufgabe3-->
 
 ### Aufgabe 3
 
+<!--Aufgabe3-->
 Analysieren Sie das im Response erhaltene JSON und zeichnen Sie auf das Bild den Bereich des erkannten Textes und den Text ein.
 
 >Wenn Sie als Programmiersprache Python verwenden, so können Sie hierzu die Bibliothek **mathplotlib** verwenden.  
