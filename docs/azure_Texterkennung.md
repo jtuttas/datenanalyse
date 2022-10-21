@@ -11,7 +11,9 @@ Azure bietet eine vielzahl von trainierten Neuronalen Netzwerken für diverse Au
 
 ### Einrichten der Texterkennung in Azure
 
-Melden Sie sich zunächst in [Azure an](https://azure.microsoft.com/de-de/get-started/azure-portal/). Erstellen Sie in dem Portal eine neue **Ressourcengruppe** und fügen Sie dieser den Dienst **Maschinelle Sehen** hinzu.
+Melden Sie sich zunächst in [Azure an](https://azure.microsoft.com/de-de/get-started/azure-portal/). Für die  Anmeldung bei Azure muss einmalig eine Telefonnummer verifiziert werden (eine Kreditkarte ist nicht notwendig). Schülerinnen und Schüler erhalten dabei ein Startguthaben von 100$ ! 
+
+Nach der Anmeldung erstellen Sie in dem Portal zunächst eine neue **Ressourcengruppe** und fügen Sie dieser den Dienst **Maschinelle Sehen** hinzu.
 
 ![Ressourcengruppe erstellen](images/azure1.png)
 
