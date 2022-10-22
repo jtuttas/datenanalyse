@@ -1,0 +1,1491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <ID-Nummer>1</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>100.00 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>2</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>80.62 %</Klassenarbeit>
+    <K1>70.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>64.29 %</K3>
+    <K4>72.22 %</K4>
+    <K5>77.27 %</K5>
+    <K6>83.33 %</K6>
+    <K7>93.58 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>3</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>95.07 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>4</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>85.80 %</Klassenarbeit>
+    <K1>50.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>5</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>94.93 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>88.89 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>6</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>86.67 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>97.22 %</K4>
+    <K5>-</K5>
+    <K6>94.44 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>7</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>0.00 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>88.89 %</K6>
+    <K7>84.89 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>8</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>9</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>75.25 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>64.29 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>97.93 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>10</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>91.74 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>11</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>79.28 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>12</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>67.61 %</Klassenarbeit>
+    <K1>30.00 %</K1>
+    <K2>-</K2>
+    <K3>21.43 %</K3>
+    <K4>0.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>38.89 %</K6>
+    <K7>33.13 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>13</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>90.58 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>74.12 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>14</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>89.28 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>77.78 %</K4>
+    <K5>95.45 %</K5>
+    <K6>-</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>15</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>78.70 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>78.57 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>43.69 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>16</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>95.11 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>17</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>83.88 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>-</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>18</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>59.93 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>-</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>83.33 %</K6>
+    <K7>80.95 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>19</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>97.83 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>78.57 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>20</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>87.32 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>21</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>83.19 %</Klassenarbeit>
+    <K1>65.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>57.14 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>22</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>96.56 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>23</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>85.07 %</Klassenarbeit>
+    <K1>87.50 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>-</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>24</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>91.74 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>25</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>95.07 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>88.89 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>26</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>86.74 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>97.93 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>27</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>97.83 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>28</ID-Nummer>
+    <Abteilung>J</Abteilung>
+    <Klassenarbeit>87.86 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>29</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>93.48 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>97.22 %</K4>
+    <K5>100.00 %</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>30</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>-</K1>
+    <K2>-</K2>
+    <K3>-</K3>
+    <K4>-</K4>
+    <K5>36.36 %</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>31</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>97.83 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>32</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>83.77 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>52.36 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>88.89 %</K6>
+    <K7>82.82 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>33</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>87.68 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>61.93 %</K3>
+    <K4>100.00 %</K4>
+    <K5>90.91 %</K5>
+    <K6>94.44 %</K6>
+    <K7>82.82 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>34</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>88.55 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>88.89 %</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>35</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>84.24 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>50.00 %</K3>
+    <K4>94.44 %</K4>
+    <K5>86.36 %</K5>
+    <K6>77.78 %</K6>
+    <K7>78.47 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>36</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>90.72 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>28.57 %</K3>
+    <K4>97.22 %</K4>
+    <K5>100.00 %</K5>
+    <K6>55.56 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>37</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>88.41 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>71.43 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>94.44 %</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>38</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>42.46 %</Klassenarbeit>
+    <K1>-</K1>
+    <K2>-</K2>
+    <K3>-</K3>
+    <K4>-</K4>
+    <K5>-</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>39</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>95.65 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>40</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>58.37 %</Klassenarbeit>
+    <K1>35.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>28.57 %</K3>
+    <K4>27.78 %</K4>
+    <K5>45.45 %</K5>
+    <K6>44.44 %</K6>
+    <K7>50.31 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>41</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>81.78 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>97.22 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>83.02 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>42</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>61.30 %</Klassenarbeit>
+    <K1>45.00 %</K1>
+    <K2>78.57 %</K2>
+    <K3>28.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>36.36 %</K5>
+    <K6>41.67 %</K6>
+    <K7>20.70 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>43</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>67.83 %</Klassenarbeit>
+    <K1>55.00 %</K1>
+    <K2>78.57 %</K2>
+    <K3>-</K3>
+    <K4>80.56 %</K4>
+    <K5>95.45 %</K5>
+    <K6>11.11 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>44</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>55.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>42.86 %</K3>
+    <K4>83.33 %</K4>
+    <K5>100.00 %</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>45</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>90.43 %</Klassenarbeit>
+    <K1>-</K1>
+    <K2>100.00 %</K2>
+    <K3>52.36 %</K3>
+    <K4>100.00 %</K4>
+    <K5>45.45 %</K5>
+    <K6>-</K6>
+    <K7>56.73 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>46</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>88.12 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>86.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>47</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>85.91 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>33.33 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>56.52 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>48</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>90.29 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>97.93 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>49</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>96.38 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>52.36 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>50</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>95.83 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>86.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>51</ID-Nummer>
+    <Abteilung>K</Abteilung>
+    <Klassenarbeit>83.04 %</Klassenarbeit>
+    <K1>45.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>52.38 %</K3>
+    <K4>-</K4>
+    <K5>72.73 %</K5>
+    <K6>50.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>52</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>100.00 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>53</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>99.28 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>87.16 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>54</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>84.78 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>75.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>55</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>49.71 %</Klassenarbeit>
+    <K1>70.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>56</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>95.65 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>85.71 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>57</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>86.67 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>83.33 %</K6>
+    <K7>43.48 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>58</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>93.48 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>85.09 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>59</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>91.30 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>97.22 %</K4>
+    <K5>90.91 %</K5>
+    <K6>100.00 %</K6>
+    <K7>78.47 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>60</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>89.57 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>78.57 %</K3>
+    <K4>97.22 %</K4>
+    <K5>95.45 %</K5>
+    <K6>94.44 %</K6>
+    <K7>97.93 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>61</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>81.59 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>94.44 %</K6>
+    <K7>93.79 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>62</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>93.48 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>78.68 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>63</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>75.94 %</Klassenarbeit>
+    <K1>70.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>78.68 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>64</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>87.32 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>65</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>81.20 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>78.57 %</K3>
+    <K4>94.44 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>93.79 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>66</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>79.42 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>71.43 %</K2>
+    <K3>100.00 %</K3>
+    <K4>83.33 %</K4>
+    <K5>95.45 %</K5>
+    <K6>77.78 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>67</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>94.20 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>68</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>85.22 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>82.82 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>69</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>87.93 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>82.61 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>70</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>93.48 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>75.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>97.22 %</K6>
+    <K7>87.16 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>71</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>92.46 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>67.86 %</K3>
+    <K4>94.44 %</K4>
+    <K5>100.00 %</K5>
+    <K6>88.89 %</K6>
+    <K7>89.23 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>72</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>92.64 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>88.89 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>73</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>93.48 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>74</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>92.46 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>75</ID-Nummer>
+    <Abteilung>L</Abteilung>
+    <Klassenarbeit>62.75 %</Klassenarbeit>
+    <K1>30.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>77.78 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>76</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>45.83 %</Klassenarbeit>
+    <K1>40.00 %</K1>
+    <K2>-</K2>
+    <K3>42.86 %</K3>
+    <K4>83.33 %</K4>
+    <K5>72.73 %</K5>
+    <K6>97.22 %</K6>
+    <K7>73.91 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>77</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>67.79 %</Klassenarbeit>
+    <K1>30.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>39.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>78</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>85.40 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>90.91 %</K5>
+    <K6>97.22 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>79</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>81.52 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>97.22 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>80</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>92.46 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>88.89 %</K6>
+    <K7>78.47 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>81</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>88.12 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>67.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>81.82 %</K5>
+    <K6>100.00 %</K6>
+    <K7>60.87 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>82</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>86.12 %</Klassenarbeit>
+    <K1>60.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>77.27 %</K5>
+    <K6>77.78 %</K6>
+    <K7>84.89 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>83</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>65.76 %</Klassenarbeit>
+    <K1>-</K1>
+    <K2>100.00 %</K2>
+    <K3>60.71 %</K3>
+    <K4>100.00 %</K4>
+    <K5>81.82 %</K5>
+    <K6>72.22 %</K6>
+    <K7>43.48 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>84</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>95.11 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>91.41 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>85</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>25.07 %</Klassenarbeit>
+    <K1>0.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>-</K3>
+    <K4>-</K4>
+    <K5>-</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>86</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>97.10 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>87</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>62.39 %</Klassenarbeit>
+    <K1>40.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>42.86 %</K3>
+    <K4>69.44 %</K4>
+    <K5>81.82 %</K5>
+    <K6>38.89 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>88</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>97.22 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>89</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>38.04 %</Klassenarbeit>
+    <K1>45.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>25.00 %</K3>
+    <K4>44.44 %</K4>
+    <K5>40.91 %</K5>
+    <K6>-</K6>
+    <K7>45.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>90</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>93.80 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>85.71 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>95.65 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>91</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>10.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>-</K3>
+    <K4>-</K4>
+    <K5>-</K5>
+    <K6>-</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>92</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>70.14 %</Klassenarbeit>
+    <K1>75.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>25.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>78.26 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>93</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>76.09 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>88.89 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>69.57 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>94</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>6.52 %</Klassenarbeit>
+    <K1>0.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>28.57 %</K3>
+    <K4>41.67 %</K4>
+    <K5>-</K5>
+    <K6>-</K6>
+    <K7>0.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>95</ID-Nummer>
+    <Abteilung>M</Abteilung>
+    <Klassenarbeit>97.28 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>96</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>94.20 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>97.22 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>97</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>89.13 %</Klassenarbeit>
+    <K1>-</K1>
+    <K2>92.86 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>-</K6>
+    <K7>91.30 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>98</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>91.30 %</Klassenarbeit>
+    <K1>65.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>99</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>92.75 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>86.11 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>93.69 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>100</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>94.09 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>97.22 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>101</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>94.93 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>102</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>80.43 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>88.89 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>103</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>84.78 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>87.16 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>104</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>96.96 %</Klassenarbeit>
+    <K1>95.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>94.44 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>78.26 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>105</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>88.84 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>88.89 %</K6>
+    <K7>82.61 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>106</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>94.35 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>93.79 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>107</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>92.03 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>82.14 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>108</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>100.00 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>109</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>98.55 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>67.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>86.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>110</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>87.43 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>100.00 %</K3>
+    <K4>50.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>95.86 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>111</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>47.43 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>78.57 %</K2>
+    <K3>50.00 %</K3>
+    <K4>58.33 %</K4>
+    <K5>81.82 %</K5>
+    <K6>100.00 %</K6>
+    <K7>83.23 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>112</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>88.04 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>85.71 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>94.44 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>113</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>87.39 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>92.86 %</K3>
+    <K4>97.22 %</K4>
+    <K5>81.82 %</K5>
+    <K6>97.22 %</K6>
+    <K7>69.77 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>114</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>68.59 %</Klassenarbeit>
+    <K1>85.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>57.14 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>86.96 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>115</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>73.80 %</Klassenarbeit>
+    <K1>0.00 %</K1>
+    <K2>-</K2>
+    <K3>92.86 %</K3>
+    <K4>88.89 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>116</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>92.64 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>78.57 %</K3>
+    <K4>100.00 %</K4>
+    <K5>90.91 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>117</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>75.69 %</Klassenarbeit>
+    <K1>70.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>71.43 %</K3>
+    <K4>83.33 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>43.48 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>118</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>77.61 %</Klassenarbeit>
+    <K1>80.00 %</K1>
+    <K2>64.29 %</K2>
+    <K3>71.43 %</K3>
+    <K4>100.00 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>97.93 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>119</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>-</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>100.00 %</K4>
+    <K5>86.36 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>120</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>89.31 %</Klassenarbeit>
+    <K1>75.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>100.00 %</K3>
+    <K4>94.44 %</K4>
+    <K5>100.00 %</K5>
+    <K6>100.00 %</K6>
+    <K7>100.00 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>121</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>88.62 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>100.00 %</K2>
+    <K3>71.43 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>52.38 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>122</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>60.33 %</Klassenarbeit>
+    <K1>100.00 %</K1>
+    <K2>92.86 %</K2>
+    <K3>92.86 %</K3>
+    <K4>100.00 %</K4>
+    <K5>95.45 %</K5>
+    <K6>100.00 %</K6>
+    <K7>-</K7>
+  </row>
+  <row>
+    <ID-Nummer>123</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>79.46 %</Klassenarbeit>
+    <K1>90.00 %</K1>
+    <K2>85.71 %</K2>
+    <K3>57.14 %</K3>
+    <K4>69.44 %</K4>
+    <K5>95.45 %</K5>
+    <K6>86.11 %</K6>
+    <K7>48.03 %</K7>
+  </row>
+  <row>
+    <ID-Nummer>124</ID-Nummer>
+    <Abteilung>N</Abteilung>
+    <Klassenarbeit>68.26 %</Klassenarbeit>
+    <K1>45.00 %</K1>
+    <K2>89.29 %</K2>
+    <K3>67.86 %</K3>
+    <K4>80.56 %</K4>
+    <K5>63.64 %</K5>
+    <K6>-</K6>
+    <K7>37.27 %</K7>
+  </row>
+</root>
