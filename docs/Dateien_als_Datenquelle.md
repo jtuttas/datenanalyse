@@ -98,7 +98,7 @@ Ein Paket in Python installiert man über den Python Paket Manger PIP wie folgt:
 pip install {Name des Paketes}
 ```
 
-### Aufgabe Daten einlesen
+### Aufgabe: Daten einlesen
 
 Entscheiden Sie sich für ein Dateiformat welches Sie bearbeiten wollen? Bilden Sie dazu Gruppen für die drei genanten Dateitypen und schreiben Sie ein Python Programm welches die jeweilige Datei einließt. Dabei sollten die Daten gleich in einem DataFrame (Datenformat für die Auswertung mit **pandas**) eingelesen werden. Geben Sie nach dem Einlesen des Datensatzes das Dataframe im Jupyter Notebook aus. Die Ausgabe sollte der folgenden Abbildung entsprechen.
 
@@ -116,7 +116,7 @@ Leider sind die Daten für die weitere Bearbeitung nicht geeignet und müssen en
 - Die Notenwerte liegen in den Daten als Zeichenketten vor, sinnvoller wäre es hier, wenn die Daten als *float* vorliegen würden.
 - Wenn ein Schüler einen Kapitel-Test nicht mitgeschrieben hat, so ist der Datensatz mit '-' gekennzeichnet. Sinnvoller wäre es, wenn hier der Wert 0.0 eingetragen wäre.
 
-## Aufgabe Daten umwandeln
+## Aufgabe: Daten umwandeln
 
 Wandeln Sie die Werte des DataFrames entsprechend der oben durchgeführten Überlegungen um und geben Sie anschließend das DataFrame Objekt im Jupyter Notebook um und kontrollieren Sie die Ausgabe.
 
