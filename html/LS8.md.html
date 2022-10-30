@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LS8.md</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="fidp---lernfeld-10c">FIDP - Lernfeld 10c</h1>
+<h2 id="ls-10.8-cloud-ki-systeme-nutzen">LS 10.8: Cloud KI Systeme nutzen</h2>
+<table>
+<colgroup>
+<col style="width: 30%"></col>
+<col style="width: 30%"></col>
+<col style="width: 38%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lernfeld</th>
+<th style="text-align: left;">Bildungsgang</th>
+<th style="text-align: center;">Ausbildungsjahr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LF 10c:</br><span class="math inline">$\newline$</span>Werkzeuge des maschinellen Lernens einsetzen</td>
+<td style="text-align: left;">Fachinformatiker für Daten- und Prozessanalyse (FIDP)</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kompetenzformulierung">Kompetenzformulierung</h3>
+<p>“<strong>Die Schülerinnen und Schüler verfügen über die Kompetenz, maschinelles Lernen zur Problemlösung anzuwenden und den Lernfortschritt des Entscheidungssystems zu begleiten</strong>”.</p>
+<p>Die Schülerinnen und Schüler <strong>stellen</strong> Einsatzmöglichkeiten des maschinellen Lernens <strong>dar</strong>. Auf dieser Basis entscheiden sie über die betriebswirtschaftlich sinnvolle Eignung maschinellen Lernens bezüglich kundenspezifischer Problemstellungen.</p>
+<p>Sie führen die benötigten Daten zusammen. Dazu analysieren sie freie und kommerzielle Datenquellen und <strong>wählen</strong> diese nach Eignung zur Lösung der Aufgabe durch maschinelles Lernen aus. Die Schülerinnen und Schüler berücksichtigen datenschutzrechtliche, moralische und wirtschaftliche Aspekte.</p>
+<p>Sie <strong>legen</strong> für die Aufgabenstellung maschinellen Lernens adäquate Werkzeuge und Systeme <strong>fest</strong>.</p>
+<p>Sie bereiten das ausgewählte System technisch vor und <strong>implementieren</strong> die Schnittstellen zum Datenimport.</p>
+<p>Die Schülerinnen und Schüler <strong>überwachen</strong> die technische Funktionsfähigkeit im Hinblick auf den Lernfortschritt des Systems.</p>
+<p>Sie <strong>reflektieren</strong> die Wirksamkeit des angelernten Entscheidungssystems. Dabei diskutieren sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.</p>
+<table>
+<colgroup>
+<col style="width: 30%"></col>
+<col style="width: 30%"></col>
+<col style="width: 38%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curricularer Bezug</th>
+<th style="text-align: left;">Titel der Lernsituation (Kurzfassung)</th>
+<th style="text-align: center;">Geplanter Zeitrichtwert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27</td>
+<td style="text-align: left;">LS 10.8: Cloud KI Systeme nutzen</td>
+<td style="text-align: center;">12 Unterrichtsstunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handlungssituation">Handlungssituation</h3>
+<p>Sie arbeiten bei der ChangeIT GmbH in der Abteilung Datenanalyse und erhalten folgenden Auftrag:</p>
+<blockquote>
+<p>Der Besitzer eines Eigenheims möchte gerne wissen welche Autos für wie lange auf seinen Parkplatz parken. Die Kamera vor dem Haus mach dazu alle 5 Minuten ein Bild von dem Parkplatz. Sie erhalten der Auftrag eine Anwendungssystem zu entwickeln welches das KFZ Kennzeichen erfasst und dieses mit einem Zeitstempel in eine Datenbank schreibt.</p>
+</blockquote>
+<p>Da das Antrainieren einer eigenen Texterkennungs KI zu aufwendig erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der Azure Bilderkennungsdienst genutzt werden.</p>
+<h3 id="handlungsergebnis">Handlungsergebnis</h3>
+<ul>
+<li>Bildanalyse (KFZ Kennzeichen) eines geparkten Autos.</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="vorausgesetzte-fähigkeiten-und-kenntnisse">Vorausgesetzte Fähigkeiten und Kenntnisse</h3>
+<table>
+<colgroup>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Handlungskompetenz<br /><span class="math inline">$\newline$</span>(Fachkompetenz und Personale Kompetenz)</th>
+<th style="text-align: left;">Inhalte</th>
+<th style="text-align: left;">Sozialform/Methoden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Informieren bzw. Analysieren</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler Analysieren den Auftrag und identifizieren einzelne Arbeitspakete. Für diese Arbeitspakete bestimmen Sie, ob dazu noch weitere Informationen notwendig sind. <br /><span class="math inline">$\newline$</span>Für das Arbeitspaket des maschinellen Sehens mit Azure lesen Sie den zur Verfügung gestellten Artikel.</td>
+<td style="text-align: left;">- Zerlegen des Auftrages in einzelne Arbeitspakete <br /> <span class="math inline">$\newline$</span>- Die Azure REST Api</td>
+<td style="text-align: left;">Einzelarbeit / Klassenplenum <br /><br /> <span class="math inline">$\newline$</span> <span class="math inline">$\newline$</span><strong>Hinweise für den DU</strong>: Das Gliedern der Arbeitspakete kann in Moodle über die Aktivität <em>Moodle Board</em> erfolgen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Planen / Entscheiden</td>
+<td style="text-align: left;">Die Schülerinnen und Schülern Planen in Kleingruppen das weitere Vorgehen zum Bewältigen des Arbeitsauftrages. Dazu Priorisieren Sie einzelne Arbeitspakete nach ihrer Zeitlichen Reihenfolge und Wichtigkeit</td>
+<td style="text-align: left;">Priorisieren von Arbeitspaketen</td>
+<td style="text-align: left;">Gruppenarbeit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Durchführen</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler implementieren die gewünschte Funktionalität entsprechend des Arbeitsauftrages</td>
+<td style="text-align: left;">Implementieren der Funktionalität</td>
+<td style="text-align: left;">Moodle Aufgabe <strong>A1</strong> bis <strong>A3</strong> (<strong>A4</strong> ist optional)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kontrollieren / Bewerten</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler bewerten das Ergebnis hinsichtlich der Qualität. <br /> <span class="math inline">$\newline$</span>Die Schülerinnen und Schüler erstellen für den Kunden ein Angebot aus denen die Kosten für den Täglichen Betrieb des Systems ersichtlich werden.</td>
+<td style="text-align: left;">- Überprüfen der Funktionalität.<br /><span class="math inline">$\newline$</span><br /><span class="math inline">$\newline$</span>- Erstellen eines Angebotes</td>
+<td style="text-align: left;">Gruppenarbeit<br /><span class="math inline">$\newline$</span> Moodle Aufgabe <strong>A5</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reflektieren</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler erhalten eine Email eines Autobesitzers und verfassen eine Antwort, die mögliche Datenschutzprobleme thematisiert</td>
+<td style="text-align: left;">Schreiben einer Email bzgl. Datenschutzaspekte bei automatischen KI Systemen</td>
+<td style="text-align: left;">Moodle Aufgabe <strong>A6</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arbeitsmaterialien-links">Arbeitsmaterialien / Links</h3>
+<ul>
+<li>Moodle-Kurs: <a href="https://moodle.mm-bbs.de/moodle/course/view.php?id=2812">LF10c: Werkzeuge des maschinellen Lernens einsetzen</a></li>
+<li><a href="https://github.com/jtuttas/datenanalyse">GitHub Repository</a></li>
+</ul>
+<h3 id="schulische-entscheidungen">Schulische Entscheidungen</h3>
+<ul>
+<li>Für die Nutzung des Azure Dienstes kann der Zugang genutzt werden, der im Rahmen des O365 Angebots vorliegt.</li>
+<li>Die Implementierung der Software sollte in Python unter Verwendung von VS-Code erfolgen. Hier sollte möglichst das in der Python Extension enthaltene Jupyter Notebook verwenden werden.</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="leistungsnachweise">Leistungsnachweise</h3>
+<ul>
+<li>Bewertung des Handlungsergebnisses ggf. im Form eines Fachgespräches mit den einzelnen Arbeitsgruppen.</li>
+</ul>
+<h3 id="mögliche-verknüpfungen-zu-anderen-lernfeldern-fächern">Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern</h3>
+<ul>
+<li>Politik / Ethik: Sekundäre personengebundene Daten</li>
+</ul>
+</body>
+</html>
