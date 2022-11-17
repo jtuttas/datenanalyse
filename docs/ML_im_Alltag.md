@@ -1,4 +1,4 @@
-# Maschine Leaning im Alltag
+# Maschine Learning im Alltag
 
 ## Handlungssituation
 
