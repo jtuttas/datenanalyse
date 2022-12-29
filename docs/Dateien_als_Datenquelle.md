@@ -2,18 +2,17 @@
 
 ## Handlungssituation
 
-Eine der ersten Kunde der neu eingeführten Abteilung "Daten- und Prozessanalyse" der ChangeIT GmbH ist eine große berufsbildenden Schule.
+>Eine der ersten Kunde der neu eingeführten Abteilung "Daten- und Prozessanalyse" der ChangeIT GmbH ist eine große berufsbildenden Schule.
+>
+>Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs ausgewertet haben. Diese Daten liegen sowohl als *csv*, *xml* und *json* vor.
 
-Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs ausgewertet haben. Diese Daten liegen sowohl als *csv*, *xml* und *json* vor.
-
-## Daten der Schülergruppe.
+## Daten der Schülergruppe
 
 <!--dateiinfo-->
-Die Daten der Schülergruppe liegen in drei unterschiedlichen Formaten vor.
 
 ### CSV Darstellung
 
-Eine Datei **moodle.csv** enthält die Daten in Form von CSV.
+Eine Datei [Moodle.csv](../Data/Moodle.csv) enthält die Daten in Form von CSV.
 
 ```csv
 ID-Nummer;Abteilung;Klassenarbeit;K1;K2;K3;K4;K5;K6;K7
@@ -24,7 +23,7 @@ ID-Nummer;Abteilung;Klassenarbeit;K1;K2;K3;K4;K5;K6;K7
 
 ### JSON Darstellung
 
-Eine Weitere Datei **Moodle.json** enthält die Daten in JSON Form.
+Eine Weitere Datei [Moodle.json](../Data/Moodle.json) enthält die Daten in JSON Form.
 
 ```json
 [
@@ -45,7 +44,7 @@ Eine Weitere Datei **Moodle.json** enthält die Daten in JSON Form.
 
 ### XML Darstellung
 
-Eine weitere Datei **Moodle.xml** erhält die Daten in Form einer XML Datei.
+Eine weitere Datei [Moodle.xml](../Data/Moodle.xml) erhält die Daten in Form einer XML Datei.
 
 ```xml
 <root>
@@ -68,15 +67,15 @@ Eine weitere Datei **Moodle.xml** erhält die Daten in Form einer XML Datei.
 
 Die einzelnen Attribute des Datensatzes haben dabei folgende Bedeutung.
 
-- ID-Nummer: Eindeutige ID eines Schülers
-- Abteilung: Jeweilige Klasse des Schülers (J-N)
-- Klassenarbeit: Ergebnis der Klassenarbeit
-- K1 bis K7: Ergebnisse in einzelnen Kapitel-Tests.
+- **ID-Nummer**: Eindeutige ID eines Schülers
+- **Abteilung**: Jeweilige Klasse des Schülers (J-N)
+- **Klassenarbeit**: Ergebnis der Klassenarbeit
+- **K1 bis K7**: Ergebnisse in einzelnen Kapitel-Tests.
 <!--dateiinfo-->
 
 ## Arbeitsprozess
 
-Im weiteren Verlauf der Kurses werden wir zunächst folgenden Arbeitsprozess anwenden.
+Im weiteren Verlauf der Kurses werden wir zunächst immer wieder folgenden Arbeitsprozess anwenden.
 
 ![Arbeitsprouess](arbeitsprozess.png)
 
@@ -90,7 +89,7 @@ Im weiteren Verlauf der Kurses werden wir zunächst folgenden Arbeitsprozess anw
 
 ### Hinweise
 
->Für die Analyse und Visualisierung der Daten verwenden wir das Python Paket **pandas** verwenden. Wenn Sie diese Pakete noch nicht installiert haben, so holen Sie dieses bitte nach. 
+>Für die Analyse und Visualisierung der Daten verwenden wir das Python Paket **pandas** verwenden. Wenn Sie diese Pakete noch nicht installiert haben, so holen Sie dieses bitte nach.
 
 Ein Paket in Python installiert man über den Python Paket Manger PIP wie folgt:
 
@@ -123,18 +122,29 @@ Wandeln Sie die Werte des DataFrames entsprechend der oben durchgeführten Über
 <!--dateiaufgabe2-->
 
 ## Erste Statistische Grunddaten ermitteln
-
-Wir wollen nun die Daten einer ersten statistischen Untersuchung unterziehen.
+<!--dateiaufgabe3-->
+Wir wollen nun die Daten einer ersten statistischen Untersuchung unterziehen. Dazu sollen wichtige statistische Grunddaten ermittelt werden. 
 
 Das arithmetische Mittel eines Datenmenge berechnet sich wie folgt:  
 
-Die Standardabweichung einer Datenmenge X berechnet sich wie folgt:
+$\bar{x}=\frac{1}{N}*\sum_{i=1}^{N}x_{i}$
 
-TODO hier ergänzen
+Die Varianz $var(x)$ einer Datenmenge X berechnet sich wie folgt:
 
-$\sigma=\sum_{i=0}^{i=N}(Xi)$
+$var(x)=\frac{1}{N-1}*\sum_{i=1}^{N}( x_{i} - \bar{x})^{2}$
 
-### statistische Grunddaten ermitteln
+Die Standardabweichung $\sigma$ ist dann die Quadratwurzel der Varianz.
+
+$\sigma=\sqrt{var(x))}$
+
+Dies Werte lassen sich auch mittels der **pandas**-Bibliothek ermitteln:
+
+- **mean(column)** ermittelt den arithmetischen Mittelwert einer Spalte
+- **median(column)** ermittelt das Mittel (mean) einer Spalte
+- **std(column)** ermittelt die Standardabweichung einer Spalte
+
+
+### Aufgabe: statistische Grunddaten ermitteln
 
 Ermitteln Sie mit Hilfe von **pandas** folgende Daten.
 
@@ -144,6 +154,8 @@ Ermitteln Sie mit Hilfe von **pandas** folgende Daten.
 - Notenspiegel der Klassenarbeit (also wie viele Schüler haben ein "1", wie viele Schüler eine "2" usw.)
 
 **Hinweis**: Nutzen Sie zum ermitteln der Daten die Dokumentation zum [pandas Dataframe](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html).
+
+
 
 ## Daten visualisieren
 
