@@ -53,6 +53,10 @@ Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (*medv*) un
 
 Die lineare Regression versucht nun durch diese Datenmenge eine gerade zu legen, um auf diese Weise Vorhersagen von zukünftigen Ereignissen zu bestimmen. Wenn dieses gelingt, dann könnte z.B. ein Immobilienpreis anhand der Größe der Wohnung bestimmt werden.
 
+> Weiter Informationen:
+>
+>-  [Studifix](https://studyflix.de/statistik/lineare-regression-2147)
+
 Eine lineare Gleichung hat dabei folgende allgemeine Form.
 
 $$f(x) = a \cdot x + b$$
