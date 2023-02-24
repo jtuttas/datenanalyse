@@ -2,10 +2,13 @@
 
 ## Handlungssituation
 
+<!--lrg_Handlungssituation-->
 > Ein großes internationales Immobilienbüro beauftragt die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH mit der Entwicklung eines Modells zur Vorhersage von Immobilienpreise.
 >
 > Sie wirken maßgeblich an der Entwicklung des Vorhersagemodells mit und Beurteilen die Qualität des Modells.
+<!--lrg_Handlungssituation-->
 
+<!--lrg_daten-->
 ## Die Daten
 
 Der Kunde stellt ihnen die Daten als *CSV* Datei zur Verfügung. Sie können diese Datei [hier](../Data/bo.csv) laden. Der Datensatz hat dabei folgenden Aufbau.
@@ -29,6 +32,9 @@ Die einzelnen Spalten bedeuten dabei:
 - LSTAT: Prozentsatz der Bevölkerung mit niedrigem sozioökonomischem Status
 - MEDV: Medianwert von Eigentumswohnungen in 1000er Dollar
 
+<!--lrg_daten-->
+
+<!--lrg_aufgabe1-->
 Ein Kollege der Abteilung Datenanalyse hat sich bereits die Daten angeschaut und basierend auf dem Daten die Korrelation der Daten als Heatmap dargestellt. Er stellt Ihnen das Ergebnis seiner Analyse zur Verfügung:
 
 ![Heatmap Correlation](./images/bo_heatmap_corr.png)
@@ -40,7 +46,9 @@ Wählen Sie zunächst zwei für die Aufgabe interessanten Korrelationen (**Featu
 Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (*medv*) und der Anzahl der Zimmer (*rm*) dargestellt.
 
 ![medv über rm](./images/bo_preis_zimmer.png)
+<!--lrg_aufgabe1-->
 
+<!--lrg_info-->
 ## lineare Regression
 
 Die lineare Regression versucht nun durch diese Datenmenge eine gerade zu legen, um auf diese Weise Vorhersagen von zukünftigen Ereignissen zu bestimmen. Wenn dieses gelingt, dann könnte z.B. ein Immobilienpreis anhand der Größe der Wohnung bestimmt werden.
@@ -58,9 +66,11 @@ $a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1
 $b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n}$
 
 Dabei sind $x_i$ für das o.g. Beispiel die Werte für die Anzahl der Zimmer pro Wohneinheit (**rm**) und $y_i$ der daraus resultierende Preis der Wohnung.
+<!--lrg_info-->
 
 ### Übungsaufgabe 1
 
+<!--lrg_uebung1-->
 Gehen Sie von folgenden Daten aus:
 
 ```py
@@ -74,9 +84,11 @@ Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 ![Übung1](./images/lin_reg_ueb1.png)
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
+<!--lrg_uebung1-->
 
 ### Übungsaufgabe 2
 
+<!--lrg_uebung2-->
 Überprüfen Sie ihre berechneten Werte, indem Sie die Gerade $f(x) = a \cdot x + b$ in die Datenmenge einzeichen. Z.B. mit Hilfe des folgenden Python Codes.
 
 ```py
@@ -104,8 +116,10 @@ from sklearn.linear_model import LinearRegression
 Überprüfen Sie mit Hilfe der Methode **fit()** ihre zuvor berechneten Werte und tragen Sie die Steigungsgerade in den Scatter Plot ein.
 
 ![Übung 2 Lösung](./images/lin_reg_ueb2_lsg.png)
+<!--lrg_uebung2-->
 
 ## Aufgabe 2
+<!--lrg_aufg2-->
 
 Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Gerade $f(x) = a \cdot x + b$ und tragen Sie diese wie in der Übung in die Datenmenge ein.
 
@@ -143,14 +157,18 @@ y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 print('R^2: ', r2)
 ```
+<!--lrg_aufg2-->
 
 ## Aufgabe 3
+<!--lrg_aufg3-->
 
 Führen Sie wie beschrieben die Regressions Analyse mit **allen** bekannten *Features* mit dem Datensatz durch und lassen Sie sich den Wert $R^2$ ausgeben.
 
 > Diskutieren Sie Maßnahmen, wie die Qualität des Vorhersagemodells verbessert werden kann!
+<!--lrg_aufg3-->
 
 ## Aufgabe 4
+<!--lrg_aufg4-->
 
 Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Präsentieren Sie anschließende kurz der Klasse ihr Ergebnis.
 
@@ -160,3 +178,5 @@ Folgende Datensätze können z.B. genutzt werden:
 - **eBay auction data**: Auction data from various eBay.com objects over various length auctions. [Download](../Data/auc.csv) / [Download und Beschreibung](https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data)
 - **Bike Sharing Dataset**: Hourly and daily count of rental bikes in a large city. [Download](../Data/lbike.csv) / [Download und Beschreibung](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset)
 - Oder wählen Sie einen eigenen Datensatz z.B. aus [https://www.kaggle.com/](https://www.kaggle.com/)!
+
+<!--lrg_aufg4-->
