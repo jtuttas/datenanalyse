@@ -13,7 +13,7 @@
 
 Der Kunde stellt ihnen die Daten als *CSV* Datei zur Verfügung. Sie können diese Datei [hier](../Data/bo.csv) laden. Der Datensatz hat dabei folgenden Aufbau.
 
-![boston](./images/bo.png)
+![Boston House Prices](./images/bo.png)
 
 Die einzelnen Spalten bedeuten dabei:
 
@@ -47,7 +47,7 @@ Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (*medv*) un
 
 ![medv über rm](./images/bo_preis_zimmer.png)
 <!--lrg_aufgabe1-->
-
+<div style="page-break-after: always;"></div>
 <!--lrg_info-->
 ## lineare Regression
 
@@ -82,6 +82,7 @@ Gehen Sie von folgenden Daten aus:
 
 x=[4,6,8,10,12]
 y=[10,20,24,32,45]
+
 ```
 
 Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
@@ -100,6 +101,7 @@ Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x +
 Überprüfen Sie ihre berechneten Werte, indem Sie die Gerade $f(x) = a \cdot x + b$ in die Datenmenge einzeichen. Z.B. mit Hilfe des folgenden Python Codes.
 
 ```py
+
 a=2 # Ihr berechneter Wert für a
 b=4 # Ihr berechneter Wert für b
 x=[4,6,8,10,12]
@@ -109,6 +111,7 @@ gy = [a*4+b, a*12+b]
 plt.plot(gx, gy,color="red")
 plt.scatter(x, y)
 plt.show()
+
 ```
 
 ![Übung2](./images/lin_reg_ueb2.png)
@@ -116,7 +119,9 @@ plt.show()
 Das Berechnen der Steigung **a** und des Achsenabschnitts **b** ist natürlich auch mit Hilfe einer Methode aus der Bibliothek **sklearn.linear_model** konkret die Klasse **LinearRegression**. Importieren Sie also zunächst die entsprechende Klasse:
 
 ```py
+
 from sklearn.linear_model import LinearRegression
+
 ```
 
 Über die Methode **fit()** dieser Klasse können die Parameter **a** und **b** bestimmt werden. Diese befinden sich nach korrektem Aufruf der Methode im Attribut **coef_[0]** (für die Steigung **a**) und **intercept_** (für den Achsenabschnitt **b**). 
@@ -158,16 +163,20 @@ Zur Überprüfung des daraus entstandene Vorhersagemodells muss nun der Datensat
 Zum Aufteilen ein Datensatzes in Trainings- / Testdaten dient auch wieder eine Methode aus dem Paket **sklearn.model_selection**, konkret die Methode **train_test_split()** die dieser Aufteilung vornimmt.
 
 ```py
+
 from sklearn.model_selection import train_test_split
 feature_names=["rm","b","dis"]
 X_train, X_test, y_train, y_test = train_test_split(df[feature_names], df['medv'], test_size=0.2, random_state=0)
+
 ```
 
 Anschließend kann das Modell mit den Trainingsdaten trainiert werden.
 
 ```py
+
 model = LinearRegression()
 model.fit(X_train, y_train)
+
 ```
 
 Die Einzelnen Faktoren $a_1$ bis $a_n$ befinden sich dabei wie zuvor in dem Attribut *model.coeff_* in Form eines Arrays und *model.intercept* der Wert für den Achsenabschnitt *b*.
@@ -177,11 +186,13 @@ Um nun aufgrund unseres Modells eine Vorhersage zu treffen, dient die Funktion *
 Über die Qualität des Modells gibt u.a. Der Wert $R^2$ aus. Je höher der $R^2$-Wert, desto besser die Vorhersage.
 
 ```py
+
 from sklearn.metrics import r2_score
 
 y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 print('R^2: ', r2)
+
 ```
 <!--lrg_info2-->
 
@@ -204,7 +215,6 @@ Das Dokument sollte beinhalten:
 - Zu untersuchende Fragestellung
 - Vorgehensweise
 - Interpretation der Ergebnisse
-
 
 Folgende Datensätze können z.B. genutzt werden:
 

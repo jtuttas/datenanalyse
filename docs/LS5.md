@@ -58,7 +58,7 @@ Vorhersagemodell für Immobilienpreise.
 
 ### Arbeitsmaterialien / Links
 
-- Moodle-Kurs: [LF10c: Werkzeuge des maschinellen Lernens einsetzen](https://moodle.mm-bbs.de/moodle/course/view.php?id=2812)
+- Moodle-Kurs: [LF10c: Werkzeuge des maschinellen Lernens einsetzen](https://moodle.mm-bbs.de/moodle/course/view.php?id=2812) oder als [pdf](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/RegressionsAnalyse.md.pdf)
 - [GitHub Repository](https://github.com/jtuttas/datenanalyse)
 - Weitere Datensätze können über die Seite [https://www.kaggle.com/](https://www.kaggle.com/)
 
