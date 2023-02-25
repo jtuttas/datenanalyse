@@ -45,7 +45,8 @@ Wählen Sie zunächst zwei für die Aufgabe interessanten Korrelationen (**Featu
 
 Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (*medv*) und der Anzahl der Zimmer (*rm*) dargestellt.
 
-![medv über rm](./images/bo_preis_zimmer.png)
+![Hauspreis über Anzahl v. Zimmern](./images/bo_preis_zimmer.png)
+
 <!--lrg_aufgabe1-->
 <div style="page-break-after: always;"></div>
 <!--lrg_info-->
@@ -87,7 +88,7 @@ y=[10,20,24,32,45]
 
 Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 
-![Übung1](./images/lin_reg_ueb1.png)
+![Datenverteilung Übung1](./images/lin_reg_ueb1.png)
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
 
@@ -129,6 +130,7 @@ from sklearn.linear_model import LinearRegression
 Überprüfen Sie mit Hilfe der Methode **fit()** ihre zuvor berechneten Werte und tragen Sie die Steigungsgerade in den Scatter Plot ein.
 
 ![Übung 2 Lösung](./images/lin_reg_ueb2_lsg.png)
+
 <!--lrg_uebung2-->
 
 ## Aufgabe 2
@@ -136,7 +138,7 @@ from sklearn.linear_model import LinearRegression
 
 Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Gerade $f(x) = a \cdot x + b$ und tragen Sie diese wie in der Übung in die Datenmenge ein.
 
-![lin_reg_Aufgabe2](./images/lin_reg_aufg2.png)
+![Regressionsgerade](./images/lin_reg_aufg2.png)
 
 > Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
 
@@ -158,7 +160,7 @@ Dabei sind $a_1$ bis $a_n$ Faktoren für die einzelnen *Features* $x_1$ bis $x_n
 
 Zur Überprüfung des daraus entstandene Vorhersagemodells muss nun der Datensatz zunächst in **Trainingsdaten** und **Testdaten** geteilt werden. Eine Teilung von 80/20 ist hierfür ein gängiges Mittel.
 
-![Dateinteilung](datenteilung.png)
+![Dateneinteilung](datenteilung.png)
 
 Zum Aufteilen ein Datensatzes in Trainings- / Testdaten dient auch wieder eine Methode aus dem Paket **sklearn.model_selection**, konkret die Methode **train_test_split()** die dieser Aufteilung vornimmt.
 
