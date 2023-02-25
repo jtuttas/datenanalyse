@@ -196,7 +196,15 @@ Führen Sie wie beschrieben die Regressions Analyse mit 3-4 **wichtigen Features
 ## Aufgabe 4
 <!--lrg_aufg4-->
 
-Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Präsentieren Sie anschließende kurz der Klasse ihr Ergebnis.
+Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Erstellen Sie auf der Grundlage ihrer Analyse ein kurzer Dokument (1 Seite) Präsentieren Sie anschließende kurz der Klasse ihr Ergebnis.
+
+Das Dokument sollte beinhalten:
+
+- Art / Beschreibung des Datensatzes
+- Zu untersuchende Fragestellung
+- Vorgehensweise
+- Interpretation der Ergebnisse
+
 
 Folgende Datensätze können z.B. genutzt werden:
 
