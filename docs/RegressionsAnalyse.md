@@ -88,7 +88,7 @@ y=[10,20,24,32,45]
 
 Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 
-![Datenverteilung Übung1](./images/lin_reg_ueb1.png)
+![Datenverteilung Übung 1](./images/lin_reg_ueb1.png)
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
 
@@ -115,7 +115,7 @@ plt.show()
 
 ```
 
-![Übung2](./images/lin_reg_ueb2.png)
+![Übung 2](./images/lin_reg_ueb2.png)
 
 Das Berechnen der Steigung **a** und des Achsenabschnitts **b** ist natürlich auch mit Hilfe einer Methode aus der Bibliothek **sklearn.linear_model** konkret die Klasse **LinearRegression**. Importieren Sie also zunächst die entsprechende Klasse:
 
