@@ -135,6 +135,10 @@ Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Ger
 
 > Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
 
+<!--lrg_aufg2-->
+
+<!--lrg_info2-->
+
 ## Anpassen des Modells für mehrere Features (Multiple Lineare Regression)
 
 Zur Optimierung des Modells sollen auch die anderen *Features* des Datensatzes genutzt werden. Dieses Verfahren nennt sich Multiple Lineare Regression. Gesucht wird dabei folgende Gleichung.
@@ -179,7 +183,7 @@ y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 print('R^2: ', r2)
 ```
-<!--lrg_aufg2-->
+<!--lrg_info2-->
 
 ## Aufgabe 3
 <!--lrg_aufg3-->
@@ -205,6 +209,7 @@ Folgende Datensätze können z.B. genutzt werden:
 
 ## Reflexion der Unterrichtseinheit
 
+<!--lrg_relex-->
 Sie erhalten von ihrem Geschäftsführer *Dr. Wöhler* die unten abgebildete Email. Verfassen Sie auf diese Email eine Antwort.
 
 >"Sehr geehrte Mitarbeiter der Abteilung Daten- und Prozessanalyse,
@@ -218,3 +223,5 @@ Sie erhalten von ihrem Geschäftsführer *Dr. Wöhler* die unten abgebildete Ema
 >Mit freundlichen Grüßen  
 >Dr. Wöhler, Geschäftsführer  
 >ChangeIT GmbH"
+
+<!--lrg_relex-->
