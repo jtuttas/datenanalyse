@@ -55,7 +55,7 @@ Die lineare Regression versucht nun durch diese Datenmenge eine gerade zu legen,
 
 > Weiter Informationen:
 >
->-  [Studifix](https://studyflix.de/statistik/lineare-regression-2147)
+>-  [Studifix: Lineare Regression](https://studyflix.de/statistik/lineare-regression-2147)
 
 Eine lineare Gleichung hat dabei folgende allgemeine Form.
 
@@ -131,9 +131,19 @@ Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Ger
 
 > Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
 
-## Anpassen des Modells für mehrere Features
+## Anpassen des Modells für mehrere Features (Multiple Lineare Regression)
 
-Zur Optimierung des Modells sollen auch die anderen *Features* des Datensatzes genutzt werden. Zur Überprüfung des daraus entstandene Vorhersagemodells muss nun der Datensatz zunächst in **Trainingsdaten** und **Testdaten** geteilt werden. Eine Teilung von 80/20 ist hierfür ein gängiges Mittel.
+Zur Optimierung des Modells sollen auch die anderen *Features* des Datensatzes genutzt werden. Dieses Verfahren nennt sich Multiple Lineare Regression. Gesucht wird dabei folgende Gleichung.
+
+$$f(x) = a_1 \cdot x_1 + a_2*x_2+a_3*x_3 + b$$
+
+Dabei sind $a_1$ bis $a_n$ Faktoren für die einzelnen *Features* $x_1$ bis $x_n$. Diese einzelnen Faktoren gilt es nun iterativ zu bestimmen.
+
+> **Weitere Informationen:**
+>
+> - [Studifix: Multiple Lineare Regression](https://studyflix.de/statistik/multiple-regression-2149)
+
+Zur Überprüfung des daraus entstandene Vorhersagemodells muss nun der Datensatz zunächst in **Trainingsdaten** und **Testdaten** geteilt werden. Eine Teilung von 80/20 ist hierfür ein gängiges Mittel.
 
 ![Dateinteilung](datenteilung.png)
 
@@ -152,6 +162,10 @@ model = LinearRegression()
 model.fit(X_train, y_train)
 ```
 
+Die Einzelnen Faktoren $a_1$ bis $a_n$ befinden sich dabei wie zuvor in dem Attribut *model.coeff_* in Form eines Arrays und *model.intercept* der Wert für den Achsenabschnitt *b*.
+
+Um nun aufgrund unseres Modells eine Vorhersage zu treffen, dient die Funktion **predict** im Objekt **model**. Dieses erwartet einen Datensatz als Übergabeparameter.
+
 Über die Qualität des Modells gibt u.a. Der Wert $R^2$ aus. Je höher der $R^2$-Wert, desto besser die Vorhersage.
 
 ```py
@@ -166,7 +180,7 @@ print('R^2: ', r2)
 ## Aufgabe 3
 <!--lrg_aufg3-->
 
-Führen Sie wie beschrieben die Regressions Analyse mit **allen** bekannten *Features* mit dem Datensatz durch und lassen Sie sich den Wert $R^2$ ausgeben.
+Führen Sie wie beschrieben die Regressions Analyse mit 3-4 **wichtigen Features** mit dem Datensatz durch. Wählen Sie dann einen Datensatz aus der Menge der Testdaten und lassen sich mit der Funktion **predict()** das Ergebnis für einen Immobilienpreis ausgeben. Überprüfen Sie ferner die Qualität ihres Vorhersagemodells, indem Sie den Wertt $R^2$ bestimmen.
 
 > Diskutieren Sie Maßnahmen, wie die Qualität des Vorhersagemodells verbessert werden kann!
 <!--lrg_aufg3-->
@@ -184,3 +198,19 @@ Folgende Datensätze können z.B. genutzt werden:
 - Oder wählen Sie einen eigenen Datensatz z.B. aus [https://www.kaggle.com/](https://www.kaggle.com/)!
 
 <!--lrg_aufg4-->
+
+## Reflexion der Unterrichtseinheit
+
+Sie erhalten von ihrem Geschäftsführer *Dr. Wöhler* die unten abgebildete Email. Verfassen Sie auf diese Email eine Antwort.
+
+>"Sehr geehrte Mitarbeiter der Abteilung Daten- und Prozessanalyse,
+>
+>ich möchte Ihnen an dieser Stelle meinen innigsten Glückwunsch zur erfolgreichen Entwicklung eines Modells zur Vorhersage von Immobilienpreisen aussprechen.
+>
+>In Zukunft schlage ich vor, dass wir alle Anfallenden Aufträge für die Erstellung eines Datenmodells mit den Mitteln der linearen Regression lösen sollten. Dadurch können wir Daten schneller und präziser interpretieren, was zu besseren Ergebnissen führt.
+>
+>Nochmals herzlichen Glückwunsch und weiterhin viel Erfolg beim Lösen dieser Herausforderung!
+>
+>Mit freundlichen Grüßen  
+>Dr. Wöhler, Geschäftsführer  
+>ChangeIT GmbH"
