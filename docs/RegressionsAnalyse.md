@@ -65,9 +65,9 @@ Wobei **a** die Steigung und **b** der y-Achsenabschnitt der Geraden ist. Gesuch
 
 Die Lösung des Problem kann dabei iterativ als auch arithmetisch erfolgen. Eine arithmetische Lösung sieht dabei wie folgt aus.
 
-$a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1}^n x_i^2 - (\sum_{i=1}^n x_i)^2}$
+$ a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1}^n x_i^2 - (\sum_{i=1}^n x_i)^2} $
 
-$b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n}$
+$ b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n} $
 
 Dabei sind $x_i$ für das o.g. Beispiel die Werte für die Anzahl der Zimmer pro Wohneinheit (**rm**) und $y_i$ der daraus resultierende Preis der Wohnung.
 <!--lrg_info-->
@@ -88,6 +88,9 @@ Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 ![Übung1](./images/lin_reg_ueb1.png)
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
+
+> **Hinweis**: Nutzen Sie zur Berechnung und ggf. auch zur Visualisierung die zur Verfügung gestellte Excel Tabelle [lrg_ueb1.xls](./lrg_ueb1.xlsx)
+
 <!--lrg_uebung1-->
 
 ### Übungsaufgabe 2
