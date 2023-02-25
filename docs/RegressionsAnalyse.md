@@ -65,19 +65,20 @@ Wobei **a** die Steigung und **b** der y-Achsenabschnitt der Geraden ist. Gesuch
 
 Die Lösung des Problem kann dabei iterativ als auch arithmetisch erfolgen. Eine arithmetische Lösung sieht dabei wie folgt aus.
 
-$ a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1}^n x_i^2 - (\sum_{i=1}^n x_i)^2} $
+<!--lrg_uebung1-->
 
-$ b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n} $
+$a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1}^n x_i^2 - (\sum_{i=1}^n x_i)^2}$
+
+$b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n}$
 
 Dabei sind $x_i$ für das o.g. Beispiel die Werte für die Anzahl der Zimmer pro Wohneinheit (**rm**) und $y_i$ der daraus resultierende Preis der Wohnung.
 <!--lrg_info-->
 
 ### Übungsaufgabe 1
 
-<!--lrg_uebung1-->
 Gehen Sie von folgenden Daten aus:
 
-```py
+```python
 
 x=[4,6,8,10,12]
 y=[10,20,24,32,45]
