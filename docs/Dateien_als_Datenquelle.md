@@ -6,9 +6,9 @@
 >
 >Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs ausgewertet haben. Diese Daten liegen sowohl als *csv*, *xml* und *json* vor.
 
+<!--dateiinfo-->
 ## Daten der Schülergruppe
 
-<!--dateiinfo-->
 
 ### CSV Darstellung
 
@@ -71,9 +71,7 @@ Die einzelnen Attribute des Datensatzes haben dabei folgende Bedeutung.
 - **Abteilung**: Jeweilige Klasse des Schülers (J-N)
 - **Klassenarbeit**: Ergebnis der Klassenarbeit
 - **K1 bis K7**: Ergebnisse in einzelnen Kapitel-Tests.
-<!--dateiinfo-->
 
-<!--dateiaufgabe1-->
 ## Arbeitsprozess
 
 Im weiteren Verlauf der Kurses werden wir zunächst immer wieder folgenden Arbeitsprozess anwenden.
@@ -104,7 +102,7 @@ Entscheiden Sie sich für ein Dateiformat welches Sie bearbeiten wollen? Bilden 
 
 >Diskutieren Sie in ihrer Gruppe, ob die Daten bereits so wie Sie vorliegen verwendet werden können, oder ob noch Bereinigungen der Daten notwendig sind?
 
-<!--dateiaufgabe1-->
+<!--dateiinfo-->
 
 ## Bereinigen der Dateien
 
