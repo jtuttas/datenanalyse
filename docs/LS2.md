@@ -32,13 +32,18 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.2: Dateien als Datenquellen nutzen | 10 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.2: Dateien als Datenquellen nutzen | 8 Unterrichtsstunden |
 
 ### Handlungssituation
 
+>Eine der ersten Kunde der neu eingeführten Abteilung "Daten- und Prozessanalyse" der ChangeIT GmbH ist eine große berufsbildenden Schule.
+>
+>Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs ausgewertet haben. Diese Daten liegen sowohl als *csv*, *xml* und *json* vor.
+
 ### Handlungsergebnis
 
--
+- Statistische Grunddaten des Datensatzes
+- Visualisierung einiger Zusammenhänge
 
 <div style="page-break-after: always;"></div>
 
@@ -46,11 +51,11 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | | Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
-| Informieren bzw. Analysieren |  | |  |
-| Planen / Entscheiden |  |  |  |
-| Durchführen |  | |  |
-| Kontrollieren / Bewerten |  | |  |
-| Reflektieren |  | |  |
+| Informieren bzw. Analysieren | - Daten und ihre Darstellung in unterschiedlichen Formaten | - Analysieren der zur Verfügung gestellten Daten </br> - Informieren sich über die Berechnung statistischer Grunddaten  | - Einzelarbeit </br> - Plenum |
+| Planen / Entscheiden | - Arbeiten mit Python Paketen | - Auswahl eines Datensatzes </br> -Einlesen des Datensatzes mit einem Python Programm  | - Einzelarbeit  |
+| Durchführen | - Umwandeln und Zusammenfassen von Daten </br> - grafische Darstellung von Datenmengen | - Bereinigen der Daten </br> - Vorbereiten der Daten für die statistische Auswertung - Erheben der statistischen Grunddaten </br> - Visualisieren der Daten |  |
+| Kontrollieren / Bewerten | - Eignung unterschiedlicher grafischer Darstellungsformen   | - Bewerten des Ergebnisses hinsichtlich der urspünglichen  Fragestellung | - Einzelarbeit </br> - Plenum |
+| Reflektieren | - Kritikfähigkeit | - Aussagekraft der statistischen Grunddaten | - Plenum |
 
 ### Arbeitsmaterialien / Links
 
@@ -58,8 +63,6 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 - [GitHub Repository](https://github.com/jtuttas/datenanalyse)
 
 ### Schulische Entscheidungen
-
-<div style="page-break-after: always;"></div>
 
 ### Leistungsnachweise
 

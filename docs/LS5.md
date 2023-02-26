@@ -68,4 +68,6 @@ Vorhersagemodell für Immobilienpreise.
 
 ### Leistungsnachweise
 
+- Die zu haltenden Präsentationen können zur Leistungskontrolle verwendet werden!
+
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern

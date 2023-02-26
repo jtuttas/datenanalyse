@@ -209,9 +209,9 @@ Führen Sie wie beschrieben die Regressions Analyse mit 3-4 **wichtigen Features
 ## Aufgabe 4
 <!--lrg_aufg4-->
 
-Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Erstellen Sie auf der Grundlage ihrer Analyse ein kurzer Dokument (1 Seite) Präsentieren Sie anschließende kurz der Klasse ihr Ergebnis.
+Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Erstellen Sie auf der Grundlage ihrer Analyse eine kurze Präsentation und Präsentieren diese anschließend kurz der Klasse ihr Ergebnis.
 
-Das Dokument sollte beinhalten:
+Die Präsentation sollte beinhalten:
 
 - Art / Beschreibung des Datensatzes
 - Zu untersuchende Fragestellung
@@ -234,14 +234,15 @@ Sie erhalten von ihrem Geschäftsführer *Dr. Wöhler* die unten abgebildete Ema
 
 >"Sehr geehrte Mitarbeiter der Abteilung Daten- und Prozessanalyse,
 >
->ich möchte Ihnen an dieser Stelle meinen innigsten Glückwunsch zur erfolgreichen Entwicklung eines Modells zur Vorhersage von Immobilienpreisen aussprechen.
+>ich gratuliere Ihnen von ganzem Herzen zu Ihrer erfolgreichen Fertigstellung des Modells zur Vorhersage von Immobilienpreisen. Alle Anstrengungen, die Sie auf sich genommen haben, um dieses Modell zum Laufen zu bringen, werden nun mit dem Ergebnis belohnt.
 >
->In Zukunft schlage ich vor, dass wir alle Anfallenden Aufträge für die Erstellung eines Datenmodells mit den Mitteln der linearen Regression lösen sollten. Dadurch können wir Daten schneller und präziser interpretieren, was zu besseren Ergebnissen führt.
+>Ausserdem möchte ich betonen, dass wir in Zukunft alle Anforderungen für ein Modell datenbasierter Vorhersagen mit den Mitteln der linearen Regression lösen sollten. Der Grund ist, dass lineare Regression uns die größtmögliche Genauigkeit beim Entwerfen oder Verbessern von Modellen gewährleistet.
 >
->Nochmals herzlichen Glückwunsch und weiterhin viel Erfolg beim Lösen dieser Herausforderung!
+>Noch einmal herzlichen Glückwunsch an alle, die an diesem Projekt beteiligt waren. Bleiben Sie alle weiterhin motiviert, kreativ und innovativ.
 >
->Mit freundlichen Grüßen  
->Dr. Wöhler, Geschäftsführer  
->ChangeIT GmbH"
+>Vielen Dank,
+>
+>Dr. Wöhler,  
+>Geschäftsführer ChangeIT GmbH"
 
 <!--lrg_relex-->
