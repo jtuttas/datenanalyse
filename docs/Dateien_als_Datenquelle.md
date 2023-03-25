@@ -159,7 +159,7 @@ Ermitteln Sie mit Hilfe von **pandas** folgende Daten.
 - Durchschnittswert (in %) der Klassenarbeit der Gruppe "J"
 - Notenspiegel der Klassenarbeit (also wie viele Schüler haben ein "seht gut", wie viele Schüler ein "gut" usw.)
 
-Schreiben Sie diese Werte für den Auftraggeber in ein Word Dokument!
+Schreiben Sie diese Werte für den Auftraggeber in ein Word Dokument! Diese Word Dokument soll dabei nir nur den Zahlenwert beinhalten, sondern eine kurze Beschreibung für den Auftraggeber zu diesem Wert enthalten.
 
 > **Hinweise**: 
 >- Nutzen Sie zum ermitteln der Daten die Dokumentation zum [pandas Dataframe](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html).
@@ -170,14 +170,15 @@ Schreiben Sie diese Werte für den Auftraggeber in ein Word Dokument!
 |  0 - < 30    | 30 - < 50    | 50 - < 66    | 66 - < 81 |  81 - < 92   | 92 - 100    |
 
 <!--dateiaufgabe3-->
-<!--dateiaufgabe4-->
 
 ## Daten visualisieren
 
+<!--dateivoraufgabe4-->
 Der Auftraggeber (die Schule) möchte die Daten zur weiteren Verarbeitung in Dokumenten visualisiert haben. Zur Visualisierung von Daten nutzen wir das python Paket **plot** aus dem **pandas** Paket.
 
 Für die folgenden Aufgaben stellt Ihnen der Leiter der Abteilung Datenanalyse folgenden Beispielcode zur Verfügung.
-
+<!--dateivoraufgabe4-->
+<!--dateiaufgabe4-->
 ### Aufgabe 4 Daten visualisieren
 
 Der Auftraggeber würde gerne das Ergebnis der Klassenarbeit in geeigneter Form visualisiert haben. Entscheiden Sie sich für ein geeignete Darstellungsform und erstellen Sie mit Hilfe eines Python Programms die Grafik. 
@@ -241,6 +242,8 @@ pltimage.set_title("Übung 2")
 
 ## Reflexion
 
+<!--dateireflexion-->
 Diskutieren Sie im Klassenverband die Aussagekraft der statischen Grunddaten und der erzeugten Diagramme.
 
 In wie weit können die Daten und die Grafiken genutzt werden um ein Vorhersagemodell für einen neuen Schüler in der Klasse genutzt werden?
+<!--dateireflexion-->
