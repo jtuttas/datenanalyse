@@ -9,7 +9,6 @@
 <!--dateiinfo-->
 ## Daten der Schülergruppe
 
-
 ### CSV Darstellung
 
 Eine Datei [Moodle.csv](../Data/Moodle.csv) enthält die Daten in Form von CSV.
@@ -150,7 +149,7 @@ Dies Werte lassen sich auch mittels der **pandas**-Bibliothek ermitteln:
 - **median(column)** ermittelt das Mittel (mean) einer Spalte
 - **std(column)** ermittelt die Standardabweichung einer Spalte
 
-### Aufgabe 3: statistische Grunddaten ermitteln
+## Aufgabe 3: statistische Grunddaten ermitteln
 
 Ermitteln Sie mit Hilfe von **pandas** folgende Daten.
 
@@ -174,12 +173,16 @@ Schreiben Sie diese Werte für den Auftraggeber in ein Word Dokument! Diese Word
 ## Daten visualisieren
 
 <!--dateivoraufgabe4-->
+
 Der Auftraggeber (die Schule) möchte die Daten zur weiteren Verarbeitung in Dokumenten visualisiert haben. Zur Visualisierung von Daten nutzen wir das python Paket **plot** aus dem **pandas** Paket.
 
 Für die folgenden Aufgaben stellt Ihnen der Leiter der Abteilung Datenanalyse folgenden Beispielcode zur Verfügung.
+
 <!--dateivoraufgabe4-->
+
 <!--dateiaufgabe4-->
-### Aufgabe 4 Daten visualisieren
+
+## Aufgabe 4 Daten visualisieren
 
 Der Auftraggeber würde gerne das Ergebnis der Klassenarbeit in geeigneter Form visualisiert haben. Entscheiden Sie sich für ein geeignete Darstellungsform und erstellen Sie mit Hilfe eines Python Programms die Grafik. 
 
@@ -203,7 +206,6 @@ plt.show()
 
 > **Hinweis**: In dem unten dargestellten Beispiel werden Werte in Form eines Balkendiagramms dargestellt.
 
-
 ```py
 import pandas as pd
 
@@ -217,7 +219,7 @@ barimage.set_title("Titel Deiner Grafik")
 <!--dateiaufgabe4-->
 <!--dateiaufgabe5-->
 
-### Aufgabe 5 Daten visualisieren
+## Aufgabe 5 Daten visualisieren
 
 Es stellt dich die Frage, ob Schüler die im arithmetischen Mittel in den Kapitel-Tests eine gute Note schreiben auch in der Klassenarbeit eine gute Note schreiben. Versuchen Sie auf diese Fragestellung eine Antwort zu finden und visualisieren Sie das Ergebnis möglichst sinnvoll für den Auftragsgeber.
 
@@ -243,7 +245,9 @@ pltimage.set_title("Übung 2")
 ## Reflexion
 
 <!--dateireflexion-->
+
 Diskutieren Sie im Klassenverband die Aussagekraft der statischen Grunddaten und der erzeugten Diagramme.
 
-In wie weit können die Daten und die Grafiken genutzt werden um ein Vorhersagemodell für einen neuen Schüler in der Klasse genutzt werden?
+In wie weit können die Daten und die Grafiken genutzt werden, um ein Vorhersagemodell zu entwickeln, welches es ermöglicht die Leistungen eines neuen Schülers in der Klasse vorherzusagen?
+
 <!--dateireflexion-->

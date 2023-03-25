@@ -53,7 +53,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 | :--- | :--- | :--- | :--- |
 | Informieren bzw. Analysieren | - Daten und ihre Darstellung in unterschiedlichen Formaten | - Analysieren der zur Verfügung gestellten Daten </br> - Informieren sich über die Berechnung statistischer Grunddaten  | - Einzelarbeit </br> - Plenum |
 | Planen / Entscheiden | - Arbeiten mit Python Paketen | - Auswahl eines Datensatzes </br> -Einlesen des Datensatzes mit einem Python Programm  | - Einzelarbeit  |
-| Durchführen | - Umwandeln und Zusammenfassen von Daten </br> - grafische Darstellung von Datenmengen | - Bereinigen der Daten </br> - Vorbereiten der Daten für die statistische Auswertung - Erheben der statistischen Grunddaten </br> - Visualisieren der Daten |  |
+| Durchführen | - Umwandeln und Zusammenfassen von Daten </br> - grafische Darstellung von Datenmengen | - Bereinigen der Daten </br> - Vorbereiten der Daten für die statistische Auswertung - Erheben der statistischen Grunddaten </br> - Visualisieren der Daten | - Einzelarbiet |
 | Kontrollieren / Bewerten | - Eignung unterschiedlicher grafischer Darstellungsformen   | - Bewerten des Ergebnisses hinsichtlich der urspünglichen  Fragestellung | - Einzelarbeit </br> - Plenum |
 | Reflektieren | - Kritikfähigkeit | - Aussagekraft der statistischen Grunddaten | - Plenum |
 
@@ -63,6 +63,8 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 - [GitHub Repository](https://github.com/jtuttas/datenanalyse)
 
 ### Schulische Entscheidungen
+
+- Die Ermittlung der statistischen Grunddaten und das erzeugen der Diagramm erfolgt mittels der Programmiersprache Python und der Entwicklungsumgebung VS Code.
 
 ### Leistungsnachweise
 
