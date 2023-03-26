@@ -90,6 +90,8 @@ Es gibt vielfältige Arten / Kategorien von Probleme die mit Hilfe von KI gelös
 
 ## Reflexion
 
+<!--kialltagreflexion-->
+
 Sie erhalten folgende Email von Dr. Harald Wöhler, dem Geschäftsführer der ChangeIT GmbH!
 
 >Liebe Mitarbeiterinnen und Mitarbeiter der Abteilung Daten- und Prozessanalyse,
@@ -107,3 +109,5 @@ Sie erhalten folgende Email von Dr. Harald Wöhler, dem Geschäftsführer der Ch
 >Dr. Harald Wöhler
 
 **Aufgabe**: Verfassen Sie zu dieser Email eine Antwort.
+
+<!--kialltagreflexion-->
