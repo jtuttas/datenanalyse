@@ -84,7 +84,7 @@ Es gibt vielfältige Arten / Kategorien von Probleme die mit Hilfe von KI gelös
 **Clustering**: Hierbei geht es darum, ähnliche Objekte oder Daten in Gruppen oder Cluster zu gruppieren.
 
 
-**Aufgabe:**  Gruppieren Sie die zuvor erarbeiteten Einsatzgebiete von Künstlicher Intelligenz (und ggf. noch weitere) in diese Kategorien. Erstellen Sie hierfür ein Plakat und präsentieren Sie dieses im Anschluss der Klasse.
+**Aufgabe:**  Gruppieren Sie die zuvor erarbeiteten Einsatzgebiete von Künstlicher Intelligenz (und ggf. noch weitere) in diese Kategorien. Präsentieren Sie ihre Zusammenstellung im Anschluss der Klasse.
 
 <!--kialltagkategorien-->
 
