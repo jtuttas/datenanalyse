@@ -50,12 +50,11 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | | Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
-| Informieren bzw. Analysieren |  | |  |
-| Planen / Entscheiden |  |  |  |
-| Durchführen |  | |  |
-| Kontrollieren / Bewerten |  | |  |
-| Reflektieren |  | |  |
-
+| Informieren bzw. Analysieren | Nutzungsszenarien von KI am Alltag nennen </br> Begriffe wie ML,Deep Learning und KI einordnen </br> Moralische Probleme identifizieren | Die Schülerinnen und Schüler benennen in einer Brainstormingphase alltägliche Nutzungsszenarien für KI </br> Sie informieren sich durch einen Artikel aus der ct über weitere Einsatzszenarien und identifizieren moralische Grenzen der Technologie | Einzelarbeit </br> Plenum </br> Wortwolke|
+| Planen / Entscheiden | Kategorien von KI Problemen nennen  | Die Schüler informieren sich über Kategorien von KI Problemen | Einzelarbeit |
+| Durchführen | Anwendungsszenarien von KI Kategorisieren | Die Schülerinnen und Schüler ordnen die zuvor identifizierten Einsatzszenarien den Kategorien zu | Gruppenarbeit </br> Board |
+| Kontrollieren / Bewerten | Die eigene Meinung äußern und kritisch hinterfragen | Die Schülerinnen und Schüler Präsentieren und Diskutieren ihre Einteilung | Plenum |
+| Reflektieren | Grenzen der KI Nutzung erkennen | Die Schülerinnen und Schüler verfassen eine EMail Antwort | Einzelarbeit </br> Plenum |
 
 ### Arbeitsmaterialien / Links
 
@@ -69,5 +68,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 <div style="page-break-after: always;"></div>
 
 ### Leistungsnachweise
+
+- Bewertung des erstellten elektronischen Boards
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
