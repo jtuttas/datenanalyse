@@ -36,9 +36,15 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 ### Handlungssituation
 
+Ein Regionaler Stromanbieter will in seinem Versorgungsgebiet Ladesäulen für Elektroautos anbieten. Dabei sollen möglichst alle Kunden einen kurzen Weg zur angebotenen Ladesäule habe. 
+
+Die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH wird damit beauftragt diese Standorte zu ermitteln.
+
+Der Kunde stellt dazu einen Plan zur Verfügung, der die Wohnorte der Kunden, die ein Elektroauto besitzen enthält.
+
 ### Handlungsergebnis
 
--
+Eine Modell welches alf der Grundlage des K-Mean Clustering den besten Standort für Ladesäulen ermittelt.  
 
 <div style="page-break-after: always;"></div>
 

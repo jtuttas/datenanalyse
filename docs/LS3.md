@@ -1,6 +1,6 @@
 # FIDP - Lernfeld 10c
 
-## LS 10.3: Datenbanken als Datenquellen nutzen
+## LS 10.3: ML auf der Grundlage von Entscheidungsbäumen modellieren
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
@@ -32,13 +32,19 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.3: Datenbanken als Datenquellen nutzen | 8 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.3: ML auf der Grundlage von Entscheidungsbäumen modellieren | 8 Unterrichtsstunden |
 
 ### Handlungssituation
 
+Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die Regenwahrscheinlichkeit bestimmen.
+
+Erste Erfahrungswerte liegen bereits vor und werden vom Landmaschinenhersteller der ChangeIT in Form einer CSV Datei zur Verfügung gestellt. 
+
+Als Mitglied der Abteilung Daten- und Prozessanalyse erhalten Sie die Aufgabe ein geeignetes Vorhersagemodell zu entwickeln.
+
 ### Handlungsergebnis
 
--
+Ein Modell auf der Grundlage eines Entscheidungsbaumes, um für eine APP Bauern die Empfehlung zu geben, das Weizen zu ernten!
 
 <div style="page-break-after: always;"></div>
 
