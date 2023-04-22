@@ -68,6 +68,31 @@ wobei $P(x_i)$ die Wahrscheinlichkeit des Ereignisses $x_i$ ist und $\log_2$ der
 
 ## Aufgabe 2
 
+Gegeben ist folgender Datensatz:
+
+|Effekt | 
+| - |
+| A  |
+| A  |
+| B  |
+| A  |
+| A  |
+| B  |
+
+Bestimmen Sie die Entropie des Datensatzes!
+
+### Lösung
+
+$$P_A = \frac{4}{6}=0.6667$$
+$$P_B = \frac{2}{6}=0.3333$$
+
+$$H = - (P_A \log_2(P_A)+P_B \log_2(P_B))$$
+$$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
+
+---
+
+## Aufgabe 3
+
 Wir können unseren Datensätze nun in zwei Teildatensätze einteilen *m1* und *m2*.
 
 ```py
@@ -81,3 +106,34 @@ m1 = data[data['Feuchte'] < 13]
 m2 = data[data['Feuchte'] >= 13]
 
 ```
+
+Entwickeln Sie eine Pythonfunktion **calcEntropie(mx):Entropie** welche die Entropie eines übergebenen Arrays mit den Kategorien **Ernten** und **Warten** ermittelt.
+
+---
+
+Wenn wir mir unsere entwickelten Funktion **calcEntropie(mx):Entropie** die Datenmenge nun schrittweise teilen, erhalten wir die folgende Darstellung.
+
+![Entropie der Feuchte](images/ds3.png)
+
+Wie wir sehen erhalten wir bei einen Wert von $Feuchte = 16$ eine Entropie in der Menge e2 von 0. Nun müssen wir noch überprüfen ob es möglich ist eine Menge im Effekt der **Regenwahrscheinlichkeit** zu finden, der gegen 0 geht.
+
+![Entropie der Regenwahrscheinlichkeit](images/ds4.png)
+
+Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer $Feuchte >= 16$ die Mengen trennen. Wir haben unsere erste Entscheidung für den Entscheidungsbaum getroffen.
+
+![Erste Entscheidung](images/ds5.png)
+
+## Aufgabe 4
+
+Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibende Menge weiter wie folgt einteilen:
+
+![Weitere Einteilung](images/ds6.png)
+
+Ergänzen Sie den unten abgebildeten Entscheidung!
+
+![Vollständiger Entscheidungsbaum](images/ds7.png)
+
+> Diskutieren Sie wie Sie weiter vorgehen sollten !
+
+---
+
