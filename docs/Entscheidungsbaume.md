@@ -38,7 +38,7 @@ Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine V
 
 Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz (**ErnteBauern.csv**) visualisiert.
 
-$\newpage$
+\newpage
 
 ## Analyse des Datensatzes
 
