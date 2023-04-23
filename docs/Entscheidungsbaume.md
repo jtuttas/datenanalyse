@@ -2,7 +2,7 @@
 
 ## Handlungssituation
 
-<img align="right" width="300"  src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Weizenfeld%2C_Markelsheim_%28Wheat_field%2C_Markelsheim%29_-_geo-en.hlipp.de_-_12381.jpg">
+<img align="right" width="300"  src="/docs/images/weizenfeld.jpg">
 
 > Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die Regenwahrscheinlichkeit bestimmen.
 >
@@ -38,7 +38,7 @@ Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine V
 
 Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz (**ErnteBauern.csv**) visualisiert.
 
-<div style="page-break-after: always;"></div>
+$\newpage$
 
 ## Analyse des Datensatzes
 
