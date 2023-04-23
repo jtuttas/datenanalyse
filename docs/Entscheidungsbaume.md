@@ -2,7 +2,7 @@
 
 ## Handlungssituation
 
-<img align="right" width="300"  src="/docs/images/weizenfeld.jpg">
+<img align="right" width="300"  src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Weizenfeld%2C_Markelsheim_%28Wheat_field%2C_Markelsheim%29_-_geo-en.hlipp.de_-_12381.jpg">
 
 > Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die Regenwahrscheinlichkeit bestimmen.
 >
@@ -44,7 +44,7 @@ Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur 
 
 Stellt man die zur Verfügung gestellten Datensatz grafisch dar, so erhält man z.B. folgende Darstellung.
 
-![Visualisierung des Datensatzes](images/ds1.png)
+![Visualisierung des Datensatzes](images/ds1.png) 
 
 > Entwerfen Sie im Klassenverband erste Idee wie man ein Modell entwickeln könnte, welches Aussagen entwickelt wann es sich lohnt den Weizen zu ernten!
 
