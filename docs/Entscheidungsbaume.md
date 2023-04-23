@@ -2,7 +2,7 @@
 
 ## Handlungssituation
 
-<img align="right" width="300"  src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Weizenfeld%2C_Markelsheim_%28Wheat_field%2C_Markelsheim%29_-_geo-en.hlipp.de_-_12381.jpg">
+![Teaser](images/weizenfeld.jpg)
 
 > Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die Regenwahrscheinlichkeit bestimmen.
 >
@@ -97,7 +97,7 @@ $$P_B = \frac{2}{6}=0.3333$$
 $$H = - (P_A \log_2(P_A)+P_B \log_2(P_B))$$
 $$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
 
----
+\newpage
 
 ## Aufgabe 3
 
@@ -117,8 +117,6 @@ m2 = data[data['Feuchte'] >= 13]
 
 Entwickeln Sie eine Pythonfunktion **calcEntropie(mx):Entropie** welche die Entropie eines übergebenen Arrays mit den Kategorien **Ernten** und **Warten** ermittelt.
 
----
-
 Wenn wir mir unsere entwickelten Funktion **calcEntropie(mx):Entropie** die Datenmenge nun schrittweise teilen, erhalten wir die folgende Darstellung.
 
 ![Entropie der Feuchte](images/ds3.png)
@@ -131,6 +129,8 @@ Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer
 
 ![Erste Entscheidung](images/ds5.png)
 
+\newpage
+
 ## Aufgabe 4
 
 Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibende Menge weiter wie folgt einteilen:
@@ -142,6 +142,8 @@ Ergänzen Sie den unten abgebildeten Entscheidung!
 ![Vollständiger Entscheidungsbaum](images/ds7.png)
 
 > Diskutieren Sie wie Sie weiter vorgehen sollten !
+
+\newpage
 
 ## Aufgabe 5
 
@@ -156,6 +158,8 @@ clf = clf.fit(x, y)
 ```
 
 Untersuchen Sie mit Hilfe der Methode **predict** den entwickelten Entscheidungsbaum! Erzeugen Sie dafür 4 typische Werte für den Datensatz!
+
+\newpage
 
 ## Aufgabe 6
 
@@ -181,4 +185,69 @@ display(graph)
 ![Entscheidungsbaum mit sklearn](images/ds8.png)
 
 Welche Aussage lassen sich aus der Grafik ableiten?
+
+\newpage
+
+## Aufgabe 7
+
+Zur Validierung unseres Modells stellt uns der Kunde einen weiteren Datensatz zur Verfügung (**ErnteBauern2.csv**). Überprüfen Sie mit Hilfe dieses Datensatzes die Qualität des Entscheidungsbaumes:
+
+> **Hinweis**: Nutzen Sie hierzu das Modul *accuracy_score* aus dem Paket *sklearn.metrics*!
+
+```py
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Laden Sie den Testdatensatz
+test_data = pd.read_csv('Data/ErnteBauern2.csv')
+
+# Trennen Sie die Zielvariable vom Rest der Daten
+X_test = test_data.drop('Ergebnis', axis=1)
+y_test = test_data['Ergebnis']
+
+# Erstellen Sie ein DecisionTreeClassifier-Objekt
+tree = DecisionTreeClassifier()
+
+# Führen Sie Vorhersagen auf dem Testdatensatz durch
+y_pred = clf.predict(X_test)
+
+# Berechnen Sie die Vorhersagegenauigkeit auf dem Testdatensatz
+accuracy = accuracy_score(y_test, y_pred)
+print("Vorhersagegenauigkeit auf dem Testdatensatz: {:.2f}%".format(accuracy * 100))
+```
+
+\newpage
+
+## Fragen zum Verständnis
+
+1. Was ist der Hauptzweck von Entscheidungsbäumen?
+    - [ ] Datenspeicherung
+    - [ ] Berechnung von Durchschnittswerten
+    - [ ] Klassifizierung und Vorhersage
+    - [ ] Datenvisualisierung
+
+2. Welches Maß wird verwendet, um die "Unordnung" oder "Unsicherheit" in einer Datenmenge zu beschreiben?
+    - [ ] Kovarianz
+    - [ ] Entropie
+    - [ ] Varianz
+    - [ ] Korrelation
+
+3. Wie wird die Entropie einer Datenmenge berechnet?
+    - [ ] $P(x_i) = \frac{n_i}{N}$
+    - [ ] $H(X) = \sum_{i=1}^n P(x_i) \log_2(P(x_i))$
+    - [ ] $H(X) = -\sum_{i=1}^n P(x_i) \log_2(P(x_i))$
+    - [ ] $H(X) = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2$
+
+4. Welches Python-Paket wird verwendet, um Entscheidungsbäume zu erstellen?
+    - [ ] numpy
+    - [ ] matplotlib
+    - [ ] pandas
+    - [ ] sklearn
+
+5. Wie kann man die Vorhersagegenauigkeit eines Entscheidungsbaums auf einem Testdatensatz berechnen?
+    - [ ] Indem man die Entropie der Vorhersagen berechnet
+    - [ ] Mit der Methode `accuracy_score` aus dem Paket `sklearn.metrics`
+    - [ ] Durch Vergleich der mittleren quadratischen Fehler
+    - [ ] Durch Berechnung der Korrelation zwischen den tatsächlichen und den vorhergesagten Werten
 
