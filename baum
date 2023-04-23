@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Feuchte &le; 14.535<br/>entropy = 1.0<br/>samples = 91<br/>value = [45, 46]<br/>class = 1>, fillcolor="#fbfdfe"] ;
+1 [label=<Regenwahrscheinlichkeit &le; 46.55<br/>entropy = 0.176<br/>samples = 38<br/>value = [37, 1]<br/>class = 0>, fillcolor="#e6843e"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Regenwahrscheinlichkeit &le; 44.825<br/>entropy = 0.323<br/>samples = 17<br/>value = [16, 1]<br/>class = 0>, fillcolor="#e78945"] ;
+1 -> 2 ;
+3 [label=<entropy = 0.0<br/>samples = 16<br/>value = [16, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label=<entropy = 0.0<br/>samples = 1<br/>value = [0, 1]<br/>class = 1>, fillcolor="#399de5"] ;
+2 -> 4 ;
+5 [label=<entropy = 0.0<br/>samples = 21<br/>value = [21, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+1 -> 5 ;
+6 [label=<Regenwahrscheinlichkeit &le; 80.005<br/>entropy = 0.612<br/>samples = 53<br/>value = [8, 45]<br/>class = 1>, fillcolor="#5caeea"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label=<entropy = 0.0<br/>samples = 40<br/>value = [0, 40]<br/>class = 1>, fillcolor="#399de5"] ;
+6 -> 7 ;
+8 [label=<Feuchte &le; 16.225<br/>entropy = 0.961<br/>samples = 13<br/>value = [8, 5]<br/>class = 0>, fillcolor="#f5d0b5"] ;
+6 -> 8 ;
+9 [label=<entropy = 0.0<br/>samples = 8<br/>value = [8, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+8 -> 9 ;
+10 [label=<entropy = 0.0<br/>samples = 5<br/>value = [0, 5]<br/>class = 1>, fillcolor="#399de5"] ;
+8 -> 10 ;
+}

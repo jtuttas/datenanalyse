@@ -2,7 +2,9 @@
     <div class="card-header">
         <i class="fa fa-thumb-tack"></i>&nbsp;Handlungssituation</div>
     <div class="card-body">
-        <h6 class="card-title">            
+        <h6 class="card-title">   
+            <img src="https://raw.githubusercontent.com/jtuttas/datenanalyse/master/html/weizenfeld.jpg" alt="" width="200"
+                role="presentation" class="img-responsive atto_image_button_right">
             Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der
             Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen
             via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die

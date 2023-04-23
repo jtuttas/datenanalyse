@@ -2,11 +2,15 @@
 
 ## Handlungssituation
 
+<img align="right" width="300"  src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Weizenfeld%2C_Markelsheim_%28Wheat_field%2C_Markelsheim%29_-_geo-en.hlipp.de_-_12381.jpg">
+
 > Ein großer Landmaschinenhersteller wünscht sich eine größere Kundenbindung und beauftragt die ChangeIT GmbH mit der Entwicklung einer App, die Landwirten Empfehlungen gibt, wann der Weizen zu ernten ist. Die App misst dazu über einen via Bluetooth gekoppelten Feuchte-Sensor die Bodenfeuchte im Feld und kann über eine API Abfrage die Regenwahrscheinlichkeit bestimmen.
 >
 >Erste Erfahrungswerte liegen bereits vor und werden vom Landmaschinenhersteller der ChangeIT in Form einer CSV Datei zur Verfügung gestellt.
 >
->Als Mitglied der Abteilung Daten- und Prozessanalyse erhalten Sie die Aufgabe ein geeignetes Vorhersagemodell zu entwickeln.
+>Als Mitglied der Abteilung Daten- und Prozessanalyse erhalten Sie die Aufgabe ein geeignetes Vorhersagemodell zu entwickeln.[^1]
+
+[^1]: Vgl. Brandt, Y., Eickhoff-Schachtebeck, A. und Strecker, K. (2022): „Schulbuch starkeSeiten Informatik Jahrgang 9/10 Differenzierende Ausgabe Niedersachsen“, Klett-Verlag 2022
 
 ## Die zur Verfügung gestellten Daten
 
@@ -33,6 +37,8 @@ Die Spalten haben dabei folgende Bedeutung:
 Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine Vorstellung von den Daten zu machen.
 
 Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz (**ErnteBauern.csv**) visualisiert.
+
+<div style="page-break-after: always;"></div>
 
 ## Analyse des Datensatzes
 
@@ -80,6 +86,8 @@ Gegeben ist folgender Datensatz:
 | B  |
 
 Bestimmen Sie die Entropie des Datensatzes!
+
+<div style="page-break-after: always;"></div>
 
 ### Lösung
 
@@ -135,5 +143,42 @@ Ergänzen Sie den unten abgebildeten Entscheidung!
 
 > Diskutieren Sie wie Sie weiter vorgehen sollten !
 
----
+## Aufgabe 5
+
+Mittels des Pythonpaketes *sklearn* lassen sich Entscheidungsbäume erstellen. Der folgende Codeauszug nutzt dieses Paket zum erstellen eines Entscheidungsbaumes:
+
+```py
+from sklearn import tree
+y = data['Ergebnis']
+x = data.drop(['Ergebnis'], axis=1)
+clf = tree.DecisionTreeClassifier(criterion = 'entropy')
+clf = clf.fit(x, y)
+```
+
+Untersuchen Sie mit Hilfe der Methode **predict** den entwickelten Entscheidungsbaum! Erzeugen Sie dafür 4 typische Werte für den Datensatz!
+
+## Aufgabe 6
+
+Python ermöglicht es Ihnen auch den Entscheidungsbaum zu visualisieren. Dazu dient das Paket **graphviz**, welches natürlich zuvor installiert werden muss. Der folgende Code visualisiert den entstandenen Entscheidungsbaum im JupyterNotebook.
+
+```py
+from sklearn.tree import export_graphviz
+from IPython.display import display
+import graphviz
+
+# exportiere Baum in DOT-Format
+dot_data = export_graphviz(clf, out_file=None, 
+                     feature_names=x.columns.values.tolist(),
+                     class_names=['Ernten', 'Warten'], 
+                     filled=True, rounded=True,
+                     special_characters=True)
+                     
+# konvertiere DOT-Format zu einem Graph-Objekt
+graph = graphviz.Source(dot_data)
+display(graph)
+```
+
+![Entscheidungsbaum mit sklearn](images/ds8.png)
+
+Welche Aussage lassen sich aus der Grafik ableiten?
 
