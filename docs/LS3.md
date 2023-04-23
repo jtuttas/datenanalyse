@@ -32,7 +32,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.3: ML auf der Grundlage von Entscheidungsbäumen modellieren | 8 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.3: ML auf der Grundlage von Entscheidungsbäumen modellieren | 10 Unterrichtsstunden |
 
 ### Handlungssituation
 
@@ -44,7 +44,7 @@ Als Mitglied der Abteilung Daten- und Prozessanalyse erhalten Sie die Aufgabe ei
 
 ### Handlungsergebnis
 
-Ein Modell auf der Grundlage eines Entscheidungsbaumes, um für eine APP Bauern die Empfehlung zu geben, das Weizen zu ernten!
+Ein Modell auf der Grundlage eines Entscheidungsbaumes, um für eine App Bauern die Empfehlung zu geben, ob Weizen zu ernten ist oder doch besser noch gewartet werden soll!
 
 <div style="page-break-after: always;"></div>
 
@@ -52,11 +52,11 @@ Ein Modell auf der Grundlage eines Entscheidungsbaumes, um für eine APP Bauern 
 
 | | Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
-| Informieren bzw. Analysieren |  | |  |
-| Planen / Entscheiden |  |  |  |
-| Durchführen |  | |  |
-| Kontrollieren / Bewerten |  | |  |
-| Reflektieren |  | |  |
+| Informieren bzw. Analysieren | Daten Visualisieren </br> Muster in Datenstrukturen erkennen </br> Entropie einer Datenmenge bestimmen </br> | Die Schülerinnen und Schüler stellen den Datensatz grafisch dar </br> Sie versuchen Muster für Entwicklung eines Modells zu erkennen </br> | Plenum </br> Einzelarbeit |
+| Planen / Entscheiden | Auf der Grundlage der Entropie Teildatenmengen einteilen | Die Schülerinnen und Schülern entwickeln eine Funktion zur Bestimmung der Entropie und wenden die an einer Teildatenmenge an</br>  | Einzelarbeit </br> Plenum |
+| Durchführen | Einen Entscheidungsbaum entwickeln | Unter Verwendung der Python Bibliothek *sklearn* implementieren die Schülerinnen und Schüler ein Vorhersagemodell | Einzelarbeit |
+| Kontrollieren / Bewerten | Bewerten eines Vorhersagemodells | Die Schülerinnen und Schüler bewerten das erzeugte Vorhersagemodell  | Einzelarbeit </br> Plenum |
+| Reflektieren | Selbständige Problemlösung | Die Schülerinnen und Schüler wählen einen weiteren geeigneten Datensatz aus und entwickeln für diesen ein Vorhersagemodell und stellen das entwickelte Modell vor  | Gruppenarbeit </br> Plenum   |
 
 ### Arbeitsmaterialien / Links
 
@@ -65,8 +65,11 @@ Ein Modell auf der Grundlage eines Entscheidungsbaumes, um für eine APP Bauern 
 
 ### Schulische Entscheidungen
 
-<div style="page-break-after: always;"></div>
+- Die Programmiersprache Python wird verwendet
+- Als Entwicklungsumgebung wird VS Code / Jupyter Notebook benutzt
 
 ### Leistungsnachweise
+
+Die Präsentation der einzelnen Vorhersagemodelle kann zur Leistungsbewertung herangezogen werden!
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
