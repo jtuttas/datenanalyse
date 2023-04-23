@@ -32,7 +32,7 @@ Die Lernsituationen werden automatisch generiert aus Markdown Dateien und könne
 
 - [LS1](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS1.md.pdf) KI im Alltag
 - [LS2](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS2.md.pdf) Dateien als Datenquellen
-- [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf) Datenbanken als Datenquellen
+- [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf) Entscheidungsbäume
 - [LS4](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS4.md.pdf) APIs abfragen
 - [LS5](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS5.md.pdf) Regressionsanalyse
 - [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf) Entscheidungsbäume
