@@ -36,7 +36,7 @@ Die Spalten haben dabei folgende Bedeutung:
 
 Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine Vorstellung von den Daten zu machen.
 
-Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz (**ErnteBauern.csv**) visualisiert.
+Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz ([ErnteBauern.csv](../Data/ErnteBauern.csv)) visualisiert.
 
 \newpage
 
@@ -198,7 +198,7 @@ Welche Aussage lassen sich aus der Grafik ableiten?
 
 ## Aufgabe 7
 
-Zur Validierung unseres Modells stellt uns der Kunde einen weiteren Datensatz zur Verfügung (**ErnteBauern2.csv**). Überprüfen Sie mit Hilfe dieses Datensatzes die Qualität des Entscheidungsbaumes:
+Zur Validierung unseres Modells stellt uns der Kunde einen weiteren Datensatz zur Verfügung ([ErnteBauern2](../Data/ErnteBauern2.csv)). Überprüfen Sie mit Hilfe dieses Datensatzes die Qualität des Entscheidungsbaumes:
 
 > **Hinweis**: Nutzen Sie hierzu das Modul *accuracy_score* aus dem Paket *sklearn.metrics*!
 
