@@ -96,6 +96,8 @@ Gegeben ist folgender Datensatz:
 | A  |
 | B  |
 
+---
+
 Bestimmen Sie die Entropie des Datensatzes!
 
 <div style="page-break-after: always;"></div>
@@ -112,9 +114,10 @@ $$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
 
 <!--dsloesung2-->
 \newpage
-<!--dsaufgabe3-->
 
 ## Aufgabe 3
+
+<!--dsaufgabe3-->
 
 Wir können unseren Datensätze nun in zwei Teildatensätze einteilen *m1* und *m2*.
 
@@ -177,9 +180,10 @@ Es bietet sich nicht an den letzten Datenpunkt von *Warten* bei *Feuchte=13* / *
 >Ein overfitted Entscheidungsbaum kann sich negativ auf die Leistung des Modells auswirken, indem es zu schlechten Vorhersagen für neue Daten führt. Um die Überanpassung von Entscheidungsbäumen zu reduzieren, können verschiedene Methoden angewandt werden, wie z.B. Regelungsverfahren wie Pruning, Setzen von Maximaltiefe für den Baum, sowie Verwendung von Klassifikationsmodellen mit weniger Features.
 
 <!--dsinfo4-->
-<!--dsaufgabe5-->
 
 ## Aufgabe 5
+
+<!--dsaufgabe5-->
 
 Mittels des Pythonpaketes *sklearn* lassen sich Entscheidungsbäume erstellen. Der folgende Codeauszug nutzt dieses Paket zum erstellen eines Entscheidungsbaumes:
 
@@ -195,9 +199,10 @@ Untersuchen Sie mit Hilfe der Methode **predict** den entwickelten Entscheidungs
 
 <!--dsaufgabe5-->
 \newpage
-<!--dsaufgabe6-->
 
 ## Aufgabe 6
+
+<!--dsaufgabe6-->
 
 Python ermöglicht es Ihnen auch den Entscheidungsbaum zu visualisieren. Dazu dient das Paket **graphviz**, welches natürlich zuvor installiert werden muss. Der folgende Code visualisiert den entstandenen Entscheidungsbaum im JupyterNotebook.
 
@@ -310,3 +315,22 @@ Wählen Sie einen geeigneten Datensatz aus und entwerfen Sie eine Entscheidungsb
     - [ ] Durch Vergleich der mittleren quadratischen Fehler
     - [ ] Durch Berechnung der Korrelation zwischen den tatsächlichen und den vorhergesagten Werten
 
+6. Welches der folgenden Aussagen beschreibt die Überanpassung (Overfitting) von Entscheidungsbäumen am besten?
+
+    - [ ] Ein überangepasster Entscheidungsbaum hat eine zu geringe Anzahl an Blättern.
+    - [ ] Die Genauigkeit eines überangepassten Entscheidungsbaums sinkt, wenn neue Daten hinzugefügt werden.
+    - [ ] Ein überangepasster Entscheidungsbaum passt sich zu stark an die Trainingsdaten an und kann dadurch schlechtere Vorhersagen auf neuen Daten liefern.
+    - [ ] Ein überangepasster Entscheidungsbaum hat eine hohe Generalisierungsfähigkeit und ist daher besser auf neuen Daten anwendbar.
+
+<!--
+
+LSG:
+
+1. Nr. 3
+2. Nr. 2
+3. Nr. 3
+4. Nr. 4
+5. Nr. 2
+6. Nr. 3
+
+ -->
