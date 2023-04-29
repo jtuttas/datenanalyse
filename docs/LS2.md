@@ -1,6 +1,6 @@
 # FIDP - Lernfeld 10c
 
-## LS 10.2: Dateien als Datenquellen nutzen
+## LS 10.2: Datenexploration und Visualisierung
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
@@ -32,7 +32,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.2: Dateien als Datenquellen nutzen | 7 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.2: Datenexploration und Visualisierung | 7 Unterrichtsstunden |
 
 ### Handlungssituation
 

@@ -12,6 +12,8 @@
 
 [^1]: Vgl. Brandt, Y., Eickhoff-Schachtebeck, A. und Strecker, K. (2022): „Schulbuch starkeSeiten Informatik Jahrgang 9/10 Differenzierende Ausgabe Niedersachsen“, Klett-Verlag 2022
 
+<!--dsdaten-->
+
 ## Die zur Verfügung gestellten Daten
 
 Die Daten die uns der Auftraggeber zur Verfügung stellt liegen in Form einer *csv* Datei vor.
@@ -32,15 +34,21 @@ Die Spalten haben dabei folgende Bedeutung:
 - Regenwahrscheinlichkeit: Die Regenwahrscheinlichkeit in %
 - Ergebnis: Die bisherigen Erfahrungswerte, wann es sich lohnt den Weizen zu **Ernten** oder besser noch zu **Warten**.
 
+<!--dsdaten-->
+<!--dsaufgabe1-->
+
 ## Aufgabe 1: Visualisierung der Daten
 
 Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine Vorstellung von den Daten zu machen.
 
 Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz ([ErnteBauern.csv](../Data/ErnteBauern.csv)) visualisiert.
 
+<!--dsaufgabe1-->
 \newpage
 
 ## Analyse des Datensatzes
+
+<!--dsanalyse1-->
 
 Stellt man die zur Verfügung gestellten Datensatz grafisch dar, so erhält man z.B. folgende Darstellung.
 
@@ -72,6 +80,9 @@ $$H(X) = -\sum_{i=1}^n P(x_i) \log_2(P(x_i))$$
 
 wobei $P(x_i)$ die Wahrscheinlichkeit des Ereignisses $x_i$ ist und $\log_2$ der Logarithmus zur Basis 2 ist.
 
+<!--dsanalyse1-->
+<!--dsaufgabe2-->
+
 ## Aufgabe 2
 
 Gegeben ist folgender Datensatz:
@@ -88,6 +99,8 @@ Gegeben ist folgender Datensatz:
 Bestimmen Sie die Entropie des Datensatzes!
 
 <div style="page-break-after: always;"></div>
+<!--dsaufgabe2-->
+<!--dsloesung2-->
 
 ### Lösung
 
@@ -97,7 +110,9 @@ $$P_B = \frac{2}{6}=0.3333$$
 $$H = - (P_A \log_2(P_A)+P_B \log_2(P_B))$$
 $$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
 
+<!--dsloesung2-->
 \newpage
+<!--dsaufgabe3-->
 
 ## Aufgabe 3
 
@@ -117,6 +132,9 @@ m2 = data[data['Feuchte'] >= 13]
 
 Entwickeln Sie eine Pythonfunktion **calcEntropie(mx):Entropie** welche die Entropie eines übergebenen Arrays mit den Kategorien **Ernten** und **Warten** ermittelt.
 
+<!--dsaufgabe3-->
+<!--dsinfo3-->
+
 Wenn wir mir unsere entwickelten Funktion **calcEntropie(mx):Entropie** die Datenmenge nun schrittweise teilen, erhalten wir die folgende Darstellung.
 
 ![Entropie der Feuchte](images/ds3.png)
@@ -129,7 +147,9 @@ Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer
 
 ![Erste Entscheidung](images/ds5.png)
 
+<!--dsinfo3-->
 \newpage
+<!--dsaufgabe4-->
 
 ## Aufgabe 4
 
@@ -145,6 +165,9 @@ Ergänzen Sie den unten abgebildeten Entscheidung!
 
 \newpage
 
+<!--dsaufgabe4-->
+<!--dsinfo4-->
+
 Es bietet sich nicht an den letzten Datenpunkt von *Warten* bei *Feuchte=13* / *Regenwahrscheinlichkeit=45* mit in den Entscheidungsbaum aufzunehmen. Bei dem Datenpunkt scheint es sich im einen Ausreißer zu handeln. Würde der Datenpunkt mit in den Entscheidungsbaum aufgenommen, so würde dieses den Entscheidungsbaum unnötig verkomplizieren. Man spricht in diesem Fall auch von der *Überanpassung* eines Modells.
 
 > Die Überanpassung (auch bekannt als Overfitting) bezeichnet ein Phänomen, bei dem ein Modell so eng auf die Trainingsdaten passt, dass es nur in der Lage ist, diese spezifischen Daten gut vorherzusagen und nicht in der Lage ist, neue Daten oder eine Testmenge gut zu verallgemeinern.
@@ -152,6 +175,9 @@ Es bietet sich nicht an den letzten Datenpunkt von *Warten* bei *Feuchte=13* / *
 >Dies kann insbesondere bei komplexeren Entscheidungsbaum-Modellen auftreten, bei denen das Modell so viele Schichten hat, dass es fast jede mögliche Kombination von Variablen innerhalb der Trainingsdaten abdeckt. Dies führt dazu, dass das Modell ein "Gedächtnis" für die Trainingsdaten entwickelt und sich an jede einzelne Beobachtung erinnert, anstatt allgemeine Muster zu lernen, die für neue Datensätze gelten können.
 >
 >Ein overfitted Entscheidungsbaum kann sich negativ auf die Leistung des Modells auswirken, indem es zu schlechten Vorhersagen für neue Daten führt. Um die Überanpassung von Entscheidungsbäumen zu reduzieren, können verschiedene Methoden angewandt werden, wie z.B. Regelungsverfahren wie Pruning, Setzen von Maximaltiefe für den Baum, sowie Verwendung von Klassifikationsmodellen mit weniger Features.
+
+<!--dsinfo4-->
+<!--dsaufgabe5-->
 
 ## Aufgabe 5
 
@@ -167,7 +193,9 @@ clf = clf.fit(x, y)
 
 Untersuchen Sie mit Hilfe der Methode **predict** den entwickelten Entscheidungsbaum! Erzeugen Sie dafür 4 typische Werte für den Datensatz!
 
+<!--dsaufgabe5-->
 \newpage
+<!--dsaufgabe6-->
 
 ## Aufgabe 6
 
@@ -189,14 +217,19 @@ dot_data = export_graphviz(clf, out_file=None,
 graph = graphviz.Source(dot_data)
 display(graph)
 ```
+<!--dsaufgabe6-->
+<!--dsloesung6-->
 
 ![Entscheidungsbaum mit sklearn](images/ds8.png)
 
 Welche Aussage lassen sich aus der Grafik ableiten?
 
+<!--dsloesung6-->
 \newpage
 
 ## Aufgabe 7
+
+<!--dsaufgabe7-->
 
 Zur Validierung unseres Modells stellt uns der Kunde einen weiteren Datensatz zur Verfügung ([ErnteBauern2](../Data/ErnteBauern2.csv)). Überprüfen Sie mit Hilfe dieses Datensatzes die Qualität des Entscheidungsbaumes:
 
@@ -225,7 +258,9 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Vorhersagegenauigkeit auf dem Testdatensatz: {:.2f}%".format(accuracy * 100))
 ```
 
+<!--dsaufgabe7-->
 \newpage
+<!--dsaufgabe8-->
 
 ## Aufgabe 8
 
@@ -240,6 +275,7 @@ Wählen Sie einen geeigneten Datensatz aus und entwerfen Sie eine Entscheidungsb
 3. **Breast Cancer Wisconsin (diagnostic) Dataset**: Dieser Datensatz enthält Details zu den Zellkernmerkmalen von malignen und benignen Brustgewebeproben sowie einer Diagnose, ob eine Probe maligne oder benign ist. Der Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben zum Erkennen von Brustkrebs.
    - URL: <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>
 
+<!--dsaufgabe8-->
 \newpage
 
 ## Fragen zum Verständnis
