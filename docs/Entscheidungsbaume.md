@@ -152,9 +152,10 @@ Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer
 
 <!--dsinfo3-->
 \newpage
-<!--dsaufgabe4-->
 
 ## Aufgabe 4
+
+<!--dsaufgabe4-->
 
 Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibende Menge weiter wie folgt einteilen:
 

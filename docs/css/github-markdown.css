@@ -77,7 +77,7 @@ figcaption {
   color: dimgray;
 }
 
-img {
+figure {
   display: block;
   margin: auto;
 }
