@@ -89,7 +89,7 @@ jobs:
       - name: install pandoc
         run: sudo apt-get update;sudo apt-get install texlive-latex-base texlive-latex-extra pandoc libjs-mathjax; npm install --global mermaid-filter
       - name: run pandoc
-        run: cd docs; for i in *.md ; do echo "$i" && pandoc -V geometry:margin=1in -f markdown-implicit_figures --highlight-style=breezeDark --mathjax -F mermaid-filter -s $i -o ../pdfs/$i.pdf || true; pandoc --webtex --self-contained -c ./css/github-markdown.css --highlight-style=breezeDark --standalone -F mermaid-filter -s $i -o ../html/$i.html --metadata pagetitle=$i || true; done 
+        run: cd docs; for i in *.md ; do echo "$i" && pandoc -V geometry:margin=1in -f markdown-implicit_figures --highlight-style=breezeDark --mathjax -F mermaid-filter -s $i -o ../pdfs/$i.pdf || true; pandoc --webtex --self-contained --highlight-style=breezeDark --standalone -F mermaid-filter -s $i -o ../html/$i.html --metadata pagetitle=$i || true; done 
       - name: list files2
         run: 'ls -laR'        
 
