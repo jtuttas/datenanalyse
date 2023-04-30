@@ -2,7 +2,7 @@
 
 ## Handlungssituation
 
-![Teaser](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Stadtwerke_Hannover_logo.svg/640px-Stadtwerke_Hannover_logo.svg.png)
+![Teaser](images/enercity.png)
 
 > Ein Regionaler Stromanbieter will in seinem Versorgungsgebiet Ladesäulen für Elektroautos anbieten. Dabei sollen möglichst alle Kunden einen kurzen Weg zur angebotenen Ladesäule habe.[^1]
 >
