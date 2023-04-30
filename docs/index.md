@@ -31,7 +31,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 Die Lernsituationen werden automatisch generiert aus Markdown Dateien und können auch als **pdf** herunter geladen werden.
 
 - [LS1](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS1.md.pdf) KI im Alltag
-- [LS2](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS2.md.pdf) Dateien als Datenquellen
+- [LS2](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS2.md.pdf) Datenexploration und -Visualisierung
 - [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf) Entscheidungsbäume
 - [LS4](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS4.md.pdf) APIs abfragen
 - [LS5](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS5.md.pdf) Regressionsanalyse
