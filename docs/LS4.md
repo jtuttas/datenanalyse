@@ -1,6 +1,6 @@
 # FIDP - Lernfeld 10c
 
-## LS 10.4: APIs abfragen
+## LS 10.4: K-Mean Clustering
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
@@ -32,7 +32,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 | Curricularer Bezug | Titel der Lernsituation (Kurzfassung) | Geplanter Zeitrichtwert |
 | :--- | :--- | :---: |
-| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.4: APIs abfragen | 8 Unterrichtsstunden |
+| Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.4: k-mean Clustering | 8 Unterrichtsstunden |
 
 ### Handlungssituation
 
@@ -52,11 +52,11 @@ Eine Modell welches alf der Grundlage des K-Mean Clustering den besten Standort 
 
 | | Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz) | Inhalte | Sozialform/Methoden |
 | :--- | :--- | :--- | :--- |
-| Informieren bzw. Analysieren |  | |  |
-| Planen / Entscheiden |  |  |  |
-| Durchführen |  | |  |
-| Kontrollieren / Bewerten |  | |  |
-| Reflektieren |  | |  |
+| Informieren bzw. Analysieren | Datenexploration und Visualisierung | Die Schülerinnen und Schüler lesen die zur Verfügung gestellten Daten ein und stellen sie grafisch dar | Einzelarbeit </br> Plenum |
+| Planen / Entscheiden | Erstes Clustering anwenden | Die Schülerinnen und Schüler wählen einen geeigneten Punkt f. die Platzierung von Ladensäulen aus und ermitteln die zugehörigen Datenpunkte mittel der Euklidische Distanz  | Einzelarbeit </br> Plenum |
+| Durchführen | Das k-mean Clustering zur Problemlösung anwenden | Die Schülerinnen und Schüler führen iterativ den Algorithmus des k-mean Clusterings aus un bewerten die Ergebnisse | Einzelarbeit |
+| Kontrollieren / Bewerten | Bibliotheken f. das k-mean Clustering anwenden | Die Schülerinnen und Schülern verwenden die Bibliothek **KMeans** aus dem Paket **sklearn.cluster** und stellen die Ergebnisse der Bibliothek grafisch dar und bewerten diese | Plenum </br> Einzelarbeit |
+| Reflektieren | Transfer auf weitere Einsatzmöglichkeiten | Die Schülerinnen und Schüler erstellen eine Wortwolke zu weiteren Anwendungsfällen für das k-mean Clustering | Plenum |
 
 ### Arbeitsmaterialien / Links
 
@@ -65,8 +65,13 @@ Eine Modell welches alf der Grundlage des K-Mean Clustering den besten Standort 
 
 ### Schulische Entscheidungen
 
+- Als Programmiersprache wird Python verwendet
+- als Entwicklungsumgebung wird vs code und Jupyter Notebook verwendet
+
 <div style="page-break-after: always;"></div>
 
 ### Leistungsnachweise
+
+Ggf. Präsentationen zu weiteren Einsatzmöglichkeiten des k-mean Clusterings.
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
