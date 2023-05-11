@@ -71,18 +71,23 @@ def distance(x1, y1, x2, y2):
 ```
 
 <!--kmean_loesung3-->
+
 <!--kmean_aufgabe4-->
 
 ## Aufgabe 4
 
 Teilen Sie die Datenmenge nun in 3 Mengen ein, jede Menge sind dabei die Autos, die zu der jeweiligen Ladestation fahren würden (also wo der Abstand zur jeweiligen Ladestation am kürzesten ist). Stellen Sie diese 3 Mengen dar und färben Sie geeigneter Weise die Punkte entsprechend ein.
 
+<!--kmean_aufgabe4-->
+
 <!--kmean_loesung4-->
+
 ### Lösung Aufgabe 4
 
 ![Drei Teilmengen](images/kmean3.png)
 
 <!--kmean_loesung4-->
+
 <!--kmean_aufgabe5-->
 
 ## Aufgabe 5
@@ -96,6 +101,7 @@ y-Mittelpunkt: $(y_1 + y_2 + ... + y_n)/n$
 Ermitteln Sie für jede der 3 Datenmenge eine neue optimale Position und zeichnen Sie diese in das Diagramm ein.
 
 <!--kmean_aufgabe5-->
+
 <!--kmean_loesung5-->
 
 ### Lösung Aufgabe 5
@@ -103,6 +109,7 @@ Ermitteln Sie für jede der 3 Datenmenge eine neue optimale Position und zeichne
 ![Neue optimierte Positionen](images/kmean4.png)
 
 <!--kmean_loesung5-->
+
 <!--kmean_aufgabe6-->
 
 ## Aufgabe 6 - iteration des Algorithmus
