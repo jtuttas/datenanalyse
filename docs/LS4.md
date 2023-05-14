@@ -44,7 +44,7 @@ Der Kunde stellt dazu einen Plan zur Verfügung, der die Wohnorte der Kunden, di
 
 ### Handlungsergebnis
 
-Eine Modell welches alf der Grundlage des K-Mean Clustering den besten Standort für Ladesäulen ermittelt.  
+Eine Modell welches auf der Grundlage des K-Mean Clustering den besten Standort für Ladesäulen ermittelt.  
 
 <div style="page-break-after: always;"></div>
 
