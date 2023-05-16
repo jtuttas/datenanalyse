@@ -18,7 +18,7 @@ Stelle Sie zunächst die Daten, die Sie vom Online Händler erhalten haben grafi
 
 ## Erste Überlegungen zum Vorhersagemodell
 
-Angenommen ein Kunde wird ausgemessen und es ergibt sich eine Körpergröße von *163cm* und eine Schrittlänge von *84cm*, welchen Rahmengröße könnte man dem Kunden empfehlen?
+Angenommen ein Kunde wird ausgemessen und es ergibt sich eine Körpergröße von *163cm* und eine Schrittlänge von *84cm* (der graue Punkt in der unteren Abbildung), welchen Rahmengröße könnte man dem Kunden empfehlen?
 
 ![Entwurf eines Vorhersagemodells](images/knn2.png)
 
@@ -41,3 +41,227 @@ Entwickeln sie eine Funktion **distance(ax,ay,px,py)**, die die Entfernung zweie
 Iterieren Sie durch alle gegeben Datenpunkte und bestimmen Sie den Punkt, der vom gesuchten Punkt (Körpergröße=163cm / Schrittlänge=84 cm) den geringsten Abstand hat.
 
 > Diskutieren Sie im Klassenverband, ob wir bereits ein geeignetes Vorhersagemodell gefunden haben? Und wie wir die Qualität unseres gefundenen Modells überprüfen können?
+
+## Testen des Vorhersagemodells
+
+Wollen wir unsere Modell qualitativ überprüfen sollten wir zunächst unseren Datenbestand teilen in Trainingsdaten und Testdaten. 
+
+![Teilen des Datensatzes](images/knn3.png)
+
+Anhand der Testdaten können wir nun überprüfen wie gut unser Modell ist. Erstellen Sie ein Programm, welches anhand der Testdaten Vorhersagen zur Rahmenhöhe macht. Und dokumentieren Sie, wie of das Modell eine richtige Vorhersage macht und wie oft das Modell falsch liegt.
+
+### Lösung
+
+```py
+import pandas as pd
+
+ok=0;
+err=0
+
+for i in range(0,len(test)):
+
+    d = pd.DataFrame(columns=["distance","Koerpergroesse","Schrittlaenge","Rahmenhöhe"])
+    testData = test.iloc[i]
+    for index, row in learn.iterrows():
+        d.loc[len(d)] = [distance(testData["Koerpergroesse"],testData["Schrittlaenge"],row["Koerpergroesse"],row["Schrittlaenge"]),row["Koerpergroesse"],row["Schrittlaenge"],row["Rahmengroesse"]]
+        
+    d.sort_values(by=["distance"], inplace=True)
+
+    print("Vorhersage "+d.iloc[0]["Rahmenhöhe"]+ " Ist-Rahmenhöhe "+testData["Rahmengroesse"])
+    if (d.iloc[0]["Rahmenhöhe"]==testData["Rahmengroesse"]):
+        print ("OK")
+        ok=ok+1
+    else:
+        print ("Fehler")
+        err=err+1
+
+print ("OK "+str(ok)+"   Fehler "+str(err))
+```
+
+## Andere k-Werte
+
+Bisher schauen und wir uns den nächsten Nachbarn im Datenraum an ($k=1$). Doch wie würde sich die Qualität unseres Modells ändern, wenn wir z.B. die nächsten 3 Nachbarn ($k=3$) betrachten würden? Experimentieren Sie mit ihrem Modell mit anderen k-Werten und analysieren Sie die Qualität des Vorhersagemodells.
+
+*Hinweis*: Wenn wir einen anderen k-Wert als 1 verwenden, müssen wir, nachdem wir das Ergebnis-Array ["Entfernung","Rahmengröße"] sortiert haben heraus finden welche Klasse in den k-letzten Einträgen am meisten vorhanden ist!
+
+![Ergebnisse k=3](images/knn4.png)
+
+## Metriken
+
+Metriken dienen dazu die Qualität von Modellen zu beurteilen. Eine erste einfache Metrik haben wir bereits angewendet, die Genauigkeit (Accuracy):
+
+> Accuracy (Genauigkeit): Die Genauigkeit misst den Prozentsatz der korrekten Vorhersagen im Verhältnis zur Gesamtzahl der Vorhersagen. Es ist eine einfache und häufig verwendete Metrik, aber sie kann irreführend sein, wenn die Daten ungleichmäßig verteilt sind.
+
+Accuracy = $\frac{T_{correct}}{T_{correct} + F_{error}}$
+
+Dabei sind $T_{correct}$ die Anzahl der richtigen Vorhersagen und $F_{error}$ die Anzahl der falschen Vorhersagen.
+
+Neben dieser Metrik gibt es noch eine Vielzahl weiterer Metriken, die je nach Problemstellung eine bessere Aussage über die Qualität des Vorhersagemodells liefern. Siehe folgende Abbildung. [^1]
+
+[^1]: vgl. <https://en.wikipedia.org/wiki/Precision_and_recall>
+
+![Fehlerbetrachtung](Fehlerbetrachtung.png)
+
+Angenommen wir wollen einen Klassifizierer für Corona Tests entwickeln. So liegen alle Personen die Corona haben im grün dargestellten Bereich. Unser Klassifizierer (Test) kann jedoch nicht alle Corona positiven Personen erfassen und es gibt eine Reihe von Tests, die Corona negativ sind obwohl die Person Corona hat. Diese finden sich im Bereich *false negative* und werden als $F_N$ bezeichnet. Erkennt unser Test eine Corona-Infektion so wird dieses als *true positive* bezeichnet und als $T_P$ erfassen.
+
+In ähnlicher Weise könnte unser Test auch einen gesunden Menschen als an Corona erkrankt erfassen. Dieses würde als *true negativ* bezeichnen und als $T_N$ erfasst. Bzw. wenn im optimalen Fall würde der Test keine Corona Infektion ausweisen und der Proband ist auch nicht an Corona erkrankt, so wäre der Test *false positiv* oder $F_P$.
+
+Daraus ergeben sich die Werte *Precision* und *Recall*
+
+> Precision (Präzision) und Recall (Rückruf): Diese beiden Metriken beziehen sich auf das Verhältnis von korrekten positiven Vorhersagen zu allen tatsächlichen positiven Instanzen. Precision misst, wie oft das Modell richtig vorhergesagt hat, während Recall misst, wie viele der tatsächlichen positiven Fälle das Modell gefunden hat.
+
+Precision = $\frac{TP}{TP + FP}$
+
+Recall = $\frac{TP}{TP + FN}$
+
+Eine weitere Metrik ergibt sich aus diesen beiden Werten und wird als *F1-Score* bezeichnet.
+
+>F1-Score: Der F1-Score ist das harmonische Mittel zwischen Präzision und Rückruf und gibt daher ein ausgewogenes Maß für die Leistung des Modells.
+
+F1 Score = $2*\frac{precision* recall}{precision + recall}$
+
+Für unser Problem der Bestimmung der optimalen Rahmenhöhe müssen wir die Größen *Precision* und *Recall* pro Klasse betrachten. Dabei haben wir 4 Klassen (S,M,L,XL).
+
+Angenommen unser Modell würde folgende Vorhersagen treffen (dabei sind die gelb markierten Felder die richtigen Größen und die blau markierten Felder die vorhergesagten Größen).
+
+![Ergebnis des Klassifikation](images/knn5.png)
+
+Wie wir sehen macht das Modell bei der Vorhersage der Rahmengröße "L" drei Fehler. Bestimmen Sie für die vier Klassen S,M,L und XL jeweils die *Precision* und den *Recall* Wert.
+
+### Lösung Metriken
+
+![Ergebnis des Klassifikation](images/knn5.png)
+
+$P_S=\frac{TP}{TP + FP}=\frac{4}{4 + 0}=1$
+
+$P_M=\frac{TP}{TP + FP}=\frac{1}{1 + 1}=0.5$
+
+$P_L=\frac{TP}{TP + FP}=\frac{2}{2 + 0}=1$
+
+$P_{XL}=\frac{TP}{TP + FP}=\frac{6}{6 + 2}=0.75$
+
+---
+
+$R_S=\frac{TP}{TP + FN}=\frac{4}{4 + 0}=1$
+
+$R_M=\frac{TP}{TP + FN}=\frac{1}{1 + 0}=1$
+
+$R_L=\frac{TP}{TP + FN}=\frac{2}{2 + 3}=0.4$
+
+$R_{XL}=\frac{TP}{TP + FN}=\frac{6}{6 + 0}=1$
+
+## Nutzen von Bibliotheken
+
+Aus dem Paket *sklearn.neighbours* kann der *KNeighborsClassifier* genutzt werden um eine KNN Klassifizierung zu erstellen.
+
+```py
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+
+# Laden Sie die CSV-Datei in ein Pandas DataFrame.
+df = pd.read_csv('Rahmenhoehe.csv')
+
+# Aufteilen der Features und Labels
+X = df[['Koerpergroesse', 'Schrittlaenge']]
+y = df['Rahmengroesse']
+
+# Teilen Sie die Daten in Trainings- und Testdaten auf.
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Skalieren Sie die Merkmale.
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Erstellen und Trainieren des KNN-Modells mit k=3.
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
+
+# Verwenden Sie das trainierte Modell, um Vorhersagen für die Testdaten zu treffen.
+y_pred = knn.predict(X_test)
+```
+
+Nutzen Sie die Klasse *KNeighborsClassifier* und überprüfen Sie das Modell für verschiedene Werte von *k*.
+
+## Bestimmung der Metriken
+
+Auch die Metriken können mit Hilfe des Paketes *sklearn.metrics* bestimmt werden. Bestimmen Sie mit Hilfe des unten abgebildeten Programmcodes die Qualität ihres Vorhersagemodells.
+
+> *Hinweis*: Die Klasse werden dabei in der Reihenfolge ihres Auftretens in den Testdaten gebildet. 
+
+```py
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Berechnen Sie die Vorhersagen für die Testdaten.
+y_pred = knn.predict(X_test)
+
+# Reihenfolge der Klassenlabels abrufen
+class_order = knn.classes_
+
+# Drucken der Reihenfolge der Klassenlabels
+print('Klassenreihenfolge:', class_order)
+
+# Berechnen Sie die Accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy:', accuracy)
+
+# Berechnen Sie die Precision
+precision = precision_score(y_test, y_pred, average=None)
+print('Precision:', precision)
+
+# Berechnen Sie den Recall
+recall = recall_score(y_test, y_pred, average=None)
+print('Recall:', recall)
+
+# Berechnen Sie den F1-Score
+f1 = f1_score(y_test, y_pred, average=None)
+print('F1-Score:', f1)
+```
+
+## Fragen zum Kapitel
+
+1.) Wie funktioniert KNN im Allgemeinen?
+
+- [ ] Es speichert alle vorhandenen Daten und sucht nach ähnlichen Mustern
+- [ ] Es berechnet die Distanz zwischen Punkten und wählt die k nächsten Nachbarn aus
+- [ ] Es gibt eine Liste von Regeln zurück, um eine Entscheidung zu treffen
+- [ ] Es gibt nur binäre Antworten zurück
+
+2.) Warum wird der Parameter "k" in KNN verwendet?
+
+- [ ] Um die Anzahl der Dateneingaben zu begrenzen
+- [ ] Um die Genauigkeit des Modells einzuschränken
+- [ ] Um zu bestimmen, wie viele Nachbarn einbezogen werden sollen
+- [ ] Um das Modell einfacher zu gestalten
+
+3.) Welche Art von Problemen kann KNN gut lösen?
+
+- [ ] Probleme mit nur zwei Variablen
+- [ ] Probleme mit vielen Variablen und komplexen Mustererkennungen
+- [ ] Nur einfache lineare Probleme
+- [ ] Probleme, bei denen das Ergebnis auf binärer Logik basiert
+
+4.) Welche Metrik wird zur Bewertung eines KNN-Modells verwendet, das für eine binäre Klassifikation eingesetzt wird?
+
+- [ ] F1-Score
+- [ ] R2-Score
+- [ ] Adjusted R-Squared
+- [ ] Silhouette Coefficient
+
+5.) Welche Python-Bibliothek kann verwendet werden, um KNN in Python zu implementieren?
+
+- [ ] TensorFlow
+- [ ] PyTorch
+- [ ] Scikit-Learn (sklearn)
+- [ ] Theano
+
+<!--
+1 Antwort: b) Es berechnet die Distanz zwischen Punkten und wählt die k nächsten Nachbarn aus
+2 Antwort: c) Um zu bestimmen, wie viele Nachbarn einbezogen werden sollen
+3 Antwort: b) Probleme mit vielen Variablen und komplexen Mustererkennungen
+4 Antwort: a) F1-Score
+5. Antwort: c) Scikit-Learn (sklearn)
+-->
