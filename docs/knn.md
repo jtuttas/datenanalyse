@@ -10,9 +10,14 @@
 >
 >Der Online Fahrradhändler hat bereits Daten in Form von Erfahrungswerten vorliegen und stellt ihnen diese in Form einer CSV Datei zur Verfügung.
 
+<!--knn_aufg1-->
+
 ## Exploration der Daten
 
 Stelle Sie zunächst die Daten, die Sie vom Online Händler erhalten haben grafisch dar ([CSV Datei](../Data/Rahmenhoehe.csv)). Zur besseren Unterscheidung der Kategorien (Klassen) sollte jede Rahmenhöhe (S,M,L,XL) in einer anderen Farbe dargestellt werden.
+
+<!--knn_aufg1-->
+<!--knn_info1-->
 
 ![Exploration der Daten](images/knn1.png)
 
@@ -42,6 +47,10 @@ Iterieren Sie durch alle gegeben Datenpunkte und bestimmen Sie den Punkt, der vo
 
 > Diskutieren Sie im Klassenverband, ob wir bereits ein geeignetes Vorhersagemodell gefunden haben? Und wie wir die Qualität unseres gefundenen Modells überprüfen können?
 
+<!--knn_info1-->
+
+<!--knn_aufg2-->
+
 ## Testen des Vorhersagemodells
 
 Wollen wir unsere Modell qualitativ überprüfen sollten wir zunächst unseren Datenbestand teilen in Trainingsdaten und Testdaten. 
@@ -49,6 +58,9 @@ Wollen wir unsere Modell qualitativ überprüfen sollten wir zunächst unseren D
 ![Teilen des Datensatzes](images/knn3.png)
 
 Anhand der Testdaten können wir nun überprüfen wie gut unser Modell ist. Erstellen Sie ein Programm, welches anhand der Testdaten Vorhersagen zur Rahmenhöhe macht. Und dokumentieren Sie, wie of das Modell eine richtige Vorhersage macht und wie oft das Modell falsch liegt.
+
+<!--knn_aufg2-->
+<!--knn_lsg2-->
 
 ### Lösung
 
@@ -77,6 +89,8 @@ for i in range(0,len(test)):
 
 print ("OK "+str(ok)+"   Fehler "+str(err))
 ```
+<!--knn_lsg2-->
+<!--knn_aufg3-->
 
 ## Andere k-Werte
 
@@ -86,9 +100,12 @@ Bisher schauen und wir uns den nächsten Nachbarn im Datenraum an ($k=1$). Doch 
 
 ![Ergebnisse k=3](images/knn4.png)
 
+<!--knn_aufg3-->
+<!--knn_aufg4-->
+
 ## Metriken
 
-Metriken dienen dazu die Qualität von Modellen zu beurteilen. Eine erste einfache Metrik haben wir bereits angewendet, die Genauigkeit (Accuracy):
+Metriken dienen dazu die Qualität von Modellen zu beurteilen. Eine erste einfache Metrik haben wir bereits angewendet, die Genauigkeit (*Accuracy*):
 
 > Accuracy (Genauigkeit): Die Genauigkeit misst den Prozentsatz der korrekten Vorhersagen im Verhältnis zur Gesamtzahl der Vorhersagen. Es ist eine einfache und häufig verwendete Metrik, aber sie kann irreführend sein, wenn die Daten ungleichmäßig verteilt sind.
 
@@ -128,6 +145,9 @@ Angenommen unser Modell würde folgende Vorhersagen treffen (dabei sind die gelb
 
 Wie wir sehen macht das Modell bei der Vorhersage der Rahmengröße "L" drei Fehler. Bestimmen Sie für die vier Klassen S,M,L und XL jeweils die *Precision* und den *Recall* Wert.
 
+<!--knn_aufg4-->
+<!--knn_lsg4-->
+
 ### Lösung Metriken
 
 ![Ergebnis des Klassifikation](images/knn5.png)
@@ -149,6 +169,70 @@ $R_M=\frac{TP}{TP + FN}=\frac{1}{1 + 0}=1$
 $R_L=\frac{TP}{TP + FN}=\frac{2}{2 + 3}=0.4$
 
 $R_{XL}=\frac{TP}{TP + FN}=\frac{6}{6 + 0}=1$
+
+<!--knn_lsg4-->
+<!--knn_uebung1-->
+
+## Übungsaufgabe Metriken
+
+Ein Klassifizierungsalgorithmus ist in der Lage unterschiedliche Getreidearten wie (W)eizen, (G)erste und (R)oggen zu klassifizieren. Der Algorithmus wurde mit einem Testdatensatz validiert und es kam zu folgendem Ergebnis:
+
+| Vorhersage | Ist |
+| ---------- | --- |
+| W          | W   |
+| W          | W   |
+| G          | W   |
+| G          | G   |
+| R          | R   |
+| W          | W   |
+| R          | W   |
+| G          | G   |
+| R          | R   |
+| R          | W   |
+| R          | R   |
+| G          | G   |
+| G          | R   |
+| W          | R   |
+| G         | G |
+
+Bestimmen Sie für den Algorithmus die *Accuracy*, *Precision* und den *Recall*-Wert.
+
+<!--knn_uebung1-->
+<!--knn_uebung1lsg-->
+
+### Lösung Übung Metriken
+
+|     | $W_v$   | $G_v$   | $R_v$   |
+| --- | :-- | --- | --- |
+| $W_i$   | 3   | 1   | 2   |
+| $G_i$   |     | 4   |     |
+| $R_i$   | 1   | 1   | 3   |
+
+Das ist $G_v$ z.B. der vorhergesagte Weizenwert und $G_i$ der Istwert.
+
+Für die *Accuracy* gilt:
+
+$A=\frac{T_{correct}}{T_{correct} + F_{error}}=\frac{10}{10 + 5}=67 \%$
+
+Für die *Precision* gilt:
+
+$P_W=\frac{T_P}{T_P + F_P}=\frac{3}{4}=75 \%$
+
+$P_G=\frac{T_P}{T_P + F_P}=\frac{4}{6}=67 \%$
+
+$P_R=\frac{T_P}{T_P + F_P}=\frac{3}{5}=60 \%$
+
+Für den *Recall* gilt:
+
+$R_W=\frac{T_P}{T_P + F_N}=\frac{3}{3 + 3}= 50 \%$
+
+$R_G=\frac{T_P}{T_P + F_N}=\frac{4}{4 + 0}= 100 \%$
+
+$R_R=\frac{T_P}{T_P + F_N}=\frac{3}{3 + 2}= 60 \%$
+
+<!--knn_uebung1lsg-->
+<!--knn_aufg5-->
+
 
 ## Nutzen von Bibliotheken
 
@@ -186,6 +270,9 @@ y_pred = knn.predict(X_test)
 
 Nutzen Sie die Klasse *KNeighborsClassifier* und überprüfen Sie das Modell für verschiedene Werte von *k*.
 
+<!--knn_aufg5-->
+<!--knn_aufg6-->
+
 ## Bestimmung der Metriken
 
 Auch die Metriken können mit Hilfe des Paketes *sklearn.metrics* bestimmt werden. Bestimmen Sie mit Hilfe des unten abgebildeten Programmcodes die Qualität ihres Vorhersagemodells.
@@ -220,6 +307,7 @@ print('Recall:', recall)
 f1 = f1_score(y_test, y_pred, average=None)
 print('F1-Score:', f1)
 ```
+<!--knn_aufg6-->
 
 ## Fragen zum Kapitel
 
