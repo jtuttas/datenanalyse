@@ -17,9 +17,12 @@
 Stelle Sie zunächst die Daten, die Sie vom Online Händler erhalten haben grafisch dar ([CSV Datei](../Data/Rahmenhoehe.csv)). Zur besseren Unterscheidung der Kategorien (Klassen) sollte jede Rahmenhöhe (S,M,L,XL) in einer anderen Farbe dargestellt werden.
 
 <!--knn_aufg1-->
-<!--knn_info1-->
+<!--knn_lsg1-->
 
 ![Exploration der Daten](images/knn1.png)
+
+<!--knn_lsg1-->
+<!--knn_aufg1b-->
 
 ## Erste Überlegungen zum Vorhersagemodell
 
@@ -47,7 +50,7 @@ Iterieren Sie durch alle gegeben Datenpunkte und bestimmen Sie den Punkt, der vo
 
 > Diskutieren Sie im Klassenverband, ob wir bereits ein geeignetes Vorhersagemodell gefunden haben? Und wie wir die Qualität unseres gefundenen Modells überprüfen können?
 
-<!--knn_info1-->
+<!--knn_aufg1b-->
 
 <!--knn_aufg2-->
 
