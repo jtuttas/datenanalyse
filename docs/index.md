@@ -35,6 +35,6 @@ Die Lernsituationen werden automatisch generiert aus Markdown Dateien und könne
 - [LS3](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS3.md.pdf) Entscheidungsbäume
 - [LS4](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS4.md.pdf) K-mean Clustering
 - [LS5](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS5.md.pdf) Regressionsanalyse
-- [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf) Entscheidungsbäume
+- [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf) K-nearest Neighbor (KNN)
 - [LS7](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS7.md.pdf) Neuronale Netze
 - [LS8](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS8.md.pdf) Cloud KI Systeme nutzen
