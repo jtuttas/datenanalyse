@@ -2,7 +2,7 @@
 
 ## Handlungssituation
 
-![Teaser](https://upload.wikimedia.org/wikipedia/commons/a/af/Diamantrahmen_Rohrlaengen.png)
+![Teaser](images/Diamantrahmen_Rohrlaengen.png)
 
 >Ein Online Fahrradhändler möchte seinen Kunden stets Fahrräder in der optimale Rahmenhöhe anbieten. Dazu soll eine App inkl. Vorhersagemodell entwickelt werden, so dass der Kunde lediglich ein Foto aufnehmen muss und ihm die optimale Rahmenhöhe empfohlen wird.
 >
