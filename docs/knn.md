@@ -78,11 +78,16 @@ for i in range(0,len(test)):
     d = pd.DataFrame(columns=["distance","Koerpergroesse","Schrittlaenge","Rahmenhöhe"])
     testData = test.iloc[i]
     for index, row in learn.iterrows():
-        d.loc[len(d)] = [distance(testData["Koerpergroesse"],testData["Schrittlaenge"],row["Koerpergroesse"],row["Schrittlaenge"]),row["Koerpergroesse"],row["Schrittlaenge"],row["Rahmengroesse"]]
+        d.loc[len(d)] = [distance(testData["Koerpergroesse"],testData["Schrittlaenge"],
+        row["Koerpergroesse"],
+        row["Schrittlaenge"]),
+        row["Koerpergroesse"],
+        row["Schrittlaenge"],
+        row["Rahmengroesse"]]
         
     d.sort_values(by=["distance"], inplace=True)
 
-    print("Vorhersage "+d.iloc[0]["Rahmenhöhe"]+ " Ist-Rahmenhöhe "+testData["Rahmengroesse"])
+    print("Vorhersage "+d.iloc[0]["Rahmenhöhe"]+ " Ist "+testData["Rahmengroesse"])
     if (d.iloc[0]["Rahmenhöhe"]==testData["Rahmengroesse"]):
         print ("OK")
         ok=ok+1
