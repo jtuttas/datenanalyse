@@ -1,14 +1,16 @@
-import gym
-env = gym.make("MsPacman-v4", render_mode="human")
-env.action_space.seed(42)
+import gymnasium as gym
+#env = gym.make("Taxi-v3", render_mode="human")
+env = gym.make("Taxi-v3")
+observation, info = env.reset()
+done = False
 
-observation, info = env.reset(seed=42)
+steps=0;
 
-for _ in range(1000):
-    observation, reward, terminated, truncated, info = env.step(env.action_space.sample())
+while not done:
+   action = env.action_space.sample()  # this is where you would insert your policy
+   observation, reward, done, truncated, info = env.step(action)
+   steps=steps+1
 
-    if terminated or truncated:
-        observation, info = env.reset()
 
+print ("We are done in ",steps, " Steps")
 env.close()
-
