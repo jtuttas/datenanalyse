@@ -1,7 +1,7 @@
 import os
 import gym
 import numpy as np
-
+import random
 
 # Erstelle die Breakout-Umgebung
 env = gym.make('Breakout-v0',render_mode='rgb_array')
@@ -11,17 +11,22 @@ env = gym.make('Breakout-v0',render_mode='rgb_array')
 state_size = env.observation_space.shape[0] * env.observation_space.shape[1] * env.observation_space.shape[2]
 action_size = env.action_space.n
 
+print ("Action Space "+str(action_size))
+print ("State Size "+str(state_size))
+
 # Definiere die Hyperparameter
-total_episodes = 1000
+total_episodes = 100
 learning_rate = 0.8         
 max_steps = 100              
-gamma = 0.95                
+gamma = 0.95             
+alpha=0.1   
 
 # Exploration parameters
 epsilon = 1.0                
 max_epsilon = 1.0           
 min_epsilon = 0.01          
-decay_rate = 0.001          
+decay_rate = 0.001   
+epsilon = 0.1       
 
 if os.path.exists("training.txt"):
     print("Starte Training, lade alte Trainigsdaten")
@@ -30,15 +35,13 @@ else:
     print("Starte neues Training!")
     qtable = np.zeros((state_size, action_size))
 
-
-# Implementiere den Q-Learning Algorithmus
 for episode in range(total_episodes):
-    # Setze die Umgebung für das neue Spiel zurück
+# Setze die Umgebung für das neue Spiel zurück
     state = env.reset()
     state = np.reshape(state, (state_size,))
     step = 0
     done = False
-    
+
     for step in range(max_steps):
         # Entscheide, ob wir eine zufällige Aktion ausführen oder diejenige mit dem höchsten Q-Wert wählen
         exp_exp_tradeoff = np.random.uniform(0, 1)
@@ -58,11 +61,12 @@ for episode in range(total_episodes):
         
         if done == True:
             break
-    
+
     # Reduziere epsilon im Laufe der Zeit, während wir unser Modell verbessern
     if episode%100==0:
         print("Episode "+str(episode))
     epsilon = min_epsilon + (max_epsilon - min_epsilon) * np.exp(-decay_rate*episode)
+
 
 
 print("Training beendet")

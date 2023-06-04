@@ -339,7 +339,6 @@ print_frames(frames)
 
 - Das **FrozenLake** Environment. <https://www.gymlibrary.dev/environments/toy_text/frozen_lake/>.
 - Das **Cliff Walking** Environmment <https://www.gymlibrary.dev/environments/toy_text/cliff_walking/>
-- Experten können sich auch gerne an den **Atari Environments** versuchen <https://www.gymlibrary.dev/environments/atari/>
 
 Gehen Sie im weiteren Verlauf wie folgt vor:
 
