@@ -214,17 +214,17 @@ Um dieses 'Gedächnis' zu erstellen benötigen wir ein Array, welches den Erfolg
 
 Beim Lernen wird es nun wichtig sein, die Summe des *reqrds* zu maximieren innerhalb einer *Epoche*. Eine *Epoche* ist dabei die Anzahl der Schritte bis zum Abliefern des Passagiers.
 
-Unser Q-Learning Algorithmus hat dabei folgende Funtion:
+Unser Q-Learning Algorithmus hat dabei folgende Funktion:
 
-**Q(state,action)= (1 - α) * Q(state,action) + α * [reward + γ * max Q(next State,all actions)]**
+**Q(state,action)= (1 - $\alpha$) * Q(state,action) + $\alpha$ * [reward + $\gamma$ * max Q(next State,all actions)]**
 
-- Q(state,aaction): der erwartete Nutzen (engl. "expected utility") bei Auswahl der Aktion 'action' im Zustand 'state'
-- α: der Lernrateparameter (engl. "learning rate parameter"), der bestimmt, inwieweit neue Informationen den bisherigen Q-Wert beeinflussen sollen
+- Q(state,action): der erwartete Nutzen (engl. "expected utility") bei Auswahl der Aktion 'action' im Zustand 'state'
+- $\alpha$: der Lernratenparameter (engl. "learning rate parameter"), der bestimmt, inwieweit neue Informationen den bisherigen Q-Wert beeinflussen sollen
 - reward: die Belohnung (engl. "reward") nach der Wahl der Aktion 'action' im Zustand 'state'
-- γ: der Abschlagfaktor (engl. "discount factor"), der bestimmt, wie wichtig zukünftige Belohnungen im Vergleich zu aktuellen Belohnungen sind
+- $\gamma$: der Abschlagfaktor (engl. "discount factor"), der bestimmt, wie wichtig zukünftige Belohnungen im Vergleich zu aktuellen Belohnungen sind
 - max Q(next State,all actions): der maximale erwartete Nutzen, den man erhält, wenn man eine Aktion 'a' im nächsten Zustand 'next state' wählt.
 
-Wir wir sehen, ist dabei, dass das bisher Gelernte den größten Einfluss hat $(1 - α) * Q(state,action)$ und der Zugewinn mit dem Renratenparameter eingeht.
+Wir wir sehen, ist dabei, dass das bisher Gelernte den größten Einfluss hat $(1 - \alpha) * Q(state,action)$ und der Zugewinn mit dem Renratenparameter eingeht.
 
 Die Implementierung des Algorithmus in Python kann wie folgt aussehen:
 
