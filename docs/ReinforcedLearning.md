@@ -339,6 +339,10 @@ print_frames(frames)
 
 - Das **FrozenLake** Environment. <https://www.gymlibrary.dev/environments/toy_text/frozen_lake/>.
 - Das **Cliff Walking** Environmment <https://www.gymlibrary.dev/environments/toy_text/cliff_walking/>
+- Das **Mountain Car** Einvorinment <https://www.gymlibrary.dev/environments/classic_control/mountain_car/>
+- Das **CartPole** Environment <https://www.gymlibrary.dev/environments/classic_control/cart_pole/>
+
+> *Hinweis*: Achtung das **Mountain Car** Environment und das **CartPole** Environment sind kontinuierliche Umgebungen, d.h. der Zustandsraum kann beliebige Werte annehmen. Daher muss hier der Zustandsraum erst diskretisiert werden!
 
 Gehen Sie im weiteren Verlauf wie folgt vor:
 
@@ -346,6 +350,124 @@ Gehen Sie im weiteren Verlauf wie folgt vor:
 - Versuchen Sie einen Brute Force Ansatz
 - Trainieren Sie mit Hilfe des Q-learning Algorithmus ein Modell und beurteilen Sie dessen Qualität
 - Dokumentieren und präsentieren Sie anschließend ihr Vorgehen
+
+### Musterlösung für CartPole
+
+Das **CartPole** Environment besteht aus einem Schlitten, der nach rechts und links bewegt werden kann. Auf dem Schlitten ist eine Pendel installiert. Ziel ist es das Pendel in der aufrechten Position zu behalten.
+
+![CartPole Environmenmt](images/ril7.png)
+
+#### Initialisierung des Environments
+
+```py
+import gymnasium as gym
+import numpy as np
+import math
+import matplotlib.pyplot as plt 
+
+# Erstelle die Umgebung
+env = gym.make('CartPole-v1',render_mode="rgb_array")
+state=env.reset()
+print("State="+str(state[0]))
+plt.imshow(env.render())
+plt.grid(False)
+```
+
+Der Sate ist ein Array aus kontinuierlichen Float Werten, mit folgenden Bedeutungen:
+
+| Index | Bedeutung |
+| ----- | --------- |
+| 0     |   Cart Position (-4.8 bis +4.8)        |
+| 1     |  Cart velocity (+/- unendlich)         |
+| 2     |   Pole Angle (- 0.418 bis + 0.418)        |
+| 3     |   Pole Angular Velocity (+/- unendlich)        |
+
+Dieser kontinuierliche Zustandsraum muss in einen diskreten umgewandelt werden. Ich entschied mich daher jeden dieser Werte in 30 diskrete Werte umzuwandeln. Der Zustandsraum hat damit $30*30*30*30=810000$ Werte.
+
+```py
+n_actions =2
+n_states = 30*30*30*30 # Festgelegt
+q_table = np.zeros([n_states, n_actions])
+q_table
+```
+Die Zuordnung eines States zu einem Index-Wert in diesem Array übernimmt die Funktion *discret(state):int*!
+
+```py
+cpos = np.array(np.linspace(-4.8,4.8,30))
+cvelocity = np.array(np.linspace(-5,5,30))
+cpolea = np.array(np.linspace(-0.418,0.418,30))
+cpolev = np.array(np.linspace(-5,5,30))
+
+def discret(s):
+    dsp = np.abs(cpos-s[0]).argmin()
+    dsv = np.abs(cvelocity-s[1]).argmin()
+    dspa = np.abs(cpolea-s[2]).argmin()
+    dspv = np.abs(cpolev-s[3]).argmin()
+
+    return dsp+dsv+dspa+dspv
+
+nr=discret(state[0])
+nr
+```
+
+Nun kann der Q-Leaning Algorithmus implementiert werden!
+
+```py
+total_episodes = 50000
+learning_rate = 0.8
+max_steps = 100
+gamma = 0.95
+epsilon = 1.0
+
+for episode in range(total_episodes):
+    state = env.reset()[0]
+    done = False
+
+    for step in range(max_steps):
+        if np.random.uniform(0, 1) > epsilon:
+            action = np.argmax(q_table[discret(state)])
+        else:
+            action = env.action_space.sample()
+
+        new_state, reward, done, info,a = env.step(action)
+
+        if done and step < max_steps - 1:
+            reward = -300  # negative reward for falling
+
+        
+        q_table[discret(state)][action] = (q_table[discret(state)][action] + 
+                                  learning_rate * (reward + gamma * 
+                                  np.max(q_table[discret(new_state)]) - q_table[discret(state)][action]))
+        state = new_state
+
+        if done:
+            break
+
+    if episode%100==0:
+        print ("Episode:"+str(episode))
+    epsilon = min_epsilon + (max_epsilon - min_epsilon) * np.exp(-decay_rate * episode)
+```
+
+Nach dem Training kann mit der Erfolg am Modell geprüft werden.
+
+```py
+from IPython import display
+import matplotlib
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+state = env.reset()[0]
+img = plt.imshow(env.render()) # only call this once
+done = False
+while not done:
+    action = np.argmax(q_table[discret(state)])
+    new_state, reward, done, info,a = env.step(action)
+    img.set_data(env.render()) # just update the data
+    display.display(plt.gcf())
+    display.clear_output(wait=True)
+    state = new_state
+env.close()
+```
 
 ## Fragen zum Verständnis
 
