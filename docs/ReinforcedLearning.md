@@ -11,6 +11,8 @@
 
 <!--ril_Handlungssituation-->
 
+<!--ril_Info-->
+
 ## Erklärung Reinforced Learning
 
 Reinforcement Learning ist eine Methode im Bereich des maschinellen Lernens, bei der ein Agent seine Strategien lernt, indem er seine Umgebung erkundet und durch Interaktion mit dieser belohnt oder bestraft wird. Das Ziel des Agenten ist es, durch wiederholte Interaktionen die Aktionen zu finden, die ihn am meisten belohnen.
@@ -26,6 +28,10 @@ Das SARS-Modell ist eine grundlegende Komponente von Reinforcement Learning. Der
 Durch die Verwendung des SARS-Modells und die ständige Interaktion mit der Umgebung kann ein Reinforcement Learning-Agent schließlich lernen, die besten Entscheidungen zu treffen, um seine Ziele auf effektive Weise zu erreichen.
 
 ![Reinforced Learning](images/reinforced_logo.drawio.png)
+
+<!--ril_Info-->
+
+<!--ril_gym-->
 
 ## Die Simulationsumgebung
 
@@ -82,21 +88,28 @@ Vgl. [Open AI Gym taxi Env](https://www.gymlibrary.dev/environments/toy_text/tax
 
 Wie jedes Environment stellt auch das Taxi Environment für das Training mittels reinforced Learning wichtige Parameter zur Verfügung:
 
-**State** : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung ($5*5*4*(4+1)$)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über*env.s* kann die Umgebung in einen gezielten Zustand gebracht werden.
+**State** : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung ($5*5*4*(4+1)$)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über *env.s* kann die Umgebung in einen gezielten Zustand gebracht werden.
 
 **Reward**: Belohnung für den Agenten
 
 **Done**: Boolean, ob die Aufgabe erfüllt wurde.
 
-### Setzen des Zustandes
+<!--ril_gym-->
+
+<!--ril_aufg1-->
+
+### Setzen eines Zustandes
 
 Erweitern Sie ihr Programm in der Weise, dass der oben dargestellte Zustand 182 eingenommen wird!
 
 ![Taxi Umgebung](images/ril3.png)
 
+<!--ril_aufg1-->
+<!--ril_aufg2-->
+
 ### Ausführen von Aktionen
 
-Führen Sie mit Hilfe Hilfe der Methode *step(int)* eine Aktion durch. Die Methode gibt dabei einen Vektor zurück der aus folgenden Elemente besteht.
+Führen Sie mit Hilfe der Methode *step(int)* eine Aktion durch. Die Methode gibt dabei einen Vektor zurück der aus folgenden Elemente besteht.
 
 ```py
 next_state, reward, done, info = env.step(int)
@@ -108,13 +121,20 @@ next_state, reward, done, info = env.step(int)
 
 Lassen Sie sich die Ergebnisse ihre Aktion auf der Console ausgeben.
 
+<!--ril_aufg2-->
+<!--ril_aufg3-->
+
 ### Die Möglichkeiten (Possibilities) der Aktionen
 
-Neben diesen Werten gibt uns die Umgebung noch die Möglichkeit die Möglichkeiten der Aktionen zu untersuchen. Setzten Sie dazu die Umgebung wieder in den Zustand 182 und lassen Sie sich das *P* Array ausgeben. Dieses Array hat das Format [Action] [State,reward,done].
+Neben diesen Werten gibt uns die Umgebung noch die Möglichkeit die weiteren Möglichkeiten der Folgeaktionen zu untersuchen. Setzten Sie dazu die Umgebung wieder in den Zustand 182 und lassen Sie sich das *P* Array ausgeben. Dieses Array hat das Format [Action] [State,reward,done].
 
 ![Möglichkeiten](images/ril4.png)
 
 Wie wir sehen führt eine *Action 1 - North* in den Zustands 82. Es gibt einen "*reward* von -1. Das Ausführen der *Action 4 - Pick Passanger* verweilt im Zustand 182 und wird 'bestraft' mit einem *reward* von -10, denn im Zustand 182 befindet sich kein Passagier an der Stelle um ihn aufzunehmen.
+
+<!--ril_aufg3-->
+<!--ril_aufg4-->
+
 
 ### Weiteres erkunden der Umgebung
 
@@ -180,9 +200,16 @@ env.render()
 
 ![Erkunden der Umgebung](images/ril5.png)
 
+<!--ril_aufg4-->
+<!--ril_aufg5-->
+
 ## Brute Force Ansatz
 
 Schreiben Sie nun ein Programm, welches die Aufgabe (den Transport eines Passagiers vom Startpunkt zum Zielpunkt) mittels eines Brute Force Ansatzes löst und lassen Sie sich ausgeben wie viele Züge dazu notwendig waren!
+
+<!--ril_aufg5-->
+<!--ril_lsg5-->
+
 
 ### Lösung Brute Force Ansatz
 
@@ -198,6 +225,10 @@ while not done:
 print("Timesteps taken: {}".format(epochs))
 
 ```
+
+<!--ril_lsg5-->
+<!--ril_infoq-->
+
 
 ## Q-Learning Algorithmus
 
@@ -216,15 +247,17 @@ Beim Lernen wird es nun wichtig sein, die Summe des *reqrds* zu maximieren inner
 
 Unser Q-Learning Algorithmus hat dabei folgende Funktion:
 
-**Q(state,action)= (1 - $\alpha$) * Q(state,action) + $\alpha$ * [reward + $\gamma$ * max Q(next State,all actions)]**
 
-- Q(state,action): der erwartete Nutzen (engl. "expected utility") bei Auswahl der Aktion 'action' im Zustand 'state'
+$$Q(_{state,aktion})=(1-\alpha)*Q(_{state,aktion})+\alpha*[reward+\gamma*max(Q_{next-state, all  -actions})]$$
+
+
+- $Q(_{state,aktion})$: der erwartete Nutzen (engl. "expected utility") bei Auswahl der Aktion 'action' im Zustand 'state'
 - $\alpha$: der Lernratenparameter (engl. "learning rate parameter"), der bestimmt, inwieweit neue Informationen den bisherigen Q-Wert beeinflussen sollen
 - reward: die Belohnung (engl. "reward") nach der Wahl der Aktion 'action' im Zustand 'state'
 - $\gamma$: der Abschlagfaktor (engl. "discount factor"), der bestimmt, wie wichtig zukünftige Belohnungen im Vergleich zu aktuellen Belohnungen sind
-- max Q(next State,all actions): der maximale erwartete Nutzen, den man erhält, wenn man eine Aktion 'a' im nächsten Zustand 'next state' wählt.
+- $max(Q_{next-state, all  -actions})$: der maximale erwartete Nutzen, den man erhält, wenn man eine Aktion 'action' im nächsten Zustand 'next state' wählt.
 
-Wir wir sehen, ist dabei, dass das bisher Gelernte den größten Einfluss hat $(1 - \alpha) * Q(state,action)$ und der Zugewinn mit dem Renratenparameter eingeht.
+Wir wir sehen, ist dabei, dass das bisher Gelernte den größten Einfluss hat $(1 - \alpha) * Q(state,action)$ und der Zugewinn geht mit dem Lernratenparameter $\alpha$ ein.
 
 Die Implementierung des Algorithmus in Python kann wie folgt aussehen:
 
@@ -267,7 +300,13 @@ print("Training finished.\n")
 
 ```
 
+<!--ril_infoq-->
+<!--ril_aufg6-->
+
 *Aufgabe*: Trainieren Sie das Modell und lassen Sie sich nach dem Training die Q-Tabelle für den Zustand 182 ausgeben und entscheiden Sie daran, welche Aktion in diesem Zustand den meisten Erfolg bringt.
+
+<!--ril_aufg6-->
+<!--ril_lsg6-->
 
 *Lösung*: Die Q-Table im Zustands 182 zieht wie folgt aus:
 
@@ -277,7 +316,13 @@ Der maximale Wert ist die -2.4510224, d.h. die erfolgreichsten Aktionen in diese
 
 ![Taxi Umgebung](images/ril3.png)
 
+<!--ril_lsg6-->
+<!--ril_aufg7-->
+
 *Aufgabe*: Entwickeln Sie nach erfolgreichem Training ein Programm, welches Ihnen Aussagen über die Qualität des Modells erlaubt. Verändern Sie ferner wichtige Parameter im Algorithmus und beobachten Sie, wie dieses sich auf die Qualität des Modells auswirken.
+
+<!--ril_aufg7-->
+<!--ril_lsg7-->
 
 *Lösung*: Hier ein Programm, welches 10 Episoden durchführt und die Anzahl der notwendigen Schritte und ggf. Fehlversuche zählt und visualisiert.
 
@@ -334,6 +379,8 @@ def print_frames(frames):
         
 print_frames(frames)
 ```
+<!--ril_lsg7-->
+<!--ril_aufg8-->
 
 *Aufgabe*: Wechseln Sie das Environment auf ein anderes Environment. Z.B.
 
@@ -350,6 +397,9 @@ Gehen Sie im weiteren Verlauf wie folgt vor:
 - Versuchen Sie einen Brute Force Ansatz
 - Trainieren Sie mit Hilfe des Q-learning Algorithmus ein Modell und beurteilen Sie dessen Qualität
 - Dokumentieren und präsentieren Sie anschließend ihr Vorgehen
+
+<!--ril_aufg8-->
+<!--ril_lsg8-->
 
 ### Musterlösung für CartPole
 
@@ -382,21 +432,22 @@ Der Sate ist ein Array aus kontinuierlichen Float Werten, mit folgenden Bedeutun
 | 2     |   Pole Angle (- 0.418 bis + 0.418)        |
 | 3     |   Pole Angular Velocity (+/- unendlich)        |
 
-Dieser kontinuierliche Zustandsraum muss in einen diskreten umgewandelt werden. Ich entschied mich daher jeden dieser Werte in 30 diskrete Werte umzuwandeln. Der Zustandsraum hat damit $30*30*30*30=810000$ Werte.
+Dieser kontinuierliche Zustandsraum muss in einen diskreten umgewandelt werden. Ich entschied mich daher jeden dieser Werte in 10 diskrete Werte umzuwandeln. Der Zustandsraum hat damit $10*10*10*10=10000$ Werte.
 
 ```py
 n_actions =2
-n_states = 30*30*30*30 # Festgelegt
+n_states = 10*10*10*10 # Festgelegt
 q_table = np.zeros([n_states, n_actions])
 q_table
 ```
+
 Die Zuordnung eines States zu einem Index-Wert in diesem Array übernimmt die Funktion *discret(state):int*!
 
 ```py
-cpos = np.array(np.linspace(-4.8,4.8,30))
-cvelocity = np.array(np.linspace(-5,5,30))
-cpolea = np.array(np.linspace(-0.418,0.418,30))
-cpolev = np.array(np.linspace(-5,5,30))
+cpos = np.array(np.linspace(-4.8,4.8,10))
+cvelocity = np.array(np.linspace(-0.5,0.5,10))
+cpolea = np.array(np.linspace(-0.418,0.418,10))
+cpolev = np.array(np.linspace(-0.5,0.5,10))
 
 def discret(s):
     dsp = np.abs(cpos-s[0]).argmin()
@@ -468,6 +519,7 @@ while not done:
     state = new_state
 env.close()
 ```
+<!--ril_lsg8-->
 
 ## Fragen zum Verständnis
 
