@@ -38,3 +38,4 @@ Die Lernsituationen werden automatisch generiert aus Markdown Dateien und könne
 - [LS6](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS6.md.pdf) K-nearest Neighbor (KNN)
 - [LS7](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS7.md.pdf) Neuronale Netze
 - [LS8](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS8.md.pdf) Cloud KI Systeme nutzen
+- [LS9](https://github.com/jtuttas/datenanalyse/raw/master/pdfs/LS9.md.pdf) Verstärkendes Lernen
