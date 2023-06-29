@@ -64,7 +64,7 @@ $X = \begin{pmatrix} X_1 \\ X_2 \\ X_3 \end{pmatrix}=\begin{pmatrix} 0.7 \\ -0.1
 
 **Lösung**: 
 
-$ \bar{Y}= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*-0.1+-0.5*-0.4=0.46$
+$ \bar{Y}= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*-0.1+-0.5*-0.4=0.46 $
 
 $ Y=tanh(0.46)=0.43$
 
@@ -137,4 +137,17 @@ $x_4=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = $
 $O_4 = \frac{1}{1 + e^{-x_4}}=$
 
 ## Implementierung in Python
+
+Zum Implementieren dieses Modells nutzen wir die Bibliothek *Tensorflow*. Der folgende Code importiert die notwendige Bibliothek und legt die Daten für die Lichtsteuerung in einem *NumPy* Array an.
+
+```py
+import tensorflow as tf
+import numpy as np
+
+# Daten definieren
+data = np.array([[1, 0, 0],
+                 [1, 1, 1],
+                 [0, 0, 1],
+                 [0, 1, 1]])
+```
 
