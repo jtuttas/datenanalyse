@@ -136,6 +136,8 @@ $x_4=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = $
 
 $O_4 = \frac{1}{1 + e^{-x_4}}=$
 
+## Backward Propagation
+
 ## Implementierung in Python
 
 Zum Implementieren dieses Modells nutzen wir die Bibliothek *Tensorflow*. Der folgende Code importiert die notwendige Bibliothek und legt die Daten für die Lichtsteuerung in einem *NumPy* Array an.
@@ -171,5 +173,36 @@ model = tf.keras.Sequential([
 ])
 ```
 
-Unser Netz hat 3 Neuronen als Hiddenlayer. Auf dieser Ebene verwenden wir die **ReLu** Funktion. Von der Eingangsebene erhalten wird 2 Daten **input_dum**.
+Unser Netz hat 3 Neuronen als *hidden layer*. Auf dieser Ebene verwenden wir die **ReLu** Funktion als Aktivierungsfunktion. Von der Eingangsebene erhalten wird 2 Daten **input_dim**. Die drei Neuronen der **hidden layer** speisen ein Neuron auf der Ausgabeebene (**output layer** ), hier verwenden wir die **Sigmoid** Funktion als Aktivierungsfunktion. 
+
+Nachdem das Neuronale Netz gebaut wurde, muss es 'compiliert' werden.
+
+```py
+# Kompilieren des Modells
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+```
+
+Angegeben wird hier der Optimizer **adam**, der dazu dient das absolute Minimum im Fehler zu finden.
+
+Nachdem das Neuronale Netz kompiliert wird, kann es angelernt werden.
+
+```py
+model.fit(X, y, epochs=600)
+```
+
+Eine *Epoche* ist dabei der Zyklus von Forward- und Backward Propagation mit allen Testdaten.
+
+Nach dem Training kann das Modell überprüft werden. 
+
+```py
+# Beispiel-Eingabe für die Vorhersage
+input_data = [[0, 1]] 
+
+# Vorhersage für die Klasse "Lampe" (Binärklassifikation)
+prediction = model.predict(input_data)
+
+print(prediction)
+```
+
+**Aufgabe:** Trainieren Sie das Modell wie angegeben und beurteilen Sie die Qualität des Modells. Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.
 
