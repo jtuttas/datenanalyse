@@ -64,7 +64,7 @@ $X = \begin{pmatrix} X_1 \\ X_2 \\ X_3 \end{pmatrix}=\begin{pmatrix} 0.7 \\ -0.1
 
 **Lösung**: 
 
-$ \bar{Y}= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*-0.1+-0.5*-0.4=0.46 $
+$ Y_*= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*-0.1+-0.5*-0.4=0.46 $
 
 $ Y=tanh(0.46)=0.43$
 
@@ -150,4 +150,26 @@ data = np.array([[1, 0, 0],
                  [0, 0, 1],
                  [0, 1, 1]])
 ```
+
+Anschließend müssen die Daten in Eingangs- und Ausgangsdaten aufgeteilt werden. Für unsere Aufgabenstellung enthalten die ersten beiden Spalten die Eingangsdaten (Tag_Nacht und Person) und die letzte Spalte die Ausgangsdaten.
+
+```py
+# Aufteilen der Daten in Features (X) und Labels (y)
+X = data[:, :-1]  # Eingangsdaten: Erste beiden Spalten
+y = data[:, -1]   # Ausgangsdaten: Letzte Spalte
+```
+
+Anschließend muss das neuronale Netz aufgebaut werden:
+
+![Neuronale Netz](neuronalesnetz.drawio.png).
+
+```py
+# Definition des neuronalen Netzwerks
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(3, activation='relu', input_dim=2),  # Hidden-Layer mit 3 Neuronen
+    tf.keras.layers.Dense(1, activation='sigmoid')             # Ausgangsneuron
+])
+```
+
+Unser Netz hat 3 Neuronen als Hiddenlayer. Auf dieser Ebene verwenden wir die **ReLu** Funktion. Von der Eingangsebene erhalten wird 2 Daten **input_dum**.
 
