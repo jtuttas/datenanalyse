@@ -230,3 +230,56 @@ Das letzte Neuron wird gespeist aus den drei Neuronen der hidden Layer. Die Gewi
 
 **Aufgabe:** Trainieren Sie das Modell wie angegeben und beurteilen Sie die Qualität des Modells. Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.
 
+## Ein eigenes Netzwerk entwerfen und trainieren
+
+**Aufgabe:** Wählen Sie einen anderen Datensatz (s.u.) und entwerfen und trainieren Sie ein neuronales Netz. Dokumentieren Sie ihr Vorgehen und Ihr Ergebnis und präsentieren Sie dieses abschließend der Klasse.
+
+Mögliche Datensätze wären (Sie können aber auch gerne einen eigenen Datensatz auswählen):
+
+1. **Titanic-Datensatz**: Der Titanic-Datensatz enthält Informationen über Passagiere an Bord des Schiffes Titanic, einschließlich Merkmalen wie Alter, Geschlecht, Klasse und Überlebensstatus. Dieser Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben und kann auch zur Vorhersage des Überlebens von Passagieren auf anderen Schiffsreisen verwendet werden.
+   - URL: <https://www.kaggle.com/c/titanic/data>
+
+2. **Bank Marketing-Datensatz**: Dieser Datensatz enthält Informationen zu Kunden einer portugiesischen Bank und ob sie Ja oder Nein für ein Termingeld-Abonnement abgeschlossen haben. Es enthält eine Vielzahl von Kundenmerkmalen wie Alter, Beruf, Familienstand usw., die verwendet werden können, um vorherzusagen, ob ein Kunde ein Abonnement abschließen wird oder nicht.
+   - URL: <https://archive.ics.uci.edu/ml/datasets/Bank+Marketing>
+
+3. **Breast Cancer Wisconsin (diagnostic) Dataset**: Dieser Datensatz enthält Details zu den Zellkernmerkmalen von malignen und benignen Brustgewebeproben sowie einer Diagnose, ob eine Probe maligne oder benign ist. Der Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben zum Erkennen von Brustkrebs.
+   - URL: <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>
+
+## Fragen zum Verständnis
+
+1. Was ist ein Neuron in einem künstlichen neuronalen Netzwerk?
+    - [ ] Eine Datenstruktur, die Informationen speichert
+    - [ ] Eine Funktion, die das Ergebnis des Netzes berechnet
+    - [ ] Eine Einheit, die Eingaben empfängt und eine Ausgabe basierend auf diesen Eingaben generiert
+    - [ ] Ein spezielles Modell von neuronalen Netzwerken
+
+2. Welche der folgenden ist KEINE typische Schicht in einem neuronalen Netzwerk?
+    - [ ] Eingabeschicht
+    - [ ] Ausgabeschicht
+    - [ ] Versteckte Schicht
+    - [ ] Datenbankschicht
+
+3. Was ist der Zweck einer Aktivierungsfunktion in einem neuronalen Netzwerk?
+    - [ ] Um die Genauigkeit des Modells zu erhöhen
+    - [ ] Um die Größe des Modells zu reduzieren
+    - [ ] Um nicht-lineare Transformationen einzuführen
+    - [ ] Um die Geschwindigkeit des Trainings zu erhöhen
+
+4. Welches Problem kann durch zu viel Training eines neuronalen Netzwerks auftreten?
+    - [ ] Overfitting
+    - [ ] Underfitting
+    - [ ] Datenverlust
+    - [ ] Netzwerkfehler
+
+5. Welches der folgenden Verfahren wird verwendet, um ein neuronales Netzwerk zu trainieren?
+    - [ ] Random Forest Algorithmus
+    - [ ] Backpropagation
+    - [ ] Linear Regression
+    - [ ] Naive Bayes Klassifikation
+
+6. Was ist die Hauptfunktion der "Verlustfunktion" (Loss Function) beim Training eines neuronalen Netzwerks?
+    - [ ] Sie definiert die Architektur des Netzwerks
+    - [ ] Sie bestimmt die Art der Aktivierungsfunktion in den Neuronen
+    - [ ] Sie misst, wie gut das Netzwerk die Ausgabe vorhersagt, und wird für die Optimierung des Netzwerks verwendet
+    - [ ] Sie dient dazu, das Netzwerk vor Overfitting zu schützen
+
