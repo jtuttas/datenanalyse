@@ -35,7 +35,7 @@ Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheit
 
 ### Lösung Wahrheitstabelle erzeugen
 
-Für ein **Büro und eine Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
+Für ein **Büro** und eine **Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
 
 | Tag / Nacht | Person    | Lampe   |
 | ----------- | --------- | ------- |
