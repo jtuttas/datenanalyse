@@ -35,7 +35,7 @@ Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheit
 
 ### Lösung Wahrheitstabelle erzeugen
 
-Für ein **Bürogebäude** könnte diese Tabelle wie folgt aussehen.
+Für ein **Büro und eine Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
 
 | Tag / Nacht | Person    | Lampe   |
 | ----------- | --------- | ------- |
@@ -56,7 +56,7 @@ Ein einfaches Neuron (man spricht hier auch von einem *Perzeptron*) kann dabei w
 
 Die Werte $X_1$ bis $X_3$ sind z.B. Sensorwerte oder Werte aus einer vorherigen Stufe. $G_1$ bis $G_3$ sind Gewichtungsfaktoren die im laufe des Trainings des Neuronalen Netzes angepasst werden und zur Initialisierung auf zufällige Werte gesetzt werden. Als Aktivierungsfunktionen können Funktionen genutzt werden, wie die Sigmoid-, ReLu- oder Tanh-Funktion bzw. einfache Schwellwerte. Die Funktion gibt an, ob und wie stark das Neuron "feuert".
 
-**Aufgabe**: Berechnen Sie den Ausgabewert für das Neurons, wenn als Aktivierungsfunktion ein Tanh-Funktion genutzt wird und folgende Eingangsvektoren und Gewichtsvektoren vorliegen.
+**Aufgabe**: Berechnen Sie den Ausgabewert $Y$ für das Neuron, wenn als Aktivierungsfunktion ein Tanh-Funktion genutzt wird und folgende Eingangsvektoren und Gewichtsvektoren vorliegen.
 
 $G = \begin{pmatrix} G_1 \\ G_2 \\ G_3 \end{pmatrix}=\begin{pmatrix} 0.4 \\ 0.2 \\ -0.5 \end{pmatrix}$
 
@@ -64,9 +64,9 @@ $X = \begin{pmatrix} X_1 \\ X_2 \\ X_3 \end{pmatrix}=\begin{pmatrix} 0.7 \\ -0.1
 
 **Lösung**: 
 
-$ Y_*= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*-0.1+-0.5*-0.4=0.46 $
+$Y_*= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*(-0.1)+(-0.5)*(-0.4)=0.46$
 
-$ Y=tanh(0.46)=0.43$
+$Y=tanh(0.46)=0.43$
 
 Diese Ausgaben können dann wieder als Eingaben für andere Neuronen dienen, wodurch das Netzwerk Schicht für Schicht komplexere Berechnungen durchführen kann.
 
@@ -118,23 +118,25 @@ $B = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}=\begin{pmatrix} 1 \\ 1 \\ 1
 
 Mit den angenommen Werten kann nun weiter gerechnet werden:
 
-$x_1=  (X_1*W_{11}+X_2*W_{12})+b_1= (1*0.2+0*-0.15)+1=$
+$x_1=  (X_1*W_{11}+X_2*W_{12})+b_1= (1*0.2+0*-0.15)+1=1.2$
 
-$x_2=  (X_1*W_{21}+X_2*W_{22})+b_2 = (1*-0.1+0*0.5)+1=$
+$x_2=  (X_1*W_{21}+X_2*W_{22})+b_2 = (1*-0.1+0*0.5)+1=0.9$
 
-$x_3=  (X_1*W_{31}+X_2*W_{23})+b_3 = (1*-0.5+0*0.4)+1=$
+$x_3=  (X_1*W_{31}+X_2*W_{23})+b_3 = (1*-0.5+0*0.4)+1=0.5$
 
-$O_1 = \frac{1}{1 + e^{-x_1}}=$
+$O_1 = \frac{1}{1 + e^{-x_1}}=0.7685$
 
-$O_2 = \frac{1}{1 + e^{-x_2}}=$
+$O_2 = \frac{1}{1 + e^{-x_2}}=0.7109$
 
-$O_3 = \frac{1}{1 + e^{-x_3}}=$
+$O_3 = \frac{1}{1 + e^{-x_3}}=0.6625$
 
 Für die *output Layer* ergeben sich folgende Werte.
 
-$x_4=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = $
+$x_4=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = (0.7685*0.2+0.7109*0.5+0.6625*-0.3)+1=1.3104$
 
-$O_4 = \frac{1}{1 + e^{-x_4}}=$
+$O_4 = \frac{1}{1 + e^{-x_4}}=0.7876$
+
+Als Ergebnis würde das Neuronale Netz also die Lampe einschalten, was leider falsch wäre, denn wir hatten ja angegeben, dass es Nacht ist (1) und keine Person anwesend ist (0). Damit das Modell nun lernen kann, müssen die Gewichte angepasst werden.
 
 ## Backward Propagation
 
@@ -195,7 +197,7 @@ Eine *Epoche* ist dabei der Zyklus von Forward- und Backward Propagation mit all
 Nach dem Training kann das Modell überprüft werden. 
 
 ```py
-# Beispiel-Eingabe für die Vorhersage
+# Beispiel-Eingabe für die Vorhersage (Nacht und Person anwesend)
 input_data = [[0, 1]] 
 
 # Vorhersage für die Klasse "Lampe" (Binärklassifikation)
@@ -203,6 +205,28 @@ prediction = model.predict(input_data)
 
 print(prediction)
 ```
+
+Das Neuronale Netz liefert z.B. einen Wert von *0.9583882*, welches in unserem Beispiel bedeuten würde, dass die Lampe einzuschalten ist. Dieses wäre auch korrekt für die Annahme, dass es Nacht ist (0) und eine Person im Raum anwesend wäre (1).
+
+Die berechneten Gewichte und Bias Werte im Modell können über folgendes Python Skript ausgegeben werden.
+
+```py
+for layer in model.layers:
+    weights = layer.get_weights()
+    print('Gewichtungen:', weights)
+```
+
+Für das Output Layer sieht die Ausgabe z.B. wie folgt aus:
+
+```txt
+Gewichtungen: [array([[ 1.6754032 ],
+       [-0.9415936 ],
+       [ 0.18030357]], dtype=float32), array([0.34544384], dtype=float32)]
+```
+
+![Neuronale Netz](neuronalesnetz.drawio.png).
+
+Das letzte Neuron wird gespeist aus den drei Neuronen der hidden Layer. Die Gewichte sind hier $W_4=1.6754$, $W_5=-0.94159$ und $W_6=0.180303$. Das zweite Array listet den Bias Wert $b_4=0.34544$.
 
 **Aufgabe:** Trainieren Sie das Modell wie angegeben und beurteilen Sie die Qualität des Modells. Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.
 
