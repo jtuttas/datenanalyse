@@ -4,9 +4,9 @@
 
 ![Teaser](images/ailight.png)
 
->Die Firma Home-IoT ist eine bekannter Hersteller von Smart Home Produkten. Es ist geplant für diese Firma eine smarte Lichtsteuerung "AI Light" zu entwickeln, die an die jeweiligen Anforderungen des Kunden angepasst werden kann.
+>Die Firma Home-IoT ist eine bekannter Hersteller von Smart Home Produkten. Es ist geplant für diese Firma eine smarte Lichtsteuerung "AI Light" zu entwickeln, die an die jeweiligen Anforderungen der Kunden angepasst werden kann.
 >
->Der Chefentwickler der Abteilung Daten- und Prozessanalyse der ChangeIT GmbH beauftragt Sie damit ein Neuronalen Netz zur entwickeln und für eine exemplarische Anforderung zu trainieren.
+>Der Chefentwickler der Abteilung Daten- und Prozessanalyse der ChangeIT GmbH beauftragt Sie damit ein Neuronalen Netz zu entwickeln und dieses für eine exemplarische Anforderung zu trainieren.
 
 ## AI-Light
 
@@ -37,7 +37,7 @@ Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheit
 
 Für ein **Büro** und eine **Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
 
-| Tag / Nacht | Person    | Lampe   |
+| Tag / Nacht ($X_1$) | Person ($X_2$)    | Lampe ($Y$)   |
 | ----------- | --------- | ------- |
 | Tag (1)     | nein (0)  | aus (0) |
 | Tag (1)     | ja (1)    | an (1)  |
@@ -70,8 +70,6 @@ $Y=tanh(0.46)=0.43$
 
 Diese Ausgaben können dann wieder als Eingaben für andere Neuronen dienen, wodurch das Netzwerk Schicht für Schicht komplexere Berechnungen durchführen kann.
 
-Die Verbindungen zwischen den künstlichen Neuronen werden Gewichte genannt und beeinflussen, wie stark die Eingaben zur Aktivierung eines Neurons beitragen. Analog dazu spielen Synapsen in biologischen Neuronen eine ähnliche Rolle, indem sie die Signalübertragung zwischen den Neuronen beeinflussen.
-
 Ein neuronales Netzwerk lernt, indem es seine Gewichte anpasst, basierend auf dem Vergleich zwischen seinen Ausgaben und den erwarteten Ausgaben. Dieser Lernprozess wird durch mathematische Algorithmen unterstützt, die als Backpropagation bezeichnet werden. Durch wiederholtes Training auf großen Datensätzen kann ein neuronales Netzwerk Muster erkennen, Zusammenhänge verstehen und Vorhersagen treffen.
 
 Obwohl neuronale Netzwerke nicht genau die gleiche Funktionsweise wie biologische Neuronen haben, sind sie dennoch stark von ihnen inspiriert. Die Idee besteht darin, komplexe Informationsverarbeitung nach dem Vorbild des Gehirns zu ermöglichen und dadurch komplexe Aufgaben in Bereichen wie Bilderkennung, Spracherkennung, Textanalyse und vielem mehr zu lösen.
@@ -82,61 +80,69 @@ Für die Steuerung der Lichtanlage benötigen wir pro Sensors ein Neuron, in die
 
 ### Initialisierung des Netzes
 
-Die Gewichtungsfunktionen $W_{11}$ bis $W_{23}$ werden initial auf zufällige Werte zwischen +1 / -1 gesetzt.
+Die Gewichte $W_{11}$ bis $W_{32}$, sowie $W_4$ bis $W_5$ werden initial auf zufällige Werte zwischen +1 / -1 gesetzt.
 
-$W_1 = \begin{pmatrix} w_{11} & w_{12} \\ w_{21} & w_{22} \\ w_{31} & w_{32} \end{pmatrix}=\begin{pmatrix} 0.2 & -0.15 \\ -0.1 & 0.5 \\ -0.5 & 0.4 \end{pmatrix}$
+$W_1 = \begin{pmatrix} w_{11} & w_{21} & w_{31} \\ w_{12} & w_{22} & w_{32} \end{pmatrix}== \begin{pmatrix} -0.19 & -0.96 & 0.43 \\ -0.23 & 0.97 & 0.46 \end{pmatrix}$
 
-$W_2 = \begin{pmatrix} w_4 \\ w_5 \\ w_6 \end{pmatrix}=\begin{pmatrix} 0.2 \\ 0.5 \\ -0.3 \end{pmatrix}$
+$W_2 = \begin{pmatrix} w_4 \\ w_5 \\ w_6 \end{pmatrix}=\begin{pmatrix} -1.0 \\ -0.21 \\ 0.16 \end{pmatrix}$
 
-Als Aktivierungsfunktion $f(x)$ können unterschiedliche Funktionen wie die Sigmoid-, ReLu- oder Tanh-Funktion genutzt werden. Wie verwenden in diesem Beispiel die Sigmoid Funktion.
+Als Aktivierungsfunktion $f(x)$ können unterschiedliche Funktionen wie die Sigmoid-, ReLu- oder Tanh-Funktion genutzt werden. Wie verwenden in diesem Beispiel die $tanh$ Funktion im **hidden Layer** und die Sigmoid Funktion in der Ausgabeschicht. Die Sigmoid Funktion ist dabei wie folgt definiert.
 
 $\sigma(x) = \frac{1}{1 + e^{-x}}$
+
+Hier sind beide Funktion nochmals grafisch dargestellt.
+
+![Sigmoid und tanh Funktion](images/neuro1.png)
 
 ### Forward Propagation
 
 Um nun den Wert der Zwischenschicht $O$ zu ermitteln müssen wir folgende Rechnungen durchführen.
 
-$x_1=  (X_1*W_{11}+X_2*W_{12})+b_1$
+$O_1=  tanh((X_1*W_{11}+X_2*W_{12})+b_1)$
 
-$x_2=  (X_1*W_{21}+X_2*W_{22})+b_2$
+$O_2=  tanh((X_1*W_{21}+X_2*W_{22})+b_2)$
 
-$x_3=  (X_1*W_{31}+X_2*W_{23})+b_3$
-
-$O_1 = \frac{1}{1 + e^{-x_1}}$
-
-$O_2 = \frac{1}{1 + e^{-x_2}}$
-
-$O_3 = \frac{1}{1 + e^{-x_3}}$
+$O_3=  tanh((X_1*W_{31}+X_2*W_{32})+b_3)$
 
 Im ersten Durchgang nehmen wird den X-Vektor wie folgt an:
 
-$X = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}=\begin{pmatrix} 1 \\ 0 \end{pmatrix}$
+$X = \begin{pmatrix} X_1 & X_2 \end{pmatrix}=\begin{pmatrix} 1 & 0 \end{pmatrix}$
 
 Die Bias Werte legen wir zunächst auf 1 fest.
 
-$B = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}=\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$
+$B_1 = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}=\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$
+
+$B_4 = 1$
 
 Mit den angenommen Werten kann nun weiter gerechnet werden:
 
-$x_1=  (X_1*W_{11}+X_2*W_{12})+b_1= (1*0.2+0*-0.15)+1=1.2$
+$O_1=  tanh((X_1*W_{11}+X_2*W_{12})+b_1)= tanh((1*-0.19+0*-0.23)+1)=0.6696$
 
-$x_2=  (X_1*W_{21}+X_2*W_{22})+b_2 = (1*-0.1+0*0.5)+1=0.9$
+$O_2=  tanh((X_1*W_{21}+X_2*W_{22})+b_2) = tanh((1*-0.96+0*0.97)+1)=0.0006$
 
-$x_3=  (X_1*W_{31}+X_2*W_{23})+b_3 = (1*-0.5+0*0.4)+1=0.5$
-
-$O_1 = \frac{1}{1 + e^{-x_1}}=0.7685$
-
-$O_2 = \frac{1}{1 + e^{-x_2}}=0.7109$
-
-$O_3 = \frac{1}{1 + e^{-x_3}}=0.6625$
+$O_3=  tanh((X_1*W_{31}+X_2*W_{32})+b_3) = tanh((1*-0.43+0*0.46)+1)=0.5154$
 
 Für die *output Layer* ergeben sich folgende Werte.
 
-$x_4=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = (0.7685*0.2+0.7109*0.5+0.6625*-0.3)+1=1.3104$
+$O_4'=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = (0.6696*-1.0+0.0006*-0.21+0.5154*0.16)+1=0.4127$
 
-$O_4 = \frac{1}{1 + e^{-x_4}}=0.7876$
+$O_4 = Y'= \frac{1}{1 + e^{-O_4'}}=0.6017$
 
-Als Ergebnis würde das Neuronale Netz also die Lampe einschalten, was leider falsch wäre, denn wir hatten ja angegeben, dass es Nacht ist (1) und keine Person anwesend ist (0). Damit das Modell nun lernen kann, müssen die Gewichte angepasst werden.
+Als Ergebnis würde das Neuronale Netz also die Lampe einschalten, was leider falsch wäre, denn wir hatten ja angegeben, dass es Nacht ist (1) und keine Person anwesend ist (0). Unser Netzwerk hat also einen Fehler gemacht, dieser kann z.B. wie folgt bestimmt werden:
+
+$E(Y')=Y-Y'=0-0.6017=-0.6017=-60.17%$
+
+Eine andere (besser geeignete) Fehlerfunktion ist der *Binary Cross Entropy Error*. Dieser ist wie folgt bestimmt:
+
+$E(Y')=-(Y*log(Y')+(1-y)*log(1-Y'))$
+
+Für unsere Beispiel würde sich also folgender *Binary Cross Entropy Error* ergeben:
+
+$E(Y')=-(0*log(0.6017)+(1-0)*log(1-0.6017))=0.3998$
+
+Neben dieser Fehlerfunktion gibt es noch weitere, wie z.B. *Categorical Cross Entropy*, *Mean Squared Error* und *Cosine Distance*. Für unsere binäres Klassifizierungsproblem (Lampe an/aus) eignet sich jedoch am besten die zuvor berechnete Binary Cross Entropy Error.
+
+Damit das Modell nun lernen kann (also sich der Fehler minimiert), müssen die Gewichte und die Bias Werte angepasst werden.
 
 ## Backward Propagation
 
