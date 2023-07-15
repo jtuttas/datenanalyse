@@ -9,8 +9,7 @@
 >Der Chefentwickler der Abteilung Daten- und Prozessanalyse der ChangeIT GmbH beauftragt Sie damit ein Neuronalen Netz zu entwickeln und dieses für eine exemplarische Anforderung zu trainieren.
 
 ## AI-Light
-<!--neuro_info1-->
-
+<!--neuro_aufg1-->
 Die smarte Lichtsteuerung "AI-Light" besitzt zwei Sensoren.
 
 - Präsenzerkennung: Über Sensoren ist das System in der Lage zu erkennen, ob sich Personen im Raum befinden.
@@ -30,11 +29,9 @@ Gymnasium Niedersachsen“, Klett-Verlag 2022, ISBN: 978-3-12-007572-1
 - Im alten Gebäude der **Stadtverwaltung** müssen die Lampen tagsüber angeschaltet sein, wenn Mitarbeiter da sind, da die Fenster zu wenig Licht hereinlassen. Sollten Mitarbeiter auch nachts arbeiten, müssen auch dann die Lampen eingeschaltet werden. Sonst können sie aus bleiben.
 - Im Haus der **Familie Schmidt** sollen die Lampen tagsüber an sein, wenn jemand zuhause ist, und aus sein, wenn keiner da ist. Nachts sollen die Lampen aus sein, wenn die Bewohner im Haus sind und schlafen, und aus Gründen des Einbrecherschutzes an sein, wenn niemand da ist
 
-<!--neuro_info1-->
 
 ### Aufgabe Wahrheitstabelle erzeugen
 
-<!--neuro_aufg1-->
 Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheitstabelle, die alle möglichen Eingangssignale darstellt und ob sich die Lampe in der jeweiligen Situation an oder ausgehen soll.
 
 <!--neuro_aufg1-->
@@ -55,7 +52,7 @@ Für ein **Büro** und eine **Fabrikhalle** könnte diese Tabelle wie folgt auss
 
 ## Das neuronale Netz
 
-<!--neuro_info2-->
+<!--neuro_aufg2-->
 Ein neuronales Netzwerk ist ein Modell, das von der Funktionsweise des menschlichen Gehirns inspiriert ist. Es besteht aus einer Sammlung miteinander verbundener künstlicher Neuronen, die Informationen verarbeiten und weiterleiten.
 
 Ähnlich wie biologische Neuronen empfangen auch künstliche Neuronen Eingaben, verarbeiten diese und geben sie als Ausgabe weiter. Die Eingaben werden gewichtet und durch Aktivierungsfunktionen in eine Ausgabe transformiert. 
@@ -66,9 +63,6 @@ Ein einfaches Neuron (man spricht hier auch von einem *Perzeptron*) kann dabei w
 
 Die Werte $X_1$ bis $X_3$ sind z.B. Sensorwerte oder Werte aus einer vorherigen Stufe. $G_1$ bis $G_3$ sind Gewichtungsfaktoren die im laufe des Trainings des Neuronalen Netzes angepasst werden und zur Initialisierung auf zufällige Werte gesetzt werden. Als Aktivierungsfunktionen können Funktionen genutzt werden, wie die Sigmoid-, ReLu- oder Tanh-Funktion bzw. einfache Schwellwerte. Die Funktion gibt an, ob und wie stark das Neuron "feuert".
 
-<!--neuro_info2-->
-
-<!--neuro_aufg2-->
 **Aufgabe**: Berechnen Sie den Ausgabewert $Y$ für das Neuron, wenn als Aktivierungsfunktion ein Tanh-Funktion genutzt wird und folgende Eingangsvektoren und Gewichtsvektoren vorliegen.
 
 $G = \begin{pmatrix} G_1 \\ G_2 \\ G_3 \end{pmatrix}=\begin{pmatrix} 0.4 \\ 0.2 \\ -0.5 \end{pmatrix}$
@@ -80,11 +74,11 @@ $X = \begin{pmatrix} X_1 \\ X_2 \\ X_3 \end{pmatrix}=\begin{pmatrix} 0.7 \\ -0.1
 
 **Lösung**: 
 
-$Y_*= X_1*G_1+X_2*G_2+X_3*G_3=0.4*0.7+0.2*(-0.1)+(-0.5)*(-0.4)=0.46$
+$Y_*= X_1*G_1+X_2*G_2+X_3*G_3$
+
+$Y_*=0.4*0.7+0.2*(-0.1)+(-0.5)*(-0.4)=0.46$
 
 $Y=tanh(0.46)=0.43$
-
-
 
 Diese Ausgaben können dann wieder als Eingaben für andere Neuronen dienen, wodurch das Netzwerk Schicht für Schicht komplexere Berechnungen durchführen kann.
 
@@ -148,7 +142,9 @@ $O_3=  tanh((X_1*W_{31}+X_2*W_{32})+b_3) = tanh((1*-0.43+0*0.46)+1)=0.5154$
 
 Für die *output Layer* ergeben sich folgende Werte.
 
-$O_4'=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4 = (0.6696*-1.0+0.0006*-0.21+0.5154*0.16)+1=0.4127$
+$O_4'=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4$
+
+$O_4' = (0.6696*-1.0+0.0006*-0.21+0.5154*0.16)+1=0.4127$
 
 $O_4 = Y'= \frac{1}{1 + e^{-O_4'}}=0.6017$
 
@@ -352,7 +348,7 @@ $R_{call}=\frac {T_P}{T_P+F_N}=\frac {2}{2+1}=0.6666$
 
 Als letzte Metrik spielt noch der *F1 Score* eine Rolle, er ist bestimmt als das harmonische Mittel zwischen *Precision* und *Recall*.
 
-$F1_{Score}=2*\frac {P_{RE}*R_{call}}{P_{RE}+R_{call}}=2*\frac {1*0.6666}{1+0.6666}=0.80 $
+$F1_{Score}=2*\frac {P_{RE}*R_{call}}{P_{RE}+R_{call}}=2*\frac {1*0.6666}{1+0.6666}=0.80$
 
 > Der F1-Score ist eine Metrik, die das harmonische Mittel aus Precision (Präzision) und Recall (Sensitivität) bildet. Er bietet eine einzige Metrik, die versucht, ein Gleichgewicht zwischen diesen beiden Aspekten herzustellen.
 >
@@ -395,8 +391,18 @@ Test recall: 0.6666666865348816
 ```
 <!--neuro_info9-->
 <!--neuro_aufg3-->
+Wenn Sie die bisherigen Informationen aufmerksam gelesen haben, sollte Ihnen die folgende Aufgabe nicht schwer fallen.
 
-**Aufgabe:** Trainieren Sie das Modell wie angegeben und beurteilen Sie die Qualität des Modells. Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.
+![Neuronale Netz](neuronalesnetz.drawio.png).
+
+**Aufgabe:**
+
+- Erstellen Sie auf der Grundlage der bisherigen Überlegungen ihre Modell eines neuronalen Netzwerkes für die intelligente Lichtsteuerung "AI-Light" in Python.
+- Trainieren Sie das Modell entsprechend den von Ihnen in Aufgabe 1 gewählten Anforderungen.
+- Beurteilen Sie die Qualität des Modells und ermitteln Sie geeignete Metriken.
+- Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.
+
+Erstellen Sie eine Dokumentation ihres Vorgehens und der Ergebnisse und der Überlegung (ca. 1 bis 2 Seiten)
 
 <!--neuro_aufg3-->
 <!--neuro_aufg4-->
