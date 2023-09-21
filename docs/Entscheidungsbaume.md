@@ -45,6 +45,15 @@ Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur 
 
 **Hinweise:**
 
+Einlesen kann man eine CSV Datei in Python auf unterschiedlichste Weise. Zur späteren Datenanalyse ist jedoch die Bibliothek **pandas** das geeignete Mittels. Hier existiert bereits eine Methode **read_csv** die dieses erledigt.
+
+```py
+import pandas as pd
+
+# CSV-Datei laden
+data = pd.read_csv('Datei.csv')
+```
+
 Zum Darstellen von Datenmenge nutzen wir die Bibliothek **matplotlib.pyplot**. Diese muss zunächst importiert werden.
 
 ```py
