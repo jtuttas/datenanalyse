@@ -43,6 +43,25 @@ Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine V
 
 Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz ([ErnteBauern.csv](../Data/ErnteBauern.csv)) visualisiert.
 
+**Hinweise:**
+
+Zum Darstellen von Datenmenge nutzen wir die Bibliothek **matplotlib.pyplot**. Diese muss zunächst importiert werden.
+
+```py
+import matplotlib.pyplot as plt
+```
+
+Angesprochen werden kann die Bibliothek hier über den Namen **plt**. Enthalten ist z.B. eine Methode zum Darstellen von Punktemengen als X und Y werte (**scatter**). Über die Methode **show()** wird dann die Grafik angezeigt.
+
+```py
+datax = [4,6,7,9]
+datay = [2,4,7,3]
+
+plt.scatter(datax,datay)
+plt.show()
+
+```
+
 <!--dsaufgabe1-->
 \newpage
 
