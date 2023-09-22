@@ -45,7 +45,7 @@ Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur 
 
 **Hinweise:**
 
-Einlesen kann man eine CSV Datei in Python auf unterschiedlichste Weise. Zur späteren Datenanalyse ist jedoch die Bibliothek **pandas** das geeignete Mittels. Hier existiert bereits eine Methode **read_csv** die dieses erledigt.
+Einlesen kann man eine CSV Datei in Python auf unterschiedlichste Weise. Zur späteren Datenanalyse ist jedoch die Bibliothek **pandas** das geeignete Mittel. Hier existiert bereits eine Methode **read_csv** die dieses erledigt.
 
 ```py
 import pandas as pd
@@ -80,7 +80,11 @@ plt.show()
 
 Stellt man die zur Verfügung gestellten Datensatz grafisch dar, so erhält man z.B. folgende Darstellung.
 
+<!--dsinfo1-->
+
 ![Visualisierung des Datensatzes](images/ds1.png) 
+
+<!--dsanalyse1-->
 
 > Entwerfen Sie im Klassenverband erste Idee wie man ein Modell entwickeln könnte, welches Aussagen entwickelt wann es sich lohnt den Weizen zu ernten!
 
@@ -108,7 +112,8 @@ $$H(X) = -\sum_{i=1}^n P(x_i) \log_2(P(x_i))$$
 
 wobei $P(x_i)$ die Wahrscheinlichkeit des Ereignisses $x_i$ ist und $\log_2$ der Logarithmus zur Basis 2 ist.
 
-<!--dsanalyse1-->
+<!--dsinfo1-->
+
 <!--dsaufgabe2-->
 
 ## Aufgabe 2
