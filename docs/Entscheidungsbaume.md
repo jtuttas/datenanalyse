@@ -190,11 +190,11 @@ Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer
 
 <!--dsaufgabe4-->
 
-Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibende Menge weiter wie folgt einteilen:
+Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibende Menge weiter einteilen:
 
 ![Weitere Einteilung](images/ds6.png)
 
-Ergänzen Sie den unten abgebildeten Entscheidung!
+Führen Sie die weiteren Überlegungen mit der verbleibenden Menge ($Feuchte < 16$) durch und finden Sie die nächsten zwei Knoten unseres Entscheidungsbaumes, indem Sie die Funktion **calcEntropie(m):Entropie** verwenden. Ergänzen Sie mit den Ergebnissen den unten abgebildeten Entscheidungsbaum!
 
 ![Vollständiger Entscheidungsbaum](images/ds7.png)
 
