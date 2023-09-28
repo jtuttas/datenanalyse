@@ -120,7 +120,7 @@ wobei $P(x_i)$ die Wahrscheinlichkeit des Ereignisses $x_i$ ist und $\log_2$ der
 
 Gegeben ist folgender Datensatz:
 
-|Effekt | 
+|Kategorie | 
 | - |
 | A  |
 | A  |
@@ -286,10 +286,8 @@ test_data = pd.read_csv('Data/ErnteBauern2.csv')
 X_test = test_data.drop('Ergebnis', axis=1)
 y_test = test_data['Ergebnis']
 
-# Erstellen Sie ein DecisionTreeClassifier-Objekt
-tree = DecisionTreeClassifier()
 
-# Führen Sie Vorhersagen auf dem Testdatensatz durch
+# Führen Sie Vorhersagen auf dem Testdatensatz durch (wobei clf unser trainierter Entscheidungsbaum aus Aufgabe 5 ist)
 y_pred = clf.predict(X_test)
 
 # Berechnen Sie die Vorhersagegenauigkeit auf dem Testdatensatz
@@ -313,6 +311,12 @@ Wählen Sie einen geeigneten Datensatz aus und entwerfen Sie eine Entscheidungsb
 
 3. **Breast Cancer Wisconsin (diagnostic) Dataset**: Dieser Datensatz enthält Details zu den Zellkernmerkmalen von malignen und benignen Brustgewebeproben sowie einer Diagnose, ob eine Probe maligne oder benign ist. Der Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben zum Erkennen von Brustkrebs.
    - URL: <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>
+
+### Die Präsentation sollte folgendes Beinhalten:
+
+- Vorstellen (Exploration) des Datensatzes mit geeigneter Visualisierung der Daten.
+- Darstellung des Entscheidungsbaumes
+- Validierung des Entscheidungsbaumes (Aussagen zur Genauigkeit des Entscheidungsbaumes)
 
 <!--dsaufgabe8-->
 \newpage
