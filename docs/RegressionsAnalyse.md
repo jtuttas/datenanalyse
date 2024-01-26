@@ -34,6 +34,39 @@ Die einzelnen Spalten bedeuten dabei:
 
 <!--lrg_daten-->
 
+<!--lrg_ueb1-->
+Im weiteren Verlauf wollen wir uns zunächst anschauen welchen Einfluss das jeweilige Feature auf den Wert einer Eigentumswohnung (**MEDV**) hat. Zur Bestimmung nutzen wir die Korrelation des Wertes mit dem Zielfeature (**MEDV**). Die Korrelation zweier Werte berechnet sich mit Hilfe des Pearson-Korrelationskoeffizient nach folgender Formel: 
+
+$$r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2}}$$
+
+In dieser Formel ist:
+
+- $r$ der Pearson-Korrelationskoeffizient
+- $X_i$ und $Y_i$ die Werte der einzelnen Beobachtungen $X$ und $Y$
+- $\bar{x}$ und $\bar{y}$ die Mittelwerte der Variablen $X$ und $Y$
+- $n$ die Anzahl der Beobachtungen
+
+### Übung 1
+
+Es gelten folgende Beispieldaten:
+
+|   X   |   Y   |
+|-------|-------|
+| 0.55  | 1.11  |
+| 0.72  | 1.58  |
+| 0.60  | 1.28  |
+| 0.54  | 1.10  |
+| 0.42  | 0.89  |
+| 0.65  | 1.33  |
+| 0.44  | 1.02  |
+| 0.89  | 1.76  |
+| 0.96  | 1.96  |
+| 0.38  | 0.68  |
+
+Schätzen Sie zunächst den Wert der Korrelation zwischen $X$ und $Y$ ab und bestimmen Sie im Anschluss daran den Pearson-Korrelationskoeffizient $r$.
+
+<!--lrg_ueb1-->
+
 <!--lrg_aufgabe1-->
 Ein Kollege der Abteilung Datenanalyse hat sich bereits die Daten angeschaut und basierend auf dem Daten die Korrelation der Daten als Heatmap dargestellt. Er stellt Ihnen das Ergebnis seiner Analyse zur Verfügung:
 
@@ -75,7 +108,7 @@ $b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n}$
 Dabei sind $x_i$ für das o.g. Beispiel die Werte für die Anzahl der Zimmer pro Wohneinheit (**rm**) und $y_i$ der daraus resultierende Preis der Wohnung.
 <!--lrg_info-->
 
-### Übungsaufgabe 1
+### Übungsaufgabe 2
 
 Gehen Sie von folgenden Daten aus:
 
@@ -96,7 +129,7 @@ Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x +
 
 <!--lrg_uebung1-->
 
-### Übungsaufgabe 2
+### Übungsaufgabe 3
 
 <!--lrg_uebung2-->
 Überprüfen Sie ihre berechneten Werte, indem Sie die Gerade $f(x) = a \cdot x + b$ in die Datenmenge einzeichen. Z.B. mit Hilfe des folgenden Python Codes.
