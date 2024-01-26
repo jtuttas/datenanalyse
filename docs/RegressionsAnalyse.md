@@ -81,7 +81,7 @@ Ein Kollege der Abteilung Datenanalyse hat sich bereits die Daten angeschaut und
 
 ## Aufgabe 1
 
-Wählen Sie zunächst zwei für die Aufgabe interessanten Korrelationen (**Features**) aus und stellen Sie die Verteilung in Form einer Grafik (Scatter Plot) dar.
+Wählen Sie anhand der Heatmap zunächst ein weiteres **Feature** aus und stellen Sie dessen Einfluss auf den Wert einer Eigentumswohnung (**MEDV**) in Form einer Grafik (Scatter Plot) dar.
 
 Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (*medv*) und der Anzahl der Zimmer (*rm*) dargestellt.
 
