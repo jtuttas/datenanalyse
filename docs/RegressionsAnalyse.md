@@ -171,6 +171,8 @@ from sklearn.linear_model import LinearRegression
 
 ![Übung 2 Lösung](./images/lin_reg_ueb2_lsg.png)
 
+Über die Methode **predict()** des Modells können Sie nun anhand des Modells Aussagen über das Verhalten des Systems machen. Testen Sie diese indem Sie sich z.B. eine Aussage über den Wert von $x=7$ ausgeben lassen!
+
 <!--lrg_uebung2-->
 
 ## Aufgabe 2
@@ -179,6 +181,8 @@ from sklearn.linear_model import LinearRegression
 Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Gerade $f(x) = a \cdot x + b$ und tragen Sie diese wie in der Übung in die Datenmenge ein.
 
 ![Regressionsgerade](./images/lin_reg_aufg2.png)
+
+Erstellen Sie ferner mittels der Methode **predict()** des Modells eine Aussage, indem Sie den Wert des Features übergeben und den Immobilienpreis angezeigt bekommen!
 
 > Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
 
