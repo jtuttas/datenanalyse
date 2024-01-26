@@ -128,7 +128,7 @@ y=[10,20,24,32,45]
 
 Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 
-![Datenverteilung Übung 1](./images/lin_reg_ueb1.png)
+![Datenverteilung Übung 2](./images/lin_reg_ueb1.png)
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
 
@@ -155,13 +155,27 @@ plt.show()
 
 ```
 
-![Übung 2](./images/lin_reg_ueb2.png)
+![Übung 3](./images/lin_reg_ueb2.png)
 
 Das Berechnen der Steigung **a** und des Achsenabschnitts **b** ist natürlich auch mit Hilfe einer Methode aus der Bibliothek **sklearn.linear_model** konkret die Klasse **LinearRegression**. Importieren Sie also zunächst die entsprechende Klasse:
 
 ```py
 
 from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Gegebene Daten
+x = np.array([4, 6, 8, 10, 12]).reshape(-1, 1)
+y = np.array([10, 20, 24, 32, 45])
+
+# Erstellung und Anpassung des linearen Regressionsmodells
+model = LinearRegression()
+model.fit(x, y)
+
+# Koeffizienten der Regressionsgeraden
+slope = model.coef_[0]
+intercept = model.intercept_
+
 
 ```
 
@@ -169,7 +183,7 @@ from sklearn.linear_model import LinearRegression
 
 Überprüfen Sie mit Hilfe der Methode **fit()** ihre zuvor berechneten Werte und tragen Sie die Steigungsgerade in den Scatter Plot ein.
 
-![Übung 2 Lösung](./images/lin_reg_ueb2_lsg.png)
+![Übung 3 Lösung](./images/lin_reg_ueb2_lsg.png)
 
 Über die Methode **predict()** des Modells können Sie nun anhand des Modells Aussagen über das Verhalten des Systems machen. Testen Sie diese indem Sie sich z.B. eine Aussage über den Wert von $x=7$ ausgeben lassen!
 
