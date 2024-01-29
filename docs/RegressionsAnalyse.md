@@ -198,7 +198,7 @@ Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Ger
 
 Erstellen Sie ferner mittels der Methode **predict()** des Modells eine Aussage, indem Sie den Wert des Features übergeben und den Immobilienpreis angezeigt bekommen!
 
-> Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann??
+> Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
 
 <!--lrg_aufg2-->
 
@@ -208,7 +208,7 @@ Erstellen Sie ferner mittels der Methode **predict()** des Modells eine Aussage,
 
 Zur Optimierung des Modells sollen auch die anderen *Features* des Datensatzes genutzt werden. Dieses Verfahren nennt sich Multiple Lineare Regression. Gesucht wird dabei folgende Gleichung.
 
-$$f(x) = a_1 \cdot x_1 + a_2*x_2+a_3*x_3 + b$$
+$$f(x) = a_1 \cdot x_1 + a_2 \cdot x_2+a_3 \cdot x_3 + b$$
 
 Dabei sind $a_1$ bis $a_n$ Faktoren für die einzelnen *Features* $x_1$ bis $x_n$. Diese einzelnen Faktoren gilt es nun iterativ zu bestimmen.
 
