@@ -198,7 +198,7 @@ Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (**Features**) die Ger
 
 Erstellen Sie ferner mittels der Methode **predict()** des Modells eine Aussage, indem Sie den Wert des Features übergeben und den Immobilienpreis angezeigt bekommen!
 
-> Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?
+> Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann??
 
 <!--lrg_aufg2-->
 
