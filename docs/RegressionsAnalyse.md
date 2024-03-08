@@ -230,6 +230,8 @@ X_train, X_test, y_train, y_test = train_test_split(df[feature_names], df['medv'
 
 ```
 
+### Trainieren des Modells
+
 Anschließend kann das Modell mit den Trainingsdaten trainiert werden.
 
 ```py
@@ -243,7 +245,11 @@ Die Einzelnen Faktoren $a_1$ bis $a_n$ befinden sich dabei wie zuvor in dem Attr
 
 Um nun aufgrund unseres Modells eine Vorhersage zu treffen, dient die Funktion **predict** im Objekt **model**. Dieses erwartet einen Datensatz als Übergabeparameter.
 
-Über die Qualität des Modells gibt u.a. Der Wert $R^2$ aus. Je höher der $R^2$-Wert, desto besser die Vorhersage.
+### R2 - Metrik
+
+Über die Qualität des Modells gibt u.a. Der Wert $R^2$ (Determinationskoeffizient) Auskunft.
+
+Je höher der $R^2$-Wert, desto besser die Vorhersage.
 
 ```py
 
@@ -278,9 +284,9 @@ Die Präsentation sollte beinhalten:
 
 Folgende Datensätze können z.B. genutzt werden:
 
-- **El Nino Dataset**: Oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. [Download](../Data/el.csv) / [Download und Beschreibung](https://www.kaggle.com/datasets/uciml/el-nino-dataset)
-- **eBay auction data**: Auction data from various eBay.com objects over various length auctions. [Download](../Data/auc.csv) / [Download und Beschreibung](https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data)
-- **Bike Sharing Dataset**: Hourly and daily count of rental bikes in a large city. [Download](../Data/lbike.csv) / [Download und Beschreibung](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset)
+- **El Nino Dataset**: Oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. [Download](../Data/el.csv) / Beschreibung: <https://www.kaggle.com/datasets/uciml/el-nino-dataset>
+- **eBay auction data**: Auction data from various eBay.com objects over various length auctions. [Download](../Data/auc.csv) / Beschreibung: <https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data>
+- **Bike Sharing Dataset**: Hourly and daily count of rental bikes in a large city. [Download](../Data/lbike.csv) / Beschreibung: <https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset>
 - Oder wählen Sie einen eigenen Datensatz z.B. aus [https://www.kaggle.com/](https://www.kaggle.com/)!
 
 <!--lrg_aufg4-->
