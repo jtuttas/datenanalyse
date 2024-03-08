@@ -4,7 +4,7 @@
 
 <!--lrg_Handlungssituation-->
 
-![Titel](immo.jpg){ width=500px }
+![Titel](immo.jpg)
 
 > Ein großes internationales Immobilienbüro beauftragt die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH mit der Entwicklung eines Modells zur Vorhersage von Immobilienpreise.
 >
