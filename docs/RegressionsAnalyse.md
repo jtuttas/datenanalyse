@@ -3,6 +3,9 @@
 ## Handlungssituation
 
 <!--lrg_Handlungssituation-->
+
+![Titel](immo.jpg)
+
 > Ein großes internationales Immobilienbüro beauftragt die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH mit der Entwicklung eines Modells zur Vorhersage von Immobilienpreise.
 >
 > Sie wirken maßgeblich an der Entwicklung des Vorhersagemodells mit und Beurteilen die Qualität des Modells.
@@ -42,8 +45,8 @@ $$r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}
 In dieser Formel ist:
 
 - $r$ der Pearson-Korrelationskoeffizient
-- $X_i$ und $Y_i$ die Werte der einzelnen Beobachtungen $X$ und $Y$
-- $\bar{x}$ und $\bar{y}$ die Mittelwerte der Variablen $X$ und $Y$
+- $x_i$ und $y_i$ die Werte der einzelnen Beobachtungen $x$ und $y$
+- $\bar{x}$ und $\bar{y}$ die Mittelwerte der Variablen $x$ und $y$
 - $n$ die Anzahl der Beobachtungen
 
 ### Übung 1
