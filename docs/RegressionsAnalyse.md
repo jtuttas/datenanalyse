@@ -14,7 +14,7 @@
 <!--lrg_daten-->
 ## Die Daten
 
-Der Kunde stellt ihnen die Daten als *CSV* Datei zur Verfügung. Sie können diese Datei [hier](../Data/bo.csv) laden. Der Datensatz hat dabei folgenden Aufbau.
+Der Kunde stellt ihnen die Daten als *CSV* Datei zur Verfügung. Sie können diese Datei [hier](https://jtuttas.github.io/datenanalyse/Data/bo.csv) laden. Der Datensatz hat dabei folgenden Aufbau.
 
 ![Boston House Prices](./images/bo.png)
 
@@ -289,9 +289,9 @@ Die Präsentation sollte beinhalten:
 
 Folgende Datensätze können z.B. genutzt werden:
 
-- **El Nino Dataset**: Oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. [Download](../Data/el.csv) / Beschreibung: <https://www.kaggle.com/datasets/uciml/el-nino-dataset>
-- **eBay auction data**: Auction data from various eBay.com objects over various length auctions. [Download](../Data/auc.csv) / Beschreibung: <https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data>
-- **Bike Sharing Dataset**: Hourly and daily count of rental bikes in a large city. [Download](../Data/lbike.csv) / Beschreibung: <https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset>
+- **El Nino Dataset**: Oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. [Download](https://jtuttas.github.io/datenanalyse/Data/el.csv) / Beschreibung: <https://www.kaggle.com/datasets/uciml/el-nino-dataset>
+- **eBay auction data**: Auction data from various eBay.com objects over various length auctions. [Download](https://jtuttas.github.io/datenanalyse/Data/auc.csv) / Beschreibung: <https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data>
+- **Bike Sharing Dataset**: Hourly and daily count of rental bikes in a large city. [Download](https://jtuttas.github.io/datenanalyse/Data/lbike.csv) / Beschreibung: <https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset>
 - Oder wählen Sie einen eigenen Datensatz z.B. aus [https://www.kaggle.com/](https://www.kaggle.com/)!
 
 <!--lrg_aufg4-->

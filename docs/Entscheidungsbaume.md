@@ -41,7 +41,7 @@ Die Spalten haben dabei folgende Bedeutung:
 
 Zunächst sollen die Daten in einem Diagramm visualisiert werden, um sich eine Vorstellung von den Daten zu machen.
 
-Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz ([ErnteBauern.csv](../Data/ErnteBauern.csv)) visualisiert.
+Schreiben Sie ein erste Python-Programm, welches möglichst anschaulich den zur Verfügung gestellten Datensatz ([ErnteBauern.csv](https://jtuttas.github.io/datenanalyse/Data/ErnteBauern.csv)) visualisiert.
 
 **Hinweise:**
 
@@ -140,9 +140,11 @@ Bestimmen Sie die Entropie des Datensatzes!
 ### Lösung
 
 $$P_A = \frac{4}{6}=0.6667$$
+
 $$P_B = \frac{2}{6}=0.3333$$
 
 $$H = - (P_A \log_2(P_A)+P_B \log_2(P_B))$$
+
 $$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
 
 <!--dsloesung2-->
@@ -181,7 +183,7 @@ Wie wir sehen erhalten wir bei einen Wert von $Feuchte = 16$ eine Entropie in de
 
 Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer $Feuchte >= 16$ die Mengen trennen. Wir haben unsere erste Entscheidung für den Entscheidungsbaum getroffen.
 
-![Erste Entscheidung](images/ds5.png)
+![Erste Entscheidung](images/ds5.png){ width=400px }
 
 <!--dsinfo3-->
 \newpage
@@ -196,7 +198,7 @@ Entsprechend den zuvor durchgeführten Überlegungen können wir die verbleibend
 
 Führen Sie die weiteren Überlegungen mit der verbleibenden Menge ($Feuchte < 16$) durch und finden Sie die nächsten zwei Knoten unseres Entscheidungsbaumes, indem Sie die Funktion **calcEntropie(m):Entropie** verwenden. Ergänzen Sie mit den Ergebnissen den unten abgebildeten Entscheidungsbaum!
 
-![Vollständiger Entscheidungsbaum](images/ds7.png)
+![Vollständiger Entscheidungsbaum](images/ds7.png){ width=500px }
 
 > Diskutieren Sie wie Sie weiter vorgehen sollten !
 
@@ -287,7 +289,8 @@ X_test = test_data.drop('Ergebnis', axis=1)
 y_test = test_data['Ergebnis']
 
 
-# Führen Sie Vorhersagen auf dem Testdatensatz durch (wobei clf unser trainierter Entscheidungsbaum aus Aufgabe 5 ist)
+# Führen Sie Vorhersagen auf dem Testdatensatz durch 
+# (wobei clf unser trainierter Entscheidungsbaum aus Aufgabe 5 ist)
 y_pred = clf.predict(X_test)
 
 # Berechnen Sie die Vorhersagegenauigkeit auf dem Testdatensatz
@@ -301,7 +304,7 @@ print("Vorhersagegenauigkeit auf dem Testdatensatz: {:.2f}%".format(accuracy * 1
 
 ## Aufgabe 8
 
-Wählen Sie einen geeigneten Datensatz aus und entwerfen Sie eine Entscheidungsbaum Modell und präsentieren Sie im Anschluss daran der Klasse ihren Datensatz, ihr Vorgehen und das entstande Modell. Folgende Datensätze können Sie z.B. verwenden!
+Wählen Sie einen geeigneten Datensatz aus und entwerfen Sie eine Entscheidungsbaum Modell und präsentieren Sie im Anschluss daran der Klasse ihren Datensatz, ihr Vorgehen und das entstandene Modell. Folgende Datensätze können Sie z.B. verwenden!
 
 1. **Titanic-Datensatz**: Der Titanic-Datensatz enthält Informationen über Passagiere an Bord des Schiffes Titanic, einschließlich Merkmalen wie Alter, Geschlecht, Klasse und Überlebensstatus. Dieser Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben und kann auch zur Vorhersage des Überlebens von Passagieren auf anderen Schiffsreisen verwendet werden.
    - URL: <https://www.kaggle.com/c/titanic/data>

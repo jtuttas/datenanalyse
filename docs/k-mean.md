@@ -16,7 +16,7 @@
 
 ## Aufgabe 1 - Datenexploration und -Visualisierung
 
-Laden Sie die zur Verfügung gestellten CSV Daten ([Ladestationen.csv](/Data/Ladestationen.csv)). Diese Datei enthält die Positionen der Elektro Auto Besitzer in der Region. Stelle Sie diese Positionen grafisch dar (vorzugsweise als graue Punkte in einem Koordinatensystem).
+Laden Sie die zur Verfügung gestellten CSV Daten ([Ladestationen.csv](https://jtuttas.github.io/datenanalyse/Data/Ladestationen.csv)). Diese Datei enthält die Positionen der Elektro Auto Besitzer in der Region. Stelle Sie diese Positionen grafisch dar (vorzugsweise als graue Punkte in einem Koordinatensystem).
 
 <!--kmean_aufgabe1-->
 <!--kmean_aufgabe2-->
