@@ -2,6 +2,8 @@
 
 ## Handlungssituation
 
+![KI im Alltag](../html/aialltag.png)
+
 > Die Change IT GmbH prüft ob es sinnvoll wäre eine eigne Abteilung zur Daten- und Prozessanalyse mit dem Schwerpunkt maschinelles Lernen und Deep Learning zu gründen.
 >
 > Sie erhalten den Auftrag die Begriffe KI, Maschine Learning, Deep Learning einzuordnen, Anwendungsbeispiele für diese Technologien zu finden und ggf. moralische Grenzen aufzuzeigen.

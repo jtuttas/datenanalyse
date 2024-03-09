@@ -2,6 +2,8 @@
 
 ## Handlungssituation
 
+![Datenexploration](../html/datenexploration.png)
+
 >Eine der ersten Kunde der neu eingeführten Abteilung "Daten- und Prozessanalyse" der ChangeIT GmbH ist eine große berufsbildenden Schule.
 >
 >Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs ausgewertet haben. Diese Daten liegen sowohl als *csv*, *xml* und *json* vor.
