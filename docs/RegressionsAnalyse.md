@@ -137,7 +137,7 @@ Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.
 
 Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung $f(x) = a \cdot x + b$.
 
-> **Hinweis**: Nutzen Sie zur Berechnung und ggf. auch zur Visualisierung die zur Verfügung gestellte Excel Tabelle [lrg_ueb1.xls](./lrg_ueb1.xlsx)
+> **Hinweis**: Nutzen Sie zur Berechnung und ggf. auch zur Visualisierung die zur Verfügung gestellte Excel Tabelle [lrg_ueb1.xls](https://raw.githubusercontent.com/jtuttas/datenanalyse/master/docs/lrg_ueb1.xlsx)
 
 <!--lrg_uebung1-->
 
