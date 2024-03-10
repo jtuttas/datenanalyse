@@ -1,5 +1,6 @@
-    code {
+    .sourceCode {
       white-space: pre-wrap;
+      background-color: #edefe9;
     }
 
     span.smallcaps {
@@ -28,11 +29,13 @@
     pre>code.sourceCode {
       white-space: pre;
       position: relative;
+      
     }
 
     pre>code.sourceCode>span {
       display: inline-block;
       line-height: 1.25;
+      
     }
 
     pre>code.sourceCode>span:empty {
@@ -202,11 +205,15 @@
     }
 
     /* Function */
-    code span.im {}
+    code span.im {
+      color: #3470e0;
+      font-weight: bold;
+      font-style: normal;
+    }
 
     /* Import */
     code span.in {
-      color: #60a0b0;
+      color: #3470e0;
       font-weight: bold;
       font-style: italic;
     }
@@ -263,5 +270,6 @@
       font-weight: bold;
       font-style: italic;
     }
+
 
     /* Warning */
