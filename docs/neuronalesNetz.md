@@ -39,7 +39,7 @@ Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheit
 ### Lösung Wahrheitstabelle erzeugen
 
 <!--neuro_lsg1-->
-Für ein **Büro** und eine **Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
+Für ein **Büro** in der **Fabrikhalle** könnte diese Tabelle wie folgt aussehen.
 
 | Tag / Nacht ($X_1$) | Person ($X_2$)    | Lampe ($Y$)   |
 | ----------- | --------- | ------- |

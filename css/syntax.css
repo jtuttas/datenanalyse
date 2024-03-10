@@ -2,7 +2,7 @@
       white-space: pre-wrap;
       background-color: #edefe9;
       border-radius: 10px;
-      padding: 5px;
+      padding-left: 5px;
     }
 
     span.smallcaps {
@@ -36,7 +36,7 @@
 
     pre>code.sourceCode>span {
       display: inline-block;
-      line-height: 1.6;
+      line-height: 1.2;
       
     }
 
