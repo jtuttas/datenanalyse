@@ -38,16 +38,36 @@ Die einzelnen Spalten bedeuten dabei:
 <!--lrg_daten-->
 
 <!--lrg_ueb1-->
-Im weiteren Verlauf wollen wir uns zunächst anschauen welchen Einfluss das jeweilige Feature auf den Wert einer Eigentumswohnung (**MEDV**) hat. Zur Bestimmung nutzen wir die Korrelation des Wertes mit dem Zielfeature (**MEDV**). Die Korrelation zweier Werte berechnet sich mit Hilfe des Pearson-Korrelationskoeffizient nach folgender Formel: 
+Im weiteren Verlauf wollen wir uns zunächst anschauen welchen Einfluss das jeweilige Feature auf den Wert einer Eigentumswohnung (**MEDV**) hat. Zur Bestimmung nutzen wir die Perason-Korrelation des Wertes mit dem Zielfeature (**MEDV**). 
 
-$$r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2}}$$
+Der Pearson-Korrelationskoeffizient (r) misst die lineare Beziehung zwischen zwei Datensätzen. Die allgemeine Formel lautet:
 
-In dieser Formel ist:
+$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}$
 
-- $r$ der Pearson-Korrelationskoeffizient
-- $x_i$ und $y_i$ die Werte der einzelnen Beobachtungen $x$ und $y$
-- $\bar{x}$ und $\bar{y}$ die Mittelwerte der Variablen $x$ und $y$
-- $n$ die Anzahl der Beobachtungen
+wobei:
+
+- $x_i$ und $y_i$ die Werte der einzelnen Datenpunkte in den beiden Datensätzen sind,
+- $\bar{x}$ und $\bar{y}$ die Mittelwerte der entsprechenden Datensätze sind.
+
+Wir können diese Formel unter Verwendung der Definitionen von Standardabweichung und Kovarianz vereinfachen.
+
+Die Kovarianz zwischen zwei Variablen X und Y ist definiert als:
+
+$\text{Cov}(X,Y) = \frac{1}{n}\sum (x_i - \bar{x})(y_i - \bar{y})$
+
+Die Standardabweichung einer Variable X ist definiert als:
+
+$\sigma_X = \sqrt{\frac{1}{n}\sum (x_i - \bar{x})^2}$
+
+und analog für Y.
+
+Setzen wir diese Definitionen in die Formel des Pearson-Korrelationskoeffizienten ein, erhalten wir:
+
+$r = \frac{\text{Cov}(X,Y)}{\sigma_X \sigma_Y}$
+
+Dies ist die vereinfachte Formel des Pearson-Korrelationskoeffizienten, die zeigt, dass der Korrelationskoeffizient gleich dem Quotienten aus der Kovarianz der beiden Variablen und dem Produkt ihrer Standardabweichungen ist. Diese Formel ist besonders nützlich, da sie direkt die Kovarianz und die Standardabweichungen verwendet, was die Berechnung in praktischen Anwendungen erleichtert.
+
+> *Hinweise*: Siehe hierzu hauch das Studyfix Video unter <https://studyflix.de/statistik/pearson-korrelation-1051>
 
 ### Übung 1
 

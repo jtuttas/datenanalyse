@@ -181,7 +181,9 @@ Wie wir sehen erhalten wir bei einen Wert von $Feuchte = 16$ eine Entropie in de
 
 ![Entropie der Regenwahrscheinlichkeit](images/ds4.png)
 
-Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer $Feuchte >= 16$ die Mengen trennen. Wir haben unsere erste Entscheidung für den Entscheidungsbaum getroffen.
+Wie wir sehen, ist der geringste Entropiewert der Wert von 0, wenn wir bei einer $Feuchte >= 16$ die Mengen trennen. Durch diese Entscheidung erhalten wir den größten **Informationsgewinn** erreicht, dieser wird auch als *gain* bezeichnet. 
+
+Wir haben also unsere erste Entscheidung für den Entscheidungsbaum getroffen.
 
 ![Erste Entscheidung](images/ds5.png){ width=400px }
 

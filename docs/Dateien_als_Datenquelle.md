@@ -204,7 +204,7 @@ ax.legend(["A","B","C","D","E","F"])
 plt.show()
 
 ```
-![Übung 1 - Tortendiagramm](./datei_ueb1.png)
+![Aufgabe 4 - Tortendiagramm](./datei_ueb1.png)
 
 > **Hinweis**: In dem unten dargestellten Beispiel werden Werte in Form eines Balkendiagramms dargestellt.
 
@@ -216,7 +216,7 @@ barimage = data.plot.bar()
 barimage.set_title("Titel Deiner Grafik")
 ```
 
-![Übung 1 - Balkendiagramm](./datei_ueb1b.png)
+![Aufgabe 4 - Balkendiagramm](./datei_ueb1b.png)
 
 <!--dateiaufgabe4-->
 <!--dateiaufgabe5-->
@@ -240,7 +240,7 @@ pltimage.set_title("Übung 2")
 
 ```
 
-![Übung 2](./datei_ueb2.png)
+![Aufgabe ](./datei_ueb2.png)
 
 <!--dateiaufgabe5-->
 
