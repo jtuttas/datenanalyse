@@ -15,7 +15,7 @@ Die smarte Lichtsteuerung "AI-Light" besitzt zwei Sensoren.
 - Präsenzerkennung: Über Sensoren ist das System in der Lage zu erkennen, ob sich Personen im Raum befinden.
 - Tag / Nachterkennung: Das System ist ebenso in der Lage, Tag- / Nachtzeiten zu erkennen.
 
-![Sensorik AI Light](../html/neuro_hs.drawio.png)
+![Sensorik AI Light](../html/neuro_hs.png)
 
 ## Kundenanforderungen
 
@@ -187,13 +187,13 @@ $\frac{\delta E(Y')} {\delta W_4}=\frac {\delta E(Y')} {\delta Y'}* \frac {\delt
 
 Dabei ist:
 
-$\frac{\delta E(Y')} {\delta W_4}$ die Partielle Ableitung der Loss Funktion nach dem Gewicht $W_4$.
+- $\frac{\delta E(Y')} {\delta W_4}$ die Partielle Ableitung der Loss Funktion nach dem Gewicht $W_4$.
 
-$\frac {\delta E(Y')} {\delta Y'}$ Ableitung der Loss Funktion nach Y'
+- $\frac {\delta E(Y')} {\delta Y'}$ Ableitung der Loss Funktion nach Y'
 
-$\frac {\delta Y'}{\delta \Theta}$ Ableitung von Y' nach $\Theta$, wobei $\Theta$ die Multiplikation der Gewichte mit den Eingangsgrößen plus den Bias Werten ist. In unserem Fall wäre also $\Theta=(O_1*W_4+O_2*W_5+O_3*W_6)+B_4$.
+- $\frac {\delta Y'}{\delta \Theta}$ Ableitung von Y' nach $\Theta$, wobei $\Theta$ die Multiplikation der Gewichte mit den Eingangsgrößen plus den Bias Werten ist. In unserem Fall wäre also $\Theta=(O_1*W_4+O_2*W_5+O_3*W_6)+B_4$.
 
-$\frac {\delta \Theta}{\delta W_4}$ Die Ableitung dieses Wertes nach $W_4$
+- $\frac {\delta \Theta}{\delta W_4}$ Die Ableitung dieses Wertes nach $W_4$
 
 Die Fehlerfunktion war $E(Y')=-((1-Y)*ln((1-Y'))$ und das abgeleitet nach Y' ergibt $\frac {\delta E(Y')} {\delta Y'}=\frac{(1 - Y)}{(1 - Y')}$, bzw. mit unseren Werten $\frac{(1 - 0)}{(1 - 0.6017)}=2.5107$
 
