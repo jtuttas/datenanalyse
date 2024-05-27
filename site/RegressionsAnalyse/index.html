@@ -1,0 +1,807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Lineare Regression - LF10c</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lineare-regression" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LF10c" class="md-header__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LF10c
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lineare Regression
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LF10c" class="md-nav__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LF10c
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS1/" class="md-nav__link">
+        LS10c.1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS2/" class="md-nav__link">
+        LS10c.2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS3/" class="md-nav__link">
+        LS10c.3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS4/" class="md-nav__link">
+        LS10c.4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS5/" class="md-nav__link">
+        LS10c.5
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS6/" class="md-nav__link">
+        LS10c.6
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS7/" class="md-nav__link">
+        LS10c.7
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS8/" class="md-nav__link">
+        LS10c.8
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS9/" class="md-nav__link">
+        LS10c.9
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handlungssituation" class="md-nav__link">
+    Handlungssituation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-daten" class="md-nav__link">
+    Die Daten
+  </a>
+  
+    <nav class="md-nav" aria-label="Die Daten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubung-1" class="md-nav__link">
+    Übung 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-1" class="md-nav__link">
+    Aufgabe 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lineare-regression_1" class="md-nav__link">
+    lineare Regression
+  </a>
+  
+    <nav class="md-nav" aria-label="lineare Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubungsaufgabe-2" class="md-nav__link">
+    Übungsaufgabe 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubungsaufgabe-3" class="md-nav__link">
+    Übungsaufgabe 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-2" class="md-nav__link">
+    Aufgabe 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anpassen-des-modells-fur-mehrere-features-multiple-lineare-regression" class="md-nav__link">
+    Anpassen des Modells für mehrere Features (Multiple Lineare Regression)
+  </a>
+  
+    <nav class="md-nav" aria-label="Anpassen des Modells für mehrere Features (Multiple Lineare Regression)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trainieren-des-modells" class="md-nav__link">
+    Trainieren des Modells
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r2-metrik" class="md-nav__link">
+    R2 - Metrik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-3" class="md-nav__link">
+    Aufgabe 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-4" class="md-nav__link">
+    Aufgabe 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflexion-der-unterrichtseinheit" class="md-nav__link">
+    Reflexion der Unterrichtseinheit
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="lineare-regression">Lineare Regression</h1>
+<h2 id="handlungssituation">Handlungssituation</h2>
+<!--lrg_Handlungssituation-->
+
+<p><img alt="Titel" src="../immo.jpg" /></p>
+<blockquote>
+<p>Ein großes internationales Immobilienbüro beauftragt die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH mit der Entwicklung eines Modells zur Vorhersage von Immobilienpreise.</p>
+<p>Sie wirken maßgeblich an der Entwicklung des Vorhersagemodells mit und Beurteilen die Qualität des Modells.</p>
+</blockquote>
+<!--lrg_Handlungssituation-->
+
+<!--lrg_daten-->
+<h2 id="die-daten">Die Daten</h2>
+<p>Der Kunde stellt ihnen die Daten als <em>CSV</em> Datei zur Verfügung. Sie können diese Datei <a href="https://jtuttas.github.io/datenanalyse/Data/bo.csv">hier</a> laden. Der Datensatz hat dabei folgenden Aufbau.</p>
+<p><img alt="Boston House Prices" src="../images/bo.png" /></p>
+<p>Die einzelnen Spalten bedeuten dabei:</p>
+<ul>
+<li>CRIM: Kriminalitätsrate pro Kopf</li>
+<li>ZN: Anteil der Wohngrundstücke über 25.000 Quadratfuß</li>
+<li>INDUS: Anteil der Nicht-Einzelhandels-Geschäftsflächen pro Stadt</li>
+<li>CHAS: Charles River-Dummy-Variable (1, falls das Grundstück an einem Fluss liegt, sonst 0)</li>
+<li>NOX: Stickoxidkonzentration (in Teilen pro 10 Millionen)</li>
+<li>RM: Durchschnittliche Anzahl von Zimmern pro Wohnung</li>
+<li>AGE: Anteil der im Jahr 1940 oder früher errichteten Wohnungen</li>
+<li>DIS: Gewichteter Abstand zu fünf Bostoner Arbeitszentren</li>
+<li>RAD: Index der Zugänglichkeit zu radialen Autobahnen</li>
+<li>TAX: Vollständige Immobiliensteuer pro 10.000 Dollar</li>
+<li>PTRATIO: Schüler-Lehrer-Verhältnis nach Stadtteilen</li>
+<li>B: Anteil an Afroamerikanern im Verhältnis zur Bevölkerung pro Stadt</li>
+<li>LSTAT: Prozentsatz der Bevölkerung mit niedrigem sozioökonomischem Status</li>
+<li>MEDV: Medianwert von Eigentumswohnungen in 1000er Dollar</li>
+</ul>
+<!--lrg_daten-->
+
+<!--lrg_ueb1-->
+<p>Im weiteren Verlauf wollen wir uns zunächst anschauen welchen Einfluss das jeweilige Feature auf den Wert einer Eigentumswohnung (<strong>MEDV</strong>) hat. Zur Bestimmung nutzen wir die Perason-Korrelation des Wertes mit dem Zielfeature (<strong>MEDV</strong>). </p>
+<p>Der Pearson-Korrelationskoeffizient (r) misst die lineare Beziehung zwischen zwei Datensätzen. Die allgemeine Formel lautet:</p>
+<p><span class="arithmatex">\(r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}\)</span></p>
+<p>wobei:</p>
+<ul>
+<li><span class="arithmatex">\(x_i\)</span> und <span class="arithmatex">\(y_i\)</span> die Werte der einzelnen Datenpunkte in den beiden Datensätzen sind,</li>
+<li><span class="arithmatex">\(\bar{x}\)</span> und <span class="arithmatex">\(\bar{y}\)</span> die Mittelwerte der entsprechenden Datensätze sind.</li>
+</ul>
+<p>Wir können diese Formel unter Verwendung der Definitionen von Standardabweichung und Kovarianz vereinfachen.</p>
+<p>Die Kovarianz zwischen zwei Variablen X und Y ist definiert als:</p>
+<p><span class="arithmatex">\(\text{Cov}(X,Y) = \frac{1}{n}\sum (x_i - \bar{x})(y_i - \bar{y})\)</span></p>
+<p>Die Standardabweichung einer Variable X ist definiert als:</p>
+<p><span class="arithmatex">\(\sigma_X = \sqrt{\frac{1}{n}\sum (x_i - \bar{x})^2}\)</span></p>
+<p>und analog für Y.</p>
+<p>Setzen wir diese Definitionen in die Formel des Pearson-Korrelationskoeffizienten ein, erhalten wir:</p>
+<p><span class="arithmatex">\(r = \frac{\text{Cov}(X,Y)}{\sigma_X \sigma_Y}\)</span></p>
+<p>Dies ist die vereinfachte Formel des Pearson-Korrelationskoeffizienten, die zeigt, dass der Korrelationskoeffizient gleich dem Quotienten aus der Kovarianz der beiden Variablen und dem Produkt ihrer Standardabweichungen ist. Diese Formel ist besonders nützlich, da sie direkt die Kovarianz und die Standardabweichungen verwendet, was die Berechnung in praktischen Anwendungen erleichtert.</p>
+<blockquote>
+<p><em>Hinweise</em>: Siehe hierzu hauch das Studyfix Video unter <a href="https://studyflix.de/statistik/pearson-korrelation-1051">https://studyflix.de/statistik/pearson-korrelation-1051</a></p>
+</blockquote>
+<h3 id="ubung-1">Übung 1</h3>
+<p>Es gelten folgende Beispieldaten:</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.55</td>
+<td>1.11</td>
+</tr>
+<tr>
+<td>0.72</td>
+<td>1.58</td>
+</tr>
+<tr>
+<td>0.60</td>
+<td>1.28</td>
+</tr>
+<tr>
+<td>0.54</td>
+<td>1.10</td>
+</tr>
+<tr>
+<td>0.42</td>
+<td>0.89</td>
+</tr>
+<tr>
+<td>0.65</td>
+<td>1.33</td>
+</tr>
+<tr>
+<td>0.44</td>
+<td>1.02</td>
+</tr>
+<tr>
+<td>0.89</td>
+<td>1.76</td>
+</tr>
+<tr>
+<td>0.96</td>
+<td>1.96</td>
+</tr>
+<tr>
+<td>0.38</td>
+<td>0.68</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.548814</span><span class="p">,</span> <span class="mf">0.715189</span><span class="p">,</span> <span class="mf">0.602763</span><span class="p">,</span> <span class="mf">0.544883</span><span class="p">,</span> <span class="mf">0.423655</span><span class="p">,</span> 
+     <span class="mf">0.645894</span><span class="p">,</span> <span class="mf">0.437587</span><span class="p">,</span> <span class="mf">0.891773</span><span class="p">,</span> <span class="mf">0.963663</span><span class="p">,</span> <span class="mf">0.383442</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.112031</span><span class="p">,</span> <span class="mf">1.575806</span><span class="p">,</span> <span class="mf">1.281631</span><span class="p">,</span> <span class="mf">1.101934</span><span class="p">,</span> <span class="mf">0.891696</span><span class="p">,</span> 
+     <span class="mf">1.325156</span><span class="p">,</span> <span class="mf">1.024582</span><span class="p">,</span> <span class="mf">1.763030</span><span class="p">,</span> <span class="mf">1.958632</span><span class="p">,</span> <span class="mf">0.681473</span><span class="p">]</span>
+</code></pre></div>
+<p>Schätzen Sie zunächst den Wert der Korrelation zwischen <span class="arithmatex">\(X\)</span> und <span class="arithmatex">\(Y\)</span> ab und bestimmen Sie im Anschluss daran den Pearson-Korrelationskoeffizient <span class="arithmatex">\(r\)</span>.</p>
+<!--lrg_ueb1-->
+
+<!--lrg_aufgabe1-->
+<p>Ein Kollege der Abteilung Datenanalyse hat sich bereits die Daten angeschaut und basierend auf dem Daten die Korrelation der Daten als Heatmap dargestellt. Er stellt Ihnen das Ergebnis seiner Analyse zur Verfügung:</p>
+<p><img alt="Heatmap Correlation" src="../images/bo_heatmap_corr.png" /></p>
+<h2 id="aufgabe-1">Aufgabe 1</h2>
+<p>Wählen Sie anhand der Heatmap zunächst ein weiteres <strong>Feature</strong> aus und stellen Sie dessen Einfluss auf den Wert einer Eigentumswohnung (<strong>MEDV</strong>) in Form einer Grafik (Scatter Plot) dar.</p>
+<p>Beispielhaft ist hier die Beziehung zwischen den Preis der Immobilie (<em>medv</em>) und der Anzahl der Zimmer (<em>rm</em>) dargestellt.</p>
+<p><img alt="Hauspreis über Anzahl v. Zimmern" src="../images/bo_preis_zimmer.png" /></p>
+<!--lrg_aufgabe1-->
+<div style="page-break-after: always;"></div>
+<!--lrg_info-->
+<h2 id="lineare-regression_1">lineare Regression</h2>
+<p>Die lineare Regression versucht nun durch diese Datenmenge eine gerade zu legen, um auf diese Weise Vorhersagen von zukünftigen Ereignissen zu bestimmen. Wenn dieses gelingt, dann könnte z.B. ein Immobilienpreis anhand der Größe der Wohnung bestimmt werden.</p>
+<blockquote>
+<p>Weiter Informationen:</p>
+<ul>
+<li><a href="https://studyflix.de/statistik/lineare-regression-2147">Studifix: Lineare Regression</a></li>
+</ul>
+</blockquote>
+<p>Eine lineare Gleichung hat dabei folgende allgemeine Form.</p>
+<div class="arithmatex">\[f(x) = a \cdot x + b\]</div>
+<p>Wobei <strong>a</strong> die Steigung und <strong>b</strong> der y-Achsenabschnitt der Geraden ist. Gesucht ist also eine Lösung mit den Werten <strong>a</strong> und <strong>b</strong>, die durch die gewählte Datenmenge eine Gerade repräsentiert, wobei der Fehlern (also die Abweichung des Gerade zu den einzelnen Datenpunkten) zu minimieren ist.</p>
+<!--lrg_uebung1-->
+<p>Die Lösung des Problem kann dabei iterativ als auch arithmetisch erfolgen. Eine arithmetische Lösung sieht dabei wie folgt aus.</p>
+<p><span class="arithmatex">\(a = \frac{n\sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n\sum_{i=1}^n x_i^2 - (\sum_{i=1}^n x_i)^2}\)</span></p>
+<p><span class="arithmatex">\(b = \frac{\sum_{i=1}^n y_i - a\sum_{i=1}^n x_i}{n}\)</span></p>
+<p>Dabei sind <span class="arithmatex">\(x_i\)</span> für das o.g. Beispiel die Werte für die Anzahl der Zimmer pro Wohneinheit (<strong>rm</strong>) und <span class="arithmatex">\(y_i\)</span> der daraus resultierende Preis der Wohnung.</p>
+<!--lrg_info-->
+
+<h3 id="ubungsaufgabe-2">Übungsaufgabe 2</h3>
+<p>Gehen Sie von folgenden Daten aus:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">45</span><span class="p">]</span>
+</code></pre></div>
+<p>Wenn Sie diese Daten visualisieren erhalten Sie folgenden Darstellung.</p>
+<p><img alt="Datenverteilung Übung 2" src="../images/lin_reg_ueb1.png" /></p>
+<p>Berechnen Sie mit Hilfe der o.g. Formel die Geradengleichung <span class="arithmatex">\(f(x) = a \cdot x + b\)</span>.</p>
+<blockquote>
+<p><strong>Hinweis</strong>: Nutzen Sie zur Berechnung und ggf. auch zur Visualisierung die zur Verfügung gestellte Excel Tabelle <a href="https://raw.githubusercontent.com/jtuttas/datenanalyse/master/docs/lrg_ueb1.xlsx">lrg_ueb1.xls</a></p>
+</blockquote>
+<!--lrg_uebung1-->
+
+<h3 id="ubungsaufgabe-3">Übungsaufgabe 3</h3>
+<!--lrg_uebung2-->
+<p>Überprüfen Sie ihre berechneten Werte, indem Sie die Gerade <span class="arithmatex">\(f(x) = a \cdot x + b\)</span> in die Datenmenge einzeichen. Z.B. mit Hilfe des folgenden Python Codes.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">2</span> <span class="c1"># Ihr berechneter Wert für a</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">4</span> <span class="c1"># Ihr berechneter Wert für b</span>
+<span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">45</span><span class="p">]</span>
+<span class="n">gx</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="n">gy</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="mi">4</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="mi">12</span><span class="o">+</span><span class="n">b</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gx</span><span class="p">,</span> <span class="n">gy</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Übung 3" src="../images/lin_reg_ueb2.png" /></p>
+<p>Das Berechnen der Steigung <strong>a</strong> und des Achsenabschnitts <strong>b</strong> ist natürlich auch mit Hilfe einer Methode aus der Bibliothek <strong>sklearn.linear_model</strong> konkret die Klasse <strong>LinearRegression</strong>. Importieren Sie also zunächst die entsprechende Klasse:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Gegebene Daten</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
+
+<span class="c1"># Erstellung und Anpassung des linearen Regressionsmodells</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Koeffizienten der Regressionsgeraden</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+</code></pre></div>
+<p>Über die Methode <strong>fit()</strong> dieser Klasse können die Parameter <strong>a</strong> und <strong>b</strong> bestimmt werden. Diese befinden sich nach korrektem Aufruf der Methode im Attribut <strong>coef_[0]</strong> (für die Steigung <strong>a</strong>) und <strong>intercept_</strong> (für den Achsenabschnitt <strong>b</strong>). </p>
+<p>Überprüfen Sie mit Hilfe der Methode <strong>fit()</strong> ihre zuvor berechneten Werte und tragen Sie die Steigungsgerade in den Scatter Plot ein.</p>
+<p><img alt="Übung 3 Lösung" src="../images/lin_reg_ueb2_lsg.png" /></p>
+<p>Über die Methode <strong>predict()</strong> des Modells können Sie nun anhand des Modells Aussagen über das Verhalten des Systems machen. Testen Sie diese indem Sie sich z.B. eine Aussage über den Wert von <span class="arithmatex">\(x=7\)</span> ausgeben lassen!</p>
+<!--lrg_uebung2-->
+
+<h2 id="aufgabe-2">Aufgabe 2</h2>
+<!--lrg_aufg2-->
+
+<p>Bestimmen Sie die aus Aufgabe 1 ermittelten Korrelationen (<strong>Features</strong>) die Gerade <span class="arithmatex">\(f(x) = a \cdot x + b\)</span> und tragen Sie diese wie in der Übung in die Datenmenge ein.</p>
+<p><img alt="Regressionsgerade" src="../images/lin_reg_aufg2.png" /></p>
+<p>Erstellen Sie ferner mittels der Methode <strong>predict()</strong> des Modells eine Aussage, indem Sie den Wert des Features übergeben und den Immobilienpreis angezeigt bekommen!</p>
+<blockquote>
+<p>Diskutieren Sie im Klassenverband, ob das nun erstellte Vorhersagemodell zum Prognostizieren des Hauspreises ausreichend ist, oder wie dieses verbessert werden kann?</p>
+</blockquote>
+<!--lrg_aufg2-->
+
+<!--lrg_info2-->
+
+<h2 id="anpassen-des-modells-fur-mehrere-features-multiple-lineare-regression">Anpassen des Modells für mehrere Features (Multiple Lineare Regression)</h2>
+<p>Zur Optimierung des Modells sollen auch die anderen <em>Features</em> des Datensatzes genutzt werden. Dieses Verfahren nennt sich Multiple Lineare Regression. Gesucht wird dabei folgende Gleichung.</p>
+<div class="arithmatex">\[f(x) = a_1 \cdot x_1 + a_2 \cdot x_2+a_3 \cdot x_3 + b\]</div>
+<p>Dabei sind <span class="arithmatex">\(a_1\)</span> bis <span class="arithmatex">\(a_n\)</span> Faktoren für die einzelnen <em>Features</em> <span class="arithmatex">\(x_1\)</span> bis <span class="arithmatex">\(x_n\)</span>. Diese einzelnen Faktoren gilt es nun iterativ zu bestimmen.</p>
+<blockquote>
+<p><strong>Weitere Informationen:</strong></p>
+<ul>
+<li><a href="https://studyflix.de/statistik/multiple-regression-2149">Studifix: Multiple Lineare Regression</a></li>
+</ul>
+</blockquote>
+<p>Zur Überprüfung des daraus entstandene Vorhersagemodells muss nun der Datensatz zunächst in <strong>Trainingsdaten</strong> und <strong>Testdaten</strong> geteilt werden. Eine Teilung von 80/20 ist hierfür ein gängiges Mittel.</p>
+<p><img alt="Dateneinteilung" src="../datenteilung.png" /></p>
+<p>Zum Aufteilen ein Datensatzes in Trainings- / Testdaten dient auch wieder eine Methode aus dem Paket <strong>sklearn.model_selection</strong>, konkret die Methode <strong>train_test_split()</strong> die dieser Aufteilung vornimmt.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">feature_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rm&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;dis&quot;</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">feature_names</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;medv&#39;</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="trainieren-des-modells">Trainieren des Modells</h3>
+<p>Anschließend kann das Modell mit den Trainingsdaten trainiert werden.</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div>
+<p>Die Einzelnen Faktoren <span class="arithmatex">\(a_1\)</span> bis <span class="arithmatex">\(a_n\)</span> befinden sich dabei wie zuvor in dem Attribut <em>model.coeff_</em> in Form eines Arrays und <em>model.intercept</em> der Wert für den Achsenabschnitt <em>b</em>.</p>
+<p>Um nun aufgrund unseres Modells eine Vorhersage zu treffen, dient die Funktion <strong>predict</strong> im Objekt <strong>model</strong>. Dieses erwartet einen Datensatz als Übergabeparameter.</p>
+<h3 id="r2-metrik">R2 - Metrik</h3>
+<p>Über die Qualität des Modells gibt u.a. Der Wert <span class="arithmatex">\(R^2\)</span> (Determinationskoeffizient) Auskunft.</p>
+<p>Je höher der <span class="arithmatex">\(R^2\)</span>-Wert, desto besser die Vorhersage.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R^2: &#39;</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
+</code></pre></div>
+<!--lrg_info2-->
+
+<h2 id="aufgabe-3">Aufgabe 3</h2>
+<!--lrg_aufg3-->
+
+<p>Führen Sie wie beschrieben die Regressions Analyse mit 3-4 <strong>wichtigen Features</strong> mit dem Datensatz durch. Wählen Sie dann einen Datensatz aus der Menge der Testdaten und lassen sich mit der Funktion <strong>predict()</strong> das Ergebnis für einen Immobilienpreis ausgeben. Überprüfen Sie ferner die Qualität ihres Vorhersagemodells, indem Sie den Wertt <span class="arithmatex">\(R^2\)</span> bestimmen.</p>
+<blockquote>
+<p>Diskutieren Sie Maßnahmen, wie die Qualität des Vorhersagemodells verbessert werden kann!</p>
+</blockquote>
+<!--lrg_aufg3-->
+
+<h2 id="aufgabe-4">Aufgabe 4</h2>
+<!--lrg_aufg4-->
+
+<p>Entscheiden Sie sich in einer Kleingruppe für einen geeigneten Datensatz zur Durchführung einer Regressionsanalyse und führen Sie die Analyse durch. Erstellen Sie auf der Grundlage ihrer Analyse eine kurze Präsentation und Präsentieren diese anschließend kurz der Klasse ihr Ergebnis.</p>
+<p>Die Präsentation sollte beinhalten:</p>
+<ul>
+<li>Art / Beschreibung des Datensatzes</li>
+<li>Zu untersuchende Fragestellung</li>
+<li>Vorgehensweise</li>
+<li>Interpretation der Ergebnisse</li>
+</ul>
+<p>Folgende Datensätze können z.B. genutzt werden:</p>
+<ul>
+<li><strong>El Nino Dataset</strong>: Oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. <a href="https://jtuttas.github.io/datenanalyse/Data/el.csv">Download</a> / Beschreibung: <a href="https://www.kaggle.com/datasets/uciml/el-nino-dataset">https://www.kaggle.com/datasets/uciml/el-nino-dataset</a></li>
+<li><strong>eBay auction data</strong>: Auction data from various eBay.com objects over various length auctions. <a href="https://jtuttas.github.io/datenanalyse/Data/auc.csv">Download</a> / Beschreibung: <a href="https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data">https://www.kaggle.com/code/yingyingchen/ebay-auction-data-analysis/data</a></li>
+<li><strong>Bike Sharing Dataset</strong>: Hourly and daily count of rental bikes in a large city. <a href="https://jtuttas.github.io/datenanalyse/Data/lbike.csv">Download</a> / Beschreibung: <a href="https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset">https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset</a></li>
+<li>Oder wählen Sie einen eigenen Datensatz z.B. aus <a href="https://www.kaggle.com/">https://www.kaggle.com/</a>!</li>
+</ul>
+<!--lrg_aufg4-->
+
+<h2 id="reflexion-der-unterrichtseinheit">Reflexion der Unterrichtseinheit</h2>
+<!--lrg_relex-->
+<p>Sie erhalten von ihrem Geschäftsführer <em>Dr. Wöhler</em> die unten abgebildete Email. Verfassen Sie auf diese Email eine Antwort.</p>
+<blockquote>
+<p>"Sehr geehrte Mitarbeiter der Abteilung Daten- und Prozessanalyse,</p>
+<p>ich gratuliere Ihnen von ganzem Herzen zu Ihrer erfolgreichen Fertigstellung des Modells zur Vorhersage von Immobilienpreisen. Alle Anstrengungen, die Sie auf sich genommen haben, um dieses Modell zum Laufen zu bringen, werden nun mit dem Ergebnis belohnt.</p>
+<p>Ausserdem möchte ich betonen, dass wir in Zukunft alle Anforderungen für ein Modell datenbasierter Vorhersagen mit den Mitteln der linearen Regression lösen sollten. Der Grund ist, dass lineare Regression uns die größtmögliche Genauigkeit beim Entwerfen oder Verbessern von Modellen gewährleistet.</p>
+<p>Noch einmal herzlichen Glückwunsch an alle, die an diesem Projekt beteiligt waren. Bleiben Sie alle weiterhin motiviert, kreativ und innovativ.</p>
+<p>Vielen Dank,</p>
+<p>Dr. Wöhler,<br />
+Geschäftsführer ChangeIT GmbH"</p>
+</blockquote>
+<!--lrg_relex-->
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

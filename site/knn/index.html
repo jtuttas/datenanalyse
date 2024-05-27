@@ -1,0 +1,878 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>KNN - K Nearest Neighbor - LF10c</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#knn-k-nearest-neighbor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LF10c" class="md-header__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LF10c
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              KNN - K Nearest Neighbor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LF10c" class="md-nav__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LF10c
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS1/" class="md-nav__link">
+        LS10c.1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS2/" class="md-nav__link">
+        LS10c.2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS3/" class="md-nav__link">
+        LS10c.3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS4/" class="md-nav__link">
+        LS10c.4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS5/" class="md-nav__link">
+        LS10c.5
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS6/" class="md-nav__link">
+        LS10c.6
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS7/" class="md-nav__link">
+        LS10c.7
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS8/" class="md-nav__link">
+        LS10c.8
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS9/" class="md-nav__link">
+        LS10c.9
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handlungssituation" class="md-nav__link">
+    Handlungssituation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-der-daten" class="md-nav__link">
+    Exploration der Daten
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-uberlegungen-zum-vorhersagemodell" class="md-nav__link">
+    Erste Überlegungen zum Vorhersagemodell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testen-des-vorhersagemodells" class="md-nav__link">
+    Testen des Vorhersagemodells
+  </a>
+  
+    <nav class="md-nav" aria-label="Testen des Vorhersagemodells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losung" class="md-nav__link">
+    Lösung
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#andere-k-werte" class="md-nav__link">
+    Andere k-Werte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metriken" class="md-nav__link">
+    Metriken
+  </a>
+  
+    <nav class="md-nav" aria-label="Metriken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losung-metriken" class="md-nav__link">
+    Lösung Metriken
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubungsaufgabe-metriken" class="md-nav__link">
+    Übungsaufgabe Metriken
+  </a>
+  
+    <nav class="md-nav" aria-label="Übungsaufgabe Metriken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losung-ubung-metriken" class="md-nav__link">
+    Lösung Übung Metriken
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzen-von-bibliotheken" class="md-nav__link">
+    Nutzen von Bibliotheken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bestimmung-der-metriken" class="md-nav__link">
+    Bestimmung der Metriken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragen-zum-kapitel" class="md-nav__link">
+    Fragen zum Kapitel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="knn-k-nearest-neighbor">KNN - K Nearest Neighbor</h1>
+<h2 id="handlungssituation">Handlungssituation</h2>
+<p><img alt="Teaser" src="../images/Diamantrahmen_Rohrlaengen.png" /></p>
+<blockquote>
+<p>Ein Online Fahrradhändler möchte seinen Kunden stets Fahrräder in der optimale Rahmenhöhe anbieten. Dazu soll eine App inkl. Vorhersagemodell entwickelt werden, so dass der Kunde lediglich ein Foto aufnehmen muss und ihm die optimale Rahmenhöhe empfohlen wird.</p>
+<p>Eine Abteilung der ChangeIT GmbH ist bereits damit beauftragt aus einem Bild die Schrittlänge und die Körpergröße (jeweils in cm) zu ermitteln. Sie sollen ein Vorhersagemodell entwickeln, welches dem Kunden die richtige Rahmengröße vorschlägt.</p>
+<p>Der Online Fahrradhändler hat bereits Daten in Form von Erfahrungswerten vorliegen und stellt ihnen diese in Form einer CSV Datei zur Verfügung.</p>
+</blockquote>
+<!--knn_aufg1-->
+
+<h2 id="exploration-der-daten">Exploration der Daten</h2>
+<p>Stelle Sie zunächst die Daten, die Sie vom Online Händler erhalten haben grafisch dar (<a href="https://jtuttas.github.io/datenanalyse/Data/Rahmenhoehe.csv">CSV Datei</a>). Zur besseren Unterscheidung der Kategorien (Klassen) sollte jede Rahmenhöhe (S,M,L,XL) in einer anderen Farbe dargestellt werden.</p>
+<!--knn_aufg1-->
+<!--knn_lsg1-->
+
+<p><img alt="Exploration der Daten" src="../images/knn1.png" /></p>
+<!--knn_lsg1-->
+<!--knn_aufg1b-->
+
+<h2 id="erste-uberlegungen-zum-vorhersagemodell">Erste Überlegungen zum Vorhersagemodell</h2>
+<p>Angenommen ein Kunde wird ausgemessen und es ergibt sich eine Körpergröße von <em>163cm</em> und eine Schrittlänge von <em>84cm</em> (der graue Punkt in der unteren Abbildung), welchen Rahmengröße könnte man dem Kunden empfehlen?</p>
+<p><img alt="Entwurf eines Vorhersagemodells" src="../images/knn2.png" /></p>
+<p>Nun man könnte zunächst auf die Idee kommen sich den Datenpunkt zu suchen, der vom gesuchten den geringsten Abstand hat. Also benötigen wir eine Funktion, die und die Entfernung der Datenpunkte bestimmt. </p>
+<div class="arithmatex">\[c = \sqrt{a^2 + b^2}\]</div>
+<p>bzw.</p>
+<div class="arithmatex">\[c = \sqrt{(ax-px)^2 + (ay-py)^2}\]</div>
+<p>Im n-dimensionalen Raum wird diese Abstand auch als Euklidische Distanz bezeichnet. Für einen n-dimensionalen Raum sieht die Berechnung des Euklidische Distanz wir folgt aus:</p>
+<div class="arithmatex">\[ \sqrt{\sum_{i=1}^{n}(q_i-p_i)^2} \]</div>
+<p>Hierbei beschreibt <span class="arithmatex">\(n\)</span> die Anzahl der Dimensionen der Punkte <span class="arithmatex">\(p\)</span> und <span class="arithmatex">\(q\)</span> und <span class="arithmatex">\(p_i\)</span> und <span class="arithmatex">\(q_i\)</span> stellen die Werte der i-ten Dimension der jeweiligen Punkte dar.</p>
+<p>Entwickeln sie eine Funktion <strong>distance(ax,ay,px,py)</strong>, die die Entfernung zweier Punkte bestimmt.</p>
+<p>Iterieren Sie durch alle gegeben Datenpunkte und bestimmen Sie den Punkt, der vom gesuchten Punkt (Körpergröße=163cm / Schrittlänge=84 cm) den geringsten Abstand hat.</p>
+<blockquote>
+<p>Diskutieren Sie im Klassenverband, ob wir bereits ein geeignetes Vorhersagemodell gefunden haben? Und wie wir die Qualität unseres gefundenen Modells überprüfen können?</p>
+</blockquote>
+<!--knn_aufg1b-->
+
+<!--knn_aufg2-->
+
+<h2 id="testen-des-vorhersagemodells">Testen des Vorhersagemodells</h2>
+<p>Wollen wir unsere Modell qualitativ überprüfen sollten wir zunächst unseren Datenbestand teilen in Trainingsdaten und Testdaten. </p>
+<p><img alt="Teilen des Datensatzes" src="../images/knn3.png" /></p>
+<p>Anhand der Testdaten können wir nun überprüfen wie gut unser Modell ist. Erstellen Sie ein Programm, welches anhand der Testdaten Vorhersagen zur Rahmenhöhe macht. Und dokumentieren Sie, wie of das Modell eine richtige Vorhersage macht und wie oft das Modell falsch liegt.</p>
+<!--knn_aufg2-->
+<!--knn_lsg2-->
+
+<h3 id="losung">Lösung</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">ok</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">err</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)):</span>
+
+    <span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">,</span><span class="s2">&quot;Koerpergroesse&quot;</span><span class="p">,</span><span class="s2">&quot;Schrittlaenge&quot;</span><span class="p">,</span><span class="s2">&quot;Rahmenhöhe&quot;</span><span class="p">])</span>
+    <span class="n">testData</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">learn</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">distance</span><span class="p">(</span><span class="n">testData</span><span class="p">[</span><span class="s2">&quot;Koerpergroesse&quot;</span><span class="p">],</span><span class="n">testData</span><span class="p">[</span><span class="s2">&quot;Schrittlaenge&quot;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Koerpergroesse&quot;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Schrittlaenge&quot;</span><span class="p">]),</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Koerpergroesse&quot;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Schrittlaenge&quot;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Rahmengroesse&quot;</span><span class="p">]]</span>
+
+    <span class="n">d</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vorhersage &quot;</span><span class="o">+</span><span class="n">d</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;Rahmenhöhe&quot;</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot; Ist &quot;</span><span class="o">+</span><span class="n">testData</span><span class="p">[</span><span class="s2">&quot;Rahmengroesse&quot;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;Rahmenhöhe&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">testData</span><span class="p">[</span><span class="s2">&quot;Rahmengroesse&quot;</span><span class="p">]):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+        <span class="n">ok</span><span class="o">=</span><span class="n">ok</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Fehler&quot;</span><span class="p">)</span>
+        <span class="n">err</span><span class="o">=</span><span class="n">err</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;OK &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ok</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;   Fehler &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+</code></pre></div>
+<!--knn_lsg2-->
+<!--knn_aufg3-->
+
+<h2 id="andere-k-werte">Andere k-Werte</h2>
+<p>Bisher schauen und wir uns den nächsten Nachbarn im Datenraum an (<span class="arithmatex">\(k=1\)</span>). Doch wie würde sich die Qualität unseres Modells ändern, wenn wir z.B. die nächsten 3 Nachbarn (<span class="arithmatex">\(k=3\)</span>) betrachten würden? Experimentieren Sie mit ihrem Modell mit anderen k-Werten und analysieren Sie die Qualität des Vorhersagemodells.</p>
+<p><em>Hinweis</em>: Wenn wir einen anderen k-Wert als 1 verwenden, müssen wir, nachdem wir das Ergebnis-Array ["Entfernung","Rahmengröße"] sortiert haben heraus finden welche Klasse in den k-letzten Einträgen am meisten vorhanden ist!</p>
+<p><img alt="Ergebnisse k=3" src="../images/knn4.png" /></p>
+<!--knn_aufg3-->
+<!--knn_aufg4-->
+
+<h2 id="metriken">Metriken</h2>
+<p>Metriken dienen dazu die Qualität von Modellen zu beurteilen. Eine erste einfache Metrik haben wir bereits angewendet, die Genauigkeit (<em>Accuracy</em>):</p>
+<blockquote>
+<p>Accuracy (Genauigkeit): Die Genauigkeit misst den Prozentsatz der korrekten Vorhersagen im Verhältnis zur Gesamtzahl der Vorhersagen. Es ist eine einfache und häufig verwendete Metrik, aber sie kann irreführend sein, wenn die Daten ungleichmäßig verteilt sind.</p>
+</blockquote>
+<p>Accuracy = <span class="arithmatex">\(\frac{T_{correct}}{T_{correct} + F_{error}}\)</span></p>
+<p>Dabei sind <span class="arithmatex">\(T_{correct}\)</span> die Anzahl der richtigen Vorhersagen und <span class="arithmatex">\(F_{error}\)</span> die Anzahl der falschen Vorhersagen.</p>
+<p>Neben dieser Metrik gibt es noch eine Vielzahl weiterer Metriken, die je nach Problemstellung eine bessere Aussage über die Qualität des Vorhersagemodells liefern. Siehe folgende Abbildung. [^1]</p>
+<p>[^1]: vgl. <a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a></p>
+<p><img alt="Fehlerbetrachtung" src="../Fehlerbetrachtung.png" /></p>
+<p>Angenommen wir wollen einen Klassifizierer für Corona Tests entwickeln. So liegen alle Personen die Corona haben im grün dargestellten Bereich. Unser Klassifizierer (Test) kann jedoch nicht alle Corona positiven Personen erfassen und es gibt eine Reihe von Tests, die Corona negativ sind obwohl die Person Corona hat. Diese finden sich im Bereich <em>false negative</em> und werden als <span class="arithmatex">\(F_N\)</span> bezeichnet. Erkennt unser Test eine Corona-Infektion so wird dieses als <em>true positive</em> bezeichnet und als <span class="arithmatex">\(T_P\)</span> erfassen.</p>
+<p>In ähnlicher Weise könnte unser Test auch einen gesunden Menschen als an Corona erkrankt erfassen. Dieses würde als <em>true negativ</em> bezeichnen und als <span class="arithmatex">\(T_N\)</span> erfasst. Bzw. wenn im optimalen Fall würde der Test keine Corona Infektion ausweisen und der Proband ist auch nicht an Corona erkrankt, so wäre der Test <em>false positiv</em> oder <span class="arithmatex">\(F_P\)</span>.</p>
+<p>Daraus ergeben sich die Werte <em>Precision</em> und <em>Recall</em></p>
+<blockquote>
+<p>Precision (Präzision) und Recall (Rückruf): Diese beiden Metriken beziehen sich auf das Verhältnis von korrekten positiven Vorhersagen zu allen tatsächlichen positiven Instanzen. Precision misst, wie oft das Modell richtig vorhergesagt hat, während Recall misst, wie viele der tatsächlichen positiven Fälle das Modell gefunden hat.</p>
+</blockquote>
+<p>Precision = <span class="arithmatex">\(\frac{TP}{TP + FP}\)</span></p>
+<p>Recall = <span class="arithmatex">\(\frac{TP}{TP + FN}\)</span></p>
+<p>Eine weitere Metrik ergibt sich aus diesen beiden Werten und wird als <em>F1-Score</em> bezeichnet.</p>
+<blockquote>
+<p>F1-Score: Der F1-Score ist das harmonische Mittel zwischen Präzision und Rückruf und gibt daher ein ausgewogenes Maß für die Leistung des Modells.</p>
+</blockquote>
+<p>F1 Score = <span class="arithmatex">\(2*\frac{precision* recall}{precision + recall}\)</span></p>
+<p>Für unser Problem der Bestimmung der optimalen Rahmenhöhe müssen wir die Größen <em>Precision</em> und <em>Recall</em> pro Klasse betrachten. Dabei haben wir 4 Klassen (S,M,L,XL).</p>
+<p>Angenommen unser Modell würde folgende Vorhersagen treffen (dabei sind die gelb markierten Felder die richtigen Größen und die blau markierten Felder die vorhergesagten Größen).</p>
+<p><img alt="Ergebnis des Klassifikation" src="../images/knn5.png" /></p>
+<p>Wie wir sehen macht das Modell bei der Vorhersage der Rahmengröße "L" drei Fehler. Bestimmen Sie für die vier Klassen S,M,L und XL jeweils die <em>Precision</em> und den <em>Recall</em> Wert.</p>
+<!--knn_aufg4-->
+<!--knn_lsg4-->
+
+<h3 id="losung-metriken">Lösung Metriken</h3>
+<p><img alt="Ergebnis des Klassifikation" src="../images/knn5.png" /></p>
+<p><span class="arithmatex">\(P_S=\frac{TP}{TP + FP}=\frac{4}{4 + 0}=1\)</span></p>
+<p><span class="arithmatex">\(P_M=\frac{TP}{TP + FP}=\frac{1}{1 + 1}=0.5\)</span></p>
+<p><span class="arithmatex">\(P_L=\frac{TP}{TP + FP}=\frac{2}{2 + 0}=1\)</span></p>
+<p><span class="arithmatex">\(P_{XL}=\frac{TP}{TP + FP}=\frac{6}{6 + 2}=0.75\)</span></p>
+<hr />
+<p><span class="arithmatex">\(R_S=\frac{TP}{TP + FN}=\frac{4}{4 + 0}=1\)</span></p>
+<p><span class="arithmatex">\(R_M=\frac{TP}{TP + FN}=\frac{1}{1 + 0}=1\)</span></p>
+<p><span class="arithmatex">\(R_L=\frac{TP}{TP + FN}=\frac{2}{2 + 3}=0.4\)</span></p>
+<p><span class="arithmatex">\(R_{XL}=\frac{TP}{TP + FN}=\frac{6}{6 + 0}=1\)</span></p>
+<!--knn_lsg4-->
+<!--knn_uebung1-->
+
+<h2 id="ubungsaufgabe-metriken">Übungsaufgabe Metriken</h2>
+<p>Ein Klassifizierungsalgorithmus ist in der Lage unterschiedliche Getreidearten wie (W)eizen, (G)erste und (R)oggen zu klassifizieren. Der Algorithmus wurde mit einem Testdatensatz validiert und es kam zu folgendem Ergebnis:</p>
+<table>
+<thead>
+<tr>
+<th>Vorhersage</th>
+<th>Ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W</td>
+<td>W</td>
+</tr>
+<tr>
+<td>W</td>
+<td>W</td>
+</tr>
+<tr>
+<td>G</td>
+<td>W</td>
+</tr>
+<tr>
+<td>G</td>
+<td>G</td>
+</tr>
+<tr>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>W</td>
+<td>W</td>
+</tr>
+<tr>
+<td>R</td>
+<td>W</td>
+</tr>
+<tr>
+<td>G</td>
+<td>G</td>
+</tr>
+<tr>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>R</td>
+<td>W</td>
+</tr>
+<tr>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>G</td>
+<td>G</td>
+</tr>
+<tr>
+<td>G</td>
+<td>R</td>
+</tr>
+<tr>
+<td>W</td>
+<td>R</td>
+</tr>
+<tr>
+<td>G</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+<p>Bestimmen Sie für den Algorithmus die <em>Accuracy</em>, <em>Precision</em> und den <em>Recall</em>-Wert.</p>
+<!--knn_uebung1-->
+<!--knn_uebung1lsg-->
+
+<h3 id="losung-ubung-metriken">Lösung Übung Metriken</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"><span class="arithmatex">\(W_v\)</span></th>
+<th><span class="arithmatex">\(G_v\)</span></th>
+<th><span class="arithmatex">\(R_v\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(W_i\)</span></td>
+<td align="left">3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(G_i\)</span></td>
+<td align="left"></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_i\)</span></td>
+<td align="left">1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Das ist <span class="arithmatex">\(G_v\)</span> z.B. der vorhergesagte Weizenwert und <span class="arithmatex">\(G_i\)</span> der Istwert.</p>
+<p>Für die <em>Accuracy</em> gilt:</p>
+<p><span class="arithmatex">\(A=\frac{T_{correct}}{T_{correct} + F_{error}}=\frac{10}{10 + 5}=67 \%\)</span></p>
+<p>Für die <em>Precision</em> gilt:</p>
+<p><span class="arithmatex">\(P_W=\frac{T_P}{T_P + F_P}=\frac{3}{4}=75 \%\)</span></p>
+<p><span class="arithmatex">\(P_G=\frac{T_P}{T_P + F_P}=\frac{4}{6}=67 \%\)</span></p>
+<p><span class="arithmatex">\(P_R=\frac{T_P}{T_P + F_P}=\frac{3}{5}=60 \%\)</span></p>
+<p>Für den <em>Recall</em> gilt:</p>
+<p><span class="arithmatex">\(R_W=\frac{T_P}{T_P + F_N}=\frac{3}{3 + 3}= 50 \%\)</span></p>
+<p><span class="arithmatex">\(R_G=\frac{T_P}{T_P + F_N}=\frac{4}{4 + 0}= 100 \%\)</span></p>
+<p><span class="arithmatex">\(R_R=\frac{T_P}{T_P + F_N}=\frac{3}{3 + 2}= 60 \%\)</span></p>
+<!--knn_uebung1lsg-->
+<!--knn_aufg5-->
+
+<h2 id="nutzen-von-bibliotheken">Nutzen von Bibliotheken</h2>
+<p>Aus dem Paket <em>sklearn.neighbours</em> kann der <em>KNeighborsClassifier</em> genutzt werden um eine KNN Klassifizierung zu erstellen.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1"># Laden Sie die CSV-Datei in ein Pandas DataFrame.</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Rahmenhoehe.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Aufteilen der Features und Labels</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Koerpergroesse&#39;</span><span class="p">,</span> <span class="s1">&#39;Schrittlaenge&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Rahmengroesse&#39;</span><span class="p">]</span>
+
+<span class="c1"># Teilen Sie die Daten in Trainings- und Testdaten auf.</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Skalieren Sie die Merkmale.</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Erstellen und Trainieren des KNN-Modells mit k=3.</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Verwenden Sie das trainierte Modell, um Vorhersagen für die Testdaten zu treffen.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div>
+<p>Nutzen Sie die Klasse <em>KNeighborsClassifier</em> und überprüfen Sie das Modell für verschiedene Werte von <em>k</em>.</p>
+<!--knn_aufg5-->
+<!--knn_aufg6-->
+
+<h2 id="bestimmung-der-metriken">Bestimmung der Metriken</h2>
+<p>Auch die Metriken können mit Hilfe des Paketes <em>sklearn.metrics</em> bestimmt werden. Bestimmen Sie mit Hilfe des unten abgebildeten Programmcodes die Qualität ihres Vorhersagemodells.</p>
+<blockquote>
+<p><em>Hinweis</em>: Die Klasse werden dabei in der Reihenfolge ihres Auftretens in den Testdaten gebildet. </p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+
+<span class="c1"># Berechnen Sie die Vorhersagen für die Testdaten.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Reihenfolge der Klassenlabels abrufen</span>
+<span class="n">class_order</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">classes_</span>
+
+<span class="c1"># Drucken der Reihenfolge der Klassenlabels</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Klassenreihenfolge:&#39;</span><span class="p">,</span> <span class="n">class_order</span><span class="p">)</span>
+
+<span class="c1"># Berechnen Sie die Accuracy</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy:&#39;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
+
+<span class="c1"># Berechnen Sie die Precision</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Precision:&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
+
+<span class="c1"># Berechnen Sie den Recall</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Recall:&#39;</span><span class="p">,</span> <span class="n">recall</span><span class="p">)</span>
+
+<span class="c1"># Berechnen Sie den F1-Score</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;F1-Score:&#39;</span><span class="p">,</span> <span class="n">f1</span><span class="p">)</span>
+</code></pre></div>
+<!--knn_aufg6-->
+
+<h2 id="fragen-zum-kapitel">Fragen zum Kapitel</h2>
+<p>1.) Wie funktioniert KNN im Allgemeinen?</p>
+<ul>
+<li>[ ] Es speichert alle vorhandenen Daten und sucht nach ähnlichen Mustern</li>
+<li>[ ] Es berechnet die Distanz zwischen Punkten und wählt die k nächsten Nachbarn aus</li>
+<li>[ ] Es gibt eine Liste von Regeln zurück, um eine Entscheidung zu treffen</li>
+<li>[ ] Es gibt nur binäre Antworten zurück</li>
+</ul>
+<p>2.) Warum wird der Parameter "k" in KNN verwendet?</p>
+<ul>
+<li>[ ] Um die Anzahl der Dateneingaben zu begrenzen</li>
+<li>[ ] Um die Genauigkeit des Modells einzuschränken</li>
+<li>[ ] Um zu bestimmen, wie viele Nachbarn einbezogen werden sollen</li>
+<li>[ ] Um das Modell einfacher zu gestalten</li>
+</ul>
+<p>3.) Welche Art von Problemen kann KNN gut lösen?</p>
+<ul>
+<li>[ ] Probleme mit nur zwei Variablen</li>
+<li>[ ] Probleme mit vielen Variablen und komplexen Mustererkennungen</li>
+<li>[ ] Nur einfache lineare Probleme</li>
+<li>[ ] Probleme, bei denen das Ergebnis auf binärer Logik basiert</li>
+</ul>
+<p>4.) Welche Metrik wird zur Bewertung eines KNN-Modells verwendet, das für eine binäre Klassifikation eingesetzt wird?</p>
+<ul>
+<li>[ ] F1-Score</li>
+<li>[ ] R2-Score</li>
+<li>[ ] Adjusted R-Squared</li>
+<li>[ ] Silhouette Coefficient</li>
+</ul>
+<p>5.) Welche Python-Bibliothek kann verwendet werden, um KNN in Python zu implementieren?</p>
+<ul>
+<li>[ ] TensorFlow</li>
+<li>[ ] PyTorch</li>
+<li>[ ] Scikit-Learn (sklearn)</li>
+<li>[ ] Theano</li>
+</ul>
+<!--
+1 Antwort: b) Es berechnet die Distanz zwischen Punkten und wählt die k nächsten Nachbarn aus
+2 Antwort: c) Um zu bestimmen, wie viele Nachbarn einbezogen werden sollen
+3 Antwort: b) Probleme mit vielen Variablen und komplexen Mustererkennungen
+4 Antwort: a) F1-Score
+5. Antwort: c) Scikit-Learn (sklearn)
+-->
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

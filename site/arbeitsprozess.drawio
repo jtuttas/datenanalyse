@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram id="sKZzisBab0XOYEypajdc" name="Seite-1">
+        <mxGraphModel dx="455" dy="383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Daten &lt;br&gt;einlesen" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="150" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Daten&amp;nbsp;&lt;br&gt;visualisieren" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="150" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Daten &lt;br&gt;anpassen" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="294" y="150" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
