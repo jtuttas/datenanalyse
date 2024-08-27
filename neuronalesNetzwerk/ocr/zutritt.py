@@ -18,7 +18,7 @@ model = VisionEncoderDecoderModel.from_pretrained(
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 # load document image
-dataset = load_dataset("hf-internal-testing/example-documents", split="test")
+#dataset = load_dataset("hf-internal-testing/example-documents", split="test")
 
 try:
     # Endlosschleife
