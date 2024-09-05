@@ -4,7 +4,7 @@
 
 | Lernfeld | Bildungsgang | Ausbildungsjahr |
 | :--- | :--- | :---: |
-| LF 10c:</br>$\newline$Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) | 3 |
+| LF 10c: Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) | 3 |
 
 ### Kompetenzformulierung
 
@@ -40,7 +40,7 @@ sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.
 
 ### Handlungsergebnis
 
-Prototyp als Jupyter Notebook zur KFZ Kennzeichen Erkennung.
+> Prototyp als Jupyter Notebook zur KFZ Kennzeichen Erkennung.
 
 <div style="page-break-after: always;"></div>
 
@@ -54,11 +54,12 @@ Prototyp als Jupyter Notebook zur KFZ Kennzeichen Erkennung.
 | **Kontrollieren / Bewerten** | **Fachkompetenz:** Vergleich der Ergebnisse, Erarbeitung von Bewertungskriterien. <br> **Personale Kompetenz:** Kritische Reflexion, analytisches Denken | Überprüfung der Ergebnisse der beiden OCR-Ansätze, Diskussion der Vor- und Nachteile von ChatGPT für die Kennzeichenerkennung | Gruppenarbeit, Diskussion, kritische Reflexion |
 | **Reflektieren** | **Fachkompetenz:** Verständnis rechtlicher Rahmenbedingungen (DSGVO), Verfassen einer rechtlich fundierten Antwort. <br> **Personale Kompetenz:** Verantwortungsbewusstsein, Kommunikationsfähigkeit | Analyse der rechtlichen Implikationen der Kennzeichenerfassung, Verfassen einer E-Mail als Antwort an den Kunden | Einzelarbeit, Recherche, Verfassen einer schriftlichen Antwort |
 
+<div style="page-break-after: always;"></div>
 
 ### Arbeitsmaterialien / Links
 
 - Download von KI-Modellen: [Hugging Face](https://huggingface.co/)
-- [Link zum Jupyter Notebook](https://github.com/jtuttas/datenanalyse/neuronalesNetzwerk/ocr/ocr.ipynb)
+- [Link zum Jupyter Notebook](https://github.com/jtuttas/datenanalyse/blob/master/neuronalesNetzwerk/ocr/ocr.ipynb)
 
 ### Schulische Entscheidungen
 
@@ -66,7 +67,7 @@ Prototyp als Jupyter Notebook zur KFZ Kennzeichen Erkennung.
 
 ### Leistungsnachweise
 
-- Fachgespräche während der Realisierung des Prototypen
+- Fachgespräche während der Realisierung des Prototyps
 
 ### Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern
 

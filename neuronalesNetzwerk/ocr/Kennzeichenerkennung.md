@@ -2,31 +2,31 @@
 
 ## Berufliche Handlungssituation
 
-Ein lokaler Einzelhändler hat die ChangeIT GmbH (ein innovatives Unternehmen welches sich auf IT-Dienstleistungen spezialisiert hat) damit beauftragt ein Berechtigungssystem für den Firmenparkplatz zu entwickeln. Sie als Auszubildender zum Fachinformatiker für Daten- und Prozessanalyse sind maßgeblich an der Implementierung eines ersten **Prototypen** für den Kunden beteiligt.
+Ein lokaler Einzelhändler hat die ChangeIT GmbH (ein innovatives Unternehmen das sich auf IT-Dienstleistungen spezialisiert hat) damit beauftragt ein Berechtigungssystem für den Firmenparkplatz zu entwickeln. Sie als Auszubildender zum Fachinformatiker für Daten- und Prozessanalyse sind maßgeblich an der Implementierung eines ersten **Prototypen** für den Kunden beteiligt.
 
 ### Ist-Situation
 
-> Der Einzelhändler verfügt über einen kleinen Parkplatz, auf dem Mitarbeiter parken dürfen. Durch die gute zentrale städtische Lage kommt es jedoch häufig vor, das fremde unberechtigt auf dem Parkplatz parken und so keine Parkmöglichkeiten für Mitarbeiter mehr bestehen.
+> Der Einzelhändler verfügt über einen kleinen Parkplatz, auf dem Mitarbeiter parken dürfen. Durch die gute zentrale städtische Lage kommt es jedoch häufig vor, das fremde unberechtigt Personen auf dem Parkplatz parken und so keine Parkmöglichkeiten für Mitarbeiter mehr bestehen.
 
 ### Soll-Situation
 
-> Durch ein Schrankensystem soll gewährleistet sein, dass Mitarbeiter deren KFZ Kennzeichen bekannt ist jederzeit parken können. Dazu soll das Kennzeichen automatisch erfasst und mit der Datenbank der Mitarbeiter abgeglichen werden.
+> Durch ein Schrankensystem soll gewährleistet sein, dass Mitarbeiter deren KFZ Kennzeichen bekannt ist jederzeit parken können. Dazu soll das Kennzeichen automatisch erfasst und in der Datenbank der Mitarbeiter abgeglichen werden.
 
 <div style="page-break-after: always;"></div>
 
 ## Informieren  / Planen (ca. 90 Minuten)
 
-Lesen Sie sich aufmerksam den Arbeitsauftrag durch und diskutieren Sie im Klassenverband, wie ein solches System zu realisieren ist.
+**Aufgabe 1.1**: Lesen Sie sich aufmerksam den Arbeitsauftrag durch und diskutieren Sie im Klassenverband, wie ein solches System zu realisieren ist.
 
 - Welche Komponenten Hardware / Software werden benötigt?
 - Wie sollen die Kennzeichnen erfasst werden?
 - Wie sollen die Kennzeichnen der Mitarbeiter gespeichert werden?
 
-Bilden Sie Kleingruppen und erstellen zu den Komponenten eine Mindmap.
+**Aufgabe 1.2**: Bilden Sie Kleingruppen und erstellen zu den Komponenten eine Mindmap.
 
 ![Mindmap](Mindmap.png)
 
-Stellen Sie den Informationsfluss des Prozesses in Form eines *UML Aktivitätsdiagramm* dar. 
+**Aufgabe 1.3**: Stellen Sie den Informationsfluss des Prozesses in Form eines *UML Aktivitätsdiagramm* dar. 
 
 ### Mögliche Lösung
 
@@ -36,7 +36,29 @@ Stellen Sie den Informationsfluss des Prozesses in Form eines *UML Aktivitätsdi
 
 ## Entscheiden (ca. 45 Minuten)
 
-Als Ergebnis wird schnell klar, dass das zentrale System zur Erkennung des KFZ Kennzeichens ein neuronales Netz verwendet werden muss. Um den Aufwand zum trainieren eines neuronalen Netzes zu reduzieren hat sich die Geschäftsleitung der ChangeIT GmbH dazu entschlossen ein vortrainiertes neuronales Netz zu verwenden.
+In modernen Zutrittskontrollsystemen, wie in diesem Projekt für die Kennzeichenerkennung, kommen neuronale Netze zum Einsatz, um komplexe Aufgaben wie die optische Zeichenerkennung (OCR) präzise und effizient zu bewältigen. Ein neuronales Netz ist besonders geeignet, weil es in der Lage ist, aus großen Mengen an Trainingsdaten zu lernen und Muster in Bildern zu erkennen – in diesem Fall die Zeichen auf einem KFZ-Kennzeichen.
+
+#### Warum ist ein neuronales Netz notwendig?
+
+Kennzeichen können in verschiedenen Formen, Schriftarten, Lichtverhältnissen und Winkeln auf Fotos erscheinen. Klassische Algorithmen zur Texterkennung (wie Regel-basierte Ansätze) wären hier nicht flexibel genug, um mit dieser Vielfalt umzugehen. Ein neuronales Netz hingegen ist in der Lage, diese Variationen zu verarbeiten und selbst in schwierigen Fällen (z. B. schlechte Beleuchtung oder teilweise verdeckte Kennzeichen) eine korrekte Erkennung zu ermöglichen. Durch die Fähigkeit zur Generalisierung kann das neuronale Netz lernen, auch bei neuen, zuvor nicht gesehenen Kennzeichen eine genaue Vorhersage zu treffen.
+
+#### Vorteile eines vortrainierten Modells
+
+Die Nutzung eines vortrainierten neuronalen Netzes, wie beispielsweise *naver-clova-ix/donut-base-finetuned-cord-v2*, bietet mehrere Vorteile:
+
+1. **Zeit- und Ressourcenersparnis:** Das Training eines neuronalen Netzes von Grund auf erfordert eine große Menge an Bilddaten und erhebliche Rechenressourcen, die in einem praktischen Projekt nicht immer zur Verfügung stehen. Ein vortrainiertes Modell wurde bereits auf großen Datensätzen trainiert und kann daher sofort eingesetzt werden.
+
+2. **Hohe Genauigkeit:** Vortrainierte Modelle wurden oft auf speziellen, großen und vielfältigen Datensätzen trainiert, was ihre Genauigkeit bei spezifischen Aufgaben wie OCR deutlich erhöht. Diese Modelle haben bereits eine gute Performance erreicht und müssen nur minimal angepasst werden.
+
+3. **Schnelle Integration:** Die Implementierung eines vortrainierten Modells ist meist einfacher, da bereits fertige Lösungen existieren, die nur noch an die spezifischen Anforderungen des Projekts angepasst werden müssen. Dies reduziert die Komplexität und ermöglicht eine schnellere Entwicklung des Prototyps.
+
+4. **Anpassungsmöglichkeiten:** Vortrainierte Modelle können oft für spezifische Anwendungsfälle weiter angepasst werden (Feintuning). Dadurch können sie an die Anforderungen des Unternehmens angepasst werden, ohne von Grund auf neu trainiert zu werden.
+
+Ein eigenes neuronales Netz zu trainieren hat den Vorteil, dass es gezielt auf die spezifischen Bedingungen und Anforderungen des Parkplatzes und der Kennzeichenerkennung zugeschnitten werden kann. Jedoch ist dieser Prozess zeitaufwendig und erfordert spezielle Fachkenntnisse und Rechenressourcen.
+
+Ein vortrainiertes Modell hingegen ist eine schnelle und kostengünstige Lösung, die oft ausreicht, um hohe Erkennungsraten zu erzielen. Es eignet sich besonders dann, wenn der zeitliche Rahmen oder die verfügbaren Ressourcen begrenzt sind und bereits vortrainierte Modelle für ähnliche Aufgaben verfügbar sind.
+
+In diesem Projekt bietet die Nutzung eines vortrainierten Modells eine effiziente Lösung, die sowohl präzise als auch ressourcenschonend ist.
 
 ![Webseite huggingface.com](huggingface.png)
 
@@ -59,7 +81,11 @@ Sie entscheiden sich dafür beide Ansätze zu verfolgen und erstellen zunächst 
 
 ![kfz](car2.jpg) 
 
-Zur Realisierung des Prototypen soll die Programmiersprache *Python* und ein *Jupyter Notebook* genutzt werden. Wenn noch nicht geschehen, dann installieren Sie Python und VS Code und aktivieren hier die Python Erweiterung.
+Zur Realisierung des Prototypen wird die Programmiersprache *Python* und ein *Jupyter Notebook* genutzt werden. Falls noch nicht geschehen, installieren Sie Python und VS Code und aktivieren hier die Python Erweiterung.
+
+> **Erforderliche Software**: Python, VS Code, Jupyter Notebook.
+>
+> **Erforderliche Bibliotheken**: matplotlib, PIL, OpenCV, easyocr, transformers, torch.
 
 Das Bild können Sie einfach einlesen über folgendes Python Skript:
 
@@ -82,7 +108,7 @@ plt.show()
 
 > **Hinweis**: Ggf. müssen Sie die verwendeten Pakete wie *matplotlib* und *PIL* noch mittels *pip* installieren.
 
-Wenn Sie alles korrekt installiert haben, sollten Sie das Bild im Jupyter Notebook sehen können:
+Wenn Sie alles korrekt installiert haben, sollten Sie das Bild im Jupyter Notebook angezeigt bekommen:
 
 
 
@@ -189,6 +215,7 @@ Wenn alle Bibliotheken korrekt installiert wurden müsste folgende Ausgabe auf d
 
 Überprüfen Sie beide Ansätze mit weiteren Fotos von parkenden Autos und bewerten Sie beide Ansätze:
 
+- Überprüfen Sie die Funktionsweise des Prototyps mit Testdaten und bewerten Sie die Genauigkeit der Kennzeichenerkennung
  - Welchen Ansatz würden Sie weiter verfolgen und warum?
  - Wie könnte eine weitere Verarbeitung der Daten erfolgen?
  - Welche weiteren Arbeitsschritte werden notwendig?
