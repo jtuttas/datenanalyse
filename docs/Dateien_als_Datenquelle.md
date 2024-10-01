@@ -231,11 +231,11 @@ Es stellt dich die Frage, ob Schüler die im arithmetischen Mittel in den Kapite
 
 import pandas as pd
 
-data = pd.DataFrame({"x":[1,2,3,4,5,6],"y":[6,5,4,3,2,1]})
+data = pd.DataFrame({"x": [11, 37, 98, 82], "y": [8, 5, 85, 95]})
 
-pltimage = data.plot.scatter(x="x",y="y")
-pltimage.set_xlabel("X Achse")
-pltimage.set_ylabel("Y Achse")
+pltimage = data.plot.scatter(x="x", y="y")
+pltimage.set_xlabel("Klassenarbeit")
+pltimage.set_ylabel("Durchschn. K1 bis K7")
 pltimage.set_title("Übung 2")
 
 ```

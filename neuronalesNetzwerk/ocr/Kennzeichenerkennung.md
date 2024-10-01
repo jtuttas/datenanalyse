@@ -216,9 +216,9 @@ Wenn alle Bibliotheken korrekt installiert wurden müsste folgende Ausgabe auf d
 Überprüfen Sie beide Ansätze mit weiteren Fotos von parkenden Autos und bewerten Sie beide Ansätze:
 
 - Überprüfen Sie die Funktionsweise des Prototyps mit Testdaten und bewerten Sie die Genauigkeit der Kennzeichenerkennung
- - Welchen Ansatz würden Sie weiter verfolgen und warum?
- - Wie könnte eine weitere Verarbeitung der Daten erfolgen?
- - Welche weiteren Arbeitsschritte werden notwendig?
+- Welchen Ansatz würden Sie weiter verfolgen und warum?
+- Wie könnte eine weitere Verarbeitung der Daten erfolgen?
+- Welche weiteren Arbeitsschritte werden notwendig?
 
  > Ein Kollege beobachtet ihr Vorgehen und schlägt vor doch das LLM (Large Language Model) ChatGPT für die Erkennung des Kennzeichens zu nutzen. Wie könnte eine weitere Verarbeitung der Daten aussehen? Welche Vor- bzw. Nachteile könnte der Einsatz von ChatGPT zur Kennzeichenerkennung mit sich bringen?
 
