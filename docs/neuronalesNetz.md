@@ -270,7 +270,7 @@ Nach dem Training kann das Modell überprüft werden.
 
 ```py
 # Beispiel-Eingabe für die Vorhersage (Nacht und Person anwesend)
-input_data = [[0, 1]] 
+input_data = np.array([[0, 1]])
 
 # Vorhersage für die Klasse "Lampe" (Binärklassifikation)
 prediction = model.predict(input_data)
