@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   render_drawio:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Render draw.io files
     steps:
     - name: Checkout
@@ -36,7 +36,7 @@ jobs:
       run: 'mv --backup=numbered -t ./docs/images ${{ steps.render.outputs.rendered-files }}'
       
   render_umlet:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Render umlet files
     needs: [render_drawio]
     steps:
@@ -65,7 +65,7 @@ jobs:
   converttopdf:
     name: Build PDF with Pandoc
     needs: render_umlet
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Cache files 
         uses: actions/cache@v2
@@ -96,7 +96,7 @@ jobs:
   render-mk-docs:
     name: mkdocs
     needs: converttopdf 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
