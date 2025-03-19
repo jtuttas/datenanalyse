@@ -214,17 +214,19 @@ In ähnlicher Weise müssen wir nun mit den anderen Gewichten $W_5$ und $W_6$ un
 
 ## Implementierung in Python
 
-Zum Implementieren dieses Modells nutzen wir die Bibliothek *Tensorflow*. Der folgende Code importiert die notwendige Bibliothek und legt die Daten für die Lichtsteuerung in einem *NumPy* Array an.
+Zum Implementieren dieses Modells nutzen wir die Bibliothek *Tensorflow*. Der folgende Code importiert die notwendige Bibliothek und legt die Daten für die Lichtsteuerung in einem *NumPy* Array an. 
+
+> Ein Eingangswert von "0" ist jedoch für ein neuronales Netz eher ein ungünstiger Wert (da damit die Gewichte schlecht zu trainieren sind). Von daher wird der Wert von "0" ersetzt durch einen Wert von "-1"
 
 ```py
 import tensorflow as tf
 import numpy as np
 
 # Daten definieren
-data = np.array([[1, 0, 0],
+data = np.array([[1, -1, 0],
                  [1, 1, 1],
-                 [0, 0, 1],
-                 [0, 1, 1]])
+                 [-1, -1, 1],
+                 [-1, 1, 1]])
 ```
 
 Anschließend müssen die Daten in Eingangs- und Ausgangsdaten aufgeteilt werden. Für unsere Aufgabenstellung enthalten die ersten beiden Spalten die Eingangsdaten (Tag_Nacht und Person) und die letzte Spalte die Ausgangsdaten.
@@ -270,7 +272,7 @@ Nach dem Training kann das Modell überprüft werden.
 
 ```py
 # Beispiel-Eingabe für die Vorhersage (Nacht und Person anwesend)
-input_data = np.array([[0, 1]])
+input_data = np.array([[-1, 1]])
 
 # Vorhersage für die Klasse "Lampe" (Binärklassifikation)
 prediction = model.predict(input_data)
@@ -278,7 +280,7 @@ prediction = model.predict(input_data)
 print(prediction)
 ```
 
-Das Neuronale Netz liefert z.B. einen Wert von *0.9583882*, welches in unserem Beispiel bedeuten würde, dass die Lampe einzuschalten ist. Dieses wäre auch korrekt für die Annahme, dass es Nacht ist (0) und eine Person im Raum anwesend wäre (1).
+Das Neuronale Netz liefert z.B. einen Wert von *0.9583882*, welches in unserem Beispiel bedeuten würde, dass die Lampe einzuschalten ist. Dieses wäre auch korrekt für die Annahme, dass es Nacht ist (-1) und eine Person im Raum anwesend wäre (1).
 
 Die berechneten Gewichte und Bias Werte im Modell können über folgendes Python Skript ausgegeben werden.
 
@@ -319,10 +321,10 @@ Würde man die Werte runden so erhält man:
 
 | Tag / Nacht ($X_1$) | Person ($X_2$)    | Lampe ($Y$)   | Vorhersage
 | ----------- | --------- | ------- | ------
-| Tag (1)     | nein (0)  | aus (0) | 0
+| Tag (1)     | nein (-1)  | aus (0) | 0
 | Tag (1)     | ja (1)    | an (1)  | 0
-| Nacht (0)   | nein  (0) | an (1)  |1
-| Nacht (0)   | ja (1)    | an (1)  |1
+| Nacht (-1)   | nein  (-1) | an (1)  |1
+| Nacht (-1)   | ja (1)    | an (1)  |1
 
 Unser Modell hat also 2 mal den korrekten Wert für 1 bestimmt ($T_P$) und einmal den korrekten Wert für 0 ($F_P$). Einmal lag das Modell falsch, es wäre bei "Tag" und eine Person anwesend eine 1 heraus kommen müssen, dass Modell hat jedoch eine 0 bestimmt ($F_P$). Für unser Vorhersagemodell ergebe sich folgende Darstellung:
 
@@ -351,7 +353,7 @@ Als letzte Metrik spielt noch der *F1 Score* eine Rolle, er ist bestimmt als das
 $F1_{Score}=2*\frac {P_{RE}*R_{call}}{P_{RE}+R_{call}}=2*\frac {1*0.6666}{1+0.6666}=0.80$
 
 > Der F1-Score ist eine Metrik, die das harmonische Mittel aus Precision (Präzision) und Recall (Sensitivität) bildet. Er bietet eine einzige Metrik, die versucht, ein Gleichgewicht zwischen diesen beiden Aspekten herzustellen.
->
+>S
 >Wenn Sie ein Modell haben, dessen F1-Score hoch ist, bedeutet das im Allgemeinen, dass sowohl die Präzision als auch der Recall des Modells gut sind. Ein hoher F1-Score deutet darauf hin, dass das Modell nicht nur eine hohe Trefferquote hat (hoher Recall), sondern auch eine hohe Genauigkeit in den Vorhersagen, die es macht (hohe Präzision).
 
 Über die Funktion *evaluate* ist es möglich die Genauigkeit des Modells zu bestimmen. Wichtig dabei ist, dass bereits die Metriken beim Kompilieren des Modells mit angegeben werden müssen.
@@ -369,10 +371,10 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy',
 Anschließend können die Metriken dann anhand der Test-Daten bestimmt werden.
 
 ```py
-data = np.array([[1, 0, 0],
+data = np.array([[1, -1, 0],
                  [1, 1, 1],
-                 [0, 0, 1],
-                 [0, 1, 1]])
+                 [-1, -1, 1],
+                 [-1, 1, 1]])
 X = data[:, :-1]  # Eingangsdaten: Erste beiden Spalten
 y = data[:, -1]   # Ausgangsdaten: Letzte Spalte
 
