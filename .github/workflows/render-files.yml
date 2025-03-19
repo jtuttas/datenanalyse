@@ -8,7 +8,7 @@ jobs:
     name: Render draw.io files
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Render draw.io files
       uses: docker://ghcr.io/racklet/render-drawio-action:v1.0.3
       id: render
@@ -20,7 +20,7 @@ jobs:
         log-level: 'info'      
 
     - name: Cache files 
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       env:
         cache-name: cache-files
       with:
@@ -41,7 +41,7 @@ jobs:
     needs: [render_drawio]
     steps:
     - name: Cache files 
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       env:
         cache-name: cache-files
       with:
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Cache files 
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-files
         with:
@@ -99,9 +99,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cache files 
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-files
         with:
