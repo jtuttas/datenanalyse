@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LS4.md</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="fidp---lernfeld-10c">FIDP - Lernfeld 10c</h1>
+<h2 id="ls-10.4-k-mean-clustering">LS 10.4: K-Mean Clustering</h2>
+<table>
+<colgroup>
+<col style="width: 30%"></col>
+<col style="width: 30%"></col>
+<col style="width: 38%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lernfeld</th>
+<th style="text-align: left;">Bildungsgang</th>
+<th style="text-align: center;">Ausbildungsjahr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LF 10c:</br><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" />Werkzeuge des maschinellen Lernens einsetzen</td>
+<td style="text-align: left;">Fachinformatiker für Daten- und Prozessanalyse (FIDP)</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kompetenzformulierung">Kompetenzformulierung</h3>
+<p>“<strong>Die Schülerinnen und Schüler verfügen über die Kompetenz, maschinelles Lernen zur Problemlösung anzuwenden und den Lernfortschritt des Entscheidungssystems zu begleiten</strong>”.</p>
+<p>Die Schülerinnen und Schüler <strong>stellen</strong> Einsatzmöglichkeiten des maschinellen Lernens <strong>dar</strong>. Auf dieser Basis entscheiden sie über die betriebswirtschaftlich sinnvolle Eignung maschinellen Lernens bezüglich kundenspezifischer Problemstellungen.</p>
+<p>Sie führen die benötigten Daten zusammen. Dazu analysieren sie freie und kommerzielle Datenquellen und <strong>wählen</strong> diese nach Eignung zur Lösung der Aufgabe durch maschinelles Lernen aus. Die Schülerinnen und Schüler berücksichtigen datenschutzrechtliche, moralische und wirtschaftliche Aspekte.</p>
+<p>Sie <strong>legen</strong> für die Aufgabenstellung maschinellen Lernens adäquate Werkzeuge und Systeme <strong>fest</strong>.</p>
+<p>Sie bereiten das ausgewählte System technisch vor und <strong>implementieren</strong> die Schnittstellen zum Datenimport.</p>
+<p>Die Schülerinnen und Schüler <strong>überwachen</strong> die technische Funktionsfähigkeit im Hinblick auf den Lernfortschritt des Systems.</p>
+<p>Sie <strong>reflektieren</strong> die Wirksamkeit des angelernten Entscheidungssystems. Dabei diskutieren sie auch datenschutzrechtliche, moralische und wirtschaftliche Aspekte.</p>
+<table>
+<colgroup>
+<col style="width: 30%"></col>
+<col style="width: 30%"></col>
+<col style="width: 38%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curricularer Bezug</th>
+<th style="text-align: left;">Titel der Lernsituation (Kurzfassung)</th>
+<th style="text-align: center;">Geplanter Zeitrichtwert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27</td>
+<td style="text-align: left;">LS 10.4: k-mean Clustering</td>
+<td style="text-align: center;">8 Unterrichtsstunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handlungssituation">Handlungssituation</h3>
+<p>Ein Regionaler Stromanbieter will in seinem Versorgungsgebiet Ladesäulen für Elektroautos anbieten. Dabei sollen möglichst alle Kunden einen kurzen Weg zur angebotenen Ladesäule habe.</p>
+<p>Die Abteilung Daten- und Prozessanalyse der ChangeIT GmbH wird damit beauftragt diese Standorte zu ermitteln.</p>
+<p>Der Kunde stellt dazu einen Plan zur Verfügung, der die Wohnorte der Kunden, die ein Elektroauto besitzen enthält.</p>
+<h3 id="handlungsergebnis">Handlungsergebnis</h3>
+<p>Eine Modell welches auf der Grundlage des K-Mean Clustering den besten Standort für Ladesäulen ermittelt.</p>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="vorausgesetzte-fähigkeiten-und-kenntnisse">Vorausgesetzte Fähigkeiten und Kenntnisse</h3>
+<table>
+<colgroup>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+<col style="width: 25%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Handlungskompetenz</br>(Fachkompetenz und Personale Kompetenz)</th>
+<th style="text-align: left;">Inhalte</th>
+<th style="text-align: left;">Sozialform/Methoden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Informieren bzw. Analysieren</td>
+<td style="text-align: left;">Datenexploration und Visualisierung</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler lesen die zur Verfügung gestellten Daten ein und stellen sie grafisch dar</td>
+<td style="text-align: left;">Einzelarbeit </br> Plenum</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Planen / Entscheiden</td>
+<td style="text-align: left;">Erstes Clustering anwenden</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler wählen einen geeigneten Punkt f. die Platzierung von Ladensäulen aus und ermitteln die zugehörigen Datenpunkte mittel der Euklidische Distanz</td>
+<td style="text-align: left;">Einzelarbeit </br> Plenum</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Durchführen</td>
+<td style="text-align: left;">Das k-mean Clustering zur Problemlösung anwenden</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler führen iterativ den Algorithmus des k-mean Clusterings aus un bewerten die Ergebnisse</td>
+<td style="text-align: left;">Einzelarbeit</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kontrollieren / Bewerten</td>
+<td style="text-align: left;">Bibliotheken f. das k-mean Clustering anwenden</td>
+<td style="text-align: left;">Die Schülerinnen und Schülern verwenden die Bibliothek <strong>KMeans</strong> aus dem Paket <strong>sklearn.cluster</strong> und stellen die Ergebnisse der Bibliothek grafisch dar und bewerten diese</td>
+<td style="text-align: left;">Plenum </br> Einzelarbeit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reflektieren</td>
+<td style="text-align: left;">Transfer auf weitere Einsatzmöglichkeiten</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler erstellen eine Wortwolke zu weiteren Anwendungsfällen für das k-mean Clustering</td>
+<td style="text-align: left;">Plenum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arbeitsmaterialien-links">Arbeitsmaterialien / Links</h3>
+<ul>
+<li>Moodle-Kurs: <a href="https://moodle.mm-bbs.de/moodle/course/view.php?id=2812">LF10c: Werkzeuge des maschinellen Lernens einsetzen</a></li>
+<li><a href="https://github.com/jtuttas/datenanalyse">GitHub Repository</a></li>
+</ul>
+<h3 id="schulische-entscheidungen">Schulische Entscheidungen</h3>
+<ul>
+<li>Als Programmiersprache wird Python verwendet</li>
+<li>als Entwicklungsumgebung wird vs code und Jupyter Notebook verwendet</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="leistungsnachweise">Leistungsnachweise</h3>
+<p>Ggf. Präsentationen zu weiteren Einsatzmöglichkeiten des k-mean Clusterings.</p>
+<h3 id="mögliche-verknüpfungen-zu-anderen-lernfeldern-fächern">Mögliche Verknüpfungen zu anderen Lernfeldern / Fächern</h3>
+</body>
+</html>
