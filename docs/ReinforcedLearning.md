@@ -82,13 +82,9 @@ Um diesen Auftrag zu bewältigen stehen dem Agenten folgende Aktionen zur Verfü
 
 Vgl. [Open AI Gym taxi Env](https://www.gymlibrary.dev/environments/toy_text/taxi/)
 
-Wie jedes Environment stellt auch das Taxi Environment für das Training mittels reinforced Learning wichtige Parameter zur Verfügung:
+Wie jedes Environment stellt auch das Taxi Environment für das Training mittels reinforced Learning einen Zustand zur Verfügung in dem sich die Umgebung gerade befindet. 
 
 **State** : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung ($5*5*4*(4+1)$)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über *env.s* kann die Umgebung in einen gezielten Zustand gebracht werden.
-
-**Reward**: Belohnung für den Agenten
-
-**Done**: Boolean, ob die Aufgabe erfüllt wurde.
 
 <!--ril_gym-->
 
@@ -115,6 +111,7 @@ next_state, reward, terminated, truncated, info = env.step(int)
 - *reward*: Belohnung die es für die Aktion gab
 - *terminated*: Die Episode ist zu Ende, weil das Ziel erreicht wurde.
 - *truncated* Die Episode wurde abgebrochen, z. B. weil die maximale Zeit abgelaufen ist.
+- *info* Debugging Informationen!
 
 Lassen Sie sich die Ergebnisse ihre Aktion auf der Console ausgeben.
 
@@ -136,6 +133,13 @@ Wie wir sehen führt eine *Action 1 - North* in den Zustands 82. Es gibt einen "
 ### Weiteres erkunden der Umgebung
 
 Nachdem Sie nun die wichtigsten Parameter der Umgebung kennen gelernt haben erkunden Sie ein wenig die Umgebung und beobachten Sie die Parameter *reward*. Führen Sie folgende Zelle in einem Jupyter Notebook aus, nachdem die Umgebung initialisiert wurde. Über die dargestellten Schaltflächen können Sie die Aktionen durchführen. Transportieren Sie einen Passagier von Startpunkt zum Zielpunkt !
+
+Zuvor muss jedoch noch das Paket *ipywidgets* installiert werden:
+
+```
+pip install ipywidgets
+```
+Und hier der Python Code
 
 ```py
 import ipywidgets as widgets
