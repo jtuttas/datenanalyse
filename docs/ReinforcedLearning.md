@@ -37,22 +37,18 @@ Durch die Verwendung des SARS-Modells und die ständige Interaktion mit der Umge
 
 ### Installation der notwendigen Pakete 
 
-Zunächst müssen wir die Simulationsumgebung installieren. Am besten nutzt man dazu eine Virtuelle Umgebung mit Python 3.8. Diese kann man z.B. mittels Conda wie folgt einrichten.
-
-```
-conda create --name mygym python=3.8
-conda activate mygym
-```
+Zunächst müssen wir die Simulationsumgebung installieren. Am besten nutzt man dazu eine Virtuelle Umgebung. 
 
 Anschließend können die notwendigen Pakete installiert werden.
 
 ```
-pip install stable-baselines3
-pip install ipywidgets
-pip install gym[toy_text]
+pip install gym==0.26.2
+pip install pygame
 ```
 
-> GGf. muss anschließen der Kernel noch einmal neu gestartet werden!
+> GGf. muss anschließen der Kernel noch einmal neu gestartet werden! 
+
+> Falls Sie Conda installiert haben sollte Sie zuvor Conda via 'conda deaktivate' deaktivieren.
 
 ### Starten der Simulationsumgebung
 
@@ -61,10 +57,10 @@ Führen Sie dann im Anschluss daran den folgenden Python Code in einer Zelle ein
 ```py
 import gym
 
-env = gym.make("Taxi-v3").env
-state=env.reset()
+env = gym.make("Taxi-v3",render_mode="ansi")
+state = env.reset()
 print("State:", state)
-env.render()
+print(env.render())
 ```
 
 Es sollte dabei folgende Ausgabe erscheinen:
@@ -112,12 +108,13 @@ Erweitern Sie ihr Programm in der Weise, dass der oben dargestellte Zustand 182 
 Führen Sie mit Hilfe der Methode *step(int)* eine Aktion durch. Die Methode gibt dabei einen Vektor zurück der aus folgenden Elemente besteht.
 
 ```py
-next_state, reward, done, info = env.step(int)
+next_state, reward, terminated, truncated, info = env.step(int)
 ```
 
 - *next_state*: Der Zustand in der sich die Umgebung befindet, wenn die Aktion ausgeführt wurde.
 - *reward*: Belohnung die es für die Aktion gab
-- *done*: Boolescher Wert ob die Aufgabe erfolgreich absolviert wurde
+- *terminated*: Die Episode ist zu Ende, weil das Ziel erreicht wurde.
+- *truncated* Die Episode wurde abgebrochen, z. B. weil die maximale Zeit abgelaufen ist.
 
 Lassen Sie sich die Ergebnisse ihre Aktion auf der Console ausgeben.
 
