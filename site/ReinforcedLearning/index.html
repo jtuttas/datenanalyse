@@ -1,0 +1,1105 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Reinforced Learning - LF10c</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reinforced-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LF10c" class="md-header__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LF10c
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reinforced Learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LF10c" class="md-nav__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LF10c
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS1/" class="md-nav__link">
+        LS10c.1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS2/" class="md-nav__link">
+        LS10c.2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS3/" class="md-nav__link">
+        LS10c.3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS4/" class="md-nav__link">
+        LS10c.4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS5/" class="md-nav__link">
+        LS10c.5
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS6/" class="md-nav__link">
+        LS10c.6
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS7/" class="md-nav__link">
+        LS10c.7
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS8/" class="md-nav__link">
+        LS10c.8
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS9/" class="md-nav__link">
+        LS10c.9
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handlungssituation" class="md-nav__link">
+    Handlungssituation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erklarung-reinforced-learning" class="md-nav__link">
+    Erklärung Reinforced Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-simulationsumgebung" class="md-nav__link">
+    Die Simulationsumgebung
+  </a>
+  
+    <nav class="md-nav" aria-label="Die Simulationsumgebung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-der-notwendigen-pakete" class="md-nav__link">
+    Installation der notwendigen Pakete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starten-der-simulationsumgebung" class="md-nav__link">
+    Starten der Simulationsumgebung
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setzen-eines-zustandes" class="md-nav__link">
+    Setzen eines Zustandes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausfuhren-von-aktionen" class="md-nav__link">
+    Ausführen von Aktionen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-moglichkeiten-possibilities-der-aktionen" class="md-nav__link">
+    Die Möglichkeiten (Possibilities) der Aktionen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weiteres-erkunden-der-umgebung" class="md-nav__link">
+    Weiteres erkunden der Umgebung
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brute-force-ansatz" class="md-nav__link">
+    Brute Force Ansatz
+  </a>
+  
+    <nav class="md-nav" aria-label="Brute Force Ansatz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losung-brute-force-ansatz" class="md-nav__link">
+    Lösung Brute Force Ansatz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q-learning-algorithmus" class="md-nav__link">
+    Q-Learning Algorithmus
+  </a>
+  
+    <nav class="md-nav" aria-label="Q-Learning Algorithmus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#musterlosung-fur-cartpole" class="md-nav__link">
+    Musterlösung für CartPole
+  </a>
+  
+    <nav class="md-nav" aria-label="Musterlösung für CartPole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialisierung-des-environments" class="md-nav__link">
+    Initialisierung des Environments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragen-zum-verstandnis" class="md-nav__link">
+    Fragen zum Verständnis
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="reinforced-learning">Reinforced Learning</h1>
+<h2 id="handlungssituation">Handlungssituation</h2>
+<p><img alt="autonomes Auto" src="../images/ril2.jpg" /></p>
+<!--ril_Handlungssituation-->
+<blockquote>
+<p>Ein großer deutscher internationaler Automobilkonzern, plant die Einführung einer autonomen Taxiflotte. Dabei sollen Fahrgäste ein fest definierten Stationen die Möglichkeit haben eine Fahrt zu buchen und eine weitere Station als Zielort anzugeben.</p>
+<p>Der Chefentwickler der Abteilung Daten- und Prozessanalyse der ChangeIT GmbH schlägt vor dieses Problem mit Hilfe des verstärkenden Lernens zu lösen. Die Kollegen der Anwendungsentwicklung haben dazu bereits eine Simulationsumgebung geschaffen. Ihre Aufgabe wird es sein, einen Lernalgorithmus zu entwickeln, der in dieser Simulationsumgebung Fahrgäste aufnimmt und optimal zu ihrem Ziel befördert.</p>
+</blockquote>
+<!--ril_Handlungssituation-->
+
+<!--ril_Info-->
+
+<h2 id="erklarung-reinforced-learning">Erklärung Reinforced Learning</h2>
+<p>Reinforcement Learning ist eine Methode im Bereich des maschinellen Lernens, bei der ein Agent seine Strategien lernt, indem er seine Umgebung erkundet und durch Interaktion mit dieser belohnt oder bestraft wird. Das Ziel des Agenten ist es, durch wiederholte Interaktionen die Aktionen zu finden, die ihn am meisten belohnen.</p>
+<p>Ein Beispiel für Reinforcement Learning könnte ein autonomes Fahrzeug sein, das lernen soll, wie es auf einer Straße sicher navigieren kann. Die Umgebung des Agenten besteht aus den Straßenzuständen, dem Verkehr und anderen Objekten auf der Straße. Der Agent arbeitet hierbei mit einem State-Action-Reward-State-Modell (SARS-Modell).</p>
+<p>Der Agent beginnt damit, zufällige Aktionen auszuführen, während er die Umgebung erkundet. Der Zustand des Agenten ändert sich abhängig von seinen Aktionen und der Umgebung. Wenn das Auto beispielsweise bremst, weil ein Hindernis auf der Straße auftaucht, wird der Zustand des Autos verändert. Für jede Aktion, die der Agent ausführt, erhält er einen Belohnungswert oder ein Bestrafungssignal, je nachdem, ob die Aktion erfolgreich war oder nicht.</p>
+<p>Der Agent verwendet die gesammelten Zustandsinformationen, um die besten Aktionen in ähnlichen Situationen zu identifizieren. Durch erneute Iteration verbessert der Agent schließlich seine Fähigkeiten und trifft bessere Entscheidungen in Zukunft.</p>
+<p>Das SARS-Modell ist eine grundlegende Komponente von Reinforcement Learning. Der Zustand (State) zeigt an, in welchem Zustand das System sich gerade befindet. Die Aktion (Action) ist die Handlung, die der Agent ausführt. Die Belohnung (Reward) wird dem Agenten je nach dem Ergebnis seiner Aktion gegeben. Der Zustand in der Folgezeit zeigt an, wie sich die Umgebung aufgrund der ausgewählten Aktion verändert hat.</p>
+<p>Durch die Verwendung des SARS-Modells und die ständige Interaktion mit der Umgebung kann ein Reinforcement Learning-Agent schließlich lernen, die besten Entscheidungen zu treffen, um seine Ziele auf effektive Weise zu erreichen.</p>
+<p><img alt="Reinforced Learning" src="../images/reinforced_logo.drawio.png" /></p>
+<!--ril_Info-->
+
+<!--ril_gym-->
+
+<h2 id="die-simulationsumgebung">Die Simulationsumgebung</h2>
+<h3 id="installation-der-notwendigen-pakete">Installation der notwendigen Pakete</h3>
+<p>Zunächst müssen wir die Simulationsumgebung installieren. Am besten nutzt man dazu eine Virtuelle Umgebung. </p>
+<p>Anschließend können die notwendigen Pakete installiert werden.</p>
+<div class="highlight"><pre><span></span><code>pip install gym==0.26.2
+pip install pygame
+</code></pre></div>
+<blockquote>
+<p>GGf. muss anschließen der Kernel noch einmal neu gestartet werden! </p>
+<p>Falls Sie Conda installiert haben sollte Sie zuvor Conda via 'conda deaktivate' deaktivieren.</p>
+</blockquote>
+<h3 id="starten-der-simulationsumgebung">Starten der Simulationsumgebung</h3>
+<p>Führen Sie dann im Anschluss daran den folgenden Python Code in einer Zelle eines Juypter Notebooks aus.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gym</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;Taxi-v3&quot;</span><span class="p">,</span><span class="n">render_mode</span><span class="o">=</span><span class="s2">&quot;ansi&quot;</span><span class="p">)</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;State:&quot;</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">())</span>
+</code></pre></div>
+<p>Es sollte dabei folgende Ausgabe erscheinen:</p>
+<p><img alt="Taxi Umgebung" src="../images/ril3.png" /></p>
+<p>Der gelb markierte Cursor entspricht dem Taxi. Es gibt vier Stationen (R)ed, (G)reen ,(B)lue und (Y)ellow. Ein Passagier möchte dabei von der blau markierten Station abgeholt werden und zur magenta markierten Station gebracht werden.</p>
+<p>Um diesen Auftrag zu bewältigen stehen dem Agenten folgende Aktionen zur Verfügung.</p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>South</td>
+<td>0</td>
+</tr>
+<tr>
+<td>North</td>
+<td>1</td>
+</tr>
+<tr>
+<td>East</td>
+<td>2</td>
+</tr>
+<tr>
+<td>West</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Pick Passagener</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Drop Passanger</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Vgl. <a href="https://www.gymlibrary.dev/environments/toy_text/taxi/">Open AI Gym taxi Env</a></p>
+<p>Wie jedes Environment stellt auch das Taxi Environment für das Training mittels reinforced Learning einen Zustand zur Verfügung in dem sich die Umgebung gerade befindet. </p>
+<p><strong>State</strong> : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung (<span class="arithmatex">\(5*5*4*(4+1)\)</span>)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über <em>env.s</em> kann die Umgebung in einen gezielten Zustand gebracht werden.</p>
+<!--ril_gym-->
+
+<!--ril_aufg1-->
+
+<h3 id="setzen-eines-zustandes">Setzen eines Zustandes</h3>
+<p>Erweitern Sie ihr Programm in der Weise, dass der oben dargestellte Zustand 182 eingenommen wird!</p>
+<p><img alt="Taxi Umgebung" src="../images/ril3.png" /></p>
+<!--ril_aufg1-->
+<!--ril_aufg2-->
+
+<h3 id="ausfuhren-von-aktionen">Ausführen von Aktionen</h3>
+<p>Führen Sie mit Hilfe der Methode <em>step(int)</em> eine Aktion durch. Die Methode gibt dabei einen Vektor zurück der aus folgenden Elemente besteht.</p>
+<div class="highlight"><pre><span></span><code><span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminated</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><em>next_state</em>: Der Zustand in der sich die Umgebung befindet, wenn die Aktion ausgeführt wurde.</li>
+<li><em>reward</em>: Belohnung die es für die Aktion gab</li>
+<li><em>terminated</em>: Die Episode ist zu Ende, weil das Ziel erreicht wurde.</li>
+<li><em>truncated</em> Die Episode wurde abgebrochen, z. B. weil die maximale Zeit abgelaufen ist.</li>
+<li><em>info</em> Debugging Informationen!</li>
+</ul>
+<p>Lassen Sie sich die Ergebnisse ihre Aktion auf der Console ausgeben.</p>
+<!--ril_aufg2-->
+<!--ril_aufg3-->
+
+<h3 id="die-moglichkeiten-possibilities-der-aktionen">Die Möglichkeiten (Possibilities) der Aktionen</h3>
+<p>Neben diesen Werten gibt uns die Umgebung noch die Möglichkeit die weiteren Möglichkeiten der Folgeaktionen zu untersuchen. Setzten Sie dazu die Umgebung wieder in den Zustand 182 und lassen Sie sich das <em>P</em> Array ausgeben. Dieses Array hat das Format [Action] [State,reward,done].</p>
+<p><img alt="Möglichkeiten" src="../images/ril4.png" /></p>
+<p>Wie wir sehen führt eine <em>Action 1 - North</em> in den Zustands 82. Es gibt einen "<em>reward</em> von -1. Das Ausführen der <em>Action 4 - Pick Passanger</em> verweilt im Zustand 182 und wird 'bestraft' mit einem <em>reward</em> von -10, denn im Zustand 182 befindet sich kein Passagier an der Stelle um ihn aufzunehmen.</p>
+<!--ril_aufg3-->
+<!--ril_aufg4-->
+
+<h3 id="weiteres-erkunden-der-umgebung">Weiteres erkunden der Umgebung</h3>
+<p>Nachdem Sie nun die wichtigsten Parameter der Umgebung kennen gelernt haben erkunden Sie ein wenig die Umgebung und beobachten Sie die Parameter <em>reward</em>. Führen Sie folgende Zelle in einem Jupyter Notebook aus, nachdem die Umgebung initialisiert wurde. Über die dargestellten Schaltflächen können Sie die Aktionen durchführen. Transportieren Sie einen Passagier von Startpunkt zum Zielpunkt !</p>
+<p>Zuvor muss jedoch noch das Paket <em>ipywidgets</em> installiert werden:</p>
+<p><div class="highlight"><pre><span></span><code>pip install ipywidgets
+</code></pre></div>
+Und hier der Python Code</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
+
+<span class="c1"># Funktion, die ausgeführt wird, wenn ein Button geklickt wird:</span>
+<span class="k">def</span> <span class="nf">on_button_clicked</span><span class="p">(</span><span class="n">button</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">button</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2"> wurde geklickt!&quot;</span><span class="p">)</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">buttons_hbox</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button1</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button2</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button3</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">3</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button4</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button5</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">4</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">==</span><span class="n">button6</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">5</span>
+    <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;State:&quot;</span><span class="p">,</span> <span class="n">next_state</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Action:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reward:&quot;</span><span class="p">,</span> <span class="n">reward</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done:&quot;</span><span class="p">,</span> <span class="n">done</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info:&quot;</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="n">next_state</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Action &quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot;: state &quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot; reward: &quot;</span><span class="p">,</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot; Solved:&quot;</span><span class="p">,</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+
+
+<span class="c1"># Erstelle die beiden Buttons:</span>
+<span class="n">button1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Up&quot;</span><span class="p">)</span>
+<span class="n">button2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Down&quot;</span><span class="p">)</span>
+<span class="n">button3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Left&quot;</span><span class="p">)</span>
+<span class="n">button4</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Right&quot;</span><span class="p">)</span>
+<span class="n">button5</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Pick&quot;</span><span class="p">)</span>
+<span class="n">button6</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Drop&quot;</span><span class="p">)</span>
+
+<span class="c1"># Weise die Callback-Funktion jedem Button zu:</span>
+<span class="n">button1</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">button2</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">button3</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">button4</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">button5</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">button6</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c1"># Gruppiere die Buttons mit HBox:</span>
+<span class="n">buttons_hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">button1</span><span class="p">,</span> <span class="n">button2</span><span class="p">,</span><span class="n">button3</span><span class="p">,</span><span class="n">button4</span><span class="p">,</span><span class="n">button5</span><span class="p">,</span><span class="n">button6</span><span class="p">])</span>
+
+<span class="c1"># Zeige die Gruppierung an:</span>
+<span class="n">display</span><span class="p">(</span><span class="n">buttons_hbox</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Erkunden der Umgebung" src="../images/ril5.png" /></p>
+<!--ril_aufg4-->
+<!--ril_aufg5-->
+
+<h2 id="brute-force-ansatz">Brute Force Ansatz</h2>
+<p>Schreiben Sie nun ein Programm, welches die Aufgabe (den Transport eines Passagiers vom Startpunkt zum Zielpunkt) mittels eines Brute Force Ansatzes löst und lassen Sie sich ausgeben wie viele Züge dazu notwendig waren!</p>
+<!--ril_aufg5-->
+<!--ril_lsg5-->
+
+<h3 id="losung-brute-force-ansatz">Lösung Brute Force Ansatz</h3>
+<div class="highlight"><pre><span></span><code><span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="n">state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timesteps taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epochs</span><span class="p">))</span>
+</code></pre></div>
+<!--ril_lsg5-->
+<!--ril_infoq-->
+
+<h2 id="q-learning-algorithmus">Q-Learning Algorithmus</h2>
+<p>Der Brute-Force Ansatz liefert unterschiedliche und unakzeptable Werte für das Erledigen eines Auftrages. Der Grund darin ist, dass wir uns nicht den Erfolg einer Aktion in der Umgebung merken.</p>
+<p>Um dieses 'Gedächnis' zu erstellen benötigen wir ein Array, welches den Erfolg einer Aktion in Abhängigkeit vom Zustand speichert. Das Array hätte folgendes Aussehen und wir zunächst einmal mit 0-Werten initialisiert.</p>
+<table>
+<thead>
+<tr>
+<th>state</th>
+<th align="left">South</th>
+<th>North</th>
+<th>East</th>
+<th>West</th>
+<th>Pick</th>
+<th>Drop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>...</td>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>499</td>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Beim Lernen wird es nun wichtig sein, die Summe des <em>reqrds</em> zu maximieren innerhalb einer <em>Epoche</em>. Eine <em>Epoche</em> ist dabei die Anzahl der Schritte bis zum Abliefern des Passagiers.</p>
+<p>Unser Q-Learning Algorithmus hat dabei folgende Funktion:</p>
+<div class="arithmatex">\[Q(_{state,aktion})=(1-\alpha)*Q(_{state,aktion})+\alpha*[reward+\gamma*max(Q_{next-state, all  -actions})]\]</div>
+<ul>
+<li><span class="arithmatex">\(Q(_{state,aktion})\)</span>: der erwartete Nutzen (engl. "expected utility") bei Auswahl der Aktion 'action' im Zustand 'state'</li>
+<li><span class="arithmatex">\(\alpha\)</span>: der Lernratenparameter (engl. "learning rate parameter"), der bestimmt, inwieweit neue Informationen den bisherigen Q-Wert beeinflussen sollen</li>
+<li>reward: die Belohnung (engl. "reward") nach der Wahl der Aktion 'action' im Zustand 'state'</li>
+<li><span class="arithmatex">\(\gamma\)</span>: der Abschlagfaktor (engl. "discount factor"), der bestimmt, wie wichtig zukünftige Belohnungen im Vergleich zu aktuellen Belohnungen sind</li>
+<li><span class="arithmatex">\(max(Q_{next-state, all  -actions})\)</span>: der maximale erwartete Nutzen, den man erhält, wenn man eine Aktion 'action' im nächsten Zustand 'next state' wählt.</li>
+</ul>
+<p>Wir wir sehen, ist dabei, dass das bisher Gelernte den größten Einfluss hat <span class="arithmatex">\((1 - \alpha) * Q(state,action)\)</span> und der Zugewinn geht mit dem Lernratenparameter <span class="arithmatex">\(\alpha\)</span> ein.</p>
+<p>Die Implementierung des Algorithmus in Python kann wie folgt aussehen:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
+
+<span class="n">q_table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">])</span>
+<span class="c1"># Hyperparameters</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.6</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100001</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="n">epochs</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="c1"># Exploit learned values</span>
+
+        <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span> 
+
+        <span class="n">old_value</span> <span class="o">=</span> <span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">]</span>
+        <span class="n">next_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">next_state</span><span class="p">])</span>
+
+        <span class="n">new_value</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">old_value</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">reward</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">next_max</span><span class="p">)</span>
+        <span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_value</span>
+
+        <span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+        <span class="n">epochs</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Episode: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training finished.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<!--ril_infoq-->
+<!--ril_aufg6-->
+
+<p><em>Aufgabe</em>: Trainieren Sie das Modell und lassen Sie sich nach dem Training die Q-Tabelle für den Zustand 182 ausgeben und entscheiden Sie daran, welche Aktion in diesem Zustand den meisten Erfolg bringt.</p>
+<!--ril_aufg6-->
+<!--ril_lsg6-->
+
+<p><em>Lösung</em>: Die Q-Table im Zustands 182 zieht wie folgt aus:</p>
+<p><img alt="QTable im Zustand 182" src="../images/ril6.png" /></p>
+<p>Der maximale Wert ist die -2.4510224, d.h. die erfolgreichsten Aktionen in diesem Zustands ist entweder eine Bewegung nach Süden oder nach Osten!</p>
+<p><img alt="Taxi Umgebung" src="../images/ril3.png" /></p>
+<!--ril_lsg6-->
+<!--ril_aufg7-->
+
+<p><em>Aufgabe</em>: Entwickeln Sie nach erfolgreichem Training ein Programm, welches Ihnen Aussagen über die Qualität des Modells erlaubt. Verändern Sie ferner wichtige Parameter im Algorithmus und beobachten Sie, wie dieses sich auf die Qualität des Modells auswirken.</p>
+<!--ril_aufg7-->
+<!--ril_lsg7-->
+
+<p><em>Lösung</em>: Hier ein Programm, welches 10 Episoden durchführt und die Anzahl der notwendigen Schritte und ggf. Fehlversuche zählt und visualisiert.</p>
+<div class="highlight"><pre><span></span><code><span class="n">penalties</span><span class="p">,</span> <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+<span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># for animation</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">epochs</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+        <span class="n">state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">reward</span> <span class="o">==</span> <span class="o">-</span><span class="mi">10</span><span class="p">:</span>
+            <span class="n">penalties</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Put each rendered frame into dict for animation</span>
+        <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;ansi&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="n">state</span><span class="p">,</span>
+            <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="n">action</span><span class="p">,</span>
+            <span class="s1">&#39;reward&#39;</span><span class="p">:</span> <span class="n">reward</span><span class="p">,</span>
+            <span class="s1">&#39;done&#39;</span><span class="p">:</span> <span class="n">done</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="n">epochs</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timesteps taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epochs</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penalties incurred: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">penalties</span><span class="p">))</span>
+</code></pre></div>
+<p>Und hier eine einfache Form der Visualisierung:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_frames</span><span class="p">(</span><span class="n">frames</span><span class="p">):</span>
+    <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">frames</span><span class="p">):</span>
+        <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span>
+        <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Timestep: </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State: </span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Action: </span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reward: </span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;reward&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">frame</span><span class="p">[</span><span class="s1">&#39;done&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mf">.5</span><span class="p">)</span>
+
+<span class="n">print_frames</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+</code></pre></div>
+<!--ril_lsg7-->
+<!--ril_aufg8-->
+
+<p><em>Aufgabe</em>: Wechseln Sie das Environment auf ein anderes Environment. Z.B.</p>
+<ul>
+<li>Das <strong>FrozenLake</strong> Environment. <a href="https://www.gymlibrary.dev/environments/toy_text/frozen_lake/">https://www.gymlibrary.dev/environments/toy_text/frozen_lake/</a>.</li>
+<li>Das <strong>Cliff Walking</strong> Environmment <a href="https://www.gymlibrary.dev/environments/toy_text/cliff_walking/">https://www.gymlibrary.dev/environments/toy_text/cliff_walking/</a></li>
+<li>Das <strong>Mountain Car</strong> Einvorinment <a href="https://www.gymlibrary.dev/environments/classic_control/mountain_car/">https://www.gymlibrary.dev/environments/classic_control/mountain_car/</a></li>
+<li>Das <strong>CartPole</strong> Environment <a href="https://www.gymlibrary.dev/environments/classic_control/cart_pole/">https://www.gymlibrary.dev/environments/classic_control/cart_pole/</a></li>
+</ul>
+<blockquote>
+<p><em>Hinweis</em>: Achtung das <strong>Mountain Car</strong> Environment und das <strong>CartPole</strong> Environment sind kontinuierliche Umgebungen, d.h. der Zustandsraum kann beliebige Werte annehmen. Daher muss hier der Zustandsraum erst diskretisiert werden!</p>
+</blockquote>
+<p>Gehen Sie im weiteren Verlauf wie folgt vor:</p>
+<ul>
+<li>Untersuchen Sie dabei zunächst das Environment, welche Aktionen gibt es, bestimmen Sie den Action Space und den Observation Space.</li>
+<li>Versuchen Sie einen Brute Force Ansatz</li>
+<li>Trainieren Sie mit Hilfe des Q-learning Algorithmus ein Modell und beurteilen Sie dessen Qualität</li>
+<li>Dokumentieren und präsentieren Sie anschließend ihr Vorgehen</li>
+</ul>
+<!--ril_aufg8-->
+<!--ril_lsg8-->
+
+<h3 id="musterlosung-fur-cartpole">Musterlösung für CartPole</h3>
+<p>Das <strong>CartPole</strong> Environment besteht aus einem Schlitten, der nach rechts und links bewegt werden kann. Auf dem Schlitten ist eine Pendel installiert. Ziel ist es das Pendel in der aufrechten Position zu behalten.</p>
+<p><img alt="CartPole Environmenmt" src="../images/ril7.png" /></p>
+<h4 id="initialisierung-des-environments">Initialisierung des Environments</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="c1"># Erstelle die Umgebung</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;CartPole-v1&#39;</span><span class="p">,</span><span class="n">render_mode</span><span class="o">=</span><span class="s2">&quot;rgb_array&quot;</span><span class="p">)</span>
+<span class="n">state</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;State=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>Der Sate ist ein Array aus kontinuierlichen Float Werten, mit folgenden Bedeutungen:</p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Cart Position (-4.8 bis +4.8)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Cart velocity (+/- unendlich)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pole Angle (- 0.418 bis + 0.418)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pole Angular Velocity (+/- unendlich)</td>
+</tr>
+</tbody>
+</table>
+<p>Dieser kontinuierliche Zustandsraum muss in einen diskreten umgewandelt werden. Ich entschied mich daher jeden dieser Werte in 10 diskrete Werte umzuwandeln. Der Zustandsraum hat damit <span class="arithmatex">\(10*10*10*10=10000\)</span> Werte.</p>
+<div class="highlight"><pre><span></span><code><span class="n">n_actions</span> <span class="o">=</span><span class="mi">2</span>
+<span class="n">n_states</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span> <span class="c1"># Festgelegt</span>
+<span class="n">q_table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_states</span><span class="p">,</span> <span class="n">n_actions</span><span class="p">])</span>
+<span class="n">q_table</span>
+</code></pre></div>
+<p>Die Zuordnung eines States zu einem Index-Wert in diesem Array übernimmt die Funktion <em>discret(state):int</em>!</p>
+<div class="highlight"><pre><span></span><code><span class="n">cpos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">4.8</span><span class="p">,</span><span class="mf">4.8</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">cvelocity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">cpolea</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.418</span><span class="p">,</span><span class="mf">0.418</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">cpolev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">discret</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">dsp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">cpos</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+    <span class="n">dsv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">cvelocity</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+    <span class="n">dspa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">cpolea</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+    <span class="n">dspv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">cpolev</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">dsp</span><span class="o">+</span><span class="n">dsv</span><span class="o">+</span><span class="n">dspa</span><span class="o">+</span><span class="n">dspv</span>
+
+<span class="n">nr</span><span class="o">=</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nr</span>
+</code></pre></div>
+<p>Nun kann der Q-Leaning Algorithmus implementiert werden!</p>
+<div class="highlight"><pre><span></span><code><span class="n">total_episodes</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">max_steps</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="k">for</span> <span class="n">episode</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_episodes</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_steps</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">epsilon</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">)])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+
+        <span class="n">new_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">done</span> <span class="ow">and</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="n">max_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">reward</span> <span class="o">=</span> <span class="o">-</span><span class="mi">300</span>  <span class="c1"># negative reward for falling</span>
+
+
+        <span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">)][</span><span class="n">action</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">)][</span><span class="n">action</span><span class="p">]</span> <span class="o">+</span> 
+                                  <span class="n">learning_rate</span> <span class="o">*</span> <span class="p">(</span><span class="n">reward</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> 
+                                  <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">new_state</span><span class="p">)])</span> <span class="o">-</span> <span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">)][</span><span class="n">action</span><span class="p">]))</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">new_state</span>
+
+        <span class="k">if</span> <span class="n">done</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">if</span> <span class="n">episode</span><span class="o">%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Episode:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">episode</span><span class="p">))</span>
+    <span class="n">epsilon</span> <span class="o">=</span> <span class="n">min_epsilon</span> <span class="o">+</span> <span class="p">(</span><span class="n">max_epsilon</span> <span class="o">-</span> <span class="n">min_epsilon</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">decay_rate</span> <span class="o">*</span> <span class="n">episode</span><span class="p">)</span>
+</code></pre></div>
+<p>Nach dem Training kann mit der Erfolg am Modell geprüft werden.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">())</span> <span class="c1"># only call this once</span>
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">discret</span><span class="p">(</span><span class="n">state</span><span class="p">)])</span>
+    <span class="n">new_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">())</span> <span class="c1"># just update the data</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">())</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">new_state</span>
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<!--ril_lsg8-->
+
+<h2 id="fragen-zum-verstandnis">Fragen zum Verständnis</h2>
+<ol>
+<li>Welches der folgenden Aussagen ist eine korrekte Beschreibung von Reinforcement Learning?</li>
+<li>[ ] A. Ein überwachtes Lernen, bei dem die Modelle mit Hilfe von explizit beschrifteten Trainingsdaten trainiert werden.</li>
+<li>[ ] B. Ein unüberwachtes Lernen, bei dem die Modelle Muster in Daten entdecken, ohne dass menschliche Anleitung erforderlich ist.</li>
+<li>[ ] C. Ein Art von Lernen, bei dem ein Agent seine Handlungen basierend auf Belohnungen und Strafen optimiert.</li>
+<li>
+<p>[ ] D. Ein semi-überwachtes Lernen, das eine Mischung aus beschrifteten und unbeschrifteten Daten verwendet.</p>
+</li>
+<li>
+<p>Was ist ein wesentliches Merkmal des Q-Learning-Algorithmus im Reinforcement Learning?</p>
+</li>
+<li>[ ] A. Q-Learning verwendet ein Modell der Umgebung, um die beste nächste Aktion vorherzusagen.</li>
+<li>[ ] B. Q-Learning aktualisiert seine Q-Werte basierend auf der Differenz zwischen der erwarteten und der tatsächlichen Belohnung nach jeder Aktion (auch bekannt als TD-Fehler).</li>
+<li>[ ] C. Q-Learning erfordert eine vollständige Kenntnis aller möglichen Zustände und Aktionen vor Beginn des Lernprozesses.</li>
+<li>
+<p>[ ] D. Q-Learning kann nur bei diskreten Zustands- und Handlungsräumen angewendet werden.</p>
+</li>
+<li>
+<p>Was ist "Deep Reinforcement Learning"?</p>
+</li>
+<li>[ ] A. Ein Ansatz für Reinforcement Learning, der genetische Algorithmen verwendet.</li>
+<li>[ ] B. Ein Ansatz für Reinforcement Learning, der neuronale Netzwerke verwendet, um Q- oder Value-Funktionen zu approximieren.</li>
+<li>[ ] C. Ein Ansatz für Reinforcement Learning, der tiefe neuronale Netzwerke verwendet, um die Umgebung des Agenten zu modellieren.</li>
+<li>
+<p>[ ] D. Ein Ansatz für Reinforcement Learning, der sich ausschließlich auf theoretische Forschung konzentriert und nicht in der Praxis angewendet wird.</p>
+</li>
+<li>
+<p>Welche Aussage über Q-Learning ist korrekt?</p>
+</li>
+<li>[ ] A. Q-Learning ist eine Art von überwachtem Lernen.</li>
+<li>[ ] B. Q-Learning ist ein modellfreier Reinforcement Learning Algorithmus.</li>
+<li>[ ] C. Q-Learning erfordert ein vollständiges Modell der Umgebung, um effektiv zu sein.</li>
+<li>
+<p>[ ] D. Q-Learning kann nur in kontinuierlichen Zustandsräumen verwendet werden.</p>
+</li>
+<li>
+<p>Was bedeutet Exploration vs Exploitation in Reinforcement Learning?</p>
+</li>
+<li>[ ] A. Exploration bezieht sich auf das Erlernen von neuen Strategien, während Exploitation das Anwenden dieser Strategien bezeichnet.</li>
+<li>[ ] B. Exploration bezieht sich auf das Sammeln von Daten, während Exploitation die Analyse dieser Daten bezeichnet.</li>
+<li>[ ] C. Exploration bezieht sich auf das Testen unbekannter Aktionen, während Exploitation das Nutzen von bekanntem Wissen zur Maximierung der Belohnung bezeichnet.</li>
+<li>[ ] D. Exploration bezieht sich auf das Experimentieren mit verschiedenen Modellen, während Exploitation das Trainieren eines bestimmten Modells bezeichnet.</li>
+</ol>
+<!-- richtig 
+
+1C
+2B
+3B
+4B
+5C
+
+-->
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Neuronale Netze - LF10c</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#neuronale-netze" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LF10c" class="md-header__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LF10c
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Neuronale Netze
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LF10c" class="md-nav__button md-logo" aria-label="LF10c" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LF10c
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS1/" class="md-nav__link">
+        LS10c.1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS2/" class="md-nav__link">
+        LS10c.2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS3/" class="md-nav__link">
+        LS10c.3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS4/" class="md-nav__link">
+        LS10c.4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS5/" class="md-nav__link">
+        LS10c.5
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS6/" class="md-nav__link">
+        LS10c.6
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS7/" class="md-nav__link">
+        LS10c.7
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS8/" class="md-nav__link">
+        LS10c.8
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LS9/" class="md-nav__link">
+        LS10c.9
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handlungssituation" class="md-nav__link">
+    Handlungssituation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-light" class="md-nav__link">
+    AI-Light
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kundenanforderungen" class="md-nav__link">
+    Kundenanforderungen
+  </a>
+  
+    <nav class="md-nav" aria-label="Kundenanforderungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufgabe-wahrheitstabelle-erzeugen" class="md-nav__link">
+    Aufgabe Wahrheitstabelle erzeugen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#losung-wahrheitstabelle-erzeugen" class="md-nav__link">
+    Lösung Wahrheitstabelle erzeugen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#das-neuronale-netz" class="md-nav__link">
+    Das neuronale Netz
+  </a>
+  
+    <nav class="md-nav" aria-label="Das neuronale Netz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialisierung-des-netzes" class="md-nav__link">
+    Initialisierung des Netzes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forward-propagation" class="md-nav__link">
+    Forward Propagation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fehlerfunktionen-loss-function" class="md-nav__link">
+    Fehlerfunktionen (Loss-Function)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#back-propagation" class="md-nav__link">
+    Back Propagation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementierung-in-python" class="md-nav__link">
+    Implementierung in Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metriken" class="md-nav__link">
+    Metriken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-eigenes-netzwerk-entwerfen-und-trainieren" class="md-nav__link">
+    Ein eigenes Netzwerk entwerfen und trainieren
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragen-zum-verstandnis" class="md-nav__link">
+    Fragen zum Verständnis
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="neuronale-netze">Neuronale Netze</h1>
+<h2 id="handlungssituation">Handlungssituation</h2>
+<p><img alt="Teaser" src="../images/ailight.png" /></p>
+<blockquote>
+<p>Die Firma Home-IoT ist eine bekannter Hersteller von Smart Home Produkten. Es ist geplant für diese Firma eine smarte Lichtsteuerung "AI Light" zu entwickeln, die an die jeweiligen Anforderungen der Kunden angepasst werden kann.</p>
+<p>Der Chefentwickler der Abteilung Daten- und Prozessanalyse der ChangeIT GmbH beauftragt Sie damit ein Neuronalen Netz zu entwickeln und dieses für eine exemplarische Anforderung zu trainieren.</p>
+</blockquote>
+<h2 id="ai-light">AI-Light</h2>
+<!--neuro_aufg1-->
+<p>Die smarte Lichtsteuerung "AI-Light" besitzt zwei Sensoren.</p>
+<ul>
+<li>Präsenzerkennung: Über Sensoren ist das System in der Lage zu erkennen, ob sich Personen im Raum befinden.</li>
+<li>Tag / Nachterkennung: Das System ist ebenso in der Lage, Tag- / Nachtzeiten zu erkennen.</li>
+</ul>
+<p><img alt="Sensorik AI Light" src="../html/neuro_hs.png" /></p>
+<h2 id="kundenanforderungen">Kundenanforderungen</h2>
+<p>Die Kunden stellen dabei unterschiedliche Anforderungen an das System vlg. [^1].</p>
+<p>[^1]: Brandt, Y., Eickhoff-Schachtebeck, A. und Strecker, K. (2022) „Schulbuch starkeSeiten Informatik Jahrgang 9/10
+Gymnasium Niedersachsen“, Klett-Verlag 2022, ISBN: 978-3-12-007572-1</p>
+<ul>
+<li>In den <strong>Büros</strong> der <strong>Fabrikhalle</strong> sollen die Lampen nachts immer leuchten aus Gründen des Einbrecherschutzes, und tagsüber nur, wenn die Mitarbeiter an ihren Plätzen sind.</li>
+<li>Im <strong>Bürogebäude</strong> der Softwarefirma sollen die Lampen nur nachts leuchten, wenn Mitarbeiter da sind. Tagsüber ist es durch die vielen Fenster immer hell genug.</li>
+<li>Im alten Gebäude der <strong>Stadtverwaltung</strong> müssen die Lampen tagsüber angeschaltet sein, wenn Mitarbeiter da sind, da die Fenster zu wenig Licht hereinlassen. Sollten Mitarbeiter auch nachts arbeiten, müssen auch dann die Lampen eingeschaltet werden. Sonst können sie aus bleiben.</li>
+<li>Im Haus der <strong>Familie Schmidt</strong> sollen die Lampen tagsüber an sein, wenn jemand zuhause ist, und aus sein, wenn keiner da ist. Nachts sollen die Lampen aus sein, wenn die Bewohner im Haus sind und schlafen, und aus Gründen des Einbrecherschutzes an sein, wenn niemand da ist</li>
+</ul>
+<h3 id="aufgabe-wahrheitstabelle-erzeugen">Aufgabe Wahrheitstabelle erzeugen</h3>
+<p>Wählen Sie sich eine Anforderung des Kunden aus und erstellen Sie eine Wahrheitstabelle, die alle möglichen Eingangssignale darstellt und ob sich die Lampe in der jeweiligen Situation an oder ausgehen soll.</p>
+<!--neuro_aufg1-->
+
+<h3 id="losung-wahrheitstabelle-erzeugen">Lösung Wahrheitstabelle erzeugen</h3>
+<!--neuro_lsg1-->
+<p>Für ein <strong>Büro</strong> in der <strong>Fabrikhalle</strong> könnte diese Tabelle wie folgt aussehen.</p>
+<table>
+<thead>
+<tr>
+<th>Tag / Nacht (<span class="arithmatex">\(X_1\)</span>)</th>
+<th>Person (<span class="arithmatex">\(X_2\)</span>)</th>
+<th>Lampe (<span class="arithmatex">\(Y\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag (1)</td>
+<td>nein (0)</td>
+<td>aus (0)</td>
+</tr>
+<tr>
+<td>Tag (1)</td>
+<td>ja (1)</td>
+<td>an (1)</td>
+</tr>
+<tr>
+<td>Nacht (0)</td>
+<td>nein  (0)</td>
+<td>an (1)</td>
+</tr>
+<tr>
+<td>Nacht (0)</td>
+<td>ja (1)</td>
+<td>an (1)</td>
+</tr>
+</tbody>
+</table>
+<!--neuro_lsg1-->
+
+<h2 id="das-neuronale-netz">Das neuronale Netz</h2>
+<!--neuro_aufg2-->
+<p>Ein neuronales Netzwerk ist ein Modell, das von der Funktionsweise des menschlichen Gehirns inspiriert ist. Es besteht aus einer Sammlung miteinander verbundener künstlicher Neuronen, die Informationen verarbeiten und weiterleiten.</p>
+<p>Ähnlich wie biologische Neuronen empfangen auch künstliche Neuronen Eingaben, verarbeiten diese und geben sie als Ausgabe weiter. Die Eingaben werden gewichtet und durch Aktivierungsfunktionen in eine Ausgabe transformiert. </p>
+<p>Ein einfaches Neuron (man spricht hier auch von einem <em>Perzeptron</em>) kann dabei wie folgt aussehen.</p>
+<p><img alt="Perzeptron" src="../Perzeptron.drawio.png" /></p>
+<p>Die Werte <span class="arithmatex">\(X_1\)</span> bis <span class="arithmatex">\(X_3\)</span> sind z.B. Sensorwerte oder Werte aus einer vorherigen Stufe. <span class="arithmatex">\(G_1\)</span> bis <span class="arithmatex">\(G_3\)</span> sind Gewichtungsfaktoren die im laufe des Trainings des Neuronalen Netzes angepasst werden und zur Initialisierung auf zufällige Werte gesetzt werden. Als Aktivierungsfunktionen können Funktionen genutzt werden, wie die Sigmoid-, ReLu- oder Tanh-Funktion bzw. einfache Schwellwerte. Die Funktion gibt an, ob und wie stark das Neuron "feuert".</p>
+<p><strong>Aufgabe</strong>: Berechnen Sie den Ausgabewert <span class="arithmatex">\(Y\)</span> für das Neuron, wenn als Aktivierungsfunktion ein Tanh-Funktion genutzt wird und folgende Eingangsvektoren und Gewichtsvektoren vorliegen.</p>
+<p><span class="arithmatex">\(G = \begin{pmatrix} G_1 \\ G_2 \\ G_3 \end{pmatrix}=\begin{pmatrix} 0.4 \\ 0.2 \\ -0.5 \end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(X = \begin{pmatrix} X_1 \\ X_2 \\ X_3 \end{pmatrix}=\begin{pmatrix} 0.7 \\ -0.1 \\ -0.4 \end{pmatrix}\)</span></p>
+<!--neuro_aufg2-->
+<!--neuro_lsg2-->
+
+<p><strong>Lösung</strong>: </p>
+<p><span class="arithmatex">\(Y_*= X_1*G_1+X_2*G_2+X_3*G_3\)</span></p>
+<p><span class="arithmatex">\(Y_*=0.4*0.7+0.2*(-0.1)+(-0.5)*(-0.4)=0.46\)</span></p>
+<p><span class="arithmatex">\(Y=tanh(0.46)=0.43\)</span></p>
+<p>Diese Ausgaben können dann wieder als Eingaben für andere Neuronen dienen, wodurch das Netzwerk Schicht für Schicht komplexere Berechnungen durchführen kann.</p>
+<!--neuro_lsg2-->
+<!--neuro_info3-->
+<p>Ein neuronales Netzwerk lernt, indem es seine Gewichte anpasst, basierend auf dem Vergleich zwischen seinen Ausgaben und den erwarteten Ausgaben. Dieser Lernprozess wird durch mathematische Algorithmen unterstützt, die als Backpropagation bezeichnet werden. Durch wiederholtes Training auf großen Datensätzen kann ein neuronales Netzwerk Muster erkennen, Zusammenhänge verstehen und Vorhersagen treffen.</p>
+<p>Obwohl neuronale Netzwerke nicht genau die gleiche Funktionsweise wie biologische Neuronen haben, sind sie dennoch stark von ihnen inspiriert. Die Idee besteht darin, komplexe Informationsverarbeitung nach dem Vorbild des Gehirns zu ermöglichen und dadurch komplexe Aufgaben in Bereichen wie Bilderkennung, Spracherkennung, Textanalyse und vielem mehr zu lösen.</p>
+<p>Für die Steuerung der Lichtanlage benötigen wir pro Sensors ein Neuron, in diesem Fall wäre das demnach zwei Neuronen in der Eingangsschicht (<em>input Layer</em>). Die Ausgangsschicht (<em>output layer</em>) steuert mir einem Neuron die Lampe. Für einen ersten Ansatz wählen wir 3 Neuronen in der <em>hidden Layer</em>. Dementsprechend hat unser Neuronales Netz folgendes Aussehen.</p>
+<p><img alt="Neuronale Netz" src="../neuronalesnetz.drawio.png" />.</p>
+<!--neuro_info3-->
+<!--neuro_info4-->
+<h3 id="initialisierung-des-netzes">Initialisierung des Netzes</h3>
+<p>Die Gewichte <span class="arithmatex">\(W_{11}\)</span> bis <span class="arithmatex">\(W_{32}\)</span>, sowie <span class="arithmatex">\(W_4\)</span> bis <span class="arithmatex">\(W_5\)</span> werden initial auf zufällige Werte zwischen +1 / -1 gesetzt.</p>
+<p><span class="arithmatex">\(W_1 = \begin{pmatrix} w_{11} &amp; w_{21} &amp; w_{31} \\ w_{12} &amp; w_{22} &amp; w_{32} \end{pmatrix}== \begin{pmatrix} -0.19 &amp; -0.96 &amp; 0.43 \\ -0.23 &amp; 0.97 &amp; 0.46 \end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(W_2 = \begin{pmatrix} w_4 \\ w_5 \\ w_6 \end{pmatrix}=\begin{pmatrix} -1.0 \\ -0.21 \\ 0.16 \end{pmatrix}\)</span></p>
+<p>Als Aktivierungsfunktion <span class="arithmatex">\(f(x)\)</span> können unterschiedliche Funktionen wie die Sigmoid-, ReLu- oder Tanh-Funktion genutzt werden. Wie verwenden in diesem Beispiel die <span class="arithmatex">\(tanh\)</span> Funktion im <strong>hidden Layer</strong> und die Sigmoid Funktion in der Ausgabeschicht. Die Sigmoid Funktion ist dabei wie folgt definiert.</p>
+<p><span class="arithmatex">\(\sigma(x) = \frac{1}{1 + e^{-x}}\)</span></p>
+<p>Hier sind beide Funktion nochmals grafisch dargestellt.</p>
+<p><img alt="Sigmoid und tanh Funktion" src="../images/neuro1.png" /></p>
+<!--neuro_info4-->
+<!--neuro_info5-->
+<h3 id="forward-propagation">Forward Propagation</h3>
+<p>Um nun den Wert der Zwischenschicht <span class="arithmatex">\(O\)</span> zu ermitteln müssen wir folgende Rechnungen durchführen.</p>
+<p><span class="arithmatex">\(O_1=  tanh((X_1*W_{11}+X_2*W_{12})+b_1)\)</span></p>
+<p><span class="arithmatex">\(O_2=  tanh((X_1*W_{21}+X_2*W_{22})+b_2)\)</span></p>
+<p><span class="arithmatex">\(O_3=  tanh((X_1*W_{31}+X_2*W_{32})+b_3)\)</span></p>
+<p>Im ersten Durchgang nehmen wird den X-Vektor wie folgt an:</p>
+<p><span class="arithmatex">\(X = \begin{pmatrix} X_1 &amp; X_2 \end{pmatrix}=\begin{pmatrix} 1 &amp; 0 \end{pmatrix}\)</span></p>
+<p>Die Bias Werte legen wir zunächst auf 1 fest.</p>
+<p><span class="arithmatex">\(B_1 = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}=\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}\)</span></p>
+<p><span class="arithmatex">\(B_4 = 1\)</span></p>
+<p>Mit den angenommen Werten kann nun weiter gerechnet werden:</p>
+<p><span class="arithmatex">\(O_1=  tanh((X_1*W_{11}+X_2*W_{12})+b_1)= tanh((1*-0.19+0*-0.23)+1)=0.6696\)</span></p>
+<p><span class="arithmatex">\(O_2=  tanh((X_1*W_{21}+X_2*W_{22})+b_2) = tanh((1*-0.96+0*0.97)+1)=0.0006\)</span></p>
+<p><span class="arithmatex">\(O_3=  tanh((X_1*W_{31}+X_2*W_{32})+b_3) = tanh((1*-0.43+0*0.46)+1)=0.5154\)</span></p>
+<p>Für die <em>output Layer</em> ergeben sich folgende Werte.</p>
+<p><span class="arithmatex">\(O_4'=  (O_1*W_4+O_2*W_5+O_3*W_6)+b_4\)</span></p>
+<p><span class="arithmatex">\(O_4' = (0.6696*-1.0+0.0006*-0.21+0.5154*0.16)+1=0.4127\)</span></p>
+<p><span class="arithmatex">\(O_4 = Y'= \frac{1}{1 + e^{-O_4'}}=0.6017\)</span></p>
+<p>Als Ergebnis würde das Neuronale Netz also die Lampe einschalten, was leider falsch wäre, denn wir hatten ja angegeben, dass es Nacht ist (1) und keine Person anwesend ist (0). </p>
+<!--neuro_info5-->
+<!--neuro_info6-->
+<h2 id="fehlerfunktionen-loss-function">Fehlerfunktionen (Loss-Function)</h2>
+<p>Unser Netzwerk hat also einen Fehler gemacht, dieser kann z.B. wie folgt bestimmt werden:</p>
+<p><span class="arithmatex">\(E(Y')=Y-Y'=0-0.6017=-0.6017=-60.17\%\)</span></p>
+<p>Eine andere (besser geeignete) Fehlerfunktion ist der <em>Binary Cross Entropy Error</em>. Dieser ist wie folgt bestimmt:</p>
+<p><span class="arithmatex">\(E(Y')=-(Y*ln(Y')+(1-Y)*ln(1-Y'))\)</span></p>
+<p>Für unsere Beispiel würde sich also folgender <em>Binary Cross Entropy Error</em> ergeben:</p>
+<p><span class="arithmatex">\(E(Y')=-(0*ln(0.6017)+(1-0)*ln(1-0.6017))=0.9205\)</span></p>
+<p>Neben dieser Fehlerfunktion gibt es noch weitere, wie z.B. <em>Categorical Cross Entropy</em>, <em>Mean Squared Error</em> und <em>Cosine Distance</em>. Für unsere binäres Klassifizierungsproblem (Lampe an/aus) eignet sich jedoch am besten die zuvor berechnete Binary Cross Entropy Error.</p>
+<!--neuro_info6-->
+<!--neuro_info7-->
+
+<h2 id="back-propagation">Back Propagation</h2>
+<p>Damit das Modell nun lernen kann (also sich der Fehler minimiert), müssen die Gewichte und die Bias Werte angepasst werden. Dieses geschieht in der Back-Propagation.</p>
+<p>Neben dem <em>Cross Entropy Error</em> definieren wir noch einen weiteren Parameter, die Lernrate <em>LearningRate</em>. Sie zumeist mit <span class="arithmatex">\(\alpha\)</span> bezeichnet und liegt auf einem Wert z.B. <span class="arithmatex">\(\alpha=0.1\)</span>. Die <em>LearningRate</em> ist dabei nur ein Faktor um wie viel die Gewichte und Bias Werte angepasst werden, also wie schnell das Neuronale Netz lernen soll.</p>
+<p>In der Back Propagation geht es nun darum die Loss Funktion nach allen Gewichten und Bias Werten abzuleiten.</p>
+<p>Durch das Anwenden der Kettenregel kann der Rechenaufwand jedoch reduziert werden. Wir wollen uns nur auf einen Teil unseres Netzwerkes konzentrieren und "trainieren" jetzt den Parameter <span class="arithmatex">\(W_4\)</span>.</p>
+<p><img alt="Neuronale Netz" src="../neuronalesnetz.drawio.png" />.</p>
+<p><span class="arithmatex">\(\frac{\delta E(Y')} {\delta W_4}=\frac {\delta E(Y')} {\delta Y'}* \frac {\delta Y'}{\delta \Theta}*\frac {\delta \Theta}{\delta W_4}\)</span></p>
+<p>Dabei ist:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\frac{\delta E(Y')} {\delta W_4}\)</span> die Partielle Ableitung der Loss Funktion nach dem Gewicht <span class="arithmatex">\(W_4\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac {\delta E(Y')} {\delta Y'}\)</span> Ableitung der Loss Funktion nach Y'</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac {\delta Y'}{\delta \Theta}\)</span> Ableitung von Y' nach <span class="arithmatex">\(\Theta\)</span>, wobei <span class="arithmatex">\(\Theta\)</span> die Multiplikation der Gewichte mit den Eingangsgrößen plus den Bias Werten ist. In unserem Fall wäre also <span class="arithmatex">\(\Theta=(O_1*W_4+O_2*W_5+O_3*W_6)+B_4\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac {\delta \Theta}{\delta W_4}\)</span> Die Ableitung dieses Wertes nach <span class="arithmatex">\(W_4\)</span></p>
+</li>
+</ul>
+<p>Die Fehlerfunktion war <span class="arithmatex">\(E(Y')=-((1-Y)*ln((1-Y'))\)</span> und das abgeleitet nach Y' ergibt <span class="arithmatex">\(\frac {\delta E(Y')} {\delta Y'}=\frac{(1 - Y)}{(1 - Y')}\)</span>, bzw. mit unseren Werten <span class="arithmatex">\(\frac{(1 - 0)}{(1 - 0.6017)}=2.5107\)</span></p>
+<p>Der Wert Y' ergibt sich aus der Sigmoid Funktion <span class="arithmatex">\(\frac{1}{1 + e^{-\Theta}}\)</span>. Die Ableitung der Sigmoid Funktion nach <span class="arithmatex">\(\Theta\)</span> ergibt <span class="arithmatex">\(\frac {\delta Y'}{\delta \Theta}=Y'*(1-Y')=0.6017*(1-0.6017)=0.2397\)</span></p>
+<p>Als letztes erfolgt die Ableitung von <span class="arithmatex">\(\Theta\)</span> nach <span class="arithmatex">\(W_4\)</span>, wobei <span class="arithmatex">\(\Theta=(O_1*W_4+O_2*W_5+O_3*W_6)+B_4\)</span> und die Ableitung ist <span class="arithmatex">\(\frac {\delta \Theta}{\delta W_4}=O_1=0.6696\)</span>.</p>
+<p>Durch Anwendung der Kettenregel erhalten wir also:</p>
+<p><span class="arithmatex">\(\frac{\delta E(Y')} {\delta W_4}=2.5107*0.2397*0.6696=0.4030\)</span>, d.h. um unsere Loss Funktion zu optimieren müssen wir diesen Wert von <span class="arithmatex">\(W_4\)</span> abziehen, dieses geschieht aber unter Berücksichtigung der <em>Learning Rate</em>. Es gilt:</p>
+<p><span class="arithmatex">\(W_{4Neu}=W_4-\alpha*\frac{\delta E(Y')} {\delta W_4}=-1.0-0.1*0.4030=-1.0403\)</span>, d.h. unser Wert <span class="arithmatex">\(W_4\)</span> hat sich erniedrigt von -1.0 auf -1.0403.</p>
+<p>In ähnlicher Weise müssen wir nun mit den anderen Gewichten <span class="arithmatex">\(W_5\)</span> und <span class="arithmatex">\(W_6\)</span> und den Bias Wert <span class="arithmatex">\(B_4\)</span> verfahren, also jeweils fie Fehlerfunktion ableiten. Dann hat man die Gewichte und Bias Werte der Ausgabeschicht neu berechnet und kann sich dann an die Gewichte und Bias Werte der Hidden-Layer und Eingabeschicht (Input Layer) machen.</p>
+<!--neuro_info7-->
+<!--neuro_info8-->
+
+<h2 id="implementierung-in-python">Implementierung in Python</h2>
+<p>Zum Implementieren dieses Modells nutzen wir die Bibliothek <em>Tensorflow</em>. Der folgende Code importiert die notwendige Bibliothek und legt die Daten für die Lichtsteuerung in einem <em>NumPy</em> Array an. </p>
+<blockquote>
+<p>Ein Eingangswert von "0" ist jedoch für ein neuronales Netz eher ein ungünstiger Wert (da damit die Gewichte schlecht zu trainieren sind). Von daher wird der Wert von "0" ersetzt durch einen Wert von "-1"</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Daten definieren</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                 <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                 <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</code></pre></div>
+<p>Anschließend müssen die Daten in Eingangs- und Ausgangsdaten aufgeteilt werden. Für unsere Aufgabenstellung enthalten die ersten beiden Spalten die Eingangsdaten (Tag_Nacht und Person) und die letzte Spalte die Ausgangsdaten.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Aufteilen der Daten in Features (X) und Labels (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Eingangsdaten: Erste beiden Spalten</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># Ausgangsdaten: Letzte Spalte</span>
+</code></pre></div>
+<p>Anschließend muss das neuronale Netz aufgebaut werden:</p>
+<p><img alt="Neuronale Netz" src="../neuronalesnetz.drawio.png" />.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Definition des neuronalen Netzwerks</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>  <span class="c1"># Hidden-Layer mit 3 Neuronen</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)</span>             <span class="c1"># Ausgangsneuron</span>
+<span class="p">])</span>
+</code></pre></div>
+<p>Unser Netz hat 3 Neuronen als <em>hidden layer</em>. Auf dieser Ebene verwenden wir die <strong>tanh</strong> Funktion als Aktivierungsfunktion. Von der Eingangsebene erhalten wird 2 Daten <strong>input_dim</strong>. Die drei Neuronen der <strong>hidden layer</strong> speisen ein Neuron auf der Ausgabeebene (<strong>output layer</strong> ), hier verwenden wir die <strong>Sigmoid</strong> Funktion als Aktivierungsfunktion. </p>
+<p>Nachdem das Neuronale Netz gebaut wurde, muss es 'compiliert' werden.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Kompilieren des Modells</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+</code></pre></div>
+<p>Angegeben wird hier der Optimizer <strong>adam</strong>, der dazu dient das absolute Minimum im Fehler zu finden.</p>
+<p>Nachdem das Neuronale Netz kompiliert wird, kann es angelernt werden.</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</code></pre></div>
+<p>Eine <em>Epoche</em> ist dabei der Zyklus von Forward- und Backward Propagation mit allen Testdaten.</p>
+<p>Nach dem Training kann das Modell überprüft werden. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Beispiel-Eingabe für die Vorhersage (Nacht und Person anwesend)</span>
+<span class="n">input_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="c1"># Vorhersage für die Klasse &quot;Lampe&quot; (Binärklassifikation)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+</code></pre></div>
+<p>Das Neuronale Netz liefert z.B. einen Wert von <em>0.9583882</em>, welches in unserem Beispiel bedeuten würde, dass die Lampe einzuschalten ist. Dieses wäre auch korrekt für die Annahme, dass es Nacht ist (-1) und eine Person im Raum anwesend wäre (1).</p>
+<p>Die berechneten Gewichte und Bias Werte im Modell können über folgendes Python Skript ausgegeben werden.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">get_weights</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gewichtungen:&#39;</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+</code></pre></div>
+<p>Für das Output Layer sieht die Ausgabe z.B. wie folgt aus:</p>
+<div class="highlight"><pre><span></span><code>Gewichtungen: [array([[ 1.6754032 ],
+       [-0.9415936 ],
+       [ 0.18030357]], dtype=float32), array([0.34544384], dtype=float32)]
+</code></pre></div>
+<p><img alt="Neuronale Netz" src="../neuronalesnetz.drawio.png" />.</p>
+<p>Das letzte Neuron wird gespeist aus den drei Neuronen der hidden Layer. Die Gewichte sind hier <span class="arithmatex">\(W_4=1.6754\)</span>, <span class="arithmatex">\(W_5=-0.94159\)</span> und <span class="arithmatex">\(W_6=0.180303\)</span>. Das zweite Array listet den Bias Wert <span class="arithmatex">\(b_4=0.34544\)</span>.</p>
+<!--neuro_info8-->
+<!--neuro_info9-->
+<h2 id="metriken">Metriken</h2>
+<p>Metriken geben Auskunft über die Qualität eines Vorhersagemodells. Für unser binäres Vorhersagemodell ist es recht einfach eine Metrik zu bestimmen. Man setzt einfach die korrekten Vorhersagen (<span class="arithmatex">\(T_P\)</span> und <span class="arithmatex">\(T_N\)</span>) allen Vorhersagen (<span class="arithmatex">\(P + N\)</span>) ins Verhältnis und erhält die Binäre Genauigkeit (<em>Binary Accuracy</em>).</p>
+<p>Nach dem Trainieren des neuronalen Netzes Sagt unser Netz das Ergebnis wie folgt voraus:</p>
+<div class="highlight"><pre><span></span><code>[[0.3770217]
+ [0.4830392]
+ [0.5109197]
+ [0.6186656]]
+</code></pre></div>
+<p>Würde man die Werte runden so erhält man:</p>
+<table>
+<thead>
+<tr>
+<th>Tag / Nacht (<span class="arithmatex">\(X_1\)</span>)</th>
+<th>Person (<span class="arithmatex">\(X_2\)</span>)</th>
+<th>Lampe (<span class="arithmatex">\(Y\)</span>)</th>
+<th>Vorhersage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag (1)</td>
+<td>nein (-1)</td>
+<td>aus (0)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Tag (1)</td>
+<td>ja (1)</td>
+<td>an (1)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Nacht (-1)</td>
+<td>nein  (-1)</td>
+<td>an (1)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Nacht (-1)</td>
+<td>ja (1)</td>
+<td>an (1)</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Unser Modell hat also 2 mal den korrekten Wert für 1 bestimmt (<span class="arithmatex">\(T_P\)</span>) und einmal den korrekten Wert für 0 (<span class="arithmatex">\(F_P\)</span>). Einmal lag das Modell falsch, es wäre bei "Tag" und eine Person anwesend eine 1 heraus kommen müssen, dass Modell hat jedoch eine 0 bestimmt (<span class="arithmatex">\(F_P\)</span>). Für unser Vorhersagemodell ergebe sich folgende Darstellung:</p>
+<p><img alt="Precision u. Recall" src="../precal.png" /></p>
+<p>Nun kann für die Vorhersage die <em>Accuracy</em> bestimmt werden:</p>
+<p><span class="arithmatex">\(A_{CC}=\frac {T_P+T_N}{P+N}=\frac {2+1}{3+1}=0.75\)</span></p>
+<blockquote>
+<p>Die <em>Accuracy</em> gibt den Prozentwert an, wie viele Vorhersagen korrekt waren.</p>
+</blockquote>
+<p>Eine weitere Metrik ist die Genauigkeit (<em>Precision</em>). Die Precision ist definiert als:</p>
+<p><span class="arithmatex">\(P_{RE}=\frac {T_P}{T_P+F_P}=\frac {2}{2+0}=1.0\)</span></p>
+<blockquote>
+<p>Die <em>Precision</em> misst, wie viele der vom Modell als positiv klassifizierten Beispiele tatsächlich positiv sind.</p>
+</blockquote>
+<p>Eine weitere Metrik ist der <em>Recall</em> (die Sensitivität), er ist definiert als:</p>
+<p><span class="arithmatex">\(R_{call}=\frac {T_P}{T_P+F_N}=\frac {2}{2+1}=0.6666\)</span></p>
+<blockquote>
+<p>Der <em>Recall</em> misst, wie viele der tatsächlich positiven Beispiele vom Modell korrekt als positiv identifiziert wurden.</p>
+</blockquote>
+<p>Als letzte Metrik spielt noch der <em>F1 Score</em> eine Rolle, er ist bestimmt als das harmonische Mittel zwischen <em>Precision</em> und <em>Recall</em>.</p>
+<p><span class="arithmatex">\(F1_{Score}=2*\frac {P_{RE}*R_{call}}{P_{RE}+R_{call}}=2*\frac {1*0.6666}{1+0.6666}=0.80\)</span></p>
+<blockquote>
+<p>Der F1-Score ist eine Metrik, die das harmonische Mittel aus Precision (Präzision) und Recall (Sensitivität) bildet. Er bietet eine einzige Metrik, die versucht, ein Gleichgewicht zwischen diesen beiden Aspekten herzustellen.
+S
+Wenn Sie ein Modell haben, dessen F1-Score hoch ist, bedeutet das im Allgemeinen, dass sowohl die Präzision als auch der Recall des Modells gut sind. Ein hoher F1-Score deutet darauf hin, dass das Modell nicht nur eine hohe Trefferquote hat (hoher Recall), sondern auch eine hohe Genauigkeit in den Vorhersagen, die es macht (hohe Präzision).</p>
+</blockquote>
+<p>Über die Funktion <em>evaluate</em> ist es möglich die Genauigkeit des Modells zu bestimmen. Wichtig dabei ist, dass bereits die Metriken beim Kompilieren des Modells mit angegeben werden müssen.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow.keras.metrics</span> <span class="kn">import</span> <span class="n">Precision</span><span class="p">,</span> <span class="n">Recall</span>
+
+<span class="c1"># [....]</span>
+
+<span class="c1"># Kompilieren und trainieren des Modells</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">Precision</span><span class="p">(),</span> <span class="n">Recall</span><span class="p">()])</span>
+</code></pre></div>
+<p>Anschließend können die Metriken dann anhand der Test-Daten bestimmt werden.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                 <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                 <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Eingangsdaten: Erste beiden Spalten</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># Ausgangsdaten: Letzte Spalte</span>
+
+<span class="n">loss</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">recall</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy:&#39;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test precision:&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test recall:&#39;</span><span class="p">,</span> <span class="n">recall</span><span class="p">)</span>
+</code></pre></div>
+Und man erhält die vorher ermittelten Werte:</p>
+<div class="highlight"><pre><span></span><code>Test accuracy: 0.75
+Test precision: 1.0
+Test recall: 0.6666666865348816
+</code></pre></div>
+<!--neuro_info9-->
+<!--neuro_aufg3-->
+<p>Wenn Sie die bisherigen Informationen aufmerksam gelesen haben, sollte Ihnen die folgende Aufgabe nicht schwer fallen.</p>
+<p><img alt="Neuronale Netz" src="../neuronalesnetz.drawio.png" />.</p>
+<p><strong>Aufgabe:</strong></p>
+<ul>
+<li>Erstellen Sie auf der Grundlage der bisherigen Überlegungen ihre Modell eines neuronalen Netzwerkes für die intelligente Lichtsteuerung "AI-Light" in Python.</li>
+<li>Trainieren Sie das Modell entsprechend den von Ihnen in Aufgabe 1 gewählten Anforderungen.</li>
+<li>Beurteilen Sie die Qualität des Modells und ermitteln Sie geeignete Metriken.</li>
+<li>Diskutieren Sie wie die Qualität des Modells gesteigert werden kann.</li>
+</ul>
+<p>Erstellen Sie eine Dokumentation ihres Vorgehens und der Ergebnisse und der Überlegung (ca. 1 bis 2 Seiten)</p>
+<!--neuro_aufg3-->
+<!--neuro_aufg4-->
+
+<h2 id="ein-eigenes-netzwerk-entwerfen-und-trainieren">Ein eigenes Netzwerk entwerfen und trainieren</h2>
+<p><strong>Aufgabe:</strong> Bilden Sie Arbeitsgruppen zur ca. 3-4 Mitschülern und wählen Sie einen anderen Datensatz (s.u.) für ein binäres Klassifizierungsproblem und entwerfen und trainieren Sie ein neuronales Netz. Dokumentieren Sie ihr Vorgehen und Ihr Ergebnis und präsentieren Sie dieses abschließend der Klasse.</p>
+<p>Die Dokumentation sollte beinhalten:</p>
+<ul>
+<li>Vorstellen des Datensatzes</li>
+<li>Entwurf des Netzwerkes inkl. gewählter Layer und Aktivierungsfunktionen</li>
+<li>Beurteilen der Qualität des Vorhersagemodells (Metriken)</li>
+</ul>
+<p>Mögliche Datensätze wären (Sie können aber auch gerne einen eigenen Datensatz auswählen):</p>
+<ol>
+<li><strong>Titanic-Datensatz</strong>: Der Titanic-Datensatz enthält Informationen über Passagiere an Bord des Schiffes Titanic, einschließlich Merkmalen wie Alter, Geschlecht, Klasse und Überlebensstatus. Dieser Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben und kann auch zur Vorhersage des Überlebens von Passagieren auf anderen Schiffsreisen verwendet werden.</li>
+<li>
+<p>URL: <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a></p>
+</li>
+<li>
+<p><strong>Bank Marketing-Datensatz</strong>: Dieser Datensatz enthält Informationen zu Kunden einer portugiesischen Bank und ob sie Ja oder Nein für ein Termingeld-Abonnement abgeschlossen haben. Es enthält eine Vielzahl von Kundenmerkmalen wie Alter, Beruf, Familienstand usw., die verwendet werden können, um vorherzusagen, ob ein Kunde ein Abonnement abschließen wird oder nicht.</p>
+</li>
+<li>
+<p>URL: <a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing">https://archive.ics.uci.edu/ml/datasets/Bank+Marketing</a></p>
+</li>
+<li>
+<p><strong>Breast Cancer Wisconsin (diagnostic) Dataset</strong>: Dieser Datensatz enthält Details zu den Zellkernmerkmalen von malignen und benignen Brustgewebeproben sowie einer Diagnose, ob eine Probe maligne oder benign ist. Der Datensatz ist gut geeignet für binäre Klassifizierungsaufgaben zum Erkennen von Brustkrebs.</p>
+</li>
+<li>URL: <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)">https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)</a></li>
+</ol>
+<!--neuro_aufg4-->
+
+<h2 id="fragen-zum-verstandnis">Fragen zum Verständnis</h2>
+<ol>
+<li>
+<p>Was ist ein Neuron in einem künstlichen neuronalen Netzwerk?</p>
+<ul>
+<li>[ ] Eine Datenstruktur, die Informationen speichert</li>
+<li>[ ] Eine Funktion, die das Ergebnis des Netzes berechnet</li>
+<li>[ ] Eine Einheit, die Eingaben empfängt und eine Ausgabe basierend auf diesen Eingaben generiert</li>
+<li>[ ] Ein spezielles Modell von neuronalen Netzwerken</li>
+</ul>
+</li>
+<li>
+<p>Welche der folgenden ist KEINE typische Schicht in einem neuronalen Netzwerk?</p>
+<ul>
+<li>[ ] Eingabeschicht</li>
+<li>[ ] Ausgabeschicht</li>
+<li>[ ] Versteckte Schicht</li>
+<li>[ ] Datenbankschicht</li>
+</ul>
+</li>
+<li>
+<p>Was ist der Zweck einer Aktivierungsfunktion in einem neuronalen Netzwerk?</p>
+<ul>
+<li>[ ] Um die Genauigkeit des Modells zu erhöhen</li>
+<li>[ ] Um die Größe des Modells zu reduzieren</li>
+<li>[ ] Um nicht-lineare Transformationen einzuführen</li>
+<li>[ ] Um die Geschwindigkeit des Trainings zu erhöhen</li>
+</ul>
+</li>
+<li>
+<p>Welches Problem kann durch zu viel Training eines neuronalen Netzwerks auftreten?</p>
+<ul>
+<li>[ ] Overfitting</li>
+<li>[ ] Underfitting</li>
+<li>[ ] Datenverlust</li>
+<li>[ ] Netzwerkfehler</li>
+</ul>
+</li>
+<li>
+<p>Welches der folgenden Verfahren wird verwendet, um ein neuronales Netzwerk zu trainieren?</p>
+<ul>
+<li>[ ] Random Forest Algorithmus</li>
+<li>[ ] Backpropagation</li>
+<li>[ ] Linear Regression</li>
+<li>[ ] Naive Bayes Klassifikation</li>
+</ul>
+</li>
+<li>
+<p>Was ist die Hauptfunktion der "Verlustfunktion" (Loss Function) beim Training eines neuronalen Netzwerks?</p>
+<ul>
+<li>[ ] Sie definiert die Architektur des Netzwerks</li>
+<li>[ ] Sie bestimmt die Art der Aktivierungsfunktion in den Neuronen</li>
+<li>[ ] Sie misst, wie gut das Netzwerk die Ausgabe vorhersagt, und wird für die Optimierung des Netzwerks verwendet</li>
+<li>[ ] Sie dient dazu, das Netzwerk vor Overfitting zu schützen</li>
+</ul>
+</li>
+</ol>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
