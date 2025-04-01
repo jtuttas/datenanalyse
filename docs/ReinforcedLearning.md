@@ -42,7 +42,7 @@ Zunächst müssen wir die Simulationsumgebung installieren. Am besten nutzt man 
 Anschließend können die notwendigen Pakete installiert werden.
 
 ```
-pip install gym==0.26.2
+pip install gymnasium
 pip install pygame
 ```
 
@@ -55,7 +55,7 @@ pip install pygame
 Führen Sie dann im Anschluss daran den folgenden Python Code in einer Zelle eines Juypter Notebooks aus.
 
 ```py
-import gym
+import gymnasium as gym
 
 env = gym.make("Taxi-v3",render_mode="ansi")
 state = env.reset()
@@ -84,7 +84,7 @@ Vgl. [Open AI Gym taxi Env](https://www.gymlibrary.dev/environments/toy_text/tax
 
 Wie jedes Environment stellt auch das Taxi Environment für das Training mittels reinforced Learning einen Zustand zur Verfügung in dem sich die Umgebung gerade befindet. 
 
-**State** : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung ($5*5*4*(4+1)$)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über *env.s* kann die Umgebung in einen gezielten Zustand gebracht werden.
+**State** : Der Zustand in dem sich die Umgebung befindet. Nach dem oberen Bild befindet sich die Umgebung im Zustand 182. Unsere Umgebung besteht aus 5x5 Feldern. Zusätzlich gibt es 4 Positionen der Stationen. Der Passagier kann dabei an einem der Positionen sein, oder bereits im Taxi (4+1), daher haben wird insgesamt 500 unterschiedliche Zustände in der Umgebung ($5*5*4*(4+1)$)! Jeder dieser Werte beschreibt genau die Situation in unserer Umgebung. Über *env.unwrapped.s* kann die Umgebung in einen gezielten Zustand gebracht werden.
 
 <!--ril_gym-->
 
@@ -146,34 +146,37 @@ import ipywidgets as widgets
 from IPython.display import clear_output
 
 # Funktion, die ausgeführt wird, wenn ein Button geklickt wird:
+
+
 def on_button_clicked(button):
     print(f"{button.description} wurde geklickt!")
     clear_output()
     display(buttons_hbox)
-    i=0
-    if button==button1:
-        i=1
-    if button==button2:
-        i=0
-    if button==button3:
-        i=3
-    if button==button4:
-        i=2
-    if button==button5:
-        i=4
-    if button==button6:
-        i=5
-    next_state, reward, done, info = env.step(int(i))
+    i = 0
+    if button == button1:
+        i = 1
+    if button == button2:
+        i = 0
+    if button == button3:
+        i = 3
+    if button == button4:
+        i = 2
+    if button == button5:
+        i = 4
+    if button == button6:
+        i = 5
+    next_state, reward, done, trunced, info = env.step(int(i))
     env.render()
     print("State:", next_state)
     print("Action:", i)
     print("Reward:", reward)
     print("Done:", done)
     print("Info:", info)
-    
-    for key, value in env.P[next_state].items():
-        print("Action ", key, ": state ", value[0][1], " reward: ",value[0][2], " Solved:",value[0][3])
-    
+
+    for key, value in env.unwrapped.P[next_state].items():
+        print("Action ", key, ": state ",
+              value[0][1], " reward: ", value[0][2], " Solved:", value[0][3])
+    print(env.render())
 
 # Erstelle die beiden Buttons:
 button1 = widgets.Button(description="Up")
@@ -192,11 +195,12 @@ button5.on_click(lambda b: on_button_clicked(b))
 button6.on_click(lambda b: on_button_clicked(b))
 
 # Gruppiere die Buttons mit HBox:
-buttons_hbox = widgets.HBox([button1, button2,button3,button4,button5,button6])
+buttons_hbox = widgets.HBox(
+    [button1, button2, button3, button4, button5, button6])
 
 # Zeige die Gruppierung an:
 display(buttons_hbox)
-env.render()
+print(env.render())
 ```
 
 ![Erkunden der Umgebung](images/ril5.png)
@@ -268,21 +272,19 @@ import random
 from IPython.display import clear_output
 
 q_table = np.zeros([env.observation_space.n, env.action_space.n])
-# Hyperparameters
 alpha = 0.1
 gamma = 0.6
 
-
 for i in range(1, 100001):
-    state = env.reset()
+    state, _ = env.reset()
 
-    epochs, reward, = 0, 0, 
+    epochs, reward = 0, 0
     done = False
     
     while not done:
-        action = np.argmax(q_table[state]) # Exploit learned values
+        action = np.argmax(q_table[state])
 
-        next_state, reward, done, info = env.step(action) 
+        next_state, reward, done, truncated, info = env.step(action)
         
         old_value = q_table[state, action]
         next_max = np.max(q_table[next_state])
@@ -298,7 +300,6 @@ for i in range(1, 100001):
         print(f"Episode: {i}")
 
 print("Training finished.\n")
-
 ```
 
 <!--ril_infoq-->
