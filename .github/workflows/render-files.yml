@@ -13,7 +13,7 @@ on:
 
 jobs:
   render_drawio:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     name: Render draw.io files
     steps:
     - name: Checkout
@@ -44,37 +44,10 @@ jobs:
     - name: MV the rendered files
       run: 'mv --backup=numbered -t ./docs/images ${{ steps.render.outputs.rendered-files }}'
       
-  render_umlet:
-    runs-on: ubuntu-20.04
-    name: Render umlet files
-    needs: [render_drawio]
-    steps:
-    - name: Cache files 
-      uses: actions/cache@v3
-      env:
-        cache-name: cache-files
-      with:
-        path: | 
-          ./docs
-          ./config
-          ./pdfs
-          ./html
-        key: $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
-        restore-keys: |
-          $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
-    - name: list files
-      run: 'ls -laR'
-    - name: update
-      run: sudo apt-get update
-    - name: Install Umlet
-      run: sudo apt-get install umlet
-    - name: render files
-      run: 'sh ./config/render_umlet.sh'
-
   converttopdf:
     name: Build PDF with Pandoc
-    needs: render_umlet
-    runs-on: ubuntu-20.04
+    needs: render_drawio
+    runs-on: ubuntu-latest
     steps:
       - name: Cache files 
         uses: actions/cache@v3
@@ -88,7 +61,7 @@ jobs:
             ./html
           key: $build3-${{ env.cache-name }}-${{ github.event.head_commit.message }}
           restore-keys: |
-            $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
+            $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
       - name: list files
         run: 'ls -laR'
       - name: create file list
@@ -105,7 +78,7 @@ jobs:
   render-mk-docs:
     name: mkdocs
     needs: converttopdf 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
