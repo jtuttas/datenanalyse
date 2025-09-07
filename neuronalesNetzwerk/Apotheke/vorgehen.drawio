@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="WC008XlgRv0O7bpW4Mg5" name="Seite-1">
+        <mxGraphModel dx="458" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="230" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="230" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="230" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="230" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Daten&lt;div&gt;einlesen&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Daten&lt;div&gt;aufbereiten&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Daten-&lt;div&gt;exploration&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="230" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Modell&lt;div&gt;trainieren&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Modell&lt;div&gt;bewerten &amp;amp;&lt;/div&gt;&lt;div&gt;optimieren&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
