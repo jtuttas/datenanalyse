@@ -8,14 +8,13 @@ Die Eulen Apotheke in Hannover steht vor der Herausforderung, ihre Personalplanu
 
 Die Eulenapotheke hat festgestellt, dass es Zeiten mit Überbesetzung gibt, während zu Stoßzeiten oft nicht genügend Personal vorhanden ist. Dies führt zu längeren Wartezeiten für Kunden und einer erhöhten Belastung für die Mitarbeiter.
 
-![Team](team.jpg)
+![Team Eulenapotheke](team.jpg)
 
-Die Apotheke beschäftigt derzeit 16 Mitarbeiter, darunter Apotheker, Pharmazeutisch-technische Assistenten (PTA) und Pharmazeutisch-kaufmännische Angestellte (PKA). Die Öffnungszeiten sind von Montag bis Freitag von 8:00 bis 18:00 Uhr und samstags von 9:00 bis 13:00 Uhr.
+<img src="iris_wien.jpg" alt="iris_wien" align="left" width="250" style="margin-right:10px;"/>Die Apotheke beschäftigt derzeit 16 Mitarbeiter, darunter Apotheker, Pharmazeutisch-technische Assistenten (PTA) und Pharmazeutisch-kaufmännische Angestellte (PKA). Die Öffnungszeiten sind von Montag bis Freitag von 8:00 bis 18:00 Uhr und samstags von 9:00 bis 13:00 Uhr.
 
-Die Apotheke verfügt über 8 Arbeitsplätze, die flexibel besetzt werden können. Die Personalplanung erfolgt derzeit manuell durch die  Inhaberin, basierend auf Erfahrungswerten und allgemeinen Annahmen über Kundenfrequenz.
+ Die Apotheke verfügt über 8 Arbeitsplätze, die flexibel besetzt werden können. Die Personalplanung erfolgt derzeit manuell durch die  Inhaberin Frau Iris Wien, basierend auf Erfahrungswerten und allgemeinen Annahmen über Kundenfrequenz.
 
-![iris_wien](iris_wien.jpg)
-
+<br/>
 
 ## Zielsetzung
 
@@ -233,9 +232,16 @@ print(f"Erwartete Verkäufe für {ts}: {round(y_pred)}")
 
 > Überlegen Sie im Klassenverband wie das Modell dem Kunden zur Verfügung gestellt werden könnte. Welche Möglichkeiten gibt es, um das Modell in die bestehende IT-Infrastruktur der Apotheke zu integrieren? Wie könnte eine Benutzeroberfläche gestaltet sein, damit die Inhaberin der Apotheke das Modell einfach nutzen kann?
 
+![predict](sales_predict.png)
+
 ## Reflektieren
 
 > Reflektieren Sie über den gesamten Prozess der Entwicklung des Vorhersagemodells. Welche Herausforderungen sind aufgetreten und wie wurden diese bewältigt? Welche Verbesserungen könnten in zukünftigen Projekten vorgenommen werden? Wie könnte das Modell weiter optimiert werden, um noch genauere Vorhersagen zu liefern?
 
+## Zusatzaufgabe für Experten (Binnendifferenzierung)
 
+Ein Kollege hat vorgeschlagen, zusätzlich zu den bisherigen Features auch das Infektionsgeschehen in das Modell zu integrieren. So bietet Google Trends eine API an die es ermöglicht, die Suchanfragen zu bestimmten Begriffen (z.B. "Grippe", "Erkältung") zu analysieren (siehe <https://trends.google.de/trends/explore?date=2025-01-01%202025-01-31&geo=DE-NI&q=Grippe&hl=de>).
 
+![Trends](trends.png)
+
+>Überlegen Sie wie Sie diese Daten in das bestehende Modell integrieren könnten. Welche Herausforderungen könnten dabei auftreten und wie könnten diese bewältigt werden? Entwickeln Sie einen Plan zur Integration dieser zusätzlichen Datenquelle in das Vorhersagemodell.
