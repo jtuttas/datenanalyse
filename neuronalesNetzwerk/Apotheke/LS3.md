@@ -4,7 +4,7 @@
 
 | Lernfeld                                                             | Bildungsgang                                          | Ausbildungsjahr |
 | :------------------------------------------------------------------- | :---------------------------------------------------- | :-------------: |
-| LF 10c:</br>\$\newline\$Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) |        3        |
+| LF 10c:</br>Werkzeuge des maschinellen Lernens einsetzen | Fachinformatiker für Daten- und Prozessanalyse (FIDP) |        3        |
 
 ### Kompetenzformulierung
 
@@ -25,7 +25,8 @@ Sie **reflektieren** die Wirksamkeit des angelernten Entscheidungssystems. Dabei
 | :----------------------------------------------------------------------------------------------------- | :-------------------------------------------------- | :---------------------: |
 | Rahmenlehrplan für Fachinformatiker für Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27 | LS 10.3: Neuronale Netze zur Vorhersage modellieren |   8 Unterrichtsstunden  |
 
----
+<div style="page-break-after: always;"></div>
+
 
 ### Handlungssituation
 
@@ -53,13 +54,13 @@ Auf Basis historischer Verkaufszahlen sollen die Lernenden ein neuronales Netz t
 | **Kontrollieren / Bewerten**     | Modellgüte überprüfen, Ergebnisse interpretieren                                   | Training/Validierung, MSE, Vorhersagebeispiele                                  | Vergleich im Klassenverband, Diskussion    |
 | **Reflektieren**                 | Modell kritisch hinterfragen, ethische und wirtschaftliche Aspekte berücksichtigen | Grenzen des Modells, mögliche Verbesserungen, Integration in IT-Systeme         | Reflexionsgespräch, Kurzberichte           |
 
----
+<div style="page-break-after: always;"></div>
+
 
 ### Arbeitsmaterialien / Links
 
 * CSV-Datensatz *apotheke\_sales\_filled.csv*
 * Jupyter Notebook mit Code-Vorlagen (Pandas, sklearn, Keras)
-* Visualisierungen (Diagramme zu Verkäufen, Feature-Skalierung)
 * Hintergrundtexte zu neuronalen Netzen (Begriffe: Neuronen, Schichten, Aktivierungsfunktionen, Lossfunktion, Backpropagation)
 
 ---

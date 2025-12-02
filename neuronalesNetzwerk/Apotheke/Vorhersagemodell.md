@@ -157,6 +157,8 @@ df["count_scaled"] = scaler.fit_transform(df[["count"]])
 df.head()
 ```
 
+<div style="page-break-after: always;"></div>
+
 ## Durchführen / Umsetzen
 
 ### Aufgabe 4: Entwicklung des Vorhersagemodells
@@ -230,9 +232,16 @@ y_pred = float(y_scaler.inverse_transform[y_pred_scaled](0,0))  # zurückskalier
 print(f"Erwartete Verkäufe für {ts}: {round(y_pred)}")
 ```
 
-> Überlegen Sie im Klassenverband wie das Modell dem Kunden zur Verfügung gestellt werden könnte. Welche Möglichkeiten gibt es, um das Modell in die bestehende IT-Infrastruktur der Apotheke zu integrieren? Wie könnte eine Benutzeroberfläche gestaltet sein, damit die Inhaberin der Apotheke das Modell einfach nutzen kann?
+In der unteren Abbildung sind die Vorhersagen des Modells für den 15.09.2026 (ein Montag) um 17:00 dargestellt.
 
 ![predict](sales_predict.png)
+
+
+Durch Rücksprache mit Frau Wien, der Besitzerin der Eulen Apotheke, erfahren Sie, dass ca. 15 Verkäufe durch eine Angestellte der Apotheke pro 30 Minuten getätigt werden können!
+
+> Überlegen Sie im Klassenverband wie das Modell dem Kunden zur Verfügung gestellt werden könnte. Welche Möglichkeiten gibt es, um das Modell in die bestehende IT-Infrastruktur der Apotheke zu integrieren? Wie könnte eine Benutzeroberfläche gestaltet sein, damit die Inhaberin der Apotheke das Modell einfach nutzen kann?
+
+<div style="page-break-after: always;"></div>
 
 ## Reflektieren
 

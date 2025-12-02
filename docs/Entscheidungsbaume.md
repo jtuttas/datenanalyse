@@ -154,7 +154,7 @@ $$H = - (0.6667+log_2(0.6667)+0.3333*log_2(0.3333))=0.918262$$
 
 <!--dsaufgabe3-->
 
-Wir können unseren Datensätze nun in zwei Teildatensätze einteilen *m1* und *m2*.
+Wir können unseren Datensätze nun in zwei Teildatensätze einteilen *m1* und *m2*!
 
 ```py
 import pandas as pd
