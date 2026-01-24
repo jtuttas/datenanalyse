@@ -227,6 +227,32 @@ Erstellen Sie ferner mittels der Methode **predict()** des Modells eine Aussage,
 
 <!--lrg_aufg2-->
 
+<!--lrg_aufg2b-->
+
+## Aufgabe 2b
+
+Es stellt sich die Frage, wie gut das erstellte Vorhersagemodell ist. Hierzu kann die mittlere quadratische Abweichung (Mean Squared Error, MSE) und der R2-Score genutzt werden. Diese werden wie folgt berechnet:
+
+$$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+
+$$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$
+
+Dabei sind:
+- $n$ die Anzahl der Datenpunkte,
+- $y_i$ die tatsächlichen Werte,
+- $\hat{y}_i$ die vorhergesagten Werte,
+- $\bar{y}$ der Durchschnitt der tatsächlichen Werte.
+
+## Wertebereich und Interpretation
+
+- **MSE**: Ein niedriger MSE-Wert deutet auf ein gutes Modell hin, da die Vorhersagen nahe an den tatsächlichen Werten liegen. Ein hoher MSE-Wert weist auf größere Abweichungen hin.
+- **R2-Score**: Der R2-Wert liegt zwischen 0 und 1. Ein R2-Wert von 1 bedeutet, dass das Modell die Daten perfekt erklärt, während ein Wert von 0 darauf hinweist, dass das Modell keine Erklärungskraft hat (es erklärt nichts mehr als der Durchschnitt der tatsächlichen Werte).
+
+> Berechnen Sie den MSE und R2-Wert für Ihr in Aufgabe 2 erstelltes Vorhersagemodell und interpretieren Sie die Ergebnisse.
+
+
+<!--lrg_aufg2b-->
+
 <!--lrg_info2-->
 
 ## Anpassen des Modells für mehrere Features (Multiple Lineare Regression)
@@ -270,21 +296,35 @@ Die Einzelnen Faktoren $a_1$ bis $a_n$ befinden sich dabei wie zuvor in dem Attr
 
 Um nun aufgrund unseres Modells eine Vorhersage zu treffen, dient die Funktion **predict** im Objekt **model**. Dieses erwartet einen Datensatz als Übergabeparameter.
 
-### R2 - Metrik
+### R2 - Metrik für die multiple lineare Regression
 
-Über die Qualität des Modells gibt u.a. Der Wert $R^2$ (Determinationskoeffizient) Auskunft.
-
-Je höher der $R^2$-Wert, desto besser die Vorhersage.
+Über die Qualität des Modells gibt u.a. Der Wert $R^2$ (Determinationskoeffizient) und der Mean Squared Error (MSE) Auskunft.
 
 ```py
 
 from sklearn.metrics import r2_score
-
 y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 print('R^2: ', r2)
 
 ```
+
+Interpretiert bedeutet ein Wert von $R^2 = 1$, dass das Modell die Daten perfekt erklärt, während ein Wert von $R^2 = 0$ darauf hinweist, dass das Modell keine Erklärungskraft hat (es erklärt nichts mehr als der Durchschnitt der tatsächlichen Werte).
+
+
+### Mean Squared Error (MSE) für die multiple lineare Regression
+
+```py
+from sklearn.metrics import mean_squared_error
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print('MSE: ', mse)
+```  
+
+Interpretiert bedeutet ein niedriger MSE-Wert, dass die Vorhersagen nahe an den tatsächlichen Werten liegen, während ein hoher MSE-Wert auf größere Abweichungen hinweist.
+
+
+
 <!--lrg_info2-->
 
 ## Aufgabe 3
