@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LS2.md</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<h1 id="fidp---lernfeld-10c">FIDP - Lernfeld 10c</h1>
+<h2 id="ls-10.2-datenexploration-und-visualisierung">LS 10.2:
+Datenexploration und Visualisierung</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lernfeld</th>
+<th style="text-align: left;">Bildungsgang</th>
+<th style="text-align: center;">Ausbildungsjahr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LF 10c:</br><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />Werkzeuge des
+maschinellen Lernens einsetzen</td>
+<td style="text-align: left;">Fachinformatiker für Daten- und
+Prozessanalyse (FIDP)</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kompetenzformulierung">Kompetenzformulierung</h3>
+<p>“<strong>Die Schülerinnen und Schüler verfügen über die Kompetenz,
+maschinelles Lernen zur Problemlösung anzuwenden und den Lernfortschritt
+des Entscheidungssystems zu begleiten</strong>”.</p>
+<p>Die Schülerinnen und Schüler <strong>stellen</strong>
+Einsatzmöglichkeiten des maschinellen Lernens <strong>dar</strong>. Auf
+dieser Basis entscheiden sie über die betriebswirtschaftlich sinnvolle
+Eignung maschinellen Lernens bezüglich kundenspezifischer
+Problemstellungen.</p>
+<p>Sie führen die benötigten Daten zusammen. Dazu analysieren sie freie
+und kommerzielle Datenquellen und <strong>wählen</strong> diese nach
+Eignung zur Lösung der Aufgabe durch maschinelles Lernen aus. Die
+Schülerinnen und Schüler berücksichtigen datenschutzrechtliche,
+moralische und wirtschaftliche Aspekte.</p>
+<p>Sie <strong>legen</strong> für die Aufgabenstellung maschinellen
+Lernens adäquate Werkzeuge und Systeme <strong>fest</strong>.</p>
+<p>Sie bereiten das ausgewählte System technisch vor und
+<strong>implementieren</strong> die Schnittstellen zum Datenimport.</p>
+<p>Die Schülerinnen und Schüler <strong>überwachen</strong> die
+technische Funktionsfähigkeit im Hinblick auf den Lernfortschritt des
+Systems.</p>
+<p>Sie <strong>reflektieren</strong> die Wirksamkeit des angelernten
+Entscheidungssystems. Dabei diskutieren sie auch datenschutzrechtliche,
+moralische und wirtschaftliche Aspekte.</p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curricularer Bezug</th>
+<th style="text-align: left;">Titel der Lernsituation (Kurzfassung)</th>
+<th style="text-align: center;">Geplanter Zeitrichtwert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rahmenlehrplan für Fachinformatiker für
+Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27</td>
+<td style="text-align: left;">LS 10.2: Datenexploration und
+Visualisierung</td>
+<td style="text-align: center;">7 Unterrichtsstunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handlungssituation">Handlungssituation</h3>
+<blockquote>
+<p>Eine der ersten Kunde der neu eingeführten Abteilung “Daten- und
+Prozessanalyse” der ChangeIT GmbH ist eine große berufsbildenden
+Schule.</p>
+<p>Diese Schule möchte gerne die Leistungsdaten eines Jahrgangs
+ausgewertet haben. Diese Daten liegen sowohl als <em>csv</em>,
+<em>xml</em> und <em>json</em> vor.</p>
+</blockquote>
+<h3 id="handlungsergebnis">Handlungsergebnis</h3>
+<ul>
+<li>Statistische Grunddaten des Datensatzes</li>
+<li>Visualisierung einiger Zusammenhänge</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="vorausgesetzte-fähigkeiten-und-kenntnisse">Vorausgesetzte
+Fähigkeiten und Kenntnisse</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Handlungskompetenz</br>(Fachkompetenz und
+Personale Kompetenz)</th>
+<th style="text-align: left;">Inhalte</th>
+<th style="text-align: left;">Sozialform/Methoden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Informieren bzw. Analysieren</td>
+<td style="text-align: left;">- Daten und ihre Darstellung in
+unterschiedlichen Formaten</td>
+<td style="text-align: left;">- Analysieren der zur Verfügung gestellten
+Daten </br> - Informieren sich über die Berechnung statistischer
+Grunddaten</td>
+<td style="text-align: left;">- Einzelarbeit </br> - Plenum</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Planen / Entscheiden</td>
+<td style="text-align: left;">- Arbeiten mit Python Paketen</td>
+<td style="text-align: left;">- Auswahl eines Datensatzes </br>
+-Einlesen des Datensatzes mit einem Python Programm</td>
+<td style="text-align: left;">- Einzelarbeit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Durchführen</td>
+<td style="text-align: left;">- Umwandeln und Zusammenfassen von Daten
+</br> - grafische Darstellung von Datenmengen</td>
+<td style="text-align: left;">- Bereinigen der Daten </br> - Vorbereiten
+der Daten für die statistische Auswertung - Erheben der statistischen
+Grunddaten </br> - Visualisieren der Daten</td>
+<td style="text-align: left;">- Einzelarbiet</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kontrollieren / Bewerten</td>
+<td style="text-align: left;">- Eignung unterschiedlicher grafischer
+Darstellungsformen</td>
+<td style="text-align: left;">- Bewerten des Ergebnisses hinsichtlich
+der urspünglichen Fragestellung</td>
+<td style="text-align: left;">- Einzelarbeit </br> - Plenum</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reflektieren</td>
+<td style="text-align: left;">- Kritikfähigkeit</td>
+<td style="text-align: left;">- Aussagekraft der statistischen
+Grunddaten</td>
+<td style="text-align: left;">- Plenum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arbeitsmaterialien-links">Arbeitsmaterialien / Links</h3>
+<ul>
+<li>Moodle-Kurs: <a href="https://moodle.mm-bbs.de/moodle/course/view.php?id=2812">LF10c:
+Werkzeuge des maschinellen Lernens einsetzen</a></li>
+<li><a href="https://github.com/jtuttas/datenanalyse">GitHub
+Repository</a></li>
+</ul>
+<h3 id="schulische-entscheidungen">Schulische Entscheidungen</h3>
+<ul>
+<li>Die Ermittlung der statistischen Grunddaten und das erzeugen der
+Diagramm erfolgt mittels der Programmiersprache Python und der
+Entwicklungsumgebung VS Code.</li>
+</ul>
+<h3 id="leistungsnachweise">Leistungsnachweise</h3>
+<h3 id="mögliche-verknüpfungen-zu-anderen-lernfeldern-fächern">Mögliche
+Verknüpfungen zu anderen Lernfeldern / Fächern</h3>
+</body>
+</html>

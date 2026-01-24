@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LS8.md</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<h1 id="fidp---lernfeld-10c">FIDP - Lernfeld 10c</h1>
+<h2 id="ls-10.8-cloud-ki-systeme-nutzen">LS 10.8: Cloud KI Systeme
+nutzen</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lernfeld</th>
+<th style="text-align: left;">Bildungsgang</th>
+<th style="text-align: center;">Ausbildungsjahr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LF 10c:</br><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />Werkzeuge des
+maschinellen Lernens einsetzen</td>
+<td style="text-align: left;">Fachinformatiker für Daten- und
+Prozessanalyse (FIDP)</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kompetenzformulierung">Kompetenzformulierung</h3>
+<p>“<strong>Die Schülerinnen und Schüler verfügen über die Kompetenz,
+maschinelles Lernen zur Problemlösung anzuwenden und den Lernfortschritt
+des Entscheidungssystems zu begleiten</strong>”.</p>
+<p>Die Schülerinnen und Schüler <strong>stellen</strong>
+Einsatzmöglichkeiten des maschinellen Lernens <strong>dar</strong>. Auf
+dieser Basis entscheiden sie über die betriebswirtschaftlich sinnvolle
+Eignung maschinellen Lernens bezüglich kundenspezifischer
+Problemstellungen.</p>
+<p>Sie führen die benötigten Daten zusammen. Dazu analysieren sie freie
+und kommerzielle Datenquellen und <strong>wählen</strong> diese nach
+Eignung zur Lösung der Aufgabe durch maschinelles Lernen aus. Die
+Schülerinnen und Schüler berücksichtigen datenschutzrechtliche,
+moralische und wirtschaftliche Aspekte.</p>
+<p>Sie <strong>legen</strong> für die Aufgabenstellung maschinellen
+Lernens adäquate Werkzeuge und Systeme <strong>fest</strong>.</p>
+<p>Sie bereiten das ausgewählte System technisch vor und
+<strong>implementieren</strong> die Schnittstellen zum Datenimport.</p>
+<p>Die Schülerinnen und Schüler <strong>überwachen</strong> die
+technische Funktionsfähigkeit im Hinblick auf den Lernfortschritt des
+Systems.</p>
+<p>Sie <strong>reflektieren</strong> die Wirksamkeit des angelernten
+Entscheidungssystems. Dabei diskutieren sie auch datenschutzrechtliche,
+moralische und wirtschaftliche Aspekte.</p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Curricularer Bezug</th>
+<th style="text-align: left;">Titel der Lernsituation (Kurzfassung)</th>
+<th style="text-align: center;">Geplanter Zeitrichtwert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rahmenlehrplan für Fachinformatiker für
+Daten- und Prozessanalyse in der Fassung vom 13.12.2019, S. 27</td>
+<td style="text-align: left;">LS 10.8: Cloud KI Systeme nutzen</td>
+<td style="text-align: center;">12 Unterrichtsstunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handlungssituation">Handlungssituation</h3>
+<p>Sie arbeiten bei der ChangeIT GmbH in der Abteilung Datenanalyse und
+erhalten folgenden Auftrag:</p>
+<blockquote>
+<p>Der Besitzer eines Eigenheims möchte gerne wissen welche Autos für
+wie lange auf seinen Parkplatz parken. Die Kamera vor dem Haus mach dazu
+alle 5 Minuten ein Bild von dem Parkplatz. Sie erhalten der Auftrag eine
+Anwendungssystem zu entwickeln welches das KFZ Kennzeichen erfasst und
+dieses mit einem Zeitstempel in eine Datenbank schreibt.</p>
+</blockquote>
+<p>Da das Antrainieren einer eigenen Texterkennungs KI zu aufwendig
+erscheint, entscheidet sich die Geschäftsführung dazu einen Cloud
+Dienstleister zu nutzen. Da bereits ein Azure Konto existiert, soll der
+Azure Bilderkennungsdienst genutzt werden.</p>
+<h3 id="handlungsergebnis">Handlungsergebnis</h3>
+<ul>
+<li>Bildanalyse (KFZ Kennzeichen) eines geparkten Autos.</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="vorausgesetzte-fähigkeiten-und-kenntnisse">Vorausgesetzte
+Fähigkeiten und Kenntnisse</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Handlungskompetenz<br /><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />(Fachkompetenz und
+Personale Kompetenz)</th>
+<th style="text-align: left;">Inhalte</th>
+<th style="text-align: left;">Sozialform/Methoden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Informieren bzw. Analysieren</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler Analysieren
+den Auftrag und identifizieren einzelne Arbeitspakete. Für diese
+Arbeitspakete bestimmen Sie, ob dazu noch weitere Informationen
+notwendig sind. <br /><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />Für das
+Arbeitspaket des maschinellen Sehens mit Azure lesen Sie den zur
+Verfügung gestellten Artikel.</td>
+<td style="text-align: left;">- Zerlegen des Auftrages in einzelne
+Arbeitspakete <br /> <img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />- Die Azure REST
+Api</td>
+<td style="text-align: left;">Einzelarbeit / Klassenplenum <br /><br />
+<img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" /> <img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" /><strong>Hinweise
+für den DU</strong>: Das Gliedern der Arbeitspakete kann in Moodle über
+die Aktivität <em>Moodle Board</em> erfolgen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Planen / Entscheiden</td>
+<td style="text-align: left;">Die Schülerinnen und Schülern Planen in
+Kleingruppen das weitere Vorgehen zum Bewältigen des Arbeitsauftrages.
+Dazu Priorisieren Sie einzelne Arbeitspakete nach ihrer Zeitlichen
+Reihenfolge und Wichtigkeit</td>
+<td style="text-align: left;">Priorisieren von Arbeitspaketen</td>
+<td style="text-align: left;">Gruppenarbeit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Durchführen</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler
+implementieren die gewünschte Funktionalität entsprechend des
+Arbeitsauftrages</td>
+<td style="text-align: left;">Implementieren der Funktionalität</td>
+<td style="text-align: left;">Moodle Aufgabe <strong>A1</strong> bis
+<strong>A3</strong> (<strong>A4</strong> ist optional)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kontrollieren / Bewerten</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler bewerten das
+Ergebnis hinsichtlich der Qualität. <br /> <img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />Die Schülerinnen
+und Schüler erstellen für den Kunden ein Angebot aus denen die Kosten
+für den Täglichen Betrieb des Systems ersichtlich werden.</td>
+<td style="text-align: left;">- Überprüfen der Funktionalität.<br /><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" /><br /><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" />- Erstellen eines
+Angebotes</td>
+<td style="text-align: left;">Gruppenarbeit<br /><img style="vertical-align:middle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCB1jYAAAAAIAAc/INeUAAAAASUVORK5CYII=" alt="\newline" title="\newline" class="math inline" /> Moodle Aufgabe
+<strong>A5</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reflektieren</td>
+<td style="text-align: left;">Die Schülerinnen und Schüler erhalten eine
+Email eines Autobesitzers und verfassen eine Antwort, die mögliche
+Datenschutzprobleme thematisiert</td>
+<td style="text-align: left;">Schreiben einer Email bzgl.
+Datenschutzaspekte bei automatischen KI Systemen</td>
+<td style="text-align: left;">Moodle Aufgabe <strong>A6</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arbeitsmaterialien-links">Arbeitsmaterialien / Links</h3>
+<ul>
+<li>Moodle-Kurs: <a href="https://moodle.mm-bbs.de/moodle/course/view.php?id=2812">LF10c:
+Werkzeuge des maschinellen Lernens einsetzen</a></li>
+<li><a href="https://github.com/jtuttas/datenanalyse">GitHub
+Repository</a></li>
+</ul>
+<h3 id="schulische-entscheidungen">Schulische Entscheidungen</h3>
+<ul>
+<li>Für die Nutzung des Azure Dienstes kann der Zugang genutzt werden,
+der im Rahmen des O365 Angebots vorliegt.</li>
+<li>Die Implementierung der Software sollte in Python unter Verwendung
+von VS-Code erfolgen. Hier sollte möglichst das in der Python Extension
+enthaltene Jupyter Notebook verwenden werden.</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+<h3 id="leistungsnachweise">Leistungsnachweise</h3>
+<ul>
+<li>Bewertung des Handlungsergebnisses ggf. im Form eines Fachgespräches
+mit den einzelnen Arbeitsgruppen.</li>
+</ul>
+<h3 id="mögliche-verknüpfungen-zu-anderen-lernfeldern-fächern">Mögliche
+Verknüpfungen zu anderen Lernfeldern / Fächern</h3>
+<ul>
+<li>Politik / Ethik: Sekundäre personengebundene Daten</li>
+</ul>
+</body>
+</html>
